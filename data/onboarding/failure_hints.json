@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "about": "One-line nudges for the decision screen, keyed to the failure notes the simulation writes into Outcome.notes (core/objective.gd build_outcome, port of prototype/src/core/objective.ts). Specification: docs/ONBOARDING.md, 'Failure hints'.",
+
+  "rules": {
+    "showAfter": 2,
+    "maxPerDecision": 1,
+    "oncePer": "levelVisit",
+    "matching": "For each note of a FAILED resolved run, in order, find the first entry of 'hints' (file order = priority, most specific and most actionable first) whose 'match' regex matches the whole note; skip notes that match an 'ignore' regex. A note's signature is the hint id plus the values of the capture groups named in 'signature' (never the beat, which shifts between takes).",
+    "streak": "Keep a consecutive-failure count per signature for the current level visit. After each failed resolved run: signatures present get count + 1, signatures absent are dropped (count 0). A winning run clears everything. retryTake, commit and resetAll do NOT clear the counts: the same failure after a reset is still the same failure.",
+    "choose": "On entering 'decision' after a failed run, take the hints whose signature count is >= showAfter and which have not been shown this level visit; show the one earliest in file order. Show nothing if there is none.",
+    "regex": "PCRE-compatible, written with (?P<name>...) groups so the same source compiles in Godot RegEx and in Python. Match against the full note string.",
+    "tokens": "{tape} is replaced by the captured 'tape' letter rendered as the HUD names the cassette ('Tape A')."
+  },
+
+  "ignore": [
+    { "id": "objective.complete", "match": "^Objective complete at beat [0-9.]+: .*\\.$", "why": "not a failure" },
+    { "id": "survivors", "match": "^Survivors: .*\\.$", "why": "not a failure" },
+    { "id": "objective.noBoss", "match": "^Objective not complete: .*\\. There is no boss in this level\\.$", "why": "authoring error, not something the player can act on" }
+  ],
+
+  "hints": [
+    {
+      "id": "weak.breakable",
+      "match": "^Tape (?P<tape>[A-D])'s (?P<kind>\\w+) at beat [0-9.]+ hit breakable wall (?P<id>.+) with momentum [0-9.]+; it needs [0-9.]+\\.$",
+      "signature": ["id"],
+      "text": "Still bouncing off. Momentum is swing, run-up and tape speed. Stack them.",
+      "examples": ["Tape A's heavy at beat 2.02 hit breakable wall w1 with momentum 4; it needs 5."]
+    },
+    {
+      "id": "weak.core",
+      "match": "^Tape (?P<tape>[A-D])'s (?P<kind>\\w+) at beat [0-9.]+ hit core (?P<id>.+) with momentum [0-9.]+; it needs [0-9.]+\\.$",
+      "signature": ["id"],
+      "text": "The core shrugged. It wants more behind the swing, same as a wall.",
+      "examples": ["Tape A's light at beat 1.07 hit core c1 with momentum 0.6; it needs 1."]
+    },
+    {
+      "id": "weak.shield",
+      "match": "^Tape (?P<tape>[A-D])'s (?P<kind>\\w+) at beat [0-9.]+ hit (?P<id>.+) but did no damage \\(shield, momentum [0-9.]+\\)\\.$",
+      "signature": ["id"],
+      "text": "Shield's up every time you swing. Maybe don't swing alone.",
+      "examples": ["Tape A's light at beat 0.53 hit sh but did no damage (shield, momentum 1.2)."]
+    },
+    {
+      "id": "weak.armour",
+      "match": "^Tape (?P<tape>[A-D])'s (?P<kind>\\w+) at beat [0-9.]+ hit (?P<id>.+) but did no damage \\(armour, momentum [0-9.]+\\)\\.$",
+      "signature": ["id"],
+      "text": "It's armoured where it's looking. So who is it looking at?",
+      "examples": ["Tape A's heavy at beat 0.93 hit b1 but did no damage (armour, momentum 4)."]
+    },
+    {
+      "id": "weak.noDamage",
+      "match": "^Tape (?P<tape>[A-D])'s (?P<kind>\\w+) at beat [0-9.]+ hit (?P<id>.+) but did no damage \\(no damage, momentum [0-9.]+\\)\\.$",
+      "signature": ["id"],
+      "text": "That landed and did nothing. Slow tape, soft hands. Bring more momentum.",
+      "examples": ["Tape A's light at beat 0.87 hit g1 but did no damage (no damage, momentum 0.9)."]
+    },
+    {
+      "id": "weak.other",
+      "match": "^Tape (?P<tape>[A-D])'s (?P<kind>\\w+) at beat [0-9.]+ hit (?P<id>.+) but did no damage \\((?P<reason>.+), momentum [0-9.]+\\)\\.$",
+      "signature": ["id", "reason"],
+      "text": "It shrugged that off. Try another angle, another beat, or another self.",
+      "examples": ["Tape B's heavy at beat 4 hit x9 but did no damage (parried, momentum 3)."]
+    },
+
+    {
+      "id": "death.bossRecall",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: struck by boss (?P<id>.+) \\(remembering Tape (?P<remembered>[A-D])\\)\\.$",
+      "signature": ["tape", "remembered"],
+      "text": "It hit where a kept take stood. It only knows what you kept.",
+      "examples": ["Tape A died at beat 3: struck by boss b1 (remembering Tape A)."]
+    },
+    {
+      "id": "death.bossSweep",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: swept by boss (?P<id>.+)\\.$",
+      "signature": ["tape"],
+      "text": "That sweep has a reach and a beat. Be outside one of them.",
+      "examples": ["Tape C died at beat 6.5: swept by boss b1."]
+    },
+    {
+      "id": "death.struck",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: struck by (?P<kind>\\w+) (?P<id>.+)\\.$",
+      "signature": ["tape", "id"],
+      "text": "{tape}, same hit twice. They wind up first. Be elsewhere, or be first.",
+      "examples": [
+        "Tape A died at beat 10: struck by grunt g1.",
+        "Tape A died at beat 11: struck by stalker s1.",
+        "Tape A died at beat 2: struck by brute b1.",
+        "Tape A died at beat 4: struck by boss b1."
+      ]
+    },
+    {
+      "id": "death.laser",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: burned by laser (?P<id>.+)\\.$",
+      "signature": ["tape", "id"],
+      "text": "Same beam, same crisp. Something in this room switches it off.",
+      "examples": ["Tape A died at beat 0.56: burned by laser beam."]
+    },
+    {
+      "id": "death.dart",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: shot by dart launcher (?P<id>.+)\\.$",
+      "signature": ["tape", "id"],
+      "text": "That launcher only covers one lane. Learn when, or stay out of it.",
+      "examples": ["Tape B died at beat 5.25: shot by dart launcher dl1."]
+    },
+    {
+      "id": "death.shotStray",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: shot by a bolt\\.$",
+      "signature": ["tape"],
+      "text": "{tape} caught a stray. Check whose line of fire she walked through.",
+      "examples": ["Tape D died at beat 7: shot by a bolt."]
+    },
+    {
+      "id": "death.shot",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: shot by (?P<kind>\\w+) (?P<id>.+)\\.$",
+      "signature": ["tape", "id"],
+      "text": "Same shooter twice. Use cover, or give it someone else to watch.",
+      "examples": ["Tape A died at beat 13.83: shot by turret t1.", "Tape A died at beat 7.33: shot by drone d1."]
+    },
+    {
+      "id": "death.spikes",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: skewered by spikes (?P<id>.+)\\.$",
+      "signature": ["tape", "id"],
+      "text": "Spikes keep time with the track. Cross on the beat they rest.",
+      "examples": ["Tape A died at beat 4: skewered by spikes sp1."]
+    },
+    {
+      "id": "death.crusher",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: crushed by crusher (?P<id>.+)\\.$",
+      "signature": ["tape", "id"],
+      "text": "The crusher's on a beat. Cross while it's lifting, not while it's deciding.",
+      "examples": ["Tape A died at beat 8: crushed by crusher cr1."]
+    },
+    {
+      "id": "death.flame",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: burned by flame jet (?P<id>.+)\\.$",
+      "signature": ["tape", "id"],
+      "text": "The jet takes breaths. Move on the inhale.",
+      "examples": ["Tape B died at beat 2.5: burned by flame jet f1."]
+    },
+    {
+      "id": "death.other",
+      "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: (?P<cause>.+)\\.$",
+      "signature": ["tape", "cause"],
+      "text": "{tape} dies the same way each run. Change what happens just before.",
+      "examples": ["Tape A died at beat 1: flattened by something new."]
+    },
+
+    {
+      "id": "desync.door",
+      "match": "^Tape (?P<tape>[A-D]) desynced at beat [0-9.]+ \\(blocked by door (?P<id>.+)\\); its spark never caught up\\.$",
+      "signature": ["tape", "id"],
+      "text": "{tape} walked into a door that used to be open. Who shut it?",
+      "examples": ["Tape A desynced at beat 0.59 (blocked by door d1); its spark never caught up."]
+    },
+    {
+      "id": "desync.breakable",
+      "match": "^Tape (?P<tape>[A-D]) desynced at beat [0-9.]+ \\(blocked by breakable wall (?P<id>.+)\\); its spark never caught up\\.$",
+      "signature": ["tape", "id"],
+      "text": "{tape} expected a hole in that wall. Somebody has to make it first.",
+      "examples": ["Tape B desynced at beat 3 (blocked by breakable wall w1); its spark never caught up."]
+    },
+    {
+      "id": "desync.crusher",
+      "match": "^Tape (?P<tape>[A-D]) desynced at beat [0-9.]+ \\(blocked by crusher (?P<id>.+)\\); its spark never caught up\\.$",
+      "signature": ["tape", "id"],
+      "text": "{tape} met the crusher mid-stroke. Its timing around her has changed.",
+      "examples": ["Tape A desynced at beat 6 (blocked by crusher cr1); its spark never caught up."]
+    },
+    {
+      "id": "desync.wall",
+      "match": "^Tape (?P<tape>[A-D]) desynced at beat [0-9.]+ \\(blocked by a wall\\); its spark never caught up\\.$",
+      "signature": ["tape"],
+      "text": "{tape} skipped against solid wall. Something knocked her off her marks.",
+      "examples": ["Tape A desynced at beat 0.13 (blocked by a wall); its spark never caught up."]
+    },
+    {
+      "id": "desync.manual",
+      "match": "^Tape (?P<tape>[A-D]) desynced at beat [0-9.]+ \\(manual desync\\); its spark never caught up\\.$",
+      "signature": ["tape"],
+      "text": "{tape} stepped out on purpose and never got back. Leave her a road.",
+      "examples": ["Tape A desynced at beat 0 (manual desync); its spark never caught up."]
+    },
+    {
+      "id": "desync.other",
+      "match": "^Tape (?P<tape>[A-D]) desynced at beat [0-9.]+ \\((?P<cause>.+)\\); its spark never caught up\\.$",
+      "signature": ["tape", "cause"],
+      "text": "{tape} got blocked and never caught up. Find what's newly in her way.",
+      "examples": ["Tape C desynced at beat 9 (blocked by gate g7); its spark never caught up."]
+    },
+    {
+      "id": "desync.ended",
+      "match": "^Tape (?P<tape>[A-D]) ended the run desynced: it survives, but it could not act or hold an exit\\.$",
+      "signature": ["tape"],
+      "text": "{tape} finished out of step. Clear her road sooner, or reroute her.",
+      "examples": ["Tape A ended the run desynced: it survives, but it could not act or hold an exit."]
+    },
+
+    {
+      "id": "noSurvivor",
+      "match": "^No self survived to the end: the objective needs at least one survivor\\.$",
+      "signature": [],
+      "text": "Job done, nobody left. One of you has to be breathing at the end.",
+      "examples": ["No self survived to the end: the objective needs at least one survivor."]
+    },
+
+    {
+      "id": "desync.caughtUp",
+      "match": "^Tape (?P<tape>[A-D]) desynced at beat [0-9.]+ \\((?P<cause>.+)\\); its spark caught up at beat [0-9.]+\\.$",
+      "signature": ["tape", "cause"],
+      "text": "{tape} skipped, then caught up. Whatever she did in between didn't count.",
+      "examples": ["Tape A desynced at beat 0.59 (blocked by door d1); its spark caught up at beat 10.71."]
+    },
+
+    {
+      "id": "objective.reachEnd",
+      "match": "^Objective not complete: .*\\. No alive, synced self was in the exit when the encounter ended\\.$",
+      "signature": [],
+      "text": "Somebody alive has to be standing in the exit when the music stops.",
+      "examples": ["Objective not complete: Get out. No alive, synced self was in the exit when the encounter ended."]
+    },
+    {
+      "id": "objective.reachEarly",
+      "match": "^Objective not complete: .*\\. The encounter has not ended yet\\.$",
+      "signature": [],
+      "text": "You cut it short. The exit only counts on the last beat.",
+      "examples": ["Objective not complete: Reach the end. The encounter has not ended yet."]
+    },
+    {
+      "id": "objective.eliminate",
+      "match": "^Objective not complete: .*\\. Still standing: (?P<left>.+)\\.$",
+      "signature": ["left"],
+      "text": "Same stragglers both times. Somebody on the crew has a spare beat.",
+      "examples": ["Objective not complete: Take out both grunts and the turret. Still standing: grunt g1, grunt g2, turret t1."]
+    },
+    {
+      "id": "objective.activate",
+      "match": "^Objective not complete: .*\\. Not activated: (?P<left>.+)\\.$",
+      "signature": ["left"],
+      "text": "Core's still cold. Nobody has actually gone and hit it.",
+      "examples": ["Objective not complete: Light the core. Not activated: core c1."]
+    },
+    {
+      "id": "objective.boss",
+      "match": "^Objective not complete: .*\\. (?P<id>\\S+) survived with [0-9]+ of [0-9]+ hp\\.(?: \\S+ survived with [0-9]+ of [0-9]+ hp\\.)*$",
+      "signature": ["id"],
+      "text": "Still standing. Check the ruler: which takes actually landed a hit?",
+      "examples": ["Objective not complete: Defeat the boss. b1 survived with 16 of 20 hp."]
+    },
+    {
+      "id": "objective.signal",
+      "match": "^Objective not complete: .*\\. The required condition never happened\\.$",
+      "signature": [],
+      "text": "The room's waiting on something. Reread the job; see what never moved.",
+      "examples": ["Objective not complete: Open the gate. The required condition never happened."]
+    },
+    {
+      "id": "objective.other",
+      "match": "^Objective not complete: .*$",
+      "signature": [],
+      "text": "Same miss twice. Watch the playback for the beat it goes wrong.",
+      "examples": ["Objective not complete: Destroy the grunt. "]
+    }
+  ]
+}

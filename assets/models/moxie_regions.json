@@ -1,0 +1,60 @@
+{
+ "about": "Outfit zones of assets/models/moxie_body.png (tools/moxie_regions.py). color / lum are linear.",
+ "size": 1024,
+ "zones": {
+  "top": {
+   "texels": 4217,
+   "color": [
+    0.7812,
+    0.576,
+    0.4549
+   ],
+   "lum": 0.6109
+  },
+  "jacket": {
+   "texels": 67526,
+   "color": [
+    0.0794,
+    0.0432,
+    0.0385
+   ],
+   "lum": 0.0506
+  },
+  "jacket_lining": {
+   "texels": 28029,
+   "color": [
+    0.8108,
+    0.4277,
+    0.0061
+   ],
+   "lum": 0.4787
+  },
+  "pants": {
+   "texels": 129005,
+   "color": [
+    0.226,
+    0.1252,
+    0.064
+   ],
+   "lum": 0.1422
+  },
+  "pants_graphic": {
+   "texels": 5057,
+   "color": [
+    0.8282,
+    0.4499,
+    0.008
+   ],
+   "lum": 0.4984
+  },
+  "shoes": {
+   "texels": 50150,
+   "color": [
+    0.2833,
+    0.1799,
+    0.1004
+   ],
+   "lum": 0.1961
+  }
+ }
+}

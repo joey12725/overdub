@@ -1,0 +1,7527 @@
+{
+  "pieces": {
+    "arch": {
+      "file": "arch__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.972,
+        2.288,
+        0.93
+      ],
+      "aabb": {
+        "min": [
+          -0.89,
+          0.0,
+          -0.289
+        ],
+        "max": [
+          1.082,
+          2.288,
+          0.641
+        ]
+      },
+      "placement": "spans X (opening 1.0 wide, about 1.7 overall); rotate 90 deg for a Z-facing gate"
+    },
+    "arch__core": {
+      "file": "arch__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.88,
+        2.14,
+        0.58
+      ],
+      "aabb": {
+        "min": [
+          -0.94,
+          0.0,
+          -0.29
+        ],
+        "max": [
+          0.94,
+          2.14,
+          0.29
+        ]
+      },
+      "placement": "spans X (opening 1.0 wide, about 1.7 overall); rotate 90 deg for a Z-facing gate"
+    },
+    "arch__lower": {
+      "file": "arch__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.88,
+        2.14,
+        0.58
+      ],
+      "aabb": {
+        "min": [
+          -0.94,
+          0.0,
+          -0.29
+        ],
+        "max": [
+          0.94,
+          2.14,
+          0.29
+        ]
+      },
+      "placement": "spans X (opening 1.0 wide, about 1.7 overall); rotate 90 deg for a Z-facing gate"
+    },
+    "arch__mid": {
+      "file": "arch__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.972,
+        2.288,
+        0.93
+      ],
+      "aabb": {
+        "min": [
+          -0.89,
+          0.0,
+          -0.289
+        ],
+        "max": [
+          1.082,
+          2.288,
+          0.641
+        ]
+      },
+      "placement": "spans X (opening 1.0 wide, about 1.7 overall); rotate 90 deg for a Z-facing gate"
+    },
+    "arch__upper": {
+      "file": "arch__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.972,
+        2.288,
+        0.93
+      ],
+      "aabb": {
+        "min": [
+          -0.89,
+          0.0,
+          -0.289
+        ],
+        "max": [
+          1.082,
+          2.288,
+          0.641
+        ]
+      },
+      "placement": "spans X (opening 1.0 wide, about 1.7 overall); rotate 90 deg for a Z-facing gate"
+    },
+    "barrel": {
+      "file": "barrel__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.504,
+        0.741,
+        0.504
+      ],
+      "aabb": {
+        "min": [
+          -0.252,
+          0.0,
+          -0.252
+        ],
+        "max": [
+          0.252,
+          0.741,
+          0.252
+        ]
+      }
+    },
+    "barrel__core": {
+      "file": "barrel__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.53,
+        0.783,
+        0.531
+      ],
+      "aabb": {
+        "min": [
+          -0.265,
+          0.0,
+          -0.265
+        ],
+        "max": [
+          0.265,
+          0.783,
+          0.266
+        ]
+      }
+    },
+    "barrel__lower": {
+      "file": "barrel__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.53,
+        0.783,
+        0.531
+      ],
+      "aabb": {
+        "min": [
+          -0.265,
+          0.0,
+          -0.265
+        ],
+        "max": [
+          0.265,
+          0.783,
+          0.266
+        ]
+      }
+    },
+    "barrel__mid": {
+      "file": "barrel__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.504,
+        0.741,
+        0.504
+      ],
+      "aabb": {
+        "min": [
+          -0.252,
+          0.0,
+          -0.252
+        ],
+        "max": [
+          0.252,
+          0.741,
+          0.252
+        ]
+      }
+    },
+    "barrel__upper": {
+      "file": "barrel__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.504,
+        0.741,
+        0.504
+      ],
+      "aabb": {
+        "min": [
+          -0.252,
+          0.0,
+          -0.252
+        ],
+        "max": [
+          0.252,
+          0.741,
+          0.252
+        ]
+      }
+    },
+    "barrier_low": {
+      "file": "barrier_low__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        0.779,
+        0.451
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.2,
+          -0.18
+        ],
+        "max": [
+          0.5,
+          0.579,
+          0.271
+        ]
+      },
+      "placement": "runs along X through the tile centre; rotate 90 deg for a Z run; centre post"
+    },
+    "barrier_low__core": {
+      "file": "barrier_low__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        0.777,
+        0.36
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.2,
+          -0.18
+        ],
+        "max": [
+          0.5,
+          0.577,
+          0.18
+        ]
+      },
+      "placement": "runs along X through the tile centre; rotate 90 deg for a Z run; centre post"
+    },
+    "barrier_low__lower": {
+      "file": "barrier_low__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        0.777,
+        0.36
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.2,
+          -0.18
+        ],
+        "max": [
+          0.5,
+          0.577,
+          0.18
+        ]
+      },
+      "placement": "runs along X through the tile centre; rotate 90 deg for a Z run; centre post"
+    },
+    "barrier_low__mid": {
+      "file": "barrier_low__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        0.779,
+        0.451
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.2,
+          -0.18
+        ],
+        "max": [
+          0.5,
+          0.579,
+          0.271
+        ]
+      },
+      "placement": "runs along X through the tile centre; rotate 90 deg for a Z run; centre post"
+    },
+    "barrier_low__upper": {
+      "file": "barrier_low__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        0.779,
+        0.451
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.2,
+          -0.18
+        ],
+        "max": [
+          0.5,
+          0.579,
+          0.271
+        ]
+      },
+      "placement": "runs along X through the tile centre; rotate 90 deg for a Z run; centre post"
+    },
+    "breakable": {
+      "file": "breakable__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.049,
+        1.393,
+        1.046
+      ],
+      "aabb": {
+        "min": [
+          -0.523,
+          -0.2,
+          -0.523
+        ],
+        "max": [
+          0.526,
+          1.193,
+          0.523
+        ]
+      },
+      "objects": [
+        "breakable"
+      ],
+      "height": 1.2
+    },
+    "breakable__core": {
+      "file": "breakable__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.057,
+        1.392,
+        1.047
+      ],
+      "aabb": {
+        "min": [
+          -0.532,
+          -0.2,
+          -0.524
+        ],
+        "max": [
+          0.526,
+          1.192,
+          0.523
+        ]
+      },
+      "objects": [
+        "breakable"
+      ],
+      "height": 1.2
+    },
+    "breakable__lower": {
+      "file": "breakable__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.057,
+        1.392,
+        1.047
+      ],
+      "aabb": {
+        "min": [
+          -0.532,
+          -0.2,
+          -0.524
+        ],
+        "max": [
+          0.526,
+          1.192,
+          0.523
+        ]
+      },
+      "objects": [
+        "breakable"
+      ],
+      "height": 1.2
+    },
+    "breakable__mid": {
+      "file": "breakable__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.049,
+        1.393,
+        1.046
+      ],
+      "aabb": {
+        "min": [
+          -0.523,
+          -0.2,
+          -0.523
+        ],
+        "max": [
+          0.526,
+          1.193,
+          0.523
+        ]
+      },
+      "objects": [
+        "breakable"
+      ],
+      "height": 1.2
+    },
+    "breakable__upper": {
+      "file": "breakable__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.049,
+        1.393,
+        1.046
+      ],
+      "aabb": {
+        "min": [
+          -0.523,
+          -0.2,
+          -0.523
+        ],
+        "max": [
+          0.526,
+          1.193,
+          0.523
+        ]
+      },
+      "objects": [
+        "breakable"
+      ],
+      "height": 1.2
+    },
+    "breakable_chunks": {
+      "file": "breakable_chunks__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.162,
+        1.353,
+        1.183
+      ],
+      "aabb": {
+        "min": [
+          -0.58,
+          -0.228,
+          -0.596
+        ],
+        "max": [
+          0.581,
+          1.125,
+          0.587
+        ]
+      },
+      "objects": [
+        "Chunk_01",
+        "Chunk_02",
+        "Chunk_03",
+        "Chunk_04",
+        "Chunk_05",
+        "Chunk_06",
+        "Chunk_07",
+        "Chunk_08",
+        "Chunk_09",
+        "Chunk_10"
+      ]
+    },
+    "breakable_chunks__core": {
+      "file": "breakable_chunks__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.174,
+        1.352,
+        1.178
+      ],
+      "aabb": {
+        "min": [
+          -0.594,
+          -0.227,
+          -0.582
+        ],
+        "max": [
+          0.58,
+          1.124,
+          0.596
+        ]
+      },
+      "objects": [
+        "Chunk_01",
+        "Chunk_02",
+        "Chunk_03",
+        "Chunk_04",
+        "Chunk_05",
+        "Chunk_06",
+        "Chunk_07",
+        "Chunk_08",
+        "Chunk_09",
+        "Chunk_10"
+      ]
+    },
+    "breakable_chunks__lower": {
+      "file": "breakable_chunks__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.174,
+        1.352,
+        1.178
+      ],
+      "aabb": {
+        "min": [
+          -0.594,
+          -0.227,
+          -0.582
+        ],
+        "max": [
+          0.58,
+          1.124,
+          0.596
+        ]
+      },
+      "objects": [
+        "Chunk_01",
+        "Chunk_02",
+        "Chunk_03",
+        "Chunk_04",
+        "Chunk_05",
+        "Chunk_06",
+        "Chunk_07",
+        "Chunk_08",
+        "Chunk_09",
+        "Chunk_10"
+      ]
+    },
+    "breakable_chunks__mid": {
+      "file": "breakable_chunks__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.162,
+        1.353,
+        1.183
+      ],
+      "aabb": {
+        "min": [
+          -0.58,
+          -0.228,
+          -0.596
+        ],
+        "max": [
+          0.581,
+          1.125,
+          0.587
+        ]
+      },
+      "objects": [
+        "Chunk_01",
+        "Chunk_02",
+        "Chunk_03",
+        "Chunk_04",
+        "Chunk_05",
+        "Chunk_06",
+        "Chunk_07",
+        "Chunk_08",
+        "Chunk_09",
+        "Chunk_10"
+      ]
+    },
+    "breakable_chunks__upper": {
+      "file": "breakable_chunks__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.162,
+        1.353,
+        1.183
+      ],
+      "aabb": {
+        "min": [
+          -0.58,
+          -0.228,
+          -0.596
+        ],
+        "max": [
+          0.581,
+          1.125,
+          0.587
+        ]
+      },
+      "objects": [
+        "Chunk_01",
+        "Chunk_02",
+        "Chunk_03",
+        "Chunk_04",
+        "Chunk_05",
+        "Chunk_06",
+        "Chunk_07",
+        "Chunk_08",
+        "Chunk_09",
+        "Chunk_10"
+      ]
+    },
+    "bush": {
+      "file": "bush.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.973,
+        0.758,
+        0.894
+      ],
+      "aabb": {
+        "min": [
+          -0.479,
+          0.0,
+          -0.469
+        ],
+        "max": [
+          0.493,
+          0.758,
+          0.425
+        ]
+      }
+    },
+    "bush__core": {
+      "file": "bush.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.973,
+        0.758,
+        0.894
+      ],
+      "aabb": {
+        "min": [
+          -0.479,
+          0.0,
+          -0.469
+        ],
+        "max": [
+          0.493,
+          0.758,
+          0.425
+        ]
+      }
+    },
+    "bush__lower": {
+      "file": "bush.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.973,
+        0.758,
+        0.894
+      ],
+      "aabb": {
+        "min": [
+          -0.479,
+          0.0,
+          -0.469
+        ],
+        "max": [
+          0.493,
+          0.758,
+          0.425
+        ]
+      }
+    },
+    "bush__mid": {
+      "file": "bush.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.973,
+        0.758,
+        0.894
+      ],
+      "aabb": {
+        "min": [
+          -0.479,
+          0.0,
+          -0.469
+        ],
+        "max": [
+          0.493,
+          0.758,
+          0.425
+        ]
+      }
+    },
+    "bush__upper": {
+      "file": "bush.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.973,
+        0.758,
+        0.894
+      ],
+      "aabb": {
+        "min": [
+          -0.479,
+          0.0,
+          -0.469
+        ],
+        "max": [
+          0.493,
+          0.758,
+          0.425
+        ]
+      }
+    },
+    "cable": {
+      "file": "cable.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.812,
+        0.445,
+        0.572
+      ],
+      "aabb": {
+        "min": [
+          -0.31,
+          0.0,
+          -0.27
+        ],
+        "max": [
+          0.502,
+          0.445,
+          0.302
+        ]
+      }
+    },
+    "cable__core": {
+      "file": "cable.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.812,
+        0.445,
+        0.572
+      ],
+      "aabb": {
+        "min": [
+          -0.31,
+          0.0,
+          -0.27
+        ],
+        "max": [
+          0.502,
+          0.445,
+          0.302
+        ]
+      }
+    },
+    "cable__lower": {
+      "file": "cable.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.812,
+        0.445,
+        0.572
+      ],
+      "aabb": {
+        "min": [
+          -0.31,
+          0.0,
+          -0.27
+        ],
+        "max": [
+          0.502,
+          0.445,
+          0.302
+        ]
+      }
+    },
+    "cable__mid": {
+      "file": "cable.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.812,
+        0.445,
+        0.572
+      ],
+      "aabb": {
+        "min": [
+          -0.31,
+          0.0,
+          -0.27
+        ],
+        "max": [
+          0.502,
+          0.445,
+          0.302
+        ]
+      }
+    },
+    "cable__upper": {
+      "file": "cable.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.812,
+        0.445,
+        0.572
+      ],
+      "aabb": {
+        "min": [
+          -0.31,
+          0.0,
+          -0.27
+        ],
+        "max": [
+          0.502,
+          0.445,
+          0.302
+        ]
+      }
+    },
+    "chest": {
+      "file": "chest__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.799,
+        0.443,
+        0.489
+      ],
+      "aabb": {
+        "min": [
+          -0.4,
+          0.0,
+          -0.235
+        ],
+        "max": [
+          0.4,
+          0.443,
+          0.254
+        ]
+      },
+      "objects": [
+        "Body",
+        "Lid"
+      ],
+      "open": {
+        "object": "Lid",
+        "axis": "x",
+        "angle_deg": -110
+      },
+      "placement": "Lid origin is on the hinge (top back edge); rotate it about local X, negative opens"
+    },
+    "chest__core": {
+      "file": "chest__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.74,
+        0.431,
+        0.507
+      ],
+      "aabb": {
+        "min": [
+          -0.37,
+          0.0,
+          -0.25
+        ],
+        "max": [
+          0.37,
+          0.431,
+          0.257
+        ]
+      },
+      "objects": [
+        "Body",
+        "Lid"
+      ],
+      "open": {
+        "object": "Lid",
+        "axis": "x",
+        "angle_deg": -110
+      },
+      "placement": "Lid origin is on the hinge (top back edge); rotate it about local X, negative opens"
+    },
+    "chest__lower": {
+      "file": "chest__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.74,
+        0.431,
+        0.507
+      ],
+      "aabb": {
+        "min": [
+          -0.37,
+          0.0,
+          -0.25
+        ],
+        "max": [
+          0.37,
+          0.431,
+          0.257
+        ]
+      },
+      "objects": [
+        "Body",
+        "Lid"
+      ],
+      "open": {
+        "object": "Lid",
+        "axis": "x",
+        "angle_deg": -110
+      },
+      "placement": "Lid origin is on the hinge (top back edge); rotate it about local X, negative opens"
+    },
+    "chest__mid": {
+      "file": "chest__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.799,
+        0.443,
+        0.489
+      ],
+      "aabb": {
+        "min": [
+          -0.4,
+          0.0,
+          -0.235
+        ],
+        "max": [
+          0.4,
+          0.443,
+          0.254
+        ]
+      },
+      "objects": [
+        "Body",
+        "Lid"
+      ],
+      "open": {
+        "object": "Lid",
+        "axis": "x",
+        "angle_deg": -110
+      },
+      "placement": "Lid origin is on the hinge (top back edge); rotate it about local X, negative opens"
+    },
+    "chest__upper": {
+      "file": "chest__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.799,
+        0.443,
+        0.489
+      ],
+      "aabb": {
+        "min": [
+          -0.4,
+          0.0,
+          -0.235
+        ],
+        "max": [
+          0.4,
+          0.443,
+          0.254
+        ]
+      },
+      "objects": [
+        "Body",
+        "Lid"
+      ],
+      "open": {
+        "object": "Lid",
+        "axis": "x",
+        "angle_deg": -110
+      },
+      "placement": "Lid origin is on the hinge (top back edge); rotate it about local X, negative opens"
+    },
+    "cliff_skirt": {
+      "file": "cliff_skirt__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.071,
+        1.394,
+        1.126
+      ],
+      "aabb": {
+        "min": [
+          -0.545,
+          -1.594,
+          -0.523
+        ],
+        "max": [
+          0.526,
+          -0.2,
+          0.603
+        ]
+      },
+      "placement": "under an exposed tile, from y = -0.2 down"
+    },
+    "cliff_skirt__core": {
+      "file": "cliff_skirt__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.044,
+        1.35,
+        1.044
+      ],
+      "aabb": {
+        "min": [
+          -0.522,
+          -1.55,
+          -0.522
+        ],
+        "max": [
+          0.522,
+          -0.2,
+          0.522
+        ]
+      },
+      "placement": "under an exposed tile, from y = -0.2 down"
+    },
+    "cliff_skirt__lower": {
+      "file": "cliff_skirt__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.044,
+        1.35,
+        1.044
+      ],
+      "aabb": {
+        "min": [
+          -0.522,
+          -1.55,
+          -0.522
+        ],
+        "max": [
+          0.522,
+          -0.2,
+          0.522
+        ]
+      },
+      "placement": "under an exposed tile, from y = -0.2 down"
+    },
+    "cliff_skirt__mid": {
+      "file": "cliff_skirt__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.071,
+        1.394,
+        1.126
+      ],
+      "aabb": {
+        "min": [
+          -0.545,
+          -1.594,
+          -0.523
+        ],
+        "max": [
+          0.526,
+          -0.2,
+          0.603
+        ]
+      },
+      "placement": "under an exposed tile, from y = -0.2 down"
+    },
+    "cliff_skirt__upper": {
+      "file": "cliff_skirt__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.071,
+        1.394,
+        1.126
+      ],
+      "aabb": {
+        "min": [
+          -0.545,
+          -1.594,
+          -0.523
+        ],
+        "max": [
+          0.526,
+          -0.2,
+          0.603
+        ]
+      },
+      "placement": "under an exposed tile, from y = -0.2 down"
+    },
+    "console": {
+      "file": "console__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.844,
+        1.382,
+        0.78
+      ],
+      "aabb": {
+        "min": [
+          -0.41,
+          0.0,
+          -0.414
+        ],
+        "max": [
+          0.435,
+          1.382,
+          0.366
+        ]
+      },
+      "objects": [
+        "Body",
+        "Screen"
+      ],
+      "placement": "Screen faces +Z with 0-1 UVs (u left->right, v top->bottom) for a drawn display"
+    },
+    "console__core": {
+      "file": "console__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.68,
+        1.087,
+        0.798
+      ],
+      "aabb": {
+        "min": [
+          -0.34,
+          0.0,
+          -0.435
+        ],
+        "max": [
+          0.34,
+          1.087,
+          0.363
+        ]
+      },
+      "objects": [
+        "Body",
+        "Screen"
+      ],
+      "placement": "Screen faces +Z with 0-1 UVs (u left->right, v top->bottom) for a drawn display"
+    },
+    "console__lower": {
+      "file": "console__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.68,
+        1.087,
+        0.798
+      ],
+      "aabb": {
+        "min": [
+          -0.34,
+          0.0,
+          -0.435
+        ],
+        "max": [
+          0.34,
+          1.087,
+          0.363
+        ]
+      },
+      "objects": [
+        "Body",
+        "Screen"
+      ],
+      "placement": "Screen faces +Z with 0-1 UVs (u left->right, v top->bottom) for a drawn display"
+    },
+    "console__mid": {
+      "file": "console__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.844,
+        1.382,
+        0.78
+      ],
+      "aabb": {
+        "min": [
+          -0.41,
+          0.0,
+          -0.414
+        ],
+        "max": [
+          0.435,
+          1.382,
+          0.366
+        ]
+      },
+      "objects": [
+        "Body",
+        "Screen"
+      ],
+      "placement": "Screen faces +Z with 0-1 UVs (u left->right, v top->bottom) for a drawn display"
+    },
+    "console__upper": {
+      "file": "console__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.844,
+        1.382,
+        0.78
+      ],
+      "aabb": {
+        "min": [
+          -0.41,
+          0.0,
+          -0.414
+        ],
+        "max": [
+          0.435,
+          1.382,
+          0.366
+        ]
+      },
+      "objects": [
+        "Body",
+        "Screen"
+      ],
+      "placement": "Screen faces +Z with 0-1 UVs (u left->right, v top->bottom) for a drawn display"
+    },
+    "core": {
+      "file": "core__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.06,
+        1.37,
+        1.068
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.02,
+          -0.534
+        ],
+        "max": [
+          0.6,
+          1.35,
+          0.534
+        ]
+      },
+      "objects": [
+        "Shell",
+        "Heart"
+      ],
+      "heart_y": 0.95
+    },
+    "core__core": {
+      "file": "core__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.06,
+        1.37,
+        1.068
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.02,
+          -0.534
+        ],
+        "max": [
+          0.6,
+          1.35,
+          0.534
+        ]
+      },
+      "objects": [
+        "Shell",
+        "Heart"
+      ],
+      "heart_y": 0.95
+    },
+    "core__lower": {
+      "file": "core__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.06,
+        1.37,
+        1.068
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.02,
+          -0.534
+        ],
+        "max": [
+          0.6,
+          1.35,
+          0.534
+        ]
+      },
+      "objects": [
+        "Shell",
+        "Heart"
+      ],
+      "heart_y": 0.95
+    },
+    "core__mid": {
+      "file": "core__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.06,
+        1.37,
+        1.068
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.02,
+          -0.534
+        ],
+        "max": [
+          0.6,
+          1.35,
+          0.534
+        ]
+      },
+      "objects": [
+        "Shell",
+        "Heart"
+      ],
+      "heart_y": 0.95
+    },
+    "core__upper": {
+      "file": "core__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.06,
+        1.37,
+        1.068
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.02,
+          -0.534
+        ],
+        "max": [
+          0.6,
+          1.35,
+          0.534
+        ]
+      },
+      "objects": [
+        "Shell",
+        "Heart"
+      ],
+      "heart_y": 0.95
+    },
+    "crate": {
+      "file": "crate__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.787,
+        0.837,
+        0.614
+      ],
+      "aabb": {
+        "min": [
+          -0.394,
+          0.0,
+          -0.307
+        ],
+        "max": [
+          0.394,
+          0.837,
+          0.307
+        ]
+      }
+    },
+    "crate__core": {
+      "file": "crate__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.907,
+        0.498,
+        0.572
+      ],
+      "aabb": {
+        "min": [
+          -0.454,
+          0.0,
+          -0.275
+        ],
+        "max": [
+          0.454,
+          0.498,
+          0.297
+        ]
+      }
+    },
+    "crate__lower": {
+      "file": "crate__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.907,
+        0.498,
+        0.572
+      ],
+      "aabb": {
+        "min": [
+          -0.454,
+          0.0,
+          -0.275
+        ],
+        "max": [
+          0.454,
+          0.498,
+          0.297
+        ]
+      }
+    },
+    "crate__mid": {
+      "file": "crate__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.787,
+        0.837,
+        0.614
+      ],
+      "aabb": {
+        "min": [
+          -0.394,
+          0.0,
+          -0.307
+        ],
+        "max": [
+          0.394,
+          0.837,
+          0.307
+        ]
+      }
+    },
+    "crate__upper": {
+      "file": "crate__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.787,
+        0.837,
+        0.614
+      ],
+      "aabb": {
+        "min": [
+          -0.394,
+          0.0,
+          -0.307
+        ],
+        "max": [
+          0.394,
+          0.837,
+          0.307
+        ]
+      }
+    },
+    "door": {
+      "file": "door__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.05,
+        2.139,
+        0.71
+      ],
+      "aabb": {
+        "min": [
+          -0.52,
+          -0.19,
+          -0.342
+        ],
+        "max": [
+          0.53,
+          1.949,
+          0.368
+        ]
+      },
+      "objects": [
+        "Frame",
+        "Panel"
+      ],
+      "open": {
+        "object": "Panel",
+        "translate_y": -1.58
+      },
+      "actions": [
+        "open"
+      ],
+      "placement": "spans X across the tile (rotate 90 deg when the wall line runs along Z)"
+    },
+    "door__core": {
+      "file": "door__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.04,
+        2.0,
+        0.684
+      ],
+      "aabb": {
+        "min": [
+          -0.52,
+          -0.2,
+          -0.342
+        ],
+        "max": [
+          0.52,
+          1.8,
+          0.342
+        ]
+      },
+      "objects": [
+        "Frame",
+        "Panel"
+      ],
+      "open": {
+        "object": "Panel",
+        "translate_y": -1.58
+      },
+      "actions": [
+        "open"
+      ],
+      "placement": "spans X across the tile (rotate 90 deg when the wall line runs along Z)"
+    },
+    "door__lower": {
+      "file": "door__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.04,
+        2.0,
+        0.684
+      ],
+      "aabb": {
+        "min": [
+          -0.52,
+          -0.2,
+          -0.342
+        ],
+        "max": [
+          0.52,
+          1.8,
+          0.342
+        ]
+      },
+      "objects": [
+        "Frame",
+        "Panel"
+      ],
+      "open": {
+        "object": "Panel",
+        "translate_y": -1.58
+      },
+      "actions": [
+        "open"
+      ],
+      "placement": "spans X across the tile (rotate 90 deg when the wall line runs along Z)"
+    },
+    "door__mid": {
+      "file": "door__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.05,
+        2.139,
+        0.71
+      ],
+      "aabb": {
+        "min": [
+          -0.52,
+          -0.19,
+          -0.342
+        ],
+        "max": [
+          0.53,
+          1.949,
+          0.368
+        ]
+      },
+      "objects": [
+        "Frame",
+        "Panel"
+      ],
+      "open": {
+        "object": "Panel",
+        "translate_y": -1.58
+      },
+      "actions": [
+        "open"
+      ],
+      "placement": "spans X across the tile (rotate 90 deg when the wall line runs along Z)"
+    },
+    "door__upper": {
+      "file": "door__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.05,
+        2.139,
+        0.71
+      ],
+      "aabb": {
+        "min": [
+          -0.52,
+          -0.19,
+          -0.342
+        ],
+        "max": [
+          0.53,
+          1.949,
+          0.368
+        ]
+      },
+      "objects": [
+        "Frame",
+        "Panel"
+      ],
+      "open": {
+        "object": "Panel",
+        "translate_y": -1.58
+      },
+      "actions": [
+        "open"
+      ],
+      "placement": "spans X across the tile (rotate 90 deg when the wall line runs along Z)"
+    },
+    "edge_trim": {
+      "file": "edge_trim__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        0.356,
+        0.119
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.342,
+          0.425
+        ],
+        "max": [
+          0.5,
+          0.014,
+          0.544
+        ]
+      },
+      "placement": "front edge (+Z) of the tile; rotate per exposed side"
+    },
+    "edge_trim__core": {
+      "file": "edge_trim__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        0.402,
+        0.119
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.39,
+          0.425
+        ],
+        "max": [
+          0.5,
+          0.012,
+          0.544
+        ]
+      },
+      "placement": "front edge (+Z) of the tile; rotate per exposed side"
+    },
+    "edge_trim__lower": {
+      "file": "edge_trim__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        0.402,
+        0.119
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.39,
+          0.425
+        ],
+        "max": [
+          0.5,
+          0.012,
+          0.544
+        ]
+      },
+      "placement": "front edge (+Z) of the tile; rotate per exposed side"
+    },
+    "edge_trim__mid": {
+      "file": "edge_trim__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        0.356,
+        0.119
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.342,
+          0.425
+        ],
+        "max": [
+          0.5,
+          0.014,
+          0.544
+        ]
+      },
+      "placement": "front edge (+Z) of the tile; rotate per exposed side"
+    },
+    "edge_trim__upper": {
+      "file": "edge_trim__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        0.356,
+        0.119
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.342,
+          0.425
+        ],
+        "max": [
+          0.5,
+          0.014,
+          0.544
+        ]
+      },
+      "placement": "front edge (+Z) of the tile; rotate per exposed side"
+    },
+    "exit_pad": {
+      "file": "exit_pad__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.92,
+        0.44,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.02,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.42,
+          0.46
+        ]
+      },
+      "objects": [
+        "exit_pad"
+      ]
+    },
+    "exit_pad__core": {
+      "file": "exit_pad__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.92,
+        0.44,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.02,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.42,
+          0.46
+        ]
+      },
+      "objects": [
+        "exit_pad"
+      ]
+    },
+    "exit_pad__lower": {
+      "file": "exit_pad__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.92,
+        0.44,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.02,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.42,
+          0.46
+        ]
+      },
+      "objects": [
+        "exit_pad"
+      ]
+    },
+    "exit_pad__mid": {
+      "file": "exit_pad__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.92,
+        0.44,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.02,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.42,
+          0.46
+        ]
+      },
+      "objects": [
+        "exit_pad"
+      ]
+    },
+    "exit_pad__upper": {
+      "file": "exit_pad__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.92,
+        0.44,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.02,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.42,
+          0.46
+        ]
+      },
+      "objects": [
+        "exit_pad"
+      ]
+    },
+    "floor_cracked": {
+      "file": "floor_cracked__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.977,
+        0.28,
+        0.977
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.49
+        ],
+        "max": [
+          0.49,
+          0.08,
+          0.487
+        ]
+      }
+    },
+    "floor_cracked__core": {
+      "file": "floor_cracked__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.984,
+        0.252,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.209,
+          -0.487
+        ],
+        "max": [
+          0.497,
+          0.042,
+          0.487
+        ]
+      }
+    },
+    "floor_cracked__lower": {
+      "file": "floor_cracked__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.984,
+        0.252,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.209,
+          -0.487
+        ],
+        "max": [
+          0.497,
+          0.042,
+          0.487
+        ]
+      }
+    },
+    "floor_cracked__mid": {
+      "file": "floor_cracked__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.977,
+        0.28,
+        0.977
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.49
+        ],
+        "max": [
+          0.49,
+          0.08,
+          0.487
+        ]
+      }
+    },
+    "floor_cracked__upper": {
+      "file": "floor_cracked__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.977,
+        0.28,
+        0.977
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.49
+        ],
+        "max": [
+          0.49,
+          0.08,
+          0.487
+        ]
+      }
+    },
+    "floor_grate": {
+      "file": "floor_grate__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.006,
+        0.27,
+        0.975
+      ],
+      "aabb": {
+        "min": [
+          -0.519,
+          -0.2,
+          -0.488
+        ],
+        "max": [
+          0.487,
+          0.07,
+          0.487
+        ]
+      }
+    },
+    "floor_grate__core": {
+      "file": "floor_grate__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.974,
+        0.21,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.01,
+          0.487
+        ]
+      }
+    },
+    "floor_grate__lower": {
+      "file": "floor_grate__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.974,
+        0.21,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.01,
+          0.487
+        ]
+      }
+    },
+    "floor_grate__mid": {
+      "file": "floor_grate__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.006,
+        0.27,
+        0.975
+      ],
+      "aabb": {
+        "min": [
+          -0.519,
+          -0.2,
+          -0.488
+        ],
+        "max": [
+          0.487,
+          0.07,
+          0.487
+        ]
+      }
+    },
+    "floor_grate__upper": {
+      "file": "floor_grate__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.006,
+        0.27,
+        0.975
+      ],
+      "aabb": {
+        "min": [
+          -0.519,
+          -0.2,
+          -0.488
+        ],
+        "max": [
+          0.487,
+          0.07,
+          0.487
+        ]
+      }
+    },
+    "floor_overgrown": {
+      "file": "floor_overgrown__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.974,
+        0.337,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.137,
+          0.487
+        ]
+      }
+    },
+    "floor_overgrown__core": {
+      "file": "floor_overgrown__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.983,
+        0.311,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.496,
+          0.111,
+          0.487
+        ]
+      }
+    },
+    "floor_overgrown__lower": {
+      "file": "floor_overgrown__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.983,
+        0.311,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.496,
+          0.111,
+          0.487
+        ]
+      }
+    },
+    "floor_overgrown__mid": {
+      "file": "floor_overgrown__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.974,
+        0.337,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.137,
+          0.487
+        ]
+      }
+    },
+    "floor_overgrown__upper": {
+      "file": "floor_overgrown__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.974,
+        0.337,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.137,
+          0.487
+        ]
+      }
+    },
+    "floor_rune": {
+      "file": "floor_rune__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.974,
+        0.2,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.0,
+          0.487
+        ]
+      }
+    },
+    "floor_rune__core": {
+      "file": "floor_rune__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.974,
+        0.21,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.01,
+          0.487
+        ]
+      }
+    },
+    "floor_rune__lower": {
+      "file": "floor_rune__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.974,
+        0.21,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.01,
+          0.487
+        ]
+      }
+    },
+    "floor_rune__mid": {
+      "file": "floor_rune__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.974,
+        0.2,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.0,
+          0.487
+        ]
+      }
+    },
+    "floor_rune__upper": {
+      "file": "floor_rune__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.974,
+        0.2,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.0,
+          0.487
+        ]
+      }
+    },
+    "floor_solid": {
+      "file": "floor_solid__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.974,
+        0.219,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.019,
+          0.487
+        ]
+      }
+    },
+    "floor_solid__core": {
+      "file": "floor_solid__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.974,
+        0.21,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.01,
+          0.487
+        ]
+      }
+    },
+    "floor_solid__lower": {
+      "file": "floor_solid__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.974,
+        0.21,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.01,
+          0.487
+        ]
+      }
+    },
+    "floor_solid__mid": {
+      "file": "floor_solid__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.974,
+        0.219,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.019,
+          0.487
+        ]
+      }
+    },
+    "floor_solid__upper": {
+      "file": "floor_solid__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.974,
+        0.219,
+        0.974
+      ],
+      "aabb": {
+        "min": [
+          -0.487,
+          -0.2,
+          -0.487
+        ],
+        "max": [
+          0.487,
+          0.019,
+          0.487
+        ]
+      }
+    },
+    "generator": {
+      "file": "generator__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.003,
+        0.983,
+        0.602
+      ],
+      "aabb": {
+        "min": [
+          -0.533,
+          0.0,
+          -0.29
+        ],
+        "max": [
+          0.47,
+          0.983,
+          0.312
+        ]
+      },
+      "objects": [
+        "Body",
+        "Fan"
+      ],
+      "spin": {
+        "object": "Fan",
+        "axis": "x"
+      }
+    },
+    "generator__core": {
+      "file": "generator__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.96,
+        0.701,
+        0.741
+      ],
+      "aabb": {
+        "min": [
+          -0.48,
+          0.0,
+          -0.461
+        ],
+        "max": [
+          0.48,
+          0.701,
+          0.28
+        ]
+      },
+      "spin": {
+        "object": "Fan",
+        "axis": "x"
+      }
+    },
+    "generator__lower": {
+      "file": "generator__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.96,
+        0.701,
+        0.741
+      ],
+      "aabb": {
+        "min": [
+          -0.48,
+          0.0,
+          -0.461
+        ],
+        "max": [
+          0.48,
+          0.701,
+          0.28
+        ]
+      },
+      "spin": {
+        "object": "Fan",
+        "axis": "x"
+      }
+    },
+    "generator__mid": {
+      "file": "generator__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.003,
+        0.983,
+        0.602
+      ],
+      "aabb": {
+        "min": [
+          -0.533,
+          0.0,
+          -0.29
+        ],
+        "max": [
+          0.47,
+          0.983,
+          0.312
+        ]
+      },
+      "objects": [
+        "Body",
+        "Fan"
+      ],
+      "spin": {
+        "object": "Fan",
+        "axis": "x"
+      }
+    },
+    "generator__upper": {
+      "file": "generator__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.003,
+        0.983,
+        0.602
+      ],
+      "aabb": {
+        "min": [
+          -0.533,
+          0.0,
+          -0.29
+        ],
+        "max": [
+          0.47,
+          0.983,
+          0.312
+        ]
+      },
+      "objects": [
+        "Body",
+        "Fan"
+      ],
+      "spin": {
+        "object": "Fan",
+        "axis": "x"
+      }
+    },
+    "lamp": {
+      "file": "lamp__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.588,
+        1.588,
+        0.528
+      ],
+      "aabb": {
+        "min": [
+          -0.14,
+          0.0,
+          -0.14
+        ],
+        "max": [
+          0.448,
+          1.588,
+          0.388
+        ]
+      }
+    },
+    "lamp__core": {
+      "file": "lamp__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.46,
+        1.624,
+        0.478
+      ],
+      "aabb": {
+        "min": [
+          -0.23,
+          0.0,
+          -0.213
+        ],
+        "max": [
+          0.23,
+          1.624,
+          0.265
+        ]
+      }
+    },
+    "lamp__lower": {
+      "file": "lamp__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.46,
+        1.624,
+        0.478
+      ],
+      "aabb": {
+        "min": [
+          -0.23,
+          0.0,
+          -0.213
+        ],
+        "max": [
+          0.23,
+          1.624,
+          0.265
+        ]
+      }
+    },
+    "lamp__mid": {
+      "file": "lamp__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.588,
+        1.588,
+        0.528
+      ],
+      "aabb": {
+        "min": [
+          -0.14,
+          0.0,
+          -0.14
+        ],
+        "max": [
+          0.448,
+          1.588,
+          0.388
+        ]
+      }
+    },
+    "lamp__upper": {
+      "file": "lamp__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.588,
+        1.588,
+        0.528
+      ],
+      "aabb": {
+        "min": [
+          -0.14,
+          0.0,
+          -0.14
+        ],
+        "max": [
+          0.448,
+          1.588,
+          0.388
+        ]
+      }
+    },
+    "laser_emitter": {
+      "file": "laser_emitter__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.48,
+        0.74,
+        0.56
+      ],
+      "aabb": {
+        "min": [
+          -0.24,
+          -0.02,
+          -0.24
+        ],
+        "max": [
+          0.24,
+          0.72,
+          0.32
+        ]
+      },
+      "objects": [
+        "Body",
+        "Lens"
+      ],
+      "beam_y": 0.45,
+      "facing": "+Z"
+    },
+    "laser_emitter__core": {
+      "file": "laser_emitter__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.48,
+        0.74,
+        0.56
+      ],
+      "aabb": {
+        "min": [
+          -0.24,
+          -0.02,
+          -0.24
+        ],
+        "max": [
+          0.24,
+          0.72,
+          0.32
+        ]
+      },
+      "objects": [
+        "Body",
+        "Lens"
+      ],
+      "beam_y": 0.45,
+      "facing": "+Z"
+    },
+    "laser_emitter__lower": {
+      "file": "laser_emitter__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.48,
+        0.74,
+        0.56
+      ],
+      "aabb": {
+        "min": [
+          -0.24,
+          -0.02,
+          -0.24
+        ],
+        "max": [
+          0.24,
+          0.72,
+          0.32
+        ]
+      },
+      "objects": [
+        "Body",
+        "Lens"
+      ],
+      "beam_y": 0.45,
+      "facing": "+Z"
+    },
+    "laser_emitter__mid": {
+      "file": "laser_emitter__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.48,
+        0.74,
+        0.56
+      ],
+      "aabb": {
+        "min": [
+          -0.24,
+          -0.02,
+          -0.24
+        ],
+        "max": [
+          0.24,
+          0.72,
+          0.32
+        ]
+      },
+      "objects": [
+        "Body",
+        "Lens"
+      ],
+      "beam_y": 0.45,
+      "facing": "+Z"
+    },
+    "laser_emitter__upper": {
+      "file": "laser_emitter__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.48,
+        0.74,
+        0.56
+      ],
+      "aabb": {
+        "min": [
+          -0.24,
+          -0.02,
+          -0.24
+        ],
+        "max": [
+          0.24,
+          0.72,
+          0.32
+        ]
+      },
+      "objects": [
+        "Body",
+        "Lens"
+      ],
+      "beam_y": 0.45,
+      "facing": "+Z"
+    },
+    "neon": {
+      "file": "neon.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.494,
+        1.19,
+        0.38
+      ],
+      "aabb": {
+        "min": [
+          -0.19,
+          0.0,
+          -0.19
+        ],
+        "max": [
+          0.304,
+          1.19,
+          0.19
+        ]
+      }
+    },
+    "neon__core": {
+      "file": "neon.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.494,
+        1.19,
+        0.38
+      ],
+      "aabb": {
+        "min": [
+          -0.19,
+          0.0,
+          -0.19
+        ],
+        "max": [
+          0.304,
+          1.19,
+          0.19
+        ]
+      }
+    },
+    "neon__lower": {
+      "file": "neon.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.494,
+        1.19,
+        0.38
+      ],
+      "aabb": {
+        "min": [
+          -0.19,
+          0.0,
+          -0.19
+        ],
+        "max": [
+          0.304,
+          1.19,
+          0.19
+        ]
+      }
+    },
+    "neon__mid": {
+      "file": "neon.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.494,
+        1.19,
+        0.38
+      ],
+      "aabb": {
+        "min": [
+          -0.19,
+          0.0,
+          -0.19
+        ],
+        "max": [
+          0.304,
+          1.19,
+          0.19
+        ]
+      }
+    },
+    "neon__upper": {
+      "file": "neon.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.494,
+        1.19,
+        0.38
+      ],
+      "aabb": {
+        "min": [
+          -0.19,
+          0.0,
+          -0.19
+        ],
+        "max": [
+          0.304,
+          1.19,
+          0.19
+        ]
+      }
+    },
+    "pipe": {
+      "file": "pipe__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.054,
+        0.773,
+        0.294
+      ],
+      "aabb": {
+        "min": [
+          -0.527,
+          0.0,
+          -0.142
+        ],
+        "max": [
+          0.527,
+          0.773,
+          0.152
+        ]
+      },
+      "placement": "runs along X through the tile centre, rising out of the floor at x = +-0.4"
+    },
+    "pipe__core": {
+      "file": "pipe__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.02,
+        0.765,
+        0.3
+      ],
+      "aabb": {
+        "min": [
+          -0.51,
+          0.0,
+          -0.15
+        ],
+        "max": [
+          0.51,
+          0.765,
+          0.15
+        ]
+      },
+      "placement": "runs along X through the tile centre, rising out of the floor at x = +-0.4"
+    },
+    "pipe__lower": {
+      "file": "pipe__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.02,
+        0.765,
+        0.3
+      ],
+      "aabb": {
+        "min": [
+          -0.51,
+          0.0,
+          -0.15
+        ],
+        "max": [
+          0.51,
+          0.765,
+          0.15
+        ]
+      },
+      "placement": "runs along X through the tile centre, rising out of the floor at x = +-0.4"
+    },
+    "pipe__mid": {
+      "file": "pipe__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.054,
+        0.773,
+        0.294
+      ],
+      "aabb": {
+        "min": [
+          -0.527,
+          0.0,
+          -0.142
+        ],
+        "max": [
+          0.527,
+          0.773,
+          0.152
+        ]
+      },
+      "placement": "runs along X through the tile centre, rising out of the floor at x = +-0.4"
+    },
+    "pipe__upper": {
+      "file": "pipe__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.054,
+        0.773,
+        0.294
+      ],
+      "aabb": {
+        "min": [
+          -0.527,
+          0.0,
+          -0.142
+        ],
+        "max": [
+          0.527,
+          0.773,
+          0.152
+        ]
+      },
+      "placement": "runs along X through the tile centre, rising out of the floor at x = +-0.4"
+    },
+    "plate": {
+      "file": "plate__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.88,
+        0.142,
+        0.88
+      ],
+      "aabb": {
+        "min": [
+          -0.44,
+          -0.06,
+          -0.44
+        ],
+        "max": [
+          0.44,
+          0.082,
+          0.44
+        ]
+      },
+      "objects": [
+        "Base",
+        "Pad"
+      ],
+      "pressed": {
+        "object": "Pad",
+        "translate_y": -0.045
+      },
+      "actions": [
+        "press"
+      ]
+    },
+    "plate__core": {
+      "file": "plate__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.88,
+        0.142,
+        0.88
+      ],
+      "aabb": {
+        "min": [
+          -0.44,
+          -0.06,
+          -0.44
+        ],
+        "max": [
+          0.44,
+          0.082,
+          0.44
+        ]
+      },
+      "objects": [
+        "Base",
+        "Pad"
+      ],
+      "pressed": {
+        "object": "Pad",
+        "translate_y": -0.045
+      },
+      "actions": [
+        "press"
+      ]
+    },
+    "plate__lower": {
+      "file": "plate__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.88,
+        0.142,
+        0.88
+      ],
+      "aabb": {
+        "min": [
+          -0.44,
+          -0.06,
+          -0.44
+        ],
+        "max": [
+          0.44,
+          0.082,
+          0.44
+        ]
+      },
+      "objects": [
+        "Base",
+        "Pad"
+      ],
+      "pressed": {
+        "object": "Pad",
+        "translate_y": -0.045
+      },
+      "actions": [
+        "press"
+      ]
+    },
+    "plate__mid": {
+      "file": "plate__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.88,
+        0.142,
+        0.88
+      ],
+      "aabb": {
+        "min": [
+          -0.44,
+          -0.06,
+          -0.44
+        ],
+        "max": [
+          0.44,
+          0.082,
+          0.44
+        ]
+      },
+      "objects": [
+        "Base",
+        "Pad"
+      ],
+      "pressed": {
+        "object": "Pad",
+        "translate_y": -0.045
+      },
+      "actions": [
+        "press"
+      ]
+    },
+    "plate__upper": {
+      "file": "plate__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.88,
+        0.142,
+        0.88
+      ],
+      "aabb": {
+        "min": [
+          -0.44,
+          -0.06,
+          -0.44
+        ],
+        "max": [
+          0.44,
+          0.082,
+          0.44
+        ]
+      },
+      "objects": [
+        "Base",
+        "Pad"
+      ],
+      "pressed": {
+        "object": "Pad",
+        "translate_y": -0.045
+      },
+      "actions": [
+        "press"
+      ]
+    },
+    "rubble": {
+      "file": "rubble__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.917,
+        0.463,
+        0.746
+      ],
+      "aabb": {
+        "min": [
+          -0.455,
+          0.0,
+          -0.329
+        ],
+        "max": [
+          0.462,
+          0.463,
+          0.417
+        ]
+      }
+    },
+    "rubble__core": {
+      "file": "rubble__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.735,
+        0.349,
+        0.854
+      ],
+      "aabb": {
+        "min": [
+          -0.398,
+          0.0,
+          -0.421
+        ],
+        "max": [
+          0.337,
+          0.349,
+          0.433
+        ]
+      }
+    },
+    "rubble__lower": {
+      "file": "rubble__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.735,
+        0.349,
+        0.854
+      ],
+      "aabb": {
+        "min": [
+          -0.398,
+          0.0,
+          -0.421
+        ],
+        "max": [
+          0.337,
+          0.349,
+          0.433
+        ]
+      }
+    },
+    "rubble__mid": {
+      "file": "rubble__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.917,
+        0.463,
+        0.746
+      ],
+      "aabb": {
+        "min": [
+          -0.455,
+          0.0,
+          -0.329
+        ],
+        "max": [
+          0.462,
+          0.463,
+          0.417
+        ]
+      }
+    },
+    "rubble__upper": {
+      "file": "rubble__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.917,
+        0.463,
+        0.746
+      ],
+      "aabb": {
+        "min": [
+          -0.455,
+          0.0,
+          -0.329
+        ],
+        "max": [
+          0.462,
+          0.463,
+          0.417
+        ]
+      }
+    },
+    "rune_panel": {
+      "file": "rune_panel.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.84,
+        1.68,
+        0.34
+      ],
+      "aabb": {
+        "min": [
+          -0.42,
+          0.0,
+          -0.17
+        ],
+        "max": [
+          0.42,
+          1.68,
+          0.17
+        ]
+      }
+    },
+    "rune_panel__core": {
+      "file": "rune_panel.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.84,
+        1.68,
+        0.34
+      ],
+      "aabb": {
+        "min": [
+          -0.42,
+          0.0,
+          -0.17
+        ],
+        "max": [
+          0.42,
+          1.68,
+          0.17
+        ]
+      }
+    },
+    "rune_panel__lower": {
+      "file": "rune_panel.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.84,
+        1.68,
+        0.34
+      ],
+      "aabb": {
+        "min": [
+          -0.42,
+          0.0,
+          -0.17
+        ],
+        "max": [
+          0.42,
+          1.68,
+          0.17
+        ]
+      }
+    },
+    "rune_panel__mid": {
+      "file": "rune_panel.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.84,
+        1.68,
+        0.34
+      ],
+      "aabb": {
+        "min": [
+          -0.42,
+          0.0,
+          -0.17
+        ],
+        "max": [
+          0.42,
+          1.68,
+          0.17
+        ]
+      }
+    },
+    "rune_panel__upper": {
+      "file": "rune_panel.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.84,
+        1.68,
+        0.34
+      ],
+      "aabb": {
+        "min": [
+          -0.42,
+          0.0,
+          -0.17
+        ],
+        "max": [
+          0.42,
+          1.68,
+          0.17
+        ]
+      }
+    },
+    "switch": {
+      "file": "switch__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.6,
+        0.827,
+        0.52
+      ],
+      "aabb": {
+        "min": [
+          -0.3,
+          -0.02,
+          -0.26
+        ],
+        "max": [
+          0.3,
+          0.807,
+          0.26
+        ]
+      },
+      "objects": [
+        "Base",
+        "Lever"
+      ],
+      "lever_rotation_z": {
+        "off": 0.65,
+        "on": -0.65
+      },
+      "actions": [
+        "toggle"
+      ]
+    },
+    "switch__core": {
+      "file": "switch__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.6,
+        0.827,
+        0.53
+      ],
+      "aabb": {
+        "min": [
+          -0.3,
+          -0.02,
+          -0.26
+        ],
+        "max": [
+          0.3,
+          0.807,
+          0.27
+        ]
+      },
+      "objects": [
+        "Base",
+        "Lever"
+      ],
+      "lever_rotation_z": {
+        "off": 0.65,
+        "on": -0.65
+      },
+      "actions": [
+        "toggle"
+      ]
+    },
+    "switch__lower": {
+      "file": "switch__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.6,
+        0.827,
+        0.53
+      ],
+      "aabb": {
+        "min": [
+          -0.3,
+          -0.02,
+          -0.26
+        ],
+        "max": [
+          0.3,
+          0.807,
+          0.27
+        ]
+      },
+      "objects": [
+        "Base",
+        "Lever"
+      ],
+      "lever_rotation_z": {
+        "off": 0.65,
+        "on": -0.65
+      },
+      "actions": [
+        "toggle"
+      ]
+    },
+    "switch__mid": {
+      "file": "switch__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.6,
+        0.827,
+        0.52
+      ],
+      "aabb": {
+        "min": [
+          -0.3,
+          -0.02,
+          -0.26
+        ],
+        "max": [
+          0.3,
+          0.807,
+          0.26
+        ]
+      },
+      "objects": [
+        "Base",
+        "Lever"
+      ],
+      "lever_rotation_z": {
+        "off": 0.65,
+        "on": -0.65
+      },
+      "actions": [
+        "toggle"
+      ]
+    },
+    "switch__upper": {
+      "file": "switch__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.6,
+        0.827,
+        0.52
+      ],
+      "aabb": {
+        "min": [
+          -0.3,
+          -0.02,
+          -0.26
+        ],
+        "max": [
+          0.3,
+          0.807,
+          0.26
+        ]
+      },
+      "objects": [
+        "Base",
+        "Lever"
+      ],
+      "lever_rotation_z": {
+        "off": 0.65,
+        "on": -0.65
+      },
+      "actions": [
+        "toggle"
+      ]
+    },
+    "time_machine": {
+      "file": "time_machine.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        3.09,
+        3.21,
+        2.955
+      ],
+      "aabb": {
+        "min": [
+          -1.545,
+          0.0,
+          -1.47
+        ],
+        "max": [
+          1.545,
+          3.21,
+          1.485
+        ]
+      },
+      "objects": [
+        "Body",
+        "Ring_Outer",
+        "Ring_Mid",
+        "Ring_Inner",
+        "Heart",
+        "Reel_L",
+        "Reel_R"
+      ],
+      "placement": "set piece: about 3 x 3 tiles centred on its tile, 3 tall",
+      "spin": [
+        {
+          "object": "Ring_Outer",
+          "axis": "z"
+        },
+        {
+          "object": "Ring_Mid",
+          "axis": "y"
+        },
+        {
+          "object": "Ring_Inner",
+          "axis": "x"
+        },
+        {
+          "object": "Reel_L",
+          "axis": "z"
+        },
+        {
+          "object": "Reel_R",
+          "axis": "z"
+        },
+        {
+          "object": "Heart",
+          "axis": "y"
+        }
+      ]
+    },
+    "time_machine__core": {
+      "file": "time_machine.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        3.09,
+        3.21,
+        2.955
+      ],
+      "aabb": {
+        "min": [
+          -1.545,
+          0.0,
+          -1.47
+        ],
+        "max": [
+          1.545,
+          3.21,
+          1.485
+        ]
+      },
+      "objects": [
+        "Body",
+        "Ring_Outer",
+        "Ring_Mid",
+        "Ring_Inner",
+        "Heart",
+        "Reel_L",
+        "Reel_R"
+      ],
+      "placement": "set piece: about 3 x 3 tiles centred on its tile, 3 tall",
+      "spin": [
+        {
+          "object": "Ring_Outer",
+          "axis": "z"
+        },
+        {
+          "object": "Ring_Mid",
+          "axis": "y"
+        },
+        {
+          "object": "Ring_Inner",
+          "axis": "x"
+        },
+        {
+          "object": "Reel_L",
+          "axis": "z"
+        },
+        {
+          "object": "Reel_R",
+          "axis": "z"
+        },
+        {
+          "object": "Heart",
+          "axis": "y"
+        }
+      ]
+    },
+    "time_machine__lower": {
+      "file": "time_machine.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        3.09,
+        3.21,
+        2.955
+      ],
+      "aabb": {
+        "min": [
+          -1.545,
+          0.0,
+          -1.47
+        ],
+        "max": [
+          1.545,
+          3.21,
+          1.485
+        ]
+      },
+      "objects": [
+        "Body",
+        "Ring_Outer",
+        "Ring_Mid",
+        "Ring_Inner",
+        "Heart",
+        "Reel_L",
+        "Reel_R"
+      ],
+      "placement": "set piece: about 3 x 3 tiles centred on its tile, 3 tall",
+      "spin": [
+        {
+          "object": "Ring_Outer",
+          "axis": "z"
+        },
+        {
+          "object": "Ring_Mid",
+          "axis": "y"
+        },
+        {
+          "object": "Ring_Inner",
+          "axis": "x"
+        },
+        {
+          "object": "Reel_L",
+          "axis": "z"
+        },
+        {
+          "object": "Reel_R",
+          "axis": "z"
+        },
+        {
+          "object": "Heart",
+          "axis": "y"
+        }
+      ]
+    },
+    "time_machine__mid": {
+      "file": "time_machine.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        3.09,
+        3.21,
+        2.955
+      ],
+      "aabb": {
+        "min": [
+          -1.545,
+          0.0,
+          -1.47
+        ],
+        "max": [
+          1.545,
+          3.21,
+          1.485
+        ]
+      },
+      "objects": [
+        "Body",
+        "Ring_Outer",
+        "Ring_Mid",
+        "Ring_Inner",
+        "Heart",
+        "Reel_L",
+        "Reel_R"
+      ],
+      "placement": "set piece: about 3 x 3 tiles centred on its tile, 3 tall",
+      "spin": [
+        {
+          "object": "Ring_Outer",
+          "axis": "z"
+        },
+        {
+          "object": "Ring_Mid",
+          "axis": "y"
+        },
+        {
+          "object": "Ring_Inner",
+          "axis": "x"
+        },
+        {
+          "object": "Reel_L",
+          "axis": "z"
+        },
+        {
+          "object": "Reel_R",
+          "axis": "z"
+        },
+        {
+          "object": "Heart",
+          "axis": "y"
+        }
+      ]
+    },
+    "time_machine__upper": {
+      "file": "time_machine.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        3.09,
+        3.21,
+        2.955
+      ],
+      "aabb": {
+        "min": [
+          -1.545,
+          0.0,
+          -1.47
+        ],
+        "max": [
+          1.545,
+          3.21,
+          1.485
+        ]
+      },
+      "objects": [
+        "Body",
+        "Ring_Outer",
+        "Ring_Mid",
+        "Ring_Inner",
+        "Heart",
+        "Reel_L",
+        "Reel_R"
+      ],
+      "placement": "set piece: about 3 x 3 tiles centred on its tile, 3 tall",
+      "spin": [
+        {
+          "object": "Ring_Outer",
+          "axis": "z"
+        },
+        {
+          "object": "Ring_Mid",
+          "axis": "y"
+        },
+        {
+          "object": "Ring_Inner",
+          "axis": "x"
+        },
+        {
+          "object": "Reel_L",
+          "axis": "z"
+        },
+        {
+          "object": "Reel_R",
+          "axis": "z"
+        },
+        {
+          "object": "Heart",
+          "axis": "y"
+        }
+      ]
+    },
+    "trap_bumper": {
+      "file": "trap_bumper__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.92,
+        0.13,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.04,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.09,
+          0.46
+        ]
+      },
+      "kind": "bumper",
+      "objects": [
+        "Base",
+        "Pad",
+        "Spring"
+      ],
+      "placement": "one cell, +Z = launch direction",
+      "pad_y": "PAD_POP * t",
+      "pad_pop": 0.2,
+      "spring_scale_y": "0.04 + Pad.y"
+    },
+    "trap_bumper__core": {
+      "file": "trap_bumper__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.92,
+        0.13,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.04,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.09,
+          0.46
+        ]
+      },
+      "kind": "bumper",
+      "objects": [
+        "Base",
+        "Pad",
+        "Spring"
+      ],
+      "placement": "one cell, +Z = launch direction",
+      "pad_y": "PAD_POP * t",
+      "pad_pop": 0.2,
+      "spring_scale_y": "0.04 + Pad.y"
+    },
+    "trap_bumper__lower": {
+      "file": "trap_bumper__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.92,
+        0.13,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.04,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.09,
+          0.46
+        ]
+      },
+      "kind": "bumper",
+      "objects": [
+        "Base",
+        "Pad",
+        "Spring"
+      ],
+      "placement": "one cell, +Z = launch direction",
+      "pad_y": "PAD_POP * t",
+      "pad_pop": 0.2,
+      "spring_scale_y": "0.04 + Pad.y"
+    },
+    "trap_bumper__mid": {
+      "file": "trap_bumper__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.92,
+        0.13,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.04,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.09,
+          0.46
+        ]
+      },
+      "kind": "bumper",
+      "objects": [
+        "Base",
+        "Pad",
+        "Spring"
+      ],
+      "placement": "one cell, +Z = launch direction",
+      "pad_y": "PAD_POP * t",
+      "pad_pop": 0.2,
+      "spring_scale_y": "0.04 + Pad.y"
+    },
+    "trap_bumper__upper": {
+      "file": "trap_bumper__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.92,
+        0.13,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.04,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.09,
+          0.46
+        ]
+      },
+      "kind": "bumper",
+      "objects": [
+        "Base",
+        "Pad",
+        "Spring"
+      ],
+      "placement": "one cell, +Z = launch direction",
+      "pad_y": "PAD_POP * t",
+      "pad_pop": 0.2,
+      "spring_scale_y": "0.04 + Pad.y"
+    },
+    "trap_conveyor": {
+      "file": "trap_conveyor__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.967,
+        0.14,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.484,
+          -0.04,
+          -0.5
+        ],
+        "max": [
+          0.484,
+          0.1,
+          0.5
+        ]
+      },
+      "kind": "conveyor",
+      "objects": [
+        "Frame",
+        "Belt",
+        "Arrows",
+        "End_Back",
+        "Roller_Back",
+        "End_Front",
+        "Roller_Front"
+      ],
+      "placement": "one per cell, +Z = current travel direction",
+      "belt_y": 0.05,
+      "belt_uv": "U 0..1 across (-X to +X), V = z + 0.5 (0 upstream edge, 1 downstream edge); 1 V = 1 tile",
+      "roller_radius": 0.062
+    },
+    "trap_conveyor__core": {
+      "file": "trap_conveyor__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.96,
+        0.14,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.48,
+          -0.04,
+          -0.5
+        ],
+        "max": [
+          0.48,
+          0.1,
+          0.5
+        ]
+      },
+      "kind": "conveyor",
+      "objects": [
+        "Frame",
+        "Belt",
+        "Arrows",
+        "End_Back",
+        "Roller_Back",
+        "End_Front",
+        "Roller_Front"
+      ],
+      "placement": "one per cell, +Z = current travel direction",
+      "belt_y": 0.05,
+      "belt_uv": "U 0..1 across (-X to +X), V = z + 0.5 (0 upstream edge, 1 downstream edge); 1 V = 1 tile",
+      "roller_radius": 0.062
+    },
+    "trap_conveyor__lower": {
+      "file": "trap_conveyor__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.96,
+        0.14,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.48,
+          -0.04,
+          -0.5
+        ],
+        "max": [
+          0.48,
+          0.1,
+          0.5
+        ]
+      },
+      "kind": "conveyor",
+      "objects": [
+        "Frame",
+        "Belt",
+        "Arrows",
+        "End_Back",
+        "Roller_Back",
+        "End_Front",
+        "Roller_Front"
+      ],
+      "placement": "one per cell, +Z = current travel direction",
+      "belt_y": 0.05,
+      "belt_uv": "U 0..1 across (-X to +X), V = z + 0.5 (0 upstream edge, 1 downstream edge); 1 V = 1 tile",
+      "roller_radius": 0.062
+    },
+    "trap_conveyor__mid": {
+      "file": "trap_conveyor__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.967,
+        0.14,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.484,
+          -0.04,
+          -0.5
+        ],
+        "max": [
+          0.484,
+          0.1,
+          0.5
+        ]
+      },
+      "kind": "conveyor",
+      "objects": [
+        "Frame",
+        "Belt",
+        "Arrows",
+        "End_Back",
+        "Roller_Back",
+        "End_Front",
+        "Roller_Front"
+      ],
+      "placement": "one per cell, +Z = current travel direction",
+      "belt_y": 0.05,
+      "belt_uv": "U 0..1 across (-X to +X), V = z + 0.5 (0 upstream edge, 1 downstream edge); 1 V = 1 tile",
+      "roller_radius": 0.062
+    },
+    "trap_conveyor__upper": {
+      "file": "trap_conveyor__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.967,
+        0.14,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.484,
+          -0.04,
+          -0.5
+        ],
+        "max": [
+          0.484,
+          0.1,
+          0.5
+        ]
+      },
+      "kind": "conveyor",
+      "objects": [
+        "Frame",
+        "Belt",
+        "Arrows",
+        "End_Back",
+        "Roller_Back",
+        "End_Front",
+        "Roller_Front"
+      ],
+      "placement": "one per cell, +Z = current travel direction",
+      "belt_y": 0.05,
+      "belt_uv": "U 0..1 across (-X to +X), V = z + 0.5 (0 upstream edge, 1 downstream edge); 1 V = 1 tile",
+      "roller_radius": 0.062
+    },
+    "trap_crusher": {
+      "file": "trap_crusher__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.028,
+        1.982,
+        1.059
+      ],
+      "aabb": {
+        "min": [
+          -0.528,
+          -0.2,
+          -0.513
+        ],
+        "max": [
+          0.5,
+          1.782,
+          0.546
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Housing",
+        "Head",
+        "Ram"
+      ],
+      "placement": "origin = centre of the tile behind cells[0]; +Z = piston travel; replaces the wall piece on that tile",
+      "head_z": {
+        "home": 0.53,
+        "extended": "cells + 0.5 - 0.02"
+      },
+      "ram_scale_z": "Head.z - 0.35",
+      "head_top": 1.3
+    },
+    "trap_crusher__core": {
+      "file": "trap_crusher__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        1.982,
+        1.046
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.2,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          1.782,
+          0.546
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Housing",
+        "Head",
+        "Ram"
+      ],
+      "placement": "origin = centre of the tile behind cells[0]; +Z = piston travel; replaces the wall piece on that tile",
+      "head_z": {
+        "home": 0.53,
+        "extended": "cells + 0.5 - 0.02"
+      },
+      "ram_scale_z": "Head.z - 0.35",
+      "head_top": 1.3
+    },
+    "trap_crusher__lower": {
+      "file": "trap_crusher__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        1.982,
+        1.046
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.2,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          1.782,
+          0.546
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Housing",
+        "Head",
+        "Ram"
+      ],
+      "placement": "origin = centre of the tile behind cells[0]; +Z = piston travel; replaces the wall piece on that tile",
+      "head_z": {
+        "home": 0.53,
+        "extended": "cells + 0.5 - 0.02"
+      },
+      "ram_scale_z": "Head.z - 0.35",
+      "head_top": 1.3
+    },
+    "trap_crusher__mid": {
+      "file": "trap_crusher__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.028,
+        1.982,
+        1.059
+      ],
+      "aabb": {
+        "min": [
+          -0.528,
+          -0.2,
+          -0.513
+        ],
+        "max": [
+          0.5,
+          1.782,
+          0.546
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Housing",
+        "Head",
+        "Ram"
+      ],
+      "placement": "origin = centre of the tile behind cells[0]; +Z = piston travel; replaces the wall piece on that tile",
+      "head_z": {
+        "home": 0.53,
+        "extended": "cells + 0.5 - 0.02"
+      },
+      "ram_scale_z": "Head.z - 0.35",
+      "head_top": 1.3
+    },
+    "trap_crusher__upper": {
+      "file": "trap_crusher__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.028,
+        1.982,
+        1.059
+      ],
+      "aabb": {
+        "min": [
+          -0.528,
+          -0.2,
+          -0.513
+        ],
+        "max": [
+          0.5,
+          1.782,
+          0.546
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Housing",
+        "Head",
+        "Ram"
+      ],
+      "placement": "origin = centre of the tile behind cells[0]; +Z = piston travel; replaces the wall piece on that tile",
+      "head_z": {
+        "home": 0.53,
+        "extended": "cells + 0.5 - 0.02"
+      },
+      "ram_scale_z": "Head.z - 0.35",
+      "head_top": 1.3
+    },
+    "trap_crusher_lane": {
+      "file": "trap_crusher_lane__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.94,
+        0.044,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.47,
+          -0.02,
+          -0.5
+        ],
+        "max": [
+          0.47,
+          0.024,
+          0.5
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per crusher cell, +Z = piston travel"
+    },
+    "trap_crusher_lane__core": {
+      "file": "trap_crusher_lane__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.94,
+        0.044,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.47,
+          -0.02,
+          -0.5
+        ],
+        "max": [
+          0.47,
+          0.024,
+          0.5
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per crusher cell, +Z = piston travel"
+    },
+    "trap_crusher_lane__lower": {
+      "file": "trap_crusher_lane__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.94,
+        0.044,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.47,
+          -0.02,
+          -0.5
+        ],
+        "max": [
+          0.47,
+          0.024,
+          0.5
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per crusher cell, +Z = piston travel"
+    },
+    "trap_crusher_lane__mid": {
+      "file": "trap_crusher_lane__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.94,
+        0.044,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.47,
+          -0.02,
+          -0.5
+        ],
+        "max": [
+          0.47,
+          0.024,
+          0.5
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per crusher cell, +Z = piston travel"
+    },
+    "trap_crusher_lane__upper": {
+      "file": "trap_crusher_lane__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.94,
+        0.044,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.47,
+          -0.02,
+          -0.5
+        ],
+        "max": [
+          0.47,
+          0.024,
+          0.5
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per crusher cell, +Z = piston travel"
+    },
+    "trap_crusher_stamper": {
+      "file": "trap_crusher_stamper__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        2.565,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          2.565,
+          0.5
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Frame",
+        "Head",
+        "Ram"
+      ],
+      "placement": "one-cell crusher with no dir; any yaw",
+      "head_y": {
+        "home": 1.3,
+        "extended": 0.02
+      },
+      "ram_scale_y": "1.35 - Head.y"
+    },
+    "trap_crusher_stamper__core": {
+      "file": "trap_crusher_stamper__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        2.565,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          2.565,
+          0.5
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Frame",
+        "Head",
+        "Ram"
+      ],
+      "placement": "one-cell crusher with no dir; any yaw",
+      "head_y": {
+        "home": 1.3,
+        "extended": 0.02
+      },
+      "ram_scale_y": "1.35 - Head.y"
+    },
+    "trap_crusher_stamper__lower": {
+      "file": "trap_crusher_stamper__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        2.565,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          2.565,
+          0.5
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Frame",
+        "Head",
+        "Ram"
+      ],
+      "placement": "one-cell crusher with no dir; any yaw",
+      "head_y": {
+        "home": 1.3,
+        "extended": 0.02
+      },
+      "ram_scale_y": "1.35 - Head.y"
+    },
+    "trap_crusher_stamper__mid": {
+      "file": "trap_crusher_stamper__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        2.565,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          2.565,
+          0.5
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Frame",
+        "Head",
+        "Ram"
+      ],
+      "placement": "one-cell crusher with no dir; any yaw",
+      "head_y": {
+        "home": 1.3,
+        "extended": 0.02
+      },
+      "ram_scale_y": "1.35 - Head.y"
+    },
+    "trap_crusher_stamper__upper": {
+      "file": "trap_crusher_stamper__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        2.565,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          2.565,
+          0.5
+        ]
+      },
+      "kind": "crusher",
+      "objects": [
+        "Frame",
+        "Head",
+        "Ram"
+      ],
+      "placement": "one-cell crusher with no dir; any yaw",
+      "head_y": {
+        "home": 1.3,
+        "extended": 0.02
+      },
+      "ram_scale_y": "1.35 - Head.y"
+    },
+    "trap_dart": {
+      "file": "trap_dart__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.52,
+        0.566,
+        0.425
+      ],
+      "aabb": {
+        "min": [
+          -0.26,
+          0.0,
+          0.49
+        ],
+        "max": [
+          0.26,
+          0.566,
+          0.915
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Body",
+        "Muzzle",
+        "Shutter",
+        "Flash",
+        "Pip_01",
+        "Pip_02",
+        "Pip_03",
+        "Pip_04",
+        "Pip_05",
+        "Pip_06",
+        "Pip_07",
+        "Pip_08"
+      ],
+      "placement": "origin = centre of the launcher tile; unit hangs on its +Z face; +Z = lane direction",
+      "dart_y": 0.3,
+      "muzzle_recoil_z": -0.04,
+      "shutter_y": {
+        "open": 0.0,
+        "closed": -0.095
+      }
+    },
+    "trap_dart__core": {
+      "file": "trap_dart__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.52,
+        0.566,
+        0.425
+      ],
+      "aabb": {
+        "min": [
+          -0.26,
+          0.0,
+          0.49
+        ],
+        "max": [
+          0.26,
+          0.566,
+          0.915
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Body",
+        "Muzzle",
+        "Shutter",
+        "Flash",
+        "Pip_01",
+        "Pip_02",
+        "Pip_03",
+        "Pip_04",
+        "Pip_05",
+        "Pip_06",
+        "Pip_07",
+        "Pip_08"
+      ],
+      "placement": "origin = centre of the launcher tile; unit hangs on its +Z face; +Z = lane direction",
+      "dart_y": 0.3,
+      "muzzle_recoil_z": -0.04,
+      "shutter_y": {
+        "open": 0.0,
+        "closed": -0.095
+      }
+    },
+    "trap_dart__lower": {
+      "file": "trap_dart__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.52,
+        0.566,
+        0.425
+      ],
+      "aabb": {
+        "min": [
+          -0.26,
+          0.0,
+          0.49
+        ],
+        "max": [
+          0.26,
+          0.566,
+          0.915
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Body",
+        "Muzzle",
+        "Shutter",
+        "Flash",
+        "Pip_01",
+        "Pip_02",
+        "Pip_03",
+        "Pip_04",
+        "Pip_05",
+        "Pip_06",
+        "Pip_07",
+        "Pip_08"
+      ],
+      "placement": "origin = centre of the launcher tile; unit hangs on its +Z face; +Z = lane direction",
+      "dart_y": 0.3,
+      "muzzle_recoil_z": -0.04,
+      "shutter_y": {
+        "open": 0.0,
+        "closed": -0.095
+      }
+    },
+    "trap_dart__mid": {
+      "file": "trap_dart__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.52,
+        0.566,
+        0.425
+      ],
+      "aabb": {
+        "min": [
+          -0.26,
+          0.0,
+          0.49
+        ],
+        "max": [
+          0.26,
+          0.566,
+          0.915
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Body",
+        "Muzzle",
+        "Shutter",
+        "Flash",
+        "Pip_01",
+        "Pip_02",
+        "Pip_03",
+        "Pip_04",
+        "Pip_05",
+        "Pip_06",
+        "Pip_07",
+        "Pip_08"
+      ],
+      "placement": "origin = centre of the launcher tile; unit hangs on its +Z face; +Z = lane direction",
+      "dart_y": 0.3,
+      "muzzle_recoil_z": -0.04,
+      "shutter_y": {
+        "open": 0.0,
+        "closed": -0.095
+      }
+    },
+    "trap_dart__upper": {
+      "file": "trap_dart__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.52,
+        0.566,
+        0.425
+      ],
+      "aabb": {
+        "min": [
+          -0.26,
+          0.0,
+          0.49
+        ],
+        "max": [
+          0.26,
+          0.566,
+          0.915
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Body",
+        "Muzzle",
+        "Shutter",
+        "Flash",
+        "Pip_01",
+        "Pip_02",
+        "Pip_03",
+        "Pip_04",
+        "Pip_05",
+        "Pip_06",
+        "Pip_07",
+        "Pip_08"
+      ],
+      "placement": "origin = centre of the launcher tile; unit hangs on its +Z face; +Z = lane direction",
+      "dart_y": 0.3,
+      "muzzle_recoil_z": -0.04,
+      "shutter_y": {
+        "open": 0.0,
+        "closed": -0.095
+      }
+    },
+    "trap_dart_bolt": {
+      "file": "trap_dart_bolt.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.08,
+        0.08,
+        0.3
+      ],
+      "aabb": {
+        "min": [
+          -0.04,
+          -0.04,
+          -0.15
+        ],
+        "max": [
+          0.04,
+          0.04,
+          0.15
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Dart"
+      ],
+      "placement": "projectile; origin at its centre, point along +Z, fly at y = 0.30"
+    },
+    "trap_dart_lane": {
+      "file": "trap_dart_lane__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.252,
+        0.013,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.126,
+          0.001,
+          -0.5
+        ],
+        "max": [
+          0.126,
+          0.014,
+          0.5
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per lane tile, +Z = lane direction"
+    },
+    "trap_dart_lane__core": {
+      "file": "trap_dart_lane__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.252,
+        0.013,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.126,
+          0.001,
+          -0.5
+        ],
+        "max": [
+          0.126,
+          0.014,
+          0.5
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per lane tile, +Z = lane direction"
+    },
+    "trap_dart_lane__lower": {
+      "file": "trap_dart_lane__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.252,
+        0.013,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.126,
+          0.001,
+          -0.5
+        ],
+        "max": [
+          0.126,
+          0.014,
+          0.5
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per lane tile, +Z = lane direction"
+    },
+    "trap_dart_lane__mid": {
+      "file": "trap_dart_lane__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.252,
+        0.013,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.126,
+          0.001,
+          -0.5
+        ],
+        "max": [
+          0.126,
+          0.014,
+          0.5
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per lane tile, +Z = lane direction"
+    },
+    "trap_dart_lane__upper": {
+      "file": "trap_dart_lane__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.252,
+        0.013,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.126,
+          0.001,
+          -0.5
+        ],
+        "max": [
+          0.126,
+          0.014,
+          0.5
+        ]
+      },
+      "kind": "dart",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per lane tile, +Z = lane direction"
+    },
+    "trap_flame": {
+      "file": "trap_flame__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.64,
+        0.456,
+        1.345
+      ],
+      "aabb": {
+        "min": [
+          -0.32,
+          0.0,
+          0.5
+        ],
+        "max": [
+          0.32,
+          0.456,
+          1.845
+        ]
+      },
+      "kind": "flame",
+      "objects": [
+        "Body",
+        "Nozzle",
+        "Pilot",
+        "Jet"
+      ],
+      "placement": "origin = centre of the nozzle tile; unit hangs on its +Z face; +Z = jet direction",
+      "nozzle_y": 0.26,
+      "jet_origin_z": 0.845,
+      "jet_scale_z": "reach - 0.345"
+    },
+    "trap_flame__core": {
+      "file": "trap_flame__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.64,
+        0.456,
+        1.345
+      ],
+      "aabb": {
+        "min": [
+          -0.32,
+          0.0,
+          0.5
+        ],
+        "max": [
+          0.32,
+          0.456,
+          1.845
+        ]
+      },
+      "kind": "flame",
+      "objects": [
+        "Body",
+        "Nozzle",
+        "Pilot",
+        "Jet"
+      ],
+      "placement": "origin = centre of the nozzle tile; unit hangs on its +Z face; +Z = jet direction",
+      "nozzle_y": 0.26,
+      "jet_origin_z": 0.845,
+      "jet_scale_z": "reach - 0.345"
+    },
+    "trap_flame__lower": {
+      "file": "trap_flame__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.64,
+        0.456,
+        1.345
+      ],
+      "aabb": {
+        "min": [
+          -0.32,
+          0.0,
+          0.5
+        ],
+        "max": [
+          0.32,
+          0.456,
+          1.845
+        ]
+      },
+      "kind": "flame",
+      "objects": [
+        "Body",
+        "Nozzle",
+        "Pilot",
+        "Jet"
+      ],
+      "placement": "origin = centre of the nozzle tile; unit hangs on its +Z face; +Z = jet direction",
+      "nozzle_y": 0.26,
+      "jet_origin_z": 0.845,
+      "jet_scale_z": "reach - 0.345"
+    },
+    "trap_flame__mid": {
+      "file": "trap_flame__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.64,
+        0.456,
+        1.345
+      ],
+      "aabb": {
+        "min": [
+          -0.32,
+          0.0,
+          0.5
+        ],
+        "max": [
+          0.32,
+          0.456,
+          1.845
+        ]
+      },
+      "kind": "flame",
+      "objects": [
+        "Body",
+        "Nozzle",
+        "Pilot",
+        "Jet"
+      ],
+      "placement": "origin = centre of the nozzle tile; unit hangs on its +Z face; +Z = jet direction",
+      "nozzle_y": 0.26,
+      "jet_origin_z": 0.845,
+      "jet_scale_z": "reach - 0.345"
+    },
+    "trap_flame__upper": {
+      "file": "trap_flame__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.64,
+        0.456,
+        1.345
+      ],
+      "aabb": {
+        "min": [
+          -0.32,
+          0.0,
+          0.5
+        ],
+        "max": [
+          0.32,
+          0.456,
+          1.845
+        ]
+      },
+      "kind": "flame",
+      "objects": [
+        "Body",
+        "Nozzle",
+        "Pilot",
+        "Jet"
+      ],
+      "placement": "origin = centre of the nozzle tile; unit hangs on its +Z face; +Z = jet direction",
+      "nozzle_y": 0.26,
+      "jet_origin_z": 0.845,
+      "jet_scale_z": "reach - 0.345"
+    },
+    "trap_flame_lane": {
+      "file": "trap_flame_lane__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.97,
+        0.015,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.485,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.485,
+          0.015,
+          0.5
+        ]
+      },
+      "kind": "flame",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per tile of reach, +Z = jet direction"
+    },
+    "trap_flame_lane__core": {
+      "file": "trap_flame_lane__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.97,
+        0.015,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.485,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.485,
+          0.015,
+          0.5
+        ]
+      },
+      "kind": "flame",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per tile of reach, +Z = jet direction"
+    },
+    "trap_flame_lane__lower": {
+      "file": "trap_flame_lane__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.97,
+        0.015,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.485,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.485,
+          0.015,
+          0.5
+        ]
+      },
+      "kind": "flame",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per tile of reach, +Z = jet direction"
+    },
+    "trap_flame_lane__mid": {
+      "file": "trap_flame_lane__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.97,
+        0.015,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.485,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.485,
+          0.015,
+          0.5
+        ]
+      },
+      "kind": "flame",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per tile of reach, +Z = jet direction"
+    },
+    "trap_flame_lane__upper": {
+      "file": "trap_flame_lane__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.97,
+        0.015,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.485,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.485,
+          0.015,
+          0.5
+        ]
+      },
+      "kind": "flame",
+      "objects": [
+        "Lane"
+      ],
+      "placement": "one per tile of reach, +Z = jet direction"
+    },
+    "trap_magnet": {
+      "file": "trap_magnet__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        2.0,
+        0.142,
+        2.0
+      ],
+      "aabb": {
+        "min": [
+          -1.0,
+          0.0,
+          -1.0
+        ],
+        "max": [
+          1.0,
+          0.142,
+          1.0
+        ]
+      },
+      "kind": "magnet",
+      "objects": [
+        "Base",
+        "Coil",
+        "Ring"
+      ],
+      "placement": "origin on the floor at x, y",
+      "ring_scale_xz": "radius"
+    },
+    "trap_magnet__core": {
+      "file": "trap_magnet__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        2.0,
+        0.142,
+        2.0
+      ],
+      "aabb": {
+        "min": [
+          -1.0,
+          0.0,
+          -1.0
+        ],
+        "max": [
+          1.0,
+          0.142,
+          1.0
+        ]
+      },
+      "kind": "magnet",
+      "objects": [
+        "Base",
+        "Coil",
+        "Ring"
+      ],
+      "placement": "origin on the floor at x, y",
+      "ring_scale_xz": "radius"
+    },
+    "trap_magnet__lower": {
+      "file": "trap_magnet__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        2.0,
+        0.142,
+        2.0
+      ],
+      "aabb": {
+        "min": [
+          -1.0,
+          0.0,
+          -1.0
+        ],
+        "max": [
+          1.0,
+          0.142,
+          1.0
+        ]
+      },
+      "kind": "magnet",
+      "objects": [
+        "Base",
+        "Coil",
+        "Ring"
+      ],
+      "placement": "origin on the floor at x, y",
+      "ring_scale_xz": "radius"
+    },
+    "trap_magnet__mid": {
+      "file": "trap_magnet__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        2.0,
+        0.142,
+        2.0
+      ],
+      "aabb": {
+        "min": [
+          -1.0,
+          0.0,
+          -1.0
+        ],
+        "max": [
+          1.0,
+          0.142,
+          1.0
+        ]
+      },
+      "kind": "magnet",
+      "objects": [
+        "Base",
+        "Coil",
+        "Ring"
+      ],
+      "placement": "origin on the floor at x, y",
+      "ring_scale_xz": "radius"
+    },
+    "trap_magnet__upper": {
+      "file": "trap_magnet__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        2.0,
+        0.142,
+        2.0
+      ],
+      "aabb": {
+        "min": [
+          -1.0,
+          0.0,
+          -1.0
+        ],
+        "max": [
+          1.0,
+          0.142,
+          1.0
+        ]
+      },
+      "kind": "magnet",
+      "objects": [
+        "Base",
+        "Coil",
+        "Ring"
+      ],
+      "placement": "origin on the floor at x, y",
+      "ring_scale_xz": "radius"
+    },
+    "trap_relay": {
+      "file": "trap_relay__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.365,
+        0.264,
+        0.29
+      ],
+      "aabb": {
+        "min": [
+          -0.22,
+          0.0,
+          -0.145
+        ],
+        "max": [
+          0.145,
+          0.264,
+          0.145
+        ]
+      },
+      "kind": "relay",
+      "objects": [
+        "Body",
+        "Lamp",
+        "Tick_01",
+        "Tick_02",
+        "Tick_03",
+        "Tick_04",
+        "Tick_05",
+        "Tick_06",
+        "Tick_07",
+        "Tick_08"
+      ],
+      "placement": "origin on the surface under it (floor or wall top) at x, y",
+      "ticks": "Tick_01 at the back (-Z), clockwise seen from above"
+    },
+    "trap_relay__core": {
+      "file": "trap_relay__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.365,
+        0.264,
+        0.29
+      ],
+      "aabb": {
+        "min": [
+          -0.22,
+          0.0,
+          -0.145
+        ],
+        "max": [
+          0.145,
+          0.264,
+          0.145
+        ]
+      },
+      "kind": "relay",
+      "objects": [
+        "Body",
+        "Lamp",
+        "Tick_01",
+        "Tick_02",
+        "Tick_03",
+        "Tick_04",
+        "Tick_05",
+        "Tick_06",
+        "Tick_07",
+        "Tick_08"
+      ],
+      "placement": "origin on the surface under it (floor or wall top) at x, y",
+      "ticks": "Tick_01 at the back (-Z), clockwise seen from above"
+    },
+    "trap_relay__lower": {
+      "file": "trap_relay__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.365,
+        0.264,
+        0.29
+      ],
+      "aabb": {
+        "min": [
+          -0.22,
+          0.0,
+          -0.145
+        ],
+        "max": [
+          0.145,
+          0.264,
+          0.145
+        ]
+      },
+      "kind": "relay",
+      "objects": [
+        "Body",
+        "Lamp",
+        "Tick_01",
+        "Tick_02",
+        "Tick_03",
+        "Tick_04",
+        "Tick_05",
+        "Tick_06",
+        "Tick_07",
+        "Tick_08"
+      ],
+      "placement": "origin on the surface under it (floor or wall top) at x, y",
+      "ticks": "Tick_01 at the back (-Z), clockwise seen from above"
+    },
+    "trap_relay__mid": {
+      "file": "trap_relay__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.365,
+        0.264,
+        0.29
+      ],
+      "aabb": {
+        "min": [
+          -0.22,
+          0.0,
+          -0.145
+        ],
+        "max": [
+          0.145,
+          0.264,
+          0.145
+        ]
+      },
+      "kind": "relay",
+      "objects": [
+        "Body",
+        "Lamp",
+        "Tick_01",
+        "Tick_02",
+        "Tick_03",
+        "Tick_04",
+        "Tick_05",
+        "Tick_06",
+        "Tick_07",
+        "Tick_08"
+      ],
+      "placement": "origin on the surface under it (floor or wall top) at x, y",
+      "ticks": "Tick_01 at the back (-Z), clockwise seen from above"
+    },
+    "trap_relay__upper": {
+      "file": "trap_relay__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.365,
+        0.264,
+        0.29
+      ],
+      "aabb": {
+        "min": [
+          -0.22,
+          0.0,
+          -0.145
+        ],
+        "max": [
+          0.145,
+          0.264,
+          0.145
+        ]
+      },
+      "kind": "relay",
+      "objects": [
+        "Body",
+        "Lamp",
+        "Tick_01",
+        "Tick_02",
+        "Tick_03",
+        "Tick_04",
+        "Tick_05",
+        "Tick_06",
+        "Tick_07",
+        "Tick_08"
+      ],
+      "placement": "origin on the surface under it (floor or wall top) at x, y",
+      "ticks": "Tick_01 at the back (-Z), clockwise seen from above"
+    },
+    "trap_sensor": {
+      "file": "trap_sensor__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.16,
+        0.432,
+        1.125
+      ],
+      "aabb": {
+        "min": [
+          -0.08,
+          0.0,
+          -0.08
+        ],
+        "max": [
+          0.08,
+          0.432,
+          1.045
+        ]
+      },
+      "kind": "sensor",
+      "objects": [
+        "Post",
+        "Lens",
+        "Beam"
+      ],
+      "placement": "one at `from` facing `to` (+Z along the beam), one at `to` facing back with Beam hidden",
+      "beam_y": 0.32,
+      "beam_scale_z": "reach"
+    },
+    "trap_sensor__core": {
+      "file": "trap_sensor__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.16,
+        0.432,
+        1.125
+      ],
+      "aabb": {
+        "min": [
+          -0.08,
+          0.0,
+          -0.08
+        ],
+        "max": [
+          0.08,
+          0.432,
+          1.045
+        ]
+      },
+      "kind": "sensor",
+      "objects": [
+        "Post",
+        "Lens",
+        "Beam"
+      ],
+      "placement": "one at `from` facing `to` (+Z along the beam), one at `to` facing back with Beam hidden",
+      "beam_y": 0.32,
+      "beam_scale_z": "reach"
+    },
+    "trap_sensor__lower": {
+      "file": "trap_sensor__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.16,
+        0.432,
+        1.125
+      ],
+      "aabb": {
+        "min": [
+          -0.08,
+          0.0,
+          -0.08
+        ],
+        "max": [
+          0.08,
+          0.432,
+          1.045
+        ]
+      },
+      "kind": "sensor",
+      "objects": [
+        "Post",
+        "Lens",
+        "Beam"
+      ],
+      "placement": "one at `from` facing `to` (+Z along the beam), one at `to` facing back with Beam hidden",
+      "beam_y": 0.32,
+      "beam_scale_z": "reach"
+    },
+    "trap_sensor__mid": {
+      "file": "trap_sensor__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.16,
+        0.432,
+        1.125
+      ],
+      "aabb": {
+        "min": [
+          -0.08,
+          0.0,
+          -0.08
+        ],
+        "max": [
+          0.08,
+          0.432,
+          1.045
+        ]
+      },
+      "kind": "sensor",
+      "objects": [
+        "Post",
+        "Lens",
+        "Beam"
+      ],
+      "placement": "one at `from` facing `to` (+Z along the beam), one at `to` facing back with Beam hidden",
+      "beam_y": 0.32,
+      "beam_scale_z": "reach"
+    },
+    "trap_sensor__upper": {
+      "file": "trap_sensor__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.16,
+        0.432,
+        1.125
+      ],
+      "aabb": {
+        "min": [
+          -0.08,
+          0.0,
+          -0.08
+        ],
+        "max": [
+          0.08,
+          0.432,
+          1.045
+        ]
+      },
+      "kind": "sensor",
+      "objects": [
+        "Post",
+        "Lens",
+        "Beam"
+      ],
+      "placement": "one at `from` facing `to` (+Z along the beam), one at `to` facing back with Beam hidden",
+      "beam_y": 0.32,
+      "beam_scale_z": "reach"
+    },
+    "trap_spikes": {
+      "file": "trap_spikes__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.92,
+        0.087,
+        0.932
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.04,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.047,
+          0.472
+        ]
+      },
+      "kind": "spikes",
+      "objects": [
+        "Base",
+        "Spikes"
+      ],
+      "placement": "one per cell, any yaw",
+      "spikes_scale_y": {
+        "down": 0.02,
+        "raised": 1.0
+      },
+      "tip_y": 0.62
+    },
+    "trap_spikes__core": {
+      "file": "trap_spikes__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.92,
+        0.081,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.04,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.041,
+          0.46
+        ]
+      },
+      "kind": "spikes",
+      "objects": [
+        "Base",
+        "Spikes"
+      ],
+      "placement": "one per cell, any yaw",
+      "spikes_scale_y": {
+        "down": 0.02,
+        "raised": 1.0
+      },
+      "tip_y": 0.62
+    },
+    "trap_spikes__lower": {
+      "file": "trap_spikes__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.92,
+        0.081,
+        0.92
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.04,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.041,
+          0.46
+        ]
+      },
+      "kind": "spikes",
+      "objects": [
+        "Base",
+        "Spikes"
+      ],
+      "placement": "one per cell, any yaw",
+      "spikes_scale_y": {
+        "down": 0.02,
+        "raised": 1.0
+      },
+      "tip_y": 0.62
+    },
+    "trap_spikes__mid": {
+      "file": "trap_spikes__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.92,
+        0.087,
+        0.932
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.04,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.047,
+          0.472
+        ]
+      },
+      "kind": "spikes",
+      "objects": [
+        "Base",
+        "Spikes"
+      ],
+      "placement": "one per cell, any yaw",
+      "spikes_scale_y": {
+        "down": 0.02,
+        "raised": 1.0
+      },
+      "tip_y": 0.62
+    },
+    "trap_spikes__upper": {
+      "file": "trap_spikes__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.92,
+        0.087,
+        0.932
+      ],
+      "aabb": {
+        "min": [
+          -0.46,
+          -0.04,
+          -0.46
+        ],
+        "max": [
+          0.46,
+          0.047,
+          0.472
+        ]
+      },
+      "kind": "spikes",
+      "objects": [
+        "Base",
+        "Spikes"
+      ],
+      "placement": "one per cell, any yaw",
+      "spikes_scale_y": {
+        "down": 0.02,
+        "raised": 1.0
+      },
+      "tip_y": 0.62
+    },
+    "vent": {
+      "file": "vent__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.754,
+        0.64,
+        0.44
+      ],
+      "aabb": {
+        "min": [
+          -0.33,
+          0.0,
+          -0.22
+        ],
+        "max": [
+          0.424,
+          0.64,
+          0.22
+        ]
+      },
+      "objects": [
+        "Body",
+        "Fan"
+      ],
+      "spin": {
+        "object": "Fan",
+        "axis": "z"
+      }
+    },
+    "vent__core": {
+      "file": "vent__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.82,
+        0.86,
+        0.44
+      ],
+      "aabb": {
+        "min": [
+          -0.41,
+          0.0,
+          -0.22
+        ],
+        "max": [
+          0.41,
+          0.86,
+          0.22
+        ]
+      },
+      "objects": [
+        "Body",
+        "Fan"
+      ],
+      "spin": {
+        "object": "Fan",
+        "axis": "z"
+      }
+    },
+    "vent__lower": {
+      "file": "vent__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        0.82,
+        0.86,
+        0.44
+      ],
+      "aabb": {
+        "min": [
+          -0.41,
+          0.0,
+          -0.22
+        ],
+        "max": [
+          0.41,
+          0.86,
+          0.22
+        ]
+      },
+      "objects": [
+        "Body",
+        "Fan"
+      ],
+      "spin": {
+        "object": "Fan",
+        "axis": "z"
+      }
+    },
+    "vent__mid": {
+      "file": "vent__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.754,
+        0.64,
+        0.44
+      ],
+      "aabb": {
+        "min": [
+          -0.33,
+          0.0,
+          -0.22
+        ],
+        "max": [
+          0.424,
+          0.64,
+          0.22
+        ]
+      },
+      "objects": [
+        "Body",
+        "Fan"
+      ],
+      "spin": {
+        "object": "Fan",
+        "axis": "z"
+      }
+    },
+    "vent__upper": {
+      "file": "vent__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.754,
+        0.64,
+        0.44
+      ],
+      "aabb": {
+        "min": [
+          -0.33,
+          0.0,
+          -0.22
+        ],
+        "max": [
+          0.424,
+          0.64,
+          0.22
+        ]
+      },
+      "objects": [
+        "Body",
+        "Fan"
+      ],
+      "spin": {
+        "object": "Fan",
+        "axis": "z"
+      }
+    },
+    "vines": {
+      "file": "vines.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.151,
+        1.727,
+        0.537
+      ],
+      "aabb": {
+        "min": [
+          -0.592,
+          0.0,
+          -0.349
+        ],
+        "max": [
+          0.559,
+          1.727,
+          0.187
+        ]
+      },
+      "placement": "wall-mounted: origin at the foot of the wall face (the wall is the plane z = 0 behind the piece, i.e. -Z); hangs in +Z from a wall top at y = 1.5 and spills over it; scale Y by wall_height / 1.5 to fit"
+    },
+    "vines__core": {
+      "file": "vines.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.151,
+        1.727,
+        0.537
+      ],
+      "aabb": {
+        "min": [
+          -0.592,
+          0.0,
+          -0.349
+        ],
+        "max": [
+          0.559,
+          1.727,
+          0.187
+        ]
+      },
+      "placement": "wall-mounted: origin at the foot of the wall face (the wall is the plane z = 0 behind the piece, i.e. -Z); hangs in +Z from a wall top at y = 1.5 and spills over it; scale Y by wall_height / 1.5 to fit"
+    },
+    "vines__lower": {
+      "file": "vines.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.151,
+        1.727,
+        0.537
+      ],
+      "aabb": {
+        "min": [
+          -0.592,
+          0.0,
+          -0.349
+        ],
+        "max": [
+          0.559,
+          1.727,
+          0.187
+        ]
+      },
+      "placement": "wall-mounted: origin at the foot of the wall face (the wall is the plane z = 0 behind the piece, i.e. -Z); hangs in +Z from a wall top at y = 1.5 and spills over it; scale Y by wall_height / 1.5 to fit"
+    },
+    "vines__mid": {
+      "file": "vines.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.151,
+        1.727,
+        0.537
+      ],
+      "aabb": {
+        "min": [
+          -0.592,
+          0.0,
+          -0.349
+        ],
+        "max": [
+          0.559,
+          1.727,
+          0.187
+        ]
+      },
+      "placement": "wall-mounted: origin at the foot of the wall face (the wall is the plane z = 0 behind the piece, i.e. -Z); hangs in +Z from a wall top at y = 1.5 and spills over it; scale Y by wall_height / 1.5 to fit"
+    },
+    "vines__upper": {
+      "file": "vines.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.151,
+        1.727,
+        0.537
+      ],
+      "aabb": {
+        "min": [
+          -0.592,
+          0.0,
+          -0.349
+        ],
+        "max": [
+          0.559,
+          1.727,
+          0.187
+        ]
+      },
+      "placement": "wall-mounted: origin at the foot of the wall face (the wall is the plane z = 0 behind the piece, i.e. -Z); hangs in +Z from a wall top at y = 1.5 and spills over it; scale Y by wall_height / 1.5 to fit"
+    },
+    "wall": {
+      "file": "wall__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.047,
+        1.979,
+        1.058
+      ],
+      "aabb": {
+        "min": [
+          -0.499,
+          -0.2,
+          -0.529
+        ],
+        "max": [
+          0.548,
+          1.779,
+          0.529
+        ]
+      },
+      "placement": "tile; z -0.2..1.6, all four faces finished; quarter turns give variants"
+    },
+    "wall__core": {
+      "file": "wall__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.024,
+        1.8,
+        1.024
+      ],
+      "aabb": {
+        "min": [
+          -0.512,
+          -0.2,
+          -0.512
+        ],
+        "max": [
+          0.512,
+          1.6,
+          0.512
+        ]
+      },
+      "placement": "tile; z -0.2..1.6, all four faces finished; quarter turns give variants"
+    },
+    "wall__lower": {
+      "file": "wall__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.024,
+        1.8,
+        1.024
+      ],
+      "aabb": {
+        "min": [
+          -0.512,
+          -0.2,
+          -0.512
+        ],
+        "max": [
+          0.512,
+          1.6,
+          0.512
+        ]
+      },
+      "placement": "tile; z -0.2..1.6, all four faces finished; quarter turns give variants"
+    },
+    "wall__mid": {
+      "file": "wall__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.047,
+        1.979,
+        1.058
+      ],
+      "aabb": {
+        "min": [
+          -0.499,
+          -0.2,
+          -0.529
+        ],
+        "max": [
+          0.548,
+          1.779,
+          0.529
+        ]
+      },
+      "placement": "tile; z -0.2..1.6, all four faces finished; quarter turns give variants"
+    },
+    "wall__upper": {
+      "file": "wall__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.047,
+        1.979,
+        1.058
+      ],
+      "aabb": {
+        "min": [
+          -0.499,
+          -0.2,
+          -0.529
+        ],
+        "max": [
+          0.548,
+          1.779,
+          0.529
+        ]
+      },
+      "placement": "tile; z -0.2..1.6, all four faces finished; quarter turns give variants"
+    },
+    "wall_cut": {
+      "file": "wall_cut__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.99,
+        0.65,
+        0.99
+      ],
+      "aabb": {
+        "min": [
+          -0.495,
+          -0.2,
+          -0.495
+        ],
+        "max": [
+          0.495,
+          0.45,
+          0.495
+        ]
+      },
+      "placement": "tile; z -0.2..0.45, clean capped top for camera-side cutaways"
+    },
+    "wall_cut__core": {
+      "file": "wall_cut__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.024,
+        0.652,
+        1.024
+      ],
+      "aabb": {
+        "min": [
+          -0.512,
+          -0.2,
+          -0.512
+        ],
+        "max": [
+          0.512,
+          0.452,
+          0.512
+        ]
+      },
+      "placement": "tile; z -0.2..0.45, clean capped top for camera-side cutaways"
+    },
+    "wall_cut__lower": {
+      "file": "wall_cut__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.024,
+        0.652,
+        1.024
+      ],
+      "aabb": {
+        "min": [
+          -0.512,
+          -0.2,
+          -0.512
+        ],
+        "max": [
+          0.512,
+          0.452,
+          0.512
+        ]
+      },
+      "placement": "tile; z -0.2..0.45, clean capped top for camera-side cutaways"
+    },
+    "wall_cut__mid": {
+      "file": "wall_cut__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.99,
+        0.65,
+        0.99
+      ],
+      "aabb": {
+        "min": [
+          -0.495,
+          -0.2,
+          -0.495
+        ],
+        "max": [
+          0.495,
+          0.45,
+          0.495
+        ]
+      },
+      "placement": "tile; z -0.2..0.45, clean capped top for camera-side cutaways"
+    },
+    "wall_cut__upper": {
+      "file": "wall_cut__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        0.99,
+        0.65,
+        0.99
+      ],
+      "aabb": {
+        "min": [
+          -0.495,
+          -0.2,
+          -0.495
+        ],
+        "max": [
+          0.495,
+          0.45,
+          0.495
+        ]
+      },
+      "placement": "tile; z -0.2..0.45, clean capped top for camera-side cutaways"
+    },
+    "wall_top_a": {
+      "file": "wall_top_a__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.038,
+        1.449,
+        1.039
+      ],
+      "aabb": {
+        "min": [
+          -0.49,
+          -0.852,
+          -0.49
+        ],
+        "max": [
+          0.548,
+          0.598,
+          0.549
+        ]
+      },
+      "placement": "cap; origin at the wall top (place at y = wall height)"
+    },
+    "wall_top_a__core": {
+      "file": "wall_top_a__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        0.92,
+        1.06
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.46,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          0.46,
+          0.56
+        ]
+      },
+      "placement": "cap; origin at the wall top (place at y = wall height)"
+    },
+    "wall_top_a__lower": {
+      "file": "wall_top_a__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        0.92,
+        1.06
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          -0.46,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          0.46,
+          0.56
+        ]
+      },
+      "placement": "cap; origin at the wall top (place at y = wall height)"
+    },
+    "wall_top_a__mid": {
+      "file": "wall_top_a__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.038,
+        1.449,
+        1.039
+      ],
+      "aabb": {
+        "min": [
+          -0.49,
+          -0.852,
+          -0.49
+        ],
+        "max": [
+          0.548,
+          0.598,
+          0.549
+        ]
+      },
+      "placement": "cap; origin at the wall top (place at y = wall height)"
+    },
+    "wall_top_a__upper": {
+      "file": "wall_top_a__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.038,
+        1.449,
+        1.039
+      ],
+      "aabb": {
+        "min": [
+          -0.49,
+          -0.852,
+          -0.49
+        ],
+        "max": [
+          0.548,
+          0.598,
+          0.549
+        ]
+      },
+      "placement": "cap; origin at the wall top (place at y = wall height)"
+    },
+    "wall_top_b": {
+      "file": "wall_top_b__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        0.442,
+        0.99
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.495
+        ],
+        "max": [
+          0.5,
+          0.442,
+          0.495
+        ]
+      },
+      "placement": "cap; origin at the wall top (place at y = wall height)"
+    },
+    "wall_top_b__core": {
+      "file": "wall_top_b__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        0.31,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          0.31,
+          0.5
+        ]
+      },
+      "placement": "cap; origin at the wall top (place at y = wall height)"
+    },
+    "wall_top_b__lower": {
+      "file": "wall_top_b__lower.glb",
+      "themes": [
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.0,
+        0.31,
+        1.0
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          0.31,
+          0.5
+        ]
+      },
+      "placement": "cap; origin at the wall top (place at y = wall height)"
+    },
+    "wall_top_b__mid": {
+      "file": "wall_top_b__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        0.442,
+        0.99
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.495
+        ],
+        "max": [
+          0.5,
+          0.442,
+          0.495
+        ]
+      },
+      "placement": "cap; origin at the wall top (place at y = wall height)"
+    },
+    "wall_top_b__upper": {
+      "file": "wall_top_b__upper.glb",
+      "themes": [
+        "upper",
+        "mid"
+      ],
+      "size": [
+        1.0,
+        0.442,
+        0.99
+      ],
+      "aabb": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.495
+        ],
+        "max": [
+          0.5,
+          0.442,
+          0.495
+        ]
+      },
+      "placement": "cap; origin at the wall top (place at y = wall height)"
+    },
+    "wave_screen": {
+      "file": "wave_screen.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.35,
+        1.15,
+        0.465
+      ],
+      "aabb": {
+        "min": [
+          -0.675,
+          0.0,
+          -0.315
+        ],
+        "max": [
+          0.675,
+          1.15,
+          0.15
+        ]
+      },
+      "objects": [
+        "Body",
+        "Screen"
+      ],
+      "placement": "Screen faces +Z with clean 0-1 UVs (u left->right, v top->bottom); the game draws the waveform onto it"
+    },
+    "wave_screen__core": {
+      "file": "wave_screen.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.35,
+        1.15,
+        0.465
+      ],
+      "aabb": {
+        "min": [
+          -0.675,
+          0.0,
+          -0.315
+        ],
+        "max": [
+          0.675,
+          1.15,
+          0.15
+        ]
+      },
+      "objects": [
+        "Body",
+        "Screen"
+      ],
+      "placement": "Screen faces +Z with clean 0-1 UVs (u left->right, v top->bottom); the game draws the waveform onto it"
+    },
+    "wave_screen__lower": {
+      "file": "wave_screen.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.35,
+        1.15,
+        0.465
+      ],
+      "aabb": {
+        "min": [
+          -0.675,
+          0.0,
+          -0.315
+        ],
+        "max": [
+          0.675,
+          1.15,
+          0.15
+        ]
+      },
+      "objects": [
+        "Body",
+        "Screen"
+      ],
+      "placement": "Screen faces +Z with clean 0-1 UVs (u left->right, v top->bottom); the game draws the waveform onto it"
+    },
+    "wave_screen__mid": {
+      "file": "wave_screen.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.35,
+        1.15,
+        0.465
+      ],
+      "aabb": {
+        "min": [
+          -0.675,
+          0.0,
+          -0.315
+        ],
+        "max": [
+          0.675,
+          1.15,
+          0.15
+        ]
+      },
+      "objects": [
+        "Body",
+        "Screen"
+      ],
+      "placement": "Screen faces +Z with clean 0-1 UVs (u left->right, v top->bottom); the game draws the waveform onto it"
+    },
+    "wave_screen__upper": {
+      "file": "wave_screen.glb",
+      "themes": [
+        "upper",
+        "mid",
+        "lower",
+        "core"
+      ],
+      "size": [
+        1.35,
+        1.15,
+        0.465
+      ],
+      "aabb": {
+        "min": [
+          -0.675,
+          0.0,
+          -0.315
+        ],
+        "max": [
+          0.675,
+          1.15,
+          0.15
+        ]
+      },
+      "objects": [
+        "Body",
+        "Screen"
+      ],
+      "placement": "Screen faces +Z with clean 0-1 UVs (u left->right, v top->bottom); the game draws the waveform onto it"
+    }
+  }
+}

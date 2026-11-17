@@ -1,0 +1,4181 @@
+[
+ {
+  "id": "01-soft-open",
+  "bpm": 90,
+  "key": "G Major Pentatonic",
+  "roles": [
+   "melody",
+   "chord",
+   "bass",
+   "drums"
+  ],
+  "formulas": [
+   "fibonacci",
+   "sine",
+   "triangle",
+   "euclid"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 7952,
+  "harshDownMean81": 0,
+  "harshDownWorst81": 0,
+  "harshBeatMean81": 0,
+  "harshBeatWorst81": 0,
+  "harshDownMean4x": 0,
+  "harshDownWorst4x": 0,
+  "harshDownWorstPair": 0,
+  "worstPairLabel": "-",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 99.10714285714286,
+  "icHistogramDownPct": [
+   28.741496598639454,
+   0,
+   16.071428571428573,
+   17.772108843537413,
+   15.051020408163266,
+   22.36394557823129,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 5,
+     "maxPerBar": 5,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.875
+    },
+    "2": {
+     "onsetsPerBar": 10,
+     "maxPerBar": 10,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.75
+    },
+    "4": {
+     "onsetsPerBar": 20,
+     "maxPerBar": 20,
+     "minPerBar": 20,
+     "longestGapBeats": 0.25,
+     "grid16": 60,
+     "grid32": 100,
+     "notesPerSec": 7.5
+    },
+    "0.5": {
+     "onsetsPerBar": 2.5,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.125
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 2,
+     "maxPerBar": 2,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.75
+    },
+    "2": {
+     "onsetsPerBar": 4,
+     "maxPerBar": 4,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    },
+    "4": {
+     "onsetsPerBar": 8,
+     "maxPerBar": 8,
+     "minPerBar": 8,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3
+    },
+    "0.5": {
+     "onsetsPerBar": 1,
+     "maxPerBar": 1,
+     "minPerBar": 1,
+     "longestGapBeats": 4,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.375
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.125
+    },
+    "2": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.25
+    },
+    "4": {
+     "onsetsPerBar": 12,
+     "maxPerBar": 12,
+     "minPerBar": 12,
+     "longestGapBeats": 0.375,
+     "grid16": 66.66666666666667,
+     "grid32": 100,
+     "notesPerSec": 4.5
+    },
+    "0.5": {
+     "onsetsPerBar": 1.5,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.75
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 11,
+     "maxPerBar": 11,
+     "minPerBar": 11,
+     "longestGapBeats": 0.7800000000000011,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4.125
+    },
+    "2": {
+     "onsetsPerBar": 22,
+     "maxPerBar": 22,
+     "minPerBar": 22,
+     "longestGapBeats": 0.39000000000000057,
+     "grid16": 72.72727272727273,
+     "grid32": 100,
+     "notesPerSec": 8.25
+    },
+    "4": {
+     "onsetsPerBar": 44,
+     "maxPerBar": 44,
+     "minPerBar": 44,
+     "longestGapBeats": 0.19500000000000028,
+     "grid16": 45.45454545454545,
+     "grid32": 72.72727272727273,
+     "notesPerSec": 16.5
+    },
+    "0.5": {
+     "onsetsPerBar": 5.5,
+     "maxPerBar": 6,
+     "minPerBar": 5,
+     "longestGapBeats": 1.5600000000000023,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.25
+    }
+   }
+  ],
+  "grid16Pct": 91.83673469387755,
+  "grid32Pct": 100,
+  "grid32Pct4x": 85.71428571428571,
+  "maxSwingBeats": 0.060000000000002274,
+  "mixMinPerBar": 10,
+  "mixMaxPerBar": 42,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "melody",
+    "medianHz": 659.2551138257398,
+    "lowHz": 391.99543598174927,
+    "highHz": 987.7666025122483
+   },
+   {
+    "role": "chord",
+    "medianHz": 329.6275569128699,
+    "lowHz": 195.99771799087463,
+    "highHz": 587.3295358348151
+   },
+   {
+    "role": "bass",
+    "medianHz": 82.4068892282175,
+    "lowHz": 48.999429497718666,
+    "highHz": 110
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 94.07142857142857,
+  "bassRootDownPct": 50,
+  "bassDistinctPitches": 7,
+  "bassRepeatPct": 6.382978723404255,
+  "chordClusterPct": 0,
+  "offGrid16LayerMean": 2.272727272727272,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 6.818181818181817,
+  "melody": {
+   "1": {
+    "notes": 40,
+    "stepPct": 33.333333333333336,
+    "skipPct": 41.02564102564103,
+    "leapPct": 12.820512820512821,
+    "repeatPct": 12.820512820512821,
+    "maxLeap": 10,
+    "range": 19,
+    "distinctPitches": 9,
+    "distinctBars": 6,
+    "barSelfSimilarity": 7.142857142857143
+   },
+   "2": {
+    "notes": 80,
+    "stepPct": 29.11392405063291,
+    "skipPct": 31.645569620253166,
+    "leapPct": 15.189873417721518,
+    "repeatPct": 24.050632911392405,
+    "maxLeap": 12,
+    "range": 19,
+    "distinctPitches": 9,
+    "distinctBars": 6,
+    "barSelfSimilarity": 7.142857142857143
+   },
+   "4": {
+    "notes": 160,
+    "stepPct": 27.67295597484277,
+    "skipPct": 32.075471698113205,
+    "leapPct": 16.352201257861637,
+    "repeatPct": 23.89937106918239,
+    "maxLeap": 12,
+    "range": 19,
+    "distinctPitches": 9,
+    "distinctBars": 6,
+    "barSelfSimilarity": 7.142857142857143
+   },
+   "0.5": {
+    "notes": 20,
+    "stepPct": 31.57894736842105,
+    "skipPct": 36.8421052631579,
+    "leapPct": 10.526315789473685,
+    "repeatPct": 21.05263157894737,
+    "maxLeap": 7,
+    "range": 16,
+    "distinctPitches": 7,
+    "distinctBars": 5,
+    "barSelfSimilarity": 10.714285714285714
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.578030303030303,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 76.03383458646617,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 0.7200000000000006,
+   "reverseChangedPct": 59.94897959183673,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 97.6,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 0,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0.45,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 0,
+   "melodyStatic": 0,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 2,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0,
+   "chordClusters": 0,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 939,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 26,
+   "highestMidi": 112
+  }
+ },
+ {
+  "id": "02-hit-harder",
+  "bpm": 100,
+  "key": "A Mixolydian",
+  "roles": [
+   "bass",
+   "drums",
+   "melody",
+   "chord"
+  ],
+  "formulas": [
+   "collatz",
+   "euclid",
+   "triangular",
+   "saw"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 7952,
+  "harshDownMean81": 0.2611585944919277,
+  "harshDownWorst81": 0.9615384615384616,
+  "harshBeatMean81": 2.2629737612007115,
+  "harshBeatWorst81": 4.605263157894737,
+  "harshDownMean4x": 0.15750915750915737,
+  "harshDownWorst4x": 0.9615384615384616,
+  "harshDownWorstPair": 1.5625,
+  "worstPairLabel": "bass@1x + chord@0.5x",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 98.41269841269842,
+  "icHistogramDownPct": [
+   26.53061224489796,
+   0,
+   7.3979591836734695,
+   19.387755102040817,
+   22.959183673469386,
+   22.959183673469386,
+   0.7653061224489796
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 5,
+     "maxPerBar": 5,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.0833333333333335
+    },
+    "2": {
+     "onsetsPerBar": 10,
+     "maxPerBar": 10,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4.166666666666667
+    },
+    "4": {
+     "onsetsPerBar": 20,
+     "maxPerBar": 20,
+     "minPerBar": 20,
+     "longestGapBeats": 0.25,
+     "grid16": 60,
+     "grid32": 100,
+     "notesPerSec": 8.333333333333334
+    },
+    "0.5": {
+     "onsetsPerBar": 2.5,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.25
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 12,
+     "maxPerBar": 12,
+     "minPerBar": 12,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 5
+    },
+    "2": {
+     "onsetsPerBar": 24,
+     "maxPerBar": 24,
+     "minPerBar": 24,
+     "longestGapBeats": 0.5,
+     "grid16": 58.333333333333336,
+     "grid32": 100,
+     "notesPerSec": 10
+    },
+    "4": {
+     "onsetsPerBar": 48,
+     "maxPerBar": 48,
+     "minPerBar": 48,
+     "longestGapBeats": 0.25,
+     "grid16": 41.666666666666664,
+     "grid32": 58.333333333333336,
+     "notesPerSec": 20
+    },
+    "0.5": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 7,
+     "minPerBar": 5,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.916666666666667
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.25
+    },
+    "2": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "4": {
+     "onsetsPerBar": 12,
+     "maxPerBar": 12,
+     "minPerBar": 12,
+     "longestGapBeats": 0.375,
+     "grid16": 66.66666666666667,
+     "grid32": 100,
+     "notesPerSec": 5
+    },
+    "0.5": {
+     "onsetsPerBar": 1.5,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.8333333333333334
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 2,
+     "maxPerBar": 2,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.8333333333333334
+    },
+    "2": {
+     "onsetsPerBar": 4,
+     "maxPerBar": 4,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.6666666666666667
+    },
+    "4": {
+     "onsetsPerBar": 8,
+     "maxPerBar": 8,
+     "minPerBar": 8,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.3333333333333335
+    },
+    "0.5": {
+     "onsetsPerBar": 1,
+     "maxPerBar": 1,
+     "minPerBar": 1,
+     "longestGapBeats": 4,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.4166666666666667
+    }
+   }
+  ],
+  "grid16Pct": 87.01298701298701,
+  "grid32Pct": 100,
+  "grid32Pct4x": 77.27272727272727,
+  "maxSwingBeats": 0.060000000000002274,
+  "mixMinPerBar": 10,
+  "mixMaxPerBar": 44,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "bass",
+    "medianHz": 92.4986056779086,
+    "lowHz": 55,
+    "highHz": 138.59131548843604
+   },
+   {
+    "role": "melody",
+    "medianHz": 783.9908719634985,
+    "lowHz": 440,
+    "highHz": 1108.7305239074883
+   },
+   {
+    "role": "chord",
+    "medianHz": 391.99543598174927,
+    "lowHz": 246.94165062806206,
+    "highHz": 659.2551138257398
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 88.43457943925233,
+  "bassRootDownPct": 56.25,
+  "bassDistinctPitches": 8,
+  "bassRepeatPct": 16.455696202531644,
+  "chordClusterPct": 0,
+  "offGrid16LayerMean": 3.472222222222222,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 10.416666666666666,
+  "melody": {
+   "1": {
+    "notes": 24,
+    "stepPct": 34.78260869565217,
+    "skipPct": 39.130434782608695,
+    "leapPct": 26.08695652173913,
+    "repeatPct": 0,
+    "maxLeap": 16,
+    "range": 16,
+    "distinctPitches": 8,
+    "distinctBars": 2,
+    "barSelfSimilarity": 42.857142857142854
+   },
+   "2": {
+    "notes": 48,
+    "stepPct": 34.04255319148936,
+    "skipPct": 40.42553191489362,
+    "leapPct": 25.53191489361702,
+    "repeatPct": 0,
+    "maxLeap": 16,
+    "range": 16,
+    "distinctPitches": 8,
+    "distinctBars": 1,
+    "barSelfSimilarity": 100
+   },
+   "4": {
+    "notes": 96,
+    "stepPct": 33.68421052631579,
+    "skipPct": 41.05263157894737,
+    "leapPct": 25.263157894736842,
+    "repeatPct": 0,
+    "maxLeap": 16,
+    "range": 16,
+    "distinctPitches": 8,
+    "distinctBars": 1,
+    "barSelfSimilarity": 100
+   },
+   "0.5": {
+    "notes": 12,
+    "stepPct": 18.181818181818183,
+    "skipPct": 63.63636363636363,
+    "leapPct": 18.181818181818183,
+    "repeatPct": 0,
+    "maxLeap": 16,
+    "range": 16,
+    "distinctPitches": 6,
+    "distinctBars": 3,
+    "barSelfSimilarity": 28.571428571428573
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.6083333333333334,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 74.18831168831169,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 0.7200000000000006,
+   "reverseChangedPct": 63.47402597402598,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 89.2,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 0.52,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0.69,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 4.43,
+   "melodyStatic": 2.04,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 0.75,
+   "melodyLeapy@0.5": 1.2,
+   "melodyLeapy@2": 1.2,
+   "chordClusters": 0,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 939,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 28,
+   "highestMidi": 109
+  }
+ },
+ {
+  "id": "03-hold-the-door",
+  "bpm": 120,
+  "key": "C Lydian",
+  "roles": [
+   "chord",
+   "bass",
+   "melody",
+   "drums"
+  ],
+  "formulas": [
+   "spiral",
+   "ruler",
+   "popcount",
+   "modgate"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 4360,
+  "harshDownMean81": 2.594128819619014,
+  "harshDownWorst81": 3.8461538461538463,
+  "harshBeatMean81": 3.0042155768633743,
+  "harshBeatWorst81": 5.084745762711864,
+  "harshDownMean4x": 2.7018961430726134,
+  "harshDownWorst4x": 3.8461538461538463,
+  "harshDownWorstPair": 6.25,
+  "worstPairLabel": "chord@0.5x + melody@0.5x",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 98.71794871794872,
+  "icHistogramDownPct": [
+   29.535864978902953,
+   5.063291139240507,
+   13.924050632911392,
+   11.603375527426161,
+   15.189873417721518,
+   24.68354430379747,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 1,
+     "maxPerBar": 1,
+     "minPerBar": 1,
+     "longestGapBeats": 4,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.5
+    },
+    "2": {
+     "onsetsPerBar": 2,
+     "maxPerBar": 2,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    },
+    "4": {
+     "onsetsPerBar": 4,
+     "maxPerBar": 4,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2
+    },
+    "0.5": {
+     "onsetsPerBar": 0.5,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 8,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 1.5,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    },
+    "2": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    },
+    "4": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3
+    },
+    "0.5": {
+     "onsetsPerBar": 0.75,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 6,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    },
+    "2": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3
+    },
+    "4": {
+     "onsetsPerBar": 12,
+     "maxPerBar": 12,
+     "minPerBar": 12,
+     "longestGapBeats": 0.375,
+     "grid16": 66.66666666666667,
+     "grid32": 100,
+     "notesPerSec": 6
+    },
+    "0.5": {
+     "onsetsPerBar": 1.5,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 11.6875,
+     "maxPerBar": 12,
+     "minPerBar": 11,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 6
+    },
+    "2": {
+     "onsetsPerBar": 23.375,
+     "maxPerBar": 24,
+     "minPerBar": 23,
+     "longestGapBeats": 0.375,
+     "grid16": 65.77540106951872,
+     "grid32": 100,
+     "notesPerSec": 12
+    },
+    "4": {
+     "onsetsPerBar": 46.6875,
+     "maxPerBar": 47,
+     "minPerBar": 46,
+     "longestGapBeats": 0.1875,
+     "grid16": 54.35073627844712,
+     "grid32": 65.72958500669344,
+     "notesPerSec": 23.5
+    },
+    "0.5": {
+     "onsetsPerBar": 5.875,
+     "maxPerBar": 7,
+     "minPerBar": 5,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.5
+    }
+   }
+  ],
+  "grid16Pct": 86.70820353063344,
+  "grid32Pct": 100,
+  "grid32Pct4x": 76.70609645131938,
+  "maxSwingBeats": 0,
+  "mixMinPerBar": 7,
+  "mixMaxPerBar": 35,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "chord",
+    "medianHz": 523.2511306011972,
+    "lowHz": 293.6647679174076,
+    "highHz": 783.9908719634985
+   },
+   {
+    "role": "bass",
+    "medianHz": 82.4068892282175,
+    "lowHz": 65.40639132514966,
+    "highHz": 97.99885899543733
+   },
+   {
+    "role": "melody",
+    "medianHz": 880,
+    "lowHz": 587.3295358348151,
+    "highHz": 987.7666025122483
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 91.74528301886792,
+  "bassRootDownPct": 100,
+  "bassDistinctPitches": 5,
+  "bassRepeatPct": 0,
+  "chordClusterPct": 8.928571428571429,
+  "offGrid16LayerMean": 2.85204991087344,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 8.56760374832664,
+  "melody": {
+   "1": {
+    "notes": 24,
+    "stepPct": 39.130434782608695,
+    "skipPct": 34.78260869565217,
+    "leapPct": 17.391304347826086,
+    "repeatPct": 8.695652173913043,
+    "maxLeap": 9,
+    "range": 11,
+    "distinctPitches": 7,
+    "distinctBars": 3,
+    "barSelfSimilarity": 28.571428571428573
+   },
+   "2": {
+    "notes": 48,
+    "stepPct": 38.297872340425535,
+    "skipPct": 34.04255319148936,
+    "leapPct": 19.148936170212767,
+    "repeatPct": 8.51063829787234,
+    "maxLeap": 9,
+    "range": 11,
+    "distinctPitches": 7,
+    "distinctBars": 2,
+    "barSelfSimilarity": 42.857142857142854
+   },
+   "4": {
+    "notes": 96,
+    "stepPct": 37.89473684210526,
+    "skipPct": 33.68421052631579,
+    "leapPct": 20,
+    "repeatPct": 8.421052631578947,
+    "maxLeap": 9,
+    "range": 11,
+    "distinctPitches": 7,
+    "distinctBars": 2,
+    "barSelfSimilarity": 42.857142857142854
+   },
+   "0.5": {
+    "notes": 12,
+    "stepPct": 45.45454545454545,
+    "skipPct": 18.181818181818183,
+    "leapPct": 18.181818181818183,
+    "repeatPct": 18.181818181818183,
+    "maxLeap": 9,
+    "range": 11,
+    "distinctPitches": 5,
+    "distinctBars": 3,
+    "barSelfSimilarity": 28.571428571428573
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.5801188026654348,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 83.99646330680814,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 1.4400000000000013,
+   "reverseChangedPct": 87.4859075535513,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 6,
+   "stoppedInScalePct": 100
+  },
+  "score": 92,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 5.19,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0.57,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 0,
+   "melodyStatic": 0,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 0,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0,
+   "chordClusters": 2.23,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 939,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 24,
+   "highestMidi": 103
+  }
+ },
+ {
+  "id": "04-second-opinion",
+  "bpm": 100,
+  "key": "E Dorian",
+  "roles": [
+   "melody",
+   "chord",
+   "bass",
+   "drums"
+  ],
+  "formulas": [
+   "norgard",
+   "lissajous",
+   "linear",
+   "staircase"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 7544,
+  "harshDownMean81": 0,
+  "harshDownWorst81": 0,
+  "harshBeatMean81": 0.24099764338468516,
+  "harshBeatWorst81": 2.2058823529411766,
+  "harshDownMean4x": 0,
+  "harshDownWorst4x": 0,
+  "harshDownWorstPair": 0,
+  "worstPairLabel": "-",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 99.0506329113924,
+  "icHistogramDownPct": [
+   28.07017543859649,
+   0,
+   9.320175438596491,
+   25.87719298245614,
+   13.486842105263158,
+   23.24561403508772,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 5,
+     "maxPerBar": 5,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.0833333333333335
+    },
+    "2": {
+     "onsetsPerBar": 10,
+     "maxPerBar": 10,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4.166666666666667
+    },
+    "4": {
+     "onsetsPerBar": 20,
+     "maxPerBar": 20,
+     "minPerBar": 20,
+     "longestGapBeats": 0.25,
+     "grid16": 60,
+     "grid32": 100,
+     "notesPerSec": 8.333333333333334
+    },
+    "0.5": {
+     "onsetsPerBar": 2.5,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.25
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 1.5,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.8333333333333334
+    },
+    "2": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.25
+    },
+    "4": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "0.5": {
+     "onsetsPerBar": 0.75,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 6,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.4166666666666667
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 4,
+     "maxPerBar": 4,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.6666666666666667
+    },
+    "2": {
+     "onsetsPerBar": 8,
+     "maxPerBar": 8,
+     "minPerBar": 8,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.3333333333333335
+    },
+    "4": {
+     "onsetsPerBar": 16,
+     "maxPerBar": 16,
+     "minPerBar": 16,
+     "longestGapBeats": 0.25,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 6.666666666666667
+    },
+    "0.5": {
+     "onsetsPerBar": 2,
+     "maxPerBar": 2,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.8333333333333334
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 11,
+     "maxPerBar": 11,
+     "minPerBar": 11,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4.583333333333334
+    },
+    "2": {
+     "onsetsPerBar": 22,
+     "maxPerBar": 22,
+     "minPerBar": 22,
+     "longestGapBeats": 0.25,
+     "grid16": 63.63636363636363,
+     "grid32": 100,
+     "notesPerSec": 9.166666666666668
+    },
+    "4": {
+     "onsetsPerBar": 44,
+     "maxPerBar": 44,
+     "minPerBar": 44,
+     "longestGapBeats": 0.125,
+     "grid16": 36.36363636363637,
+     "grid32": 63.63636363636363,
+     "notesPerSec": 18.333333333333336
+    },
+    "0.5": {
+     "onsetsPerBar": 5.5,
+     "maxPerBar": 6,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    }
+   }
+  ],
+  "grid16Pct": 89.3687707641196,
+  "grid32Pct": 100,
+  "grid32Pct4x": 81.3953488372093,
+  "maxSwingBeats": 0.060000000000002274,
+  "mixMinPerBar": 9,
+  "mixMaxPerBar": 43,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "melody",
+    "medianHz": 659.2551138257398,
+    "lowHz": 329.6275569128699,
+    "highHz": 880
+   },
+   {
+    "role": "chord",
+    "medianHz": 369.9944227116344,
+    "lowHz": 277.1826309768721,
+    "highHz": 493.8833012561241
+   },
+   {
+    "role": "bass",
+    "medianHz": 61.7354126570155,
+    "lowHz": 41.20344461410875,
+    "highHz": 92.4986056779086
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 86.17886178861788,
+  "bassRootDownPct": 56.25,
+  "bassDistinctPitches": 8,
+  "bassRepeatPct": 3.1746031746031744,
+  "chordClusterPct": 0,
+  "offGrid16LayerMean": 3.0303030303030307,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 9.090909090909092,
+  "melody": {
+   "1": {
+    "notes": 40,
+    "stepPct": 15.384615384615385,
+    "skipPct": 30.76923076923077,
+    "leapPct": 35.8974358974359,
+    "repeatPct": 17.94871794871795,
+    "maxLeap": 12,
+    "range": 19,
+    "distinctPitches": 12,
+    "distinctBars": 7,
+    "barSelfSimilarity": 3.5714285714285716
+   },
+   "2": {
+    "notes": 80,
+    "stepPct": 8.860759493670885,
+    "skipPct": 31.645569620253166,
+    "leapPct": 29.11392405063291,
+    "repeatPct": 30.379746835443036,
+    "maxLeap": 12,
+    "range": 19,
+    "distinctPitches": 12,
+    "distinctBars": 7,
+    "barSelfSimilarity": 3.5714285714285716
+   },
+   "4": {
+    "notes": 160,
+    "stepPct": 15.09433962264151,
+    "skipPct": 27.044025157232703,
+    "leapPct": 32.075471698113205,
+    "repeatPct": 25.78616352201258,
+    "maxLeap": 12,
+    "range": 19,
+    "distinctPitches": 12,
+    "distinctBars": 8,
+    "barSelfSimilarity": 0
+   },
+   "0.5": {
+    "notes": 20,
+    "stepPct": 21.05263157894737,
+    "skipPct": 21.05263157894737,
+    "leapPct": 26.31578947368421,
+    "repeatPct": 31.57894736842105,
+    "maxLeap": 12,
+    "range": 17,
+    "distinctPitches": 8,
+    "distinctBars": 6,
+    "barSelfSimilarity": 7.142857142857143
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.5780303030303029,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 67.53968253968254,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 0.3600000000000003,
+   "reverseChangedPct": 45.476190476190474,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 92,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 0,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0.61,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 4.36,
+   "melodyStatic": 2.33,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 0.75,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0,
+   "chordClusters": 0,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 939,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 28,
+   "highestMidi": 110
+  }
+ },
+ {
+  "id": "05-dead-air",
+  "bpm": 120,
+  "key": "B Minor",
+  "roles": [
+   "bass",
+   "melody",
+   "chord",
+   "drums"
+  ],
+  "formulas": [
+   "recaman",
+   "primes",
+   "cardioid",
+   "logistic"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 5164,
+  "harshDownMean81": 0,
+  "harshDownWorst81": 0,
+  "harshBeatMean81": 0.5234744900216823,
+  "harshBeatWorst81": 1.4814814814814814,
+  "harshDownMean4x": 0,
+  "harshDownWorst4x": 0,
+  "harshDownWorstPair": 0,
+  "worstPairLabel": "-",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 98.33852544132918,
+  "icHistogramDownPct": [
+   25.508607198748045,
+   0,
+   9.859154929577464,
+   26.604068857589983,
+   14.084507042253522,
+   23.943661971830984,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 1.75,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    },
+    "2": {
+     "onsetsPerBar": 3.4375,
+     "maxPerBar": 4,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2
+    },
+    "4": {
+     "onsetsPerBar": 6.875,
+     "maxPerBar": 7,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.5
+    },
+    "0.5": {
+     "onsetsPerBar": 0.875,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 6,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 4.5625,
+     "maxPerBar": 5,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "2": {
+     "onsetsPerBar": 9.125,
+     "maxPerBar": 10,
+     "minPerBar": 9,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 5
+    },
+    "4": {
+     "onsetsPerBar": 18.3125,
+     "maxPerBar": 19,
+     "minPerBar": 18,
+     "longestGapBeats": 0.25,
+     "grid16": 50.51194539249147,
+     "grid32": 100,
+     "notesPerSec": 9.5
+    },
+    "0.5": {
+     "onsetsPerBar": 2.3125,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 1,
+     "maxPerBar": 1,
+     "minPerBar": 1,
+     "longestGapBeats": 4,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.5
+    },
+    "2": {
+     "onsetsPerBar": 2,
+     "maxPerBar": 2,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    },
+    "4": {
+     "onsetsPerBar": 4,
+     "maxPerBar": 4,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2
+    },
+    "0.5": {
+     "onsetsPerBar": 0.5,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 8,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 10.3125,
+     "maxPerBar": 11,
+     "minPerBar": 10,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 5.5
+    },
+    "2": {
+     "onsetsPerBar": 20.625,
+     "maxPerBar": 21,
+     "minPerBar": 20,
+     "longestGapBeats": 0.375,
+     "grid16": 54.84848484848485,
+     "grid32": 100,
+     "notesPerSec": 10.5
+    },
+    "4": {
+     "onsetsPerBar": 41.3125,
+     "maxPerBar": 42,
+     "minPerBar": 41,
+     "longestGapBeats": 0.1875,
+     "grid16": 41.90620272314675,
+     "grid32": 54.91679273827534,
+     "notesPerSec": 21
+    },
+    "0.5": {
+     "onsetsPerBar": 5.125,
+     "maxPerBar": 6,
+     "minPerBar": 4,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3
+    }
+   }
+  ],
+  "grid16Pct": 84.88843813387425,
+  "grid32Pct": 100,
+  "grid32Pct4x": 73.58156028368795,
+  "maxSwingBeats": 0,
+  "mixMinPerBar": 8,
+  "mixMaxPerBar": 37,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "bass",
+    "medianHz": 123.47082531403103,
+    "lowHz": 61.7354126570155,
+    "highHz": 164.81377845643496
+   },
+   {
+    "role": "melody",
+    "medianHz": 987.7666025122483,
+    "lowHz": 554.3652619537442,
+    "highHz": 1318.5102276514797
+   },
+   {
+    "role": "chord",
+    "medianHz": 440,
+    "lowHz": 246.94165062806206,
+    "highHz": 739.9888454232688
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 95.02762430939227,
+  "bassRootDownPct": 71.42857142857143,
+  "bassDistinctPitches": 8,
+  "bassRepeatPct": 29.62962962962963,
+  "chordClusterPct": 0,
+  "offGrid16LayerMean": 3.7626262626262625,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 11.270801815431165,
+  "melody": {
+   "1": {
+    "notes": 37,
+    "stepPct": 25,
+    "skipPct": 25,
+    "leapPct": 27.77777777777778,
+    "repeatPct": 22.22222222222222,
+    "maxLeap": 10,
+    "range": 19,
+    "distinctPitches": 12,
+    "distinctBars": 8,
+    "barSelfSimilarity": 0
+   },
+   "2": {
+    "notes": 73,
+    "stepPct": 26.38888888888889,
+    "skipPct": 23.61111111111111,
+    "leapPct": 33.333333333333336,
+    "repeatPct": 16.666666666666668,
+    "maxLeap": 12,
+    "range": 19,
+    "distinctPitches": 12,
+    "distinctBars": 8,
+    "barSelfSimilarity": 0
+   },
+   "4": {
+    "notes": 146,
+    "stepPct": 28.275862068965516,
+    "skipPct": 26.20689655172414,
+    "leapPct": 33.10344827586207,
+    "repeatPct": 12.413793103448276,
+    "maxLeap": 12,
+    "range": 19,
+    "distinctPitches": 12,
+    "distinctBars": 8,
+    "barSelfSimilarity": 0
+   },
+   "0.5": {
+    "notes": 18,
+    "stepPct": 29.41176470588235,
+    "skipPct": 5.882352941176471,
+    "leapPct": 29.41176470588235,
+    "repeatPct": 35.294117647058826,
+    "maxLeap": 8,
+    "range": 14,
+    "distinctPitches": 8,
+    "distinctBars": 8,
+    "barSelfSimilarity": 0
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.5704105038108478,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 80.98214285714286,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 1.4400000000000013,
+   "reverseChangedPct": 72.87037037037037,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 94.6,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 0,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0.75,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 1.11,
+   "melodyStatic": 0,
+   "melodyRange": 0,
+   "melodyForm": 3,
+   "bassUngrounded": 0,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0.5,
+   "chordClusters": 0,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 939,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 28,
+   "highestMidi": 98
+  }
+ },
+ {
+  "id": "06-crossfire",
+  "bpm": 100,
+  "key": "F# Dorian",
+  "roles": [
+   "drums",
+   "melody",
+   "bass",
+   "chord"
+  ],
+  "formulas": [
+   "polymeter",
+   "lissajous",
+   "times",
+   "rose"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 7149,
+  "harshDownMean81": 0,
+  "harshDownWorst81": 0,
+  "harshBeatMean81": 0.9988603538915427,
+  "harshBeatWorst81": 2.2222222222222223,
+  "harshDownMean4x": 0,
+  "harshDownWorst4x": 0,
+  "harshDownWorstPair": 0,
+  "worstPairLabel": "-",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 96.04989604989605,
+  "icHistogramDownPct": [
+   25.052192066805844,
+   0,
+   7.515657620041754,
+   22.755741127348642,
+   17.11899791231733,
+   27.55741127348643,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 15.1875,
+     "maxPerBar": 16,
+     "minPerBar": 14,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 6.666666666666667
+    },
+    "2": {
+     "onsetsPerBar": 30.3125,
+     "maxPerBar": 31,
+     "minPerBar": 30,
+     "longestGapBeats": 0.375,
+     "grid16": 72.57731958762886,
+     "grid32": 100,
+     "notesPerSec": 12.916666666666668
+    },
+    "4": {
+     "onsetsPerBar": 60.6875,
+     "maxPerBar": 61,
+     "minPerBar": 60,
+     "longestGapBeats": 0.1875,
+     "grid16": 27.497425334706488,
+     "grid32": 72.50257466529351,
+     "notesPerSec": 25.416666666666668
+    },
+    "0.5": {
+     "onsetsPerBar": 7.5625,
+     "maxPerBar": 9,
+     "minPerBar": 7,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.75
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 5.3125,
+     "maxPerBar": 6,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "2": {
+     "onsetsPerBar": 10.6875,
+     "maxPerBar": 11,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4.583333333333334
+    },
+    "4": {
+     "onsetsPerBar": 21.3125,
+     "maxPerBar": 22,
+     "minPerBar": 21,
+     "longestGapBeats": 0.25,
+     "grid16": 50.146627565982406,
+     "grid32": 100,
+     "notesPerSec": 9.166666666666668
+    },
+    "0.5": {
+     "onsetsPerBar": 2.6875,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.25
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.25
+    },
+    "2": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "4": {
+     "onsetsPerBar": 12,
+     "maxPerBar": 12,
+     "minPerBar": 12,
+     "longestGapBeats": 0.375,
+     "grid16": 66.66666666666667,
+     "grid32": 100,
+     "notesPerSec": 5
+    },
+    "0.5": {
+     "onsetsPerBar": 1.5,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.8333333333333334
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 1.375,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.8333333333333334
+    },
+    "2": {
+     "onsetsPerBar": 2.6875,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.25
+    },
+    "4": {
+     "onsetsPerBar": 5.375,
+     "maxPerBar": 6,
+     "minPerBar": 5,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "0.5": {
+     "onsetsPerBar": 0.6875,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 6,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.4166666666666667
+    }
+   }
+  ],
+  "grid16Pct": 90.44540229885058,
+  "grid32Pct": 100,
+  "grid32Pct4x": 83.20754716981132,
+  "maxSwingBeats": 0,
+  "mixMinPerBar": 11,
+  "mixMaxPerBar": 50,
+  "densityFlags": [
+   "drums@4x dense 61/bar"
+  ],
+  "register": [
+   {
+    "role": "melody",
+    "medianHz": 830.6093951598903,
+    "lowHz": 622.2539674441618,
+    "highHz": 880
+   },
+   {
+    "role": "bass",
+    "medianHz": 77.78174593052023,
+    "lowHz": 46.2493028389543,
+    "highHz": 110
+   },
+   {
+    "role": "chord",
+    "medianHz": 369.9944227116344,
+    "lowHz": 184.9972113558172,
+    "highHz": 554.3652619537442
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 100,
+  "bassRootDownPct": 50,
+  "bassDistinctPitches": 9,
+  "bassRepeatPct": 0,
+  "chordClusterPct": 0,
+  "offGrid16LayerMean": 2.285223367697595,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 6.874356333676623,
+  "melody": {
+   "1": {
+    "notes": 43,
+    "stepPct": 57.142857142857146,
+    "skipPct": 2.380952380952381,
+    "leapPct": 7.142857142857143,
+    "repeatPct": 33.333333333333336,
+    "maxLeap": 5,
+    "range": 8,
+    "distinctPitches": 5,
+    "distinctBars": 6,
+    "barSelfSimilarity": 7.142857142857143
+   },
+   "2": {
+    "notes": 85,
+    "stepPct": 59.523809523809526,
+    "skipPct": 8.333333333333334,
+    "leapPct": 4.761904761904762,
+    "repeatPct": 27.38095238095238,
+    "maxLeap": 5,
+    "range": 8,
+    "distinctPitches": 6,
+    "distinctBars": 6,
+    "barSelfSimilarity": 7.142857142857143
+   },
+   "4": {
+    "notes": 171,
+    "stepPct": 54.11764705882353,
+    "skipPct": 10.588235294117647,
+    "leapPct": 5.294117647058823,
+    "repeatPct": 30,
+    "maxLeap": 5,
+    "range": 8,
+    "distinctPitches": 6,
+    "distinctBars": 6,
+    "barSelfSimilarity": 7.142857142857143
+   },
+   "0.5": {
+    "notes": 21,
+    "stepPct": 55,
+    "skipPct": 15,
+    "leapPct": 5,
+    "repeatPct": 25,
+    "maxLeap": 5,
+    "range": 8,
+    "distinctPitches": 5,
+    "distinctBars": 7,
+    "barSelfSimilarity": 3.5714285714285716
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.6940916473648933,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 85.91012947448591,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 0.3600000000000003,
+   "reverseChangedPct": 58.632840028188866,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 94.5,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 0,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0.46,
+   "density": 3,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 0,
+   "melodyStatic": 0,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 2,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0,
+   "chordClusters": 0,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 939,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 25,
+   "highestMidi": 95
+  }
+ },
+ {
+  "id": "07-out-of-phase",
+  "bpm": 80,
+  "key": "C# Phrygian",
+  "roles": [
+   "melody",
+   "chord",
+   "bass",
+   "drums"
+  ],
+  "formulas": [
+   "circle",
+   "sine",
+   "triangle",
+   "beatty"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 7455,
+  "harshDownMean81": 0,
+  "harshDownWorst81": 0,
+  "harshBeatMean81": 0.49937184973673826,
+  "harshBeatWorst81": 1.6,
+  "harshDownMean4x": 0,
+  "harshDownWorst4x": 0,
+  "harshDownWorstPair": 0,
+  "worstPairLabel": "-",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 96.875,
+  "icHistogramDownPct": [
+   24.829157175398635,
+   0,
+   8.656036446469248,
+   28.246013667425967,
+   14.578587699316628,
+   23.690205011389523,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 5,
+     "maxPerBar": 5,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.6666666666666665
+    },
+    "2": {
+     "onsetsPerBar": 10,
+     "maxPerBar": 10,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.333333333333333
+    },
+    "4": {
+     "onsetsPerBar": 20,
+     "maxPerBar": 20,
+     "minPerBar": 20,
+     "longestGapBeats": 0.25,
+     "grid16": 60,
+     "grid32": 100,
+     "notesPerSec": 6.666666666666666
+    },
+    "0.5": {
+     "onsetsPerBar": 2.5,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 1.625,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.6666666666666666
+    },
+    "2": {
+     "onsetsPerBar": 3.1875,
+     "maxPerBar": 4,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.3333333333333333
+    },
+    "4": {
+     "onsetsPerBar": 6.4375,
+     "maxPerBar": 7,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.333333333333333
+    },
+    "0.5": {
+     "onsetsPerBar": 0.8125,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 6,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.3333333333333333
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 3.4375,
+     "maxPerBar": 4,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.3333333333333333
+    },
+    "2": {
+     "onsetsPerBar": 6.875,
+     "maxPerBar": 7,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.333333333333333
+    },
+    "4": {
+     "onsetsPerBar": 13.75,
+     "maxPerBar": 14,
+     "minPerBar": 13,
+     "longestGapBeats": 0.375,
+     "grid16": 49.54545454545455,
+     "grid32": 100,
+     "notesPerSec": 4.666666666666666
+    },
+    "0.5": {
+     "onsetsPerBar": 1.75,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.6666666666666666
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 1.25,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2
+    },
+    "2": {
+     "onsetsPerBar": 12,
+     "maxPerBar": 12,
+     "minPerBar": 12,
+     "longestGapBeats": 0.625,
+     "grid16": 66.66666666666667,
+     "grid32": 100,
+     "notesPerSec": 4
+    },
+    "4": {
+     "onsetsPerBar": 24,
+     "maxPerBar": 24,
+     "minPerBar": 24,
+     "longestGapBeats": 0.3125,
+     "grid16": 66.66666666666667,
+     "grid32": 66.66666666666667,
+     "notesPerSec": 8
+    },
+    "0.5": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 2.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    }
+   }
+  ],
+  "grid16Pct": 92.88097886540601,
+  "grid32Pct": 100,
+  "grid32Pct4x": 87.5365141187926,
+  "maxSwingBeats": 0,
+  "mixMinPerBar": 7,
+  "mixMaxPerBar": 33,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "melody",
+    "medianHz": 830.6093951598903,
+    "lowHz": 587.3295358348151,
+    "highHz": 1318.5102276514797
+   },
+   {
+    "role": "chord",
+    "medianHz": 493.8833012561241,
+    "lowHz": 277.1826309768721,
+    "highHz": 830.6093951598903
+   },
+   {
+    "role": "bass",
+    "medianHz": 110,
+    "lowHz": 82.4068892282175,
+    "highHz": 164.81377845643496
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 90.45996592844975,
+  "bassRootDownPct": 57.142857142857146,
+  "bassDistinctPitches": 9,
+  "bassRepeatPct": 24.074074074074073,
+  "chordClusterPct": 0,
+  "offGrid16LayerMean": 2.7777777777777772,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 8.333333333333332,
+  "melody": {
+   "1": {
+    "notes": 40,
+    "stepPct": 43.58974358974359,
+    "skipPct": 17.94871794871795,
+    "leapPct": 20.512820512820515,
+    "repeatPct": 17.94871794871795,
+    "maxLeap": 10,
+    "range": 15,
+    "distinctPitches": 9,
+    "distinctBars": 6,
+    "barSelfSimilarity": 7.142857142857143
+   },
+   "2": {
+    "notes": 80,
+    "stepPct": 37.9746835443038,
+    "skipPct": 17.72151898734177,
+    "leapPct": 20.253164556962027,
+    "repeatPct": 24.050632911392405,
+    "maxLeap": 15,
+    "range": 17,
+    "distinctPitches": 10,
+    "distinctBars": 8,
+    "barSelfSimilarity": 0
+   },
+   "4": {
+    "notes": 160,
+    "stepPct": 42.138364779874216,
+    "skipPct": 14.465408805031446,
+    "leapPct": 23.270440251572328,
+    "repeatPct": 20.12578616352201,
+    "maxLeap": 15,
+    "range": 17,
+    "distinctPitches": 10,
+    "distinctBars": 7,
+    "barSelfSimilarity": 3.5714285714285716
+   },
+   "0.5": {
+    "notes": 20,
+    "stepPct": 47.36842105263158,
+    "skipPct": 10.526315789473685,
+    "leapPct": 15.789473684210526,
+    "repeatPct": 26.31578947368421,
+    "maxLeap": 9,
+    "range": 12,
+    "distinctPitches": 8,
+    "distinctBars": 7,
+    "barSelfSimilarity": 3.5714285714285716
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.5085147945049431,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 78.7434554973822,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 0.3600000000000003,
+   "reverseChangedPct": 62.82722513089005,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 98,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 0,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0.56,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 0,
+   "melodyStatic": 0,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 0.57,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0.9,
+   "chordClusters": 0,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 939,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 25,
+   "highestMidi": 98
+  }
+ },
+ {
+  "id": "08-loop-pedal",
+  "bpm": 120,
+  "key": "C Minor Pentatonic",
+  "roles": [
+   "bass",
+   "drums",
+   "melody",
+   "chord"
+  ],
+  "formulas": [
+   "polygon",
+   "bit",
+   "kolakoski",
+   "triangle"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 8920,
+  "harshDownMean81": 0,
+  "harshDownWorst81": 0,
+  "harshBeatMean81": 0,
+  "harshBeatWorst81": 0,
+  "harshDownMean4x": 0,
+  "harshDownWorst4x": 0,
+  "harshDownWorstPair": 0,
+  "worstPairLabel": "-",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 98.50746268656717,
+  "icHistogramDownPct": [
+   26.234567901234566,
+   0,
+   24.92283950617284,
+   5.092592592592593,
+   3.009259259259259,
+   40.74074074074074,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 5,
+     "maxPerBar": 5,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "2": {
+     "onsetsPerBar": 10,
+     "maxPerBar": 10,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 5
+    },
+    "4": {
+     "onsetsPerBar": 20,
+     "maxPerBar": 20,
+     "minPerBar": 20,
+     "longestGapBeats": 0.25,
+     "grid16": 60,
+     "grid32": 100,
+     "notesPerSec": 10
+    },
+    "0.5": {
+     "onsetsPerBar": 2.5,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 9,
+     "maxPerBar": 9,
+     "minPerBar": 9,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4.5
+    },
+    "2": {
+     "onsetsPerBar": 18,
+     "maxPerBar": 18,
+     "minPerBar": 18,
+     "longestGapBeats": 0.25,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 9
+    },
+    "4": {
+     "onsetsPerBar": 36,
+     "maxPerBar": 36,
+     "minPerBar": 36,
+     "longestGapBeats": 0.125,
+     "grid16": 55.55555555555556,
+     "grid32": 100,
+     "notesPerSec": 18
+    },
+    "0.5": {
+     "onsetsPerBar": 4.5,
+     "maxPerBar": 5,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 5,
+     "maxPerBar": 5,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "2": {
+     "onsetsPerBar": 10,
+     "maxPerBar": 10,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 5
+    },
+    "4": {
+     "onsetsPerBar": 20,
+     "maxPerBar": 20,
+     "minPerBar": 20,
+     "longestGapBeats": 0.25,
+     "grid16": 60,
+     "grid32": 100,
+     "notesPerSec": 10
+    },
+    "0.5": {
+     "onsetsPerBar": 2.5,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 2,
+     "maxPerBar": 2,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    },
+    "2": {
+     "onsetsPerBar": 4,
+     "maxPerBar": 4,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2
+    },
+    "4": {
+     "onsetsPerBar": 8,
+     "maxPerBar": 8,
+     "minPerBar": 8,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4
+    },
+    "0.5": {
+     "onsetsPerBar": 1,
+     "maxPerBar": 1,
+     "minPerBar": 1,
+     "longestGapBeats": 4,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.5
+    }
+   }
+  ],
+  "grid16Pct": 100,
+  "grid32Pct": 100,
+  "grid32Pct4x": 100,
+  "maxSwingBeats": 0,
+  "mixMinPerBar": 9,
+  "mixMaxPerBar": 42,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "bass",
+    "medianHz": 87.30705785825097,
+    "lowHz": 65.40639132514966,
+    "highHz": 174.61411571650194
+   },
+   {
+    "role": "melody",
+    "medianHz": 783.9908719634985,
+    "lowHz": 523.2511306011972,
+    "highHz": 932.3275230361799
+   },
+   {
+    "role": "chord",
+    "medianHz": 466.1637615180899,
+    "lowHz": 311.1269837220809,
+    "highHz": 783.9908719634985
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 86.71428571428571,
+  "bassRootDownPct": 56.25,
+  "bassDistinctPitches": 8,
+  "bassRepeatPct": 15.189873417721518,
+  "chordClusterPct": 0,
+  "offGrid16LayerMean": 0,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 0,
+  "melody": {
+   "1": {
+    "notes": 40,
+    "stepPct": 61.53846153846154,
+    "skipPct": 15.384615384615385,
+    "leapPct": 10.256410256410257,
+    "repeatPct": 12.820512820512821,
+    "maxLeap": 7,
+    "range": 12,
+    "distinctPitches": 6,
+    "distinctBars": 4,
+    "barSelfSimilarity": 25
+   },
+   "2": {
+    "notes": 80,
+    "stepPct": 60.75949367088607,
+    "skipPct": 17.72151898734177,
+    "leapPct": 10.126582278481013,
+    "repeatPct": 11.39240506329114,
+    "maxLeap": 7,
+    "range": 12,
+    "distinctPitches": 6,
+    "distinctBars": 8,
+    "barSelfSimilarity": 0
+   },
+   "4": {
+    "notes": 160,
+    "stepPct": 60.37735849056604,
+    "skipPct": 18.238993710691823,
+    "leapPct": 10.062893081761006,
+    "repeatPct": 11.320754716981131,
+    "maxLeap": 7,
+    "range": 12,
+    "distinctPitches": 6,
+    "distinctBars": 8,
+    "barSelfSimilarity": 0
+   },
+   "0.5": {
+    "notes": 20,
+    "stepPct": 63.1578947368421,
+    "skipPct": 10.526315789473685,
+    "leapPct": 10.526315789473685,
+    "repeatPct": 15.789473684210526,
+    "maxLeap": 7,
+    "range": 10,
+    "distinctPitches": 5,
+    "distinctBars": 4,
+    "barSelfSimilarity": 25
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.5777777777777777,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 58.125,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 0.7200000000000006,
+   "reverseChangedPct": 57.67857142857143,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 99.3,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 0,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 0,
+   "melodyStatic": 0,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 0.75,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0,
+   "chordClusters": 0,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 955,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 24,
+   "highestMidi": 96
+  }
+ },
+ {
+  "id": "09-rewind",
+  "bpm": 120,
+  "key": "F Minor",
+  "roles": [
+   "melody",
+   "bass",
+   "drums",
+   "chord"
+  ],
+  "formulas": [
+   "triangle",
+   "sine",
+   "gray",
+   "saw"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 7952,
+  "harshDownMean81": 0,
+  "harshDownWorst81": 0,
+  "harshBeatMean81": 0.6556187477240111,
+  "harshBeatWorst81": 1.5151515151515151,
+  "harshDownMean4x": 0,
+  "harshDownWorst4x": 0,
+  "harshDownWorstPair": 0,
+  "worstPairLabel": "-",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 98.61111111111111,
+  "icHistogramDownPct": [
+   24.489795918367346,
+   0,
+   9.693877551020408,
+   23.979591836734695,
+   14.45578231292517,
+   27.38095238095238,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 5,
+     "maxPerBar": 5,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "2": {
+     "onsetsPerBar": 10,
+     "maxPerBar": 10,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 5
+    },
+    "4": {
+     "onsetsPerBar": 20,
+     "maxPerBar": 20,
+     "minPerBar": 20,
+     "longestGapBeats": 0.25,
+     "grid16": 60,
+     "grid32": 100,
+     "notesPerSec": 10
+    },
+    "0.5": {
+     "onsetsPerBar": 2.5,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    },
+    "2": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3
+    },
+    "4": {
+     "onsetsPerBar": 12,
+     "maxPerBar": 12,
+     "minPerBar": 12,
+     "longestGapBeats": 0.375,
+     "grid16": 66.66666666666667,
+     "grid32": 100,
+     "notesPerSec": 6
+    },
+    "0.5": {
+     "onsetsPerBar": 1.5,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 11.5,
+     "maxPerBar": 12,
+     "minPerBar": 11,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 6
+    },
+    "2": {
+     "onsetsPerBar": 23,
+     "maxPerBar": 23,
+     "minPerBar": 23,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 11.5
+    },
+    "4": {
+     "onsetsPerBar": 46,
+     "maxPerBar": 46,
+     "minPerBar": 46,
+     "longestGapBeats": 0.25,
+     "grid16": 65.21739130434783,
+     "grid32": 100,
+     "notesPerSec": 23
+    },
+    "0.5": {
+     "onsetsPerBar": 5.75,
+     "maxPerBar": 8,
+     "minPerBar": 4,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 2,
+     "maxPerBar": 2,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    },
+    "2": {
+     "onsetsPerBar": 4,
+     "maxPerBar": 4,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2
+    },
+    "4": {
+     "onsetsPerBar": 8,
+     "maxPerBar": 8,
+     "minPerBar": 8,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4
+    },
+    "0.5": {
+     "onsetsPerBar": 1,
+     "maxPerBar": 1,
+     "minPerBar": 1,
+     "longestGapBeats": 4,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.5
+    }
+   }
+  ],
+  "grid16Pct": 100,
+  "grid32Pct": 100,
+  "grid32Pct4x": 100,
+  "maxSwingBeats": 0,
+  "mixMinPerBar": 9,
+  "mixMaxPerBar": 43,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "melody",
+    "medianHz": 622.2539674441618,
+    "lowHz": 415.3046975799451,
+    "highHz": 932.3275230361799
+   },
+   {
+    "role": "bass",
+    "medianHz": 65.40639132514966,
+    "lowHz": 43.653528929125486,
+    "highHz": 116.54094037952248
+   },
+   {
+    "role": "chord",
+    "medianHz": 349.2282314330039,
+    "lowHz": 174.61411571650194,
+    "highHz": 523.2511306011972
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 91.07142857142857,
+  "bassRootDownPct": 50,
+  "bassDistinctPitches": 9,
+  "bassRepeatPct": 4.25531914893617,
+  "chordClusterPct": 0,
+  "offGrid16LayerMean": 0,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 0,
+  "melody": {
+   "1": {
+    "notes": 40,
+    "stepPct": 38.46153846153846,
+    "skipPct": 35.8974358974359,
+    "leapPct": 15.384615384615385,
+    "repeatPct": 10.256410256410257,
+    "maxLeap": 9,
+    "range": 17,
+    "distinctPitches": 11,
+    "distinctBars": 4,
+    "barSelfSimilarity": 17.857142857142858
+   },
+   "2": {
+    "notes": 80,
+    "stepPct": 36.70886075949367,
+    "skipPct": 35.44303797468354,
+    "leapPct": 16.455696202531644,
+    "repeatPct": 11.39240506329114,
+    "maxLeap": 9,
+    "range": 17,
+    "distinctPitches": 11,
+    "distinctBars": 3,
+    "barSelfSimilarity": 28.571428571428573
+   },
+   "4": {
+    "notes": 160,
+    "stepPct": 35.84905660377358,
+    "skipPct": 35.22012578616352,
+    "leapPct": 16.9811320754717,
+    "repeatPct": 11.949685534591195,
+    "maxLeap": 9,
+    "range": 17,
+    "distinctPitches": 11,
+    "distinctBars": 3,
+    "barSelfSimilarity": 28.571428571428573
+   },
+   "0.5": {
+    "notes": 20,
+    "stepPct": 36.8421052631579,
+    "skipPct": 36.8421052631579,
+    "leapPct": 21.05263157894737,
+    "repeatPct": 5.2631578947368425,
+    "maxLeap": 9,
+    "range": 16,
+    "distinctPitches": 9,
+    "distinctBars": 4,
+    "barSelfSimilarity": 14.285714285714286
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.5829710144927536,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 72.95918367346938,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 0.7200000000000006,
+   "reverseChangedPct": 61.02040816326531,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 98,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 0,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 0,
+   "melodyStatic": 0,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 2,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0,
+   "chordClusters": 0,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 955,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 24,
+   "highestMidi": 97
+  }
+ },
+ {
+  "id": "10-heavy-rotation",
+  "bpm": 150,
+  "key": "A# Phrygian",
+  "roles": [
+   "drums",
+   "bass",
+   "melody",
+   "chord"
+  ],
+  "formulas": [
+   "vertices",
+   "spirograph",
+   "rose",
+   "polygon"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 7287,
+  "harshDownMean81": 0,
+  "harshDownWorst81": 0,
+  "harshBeatMean81": 0,
+  "harshBeatWorst81": 0,
+  "harshDownMean4x": 0,
+  "harshDownWorst4x": 0,
+  "harshDownWorstPair": 0,
+  "worstPairLabel": "-",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 97.77327935222672,
+  "icHistogramDownPct": [
+   24.26614481409002,
+   0,
+   8.806262230919765,
+   25.831702544031312,
+   15.264187866927593,
+   25.831702544031312,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 10.3125,
+     "maxPerBar": 12,
+     "minPerBar": 9,
+     "longestGapBeats": 1.5600000000000023,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 7.5
+    },
+    "2": {
+     "onsetsPerBar": 20.625,
+     "maxPerBar": 21,
+     "minPerBar": 20,
+     "longestGapBeats": 0.7800000000000011,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 13.125
+    },
+    "4": {
+     "onsetsPerBar": 41.25,
+     "maxPerBar": 42,
+     "minPerBar": 40,
+     "longestGapBeats": 0.39000000000000057,
+     "grid16": 66.96969696969697,
+     "grid32": 100,
+     "notesPerSec": 26.25
+    },
+    "0.5": {
+     "onsetsPerBar": 5.125,
+     "maxPerBar": 7,
+     "minPerBar": 4,
+     "longestGapBeats": 2.8800000000000026,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4.375
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 5.3125,
+     "maxPerBar": 6,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.75
+    },
+    "2": {
+     "onsetsPerBar": 10.6875,
+     "maxPerBar": 11,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 6.875
+    },
+    "4": {
+     "onsetsPerBar": 21.3125,
+     "maxPerBar": 22,
+     "minPerBar": 21,
+     "longestGapBeats": 0.25,
+     "grid16": 50.146627565982406,
+     "grid32": 100,
+     "notesPerSec": 13.75
+    },
+    "0.5": {
+     "onsetsPerBar": 2.6875,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.875
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 3.3125,
+     "maxPerBar": 4,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "2": {
+     "onsetsPerBar": 6.6875,
+     "maxPerBar": 7,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4.375
+    },
+    "4": {
+     "onsetsPerBar": 13.3125,
+     "maxPerBar": 14,
+     "minPerBar": 13,
+     "longestGapBeats": 0.375,
+     "grid16": 59.624413145539904,
+     "grid32": 100,
+     "notesPerSec": 8.75
+    },
+    "0.5": {
+     "onsetsPerBar": 1.6875,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.25
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 1.375,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.25
+    },
+    "2": {
+     "onsetsPerBar": 2.6875,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.875
+    },
+    "4": {
+     "onsetsPerBar": 5.375,
+     "maxPerBar": 6,
+     "minPerBar": 5,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.75
+    },
+    "0.5": {
+     "onsetsPerBar": 0.6875,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 6,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.625
+    }
+   }
+  ],
+  "grid16Pct": 100,
+  "grid32Pct": 100,
+  "grid32Pct4x": 100,
+  "maxSwingBeats": 0.120000000000001,
+  "mixMinPerBar": 8,
+  "mixMaxPerBar": 42,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "bass",
+    "medianHz": 116.54094037952248,
+    "lowHz": 87.30705785825097,
+    "highHz": 155.56349186104046
+   },
+   {
+    "role": "melody",
+    "medianHz": 1244.5079348883237,
+    "lowHz": 932.3275230361799,
+    "highHz": 1396.9129257320155
+   },
+   {
+    "role": "chord",
+    "medianHz": 466.1637615180899,
+    "lowHz": 246.94165062806206,
+    "highHz": 698.4564628660078
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 100,
+  "bassRootDownPct": 63.63636363636363,
+  "bassDistinctPitches": 8,
+  "bassRepeatPct": 34.523809523809526,
+  "chordClusterPct": 0,
+  "offGrid16LayerMean": 0,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 0,
+  "melody": {
+   "1": {
+    "notes": 27,
+    "stepPct": 38.46153846153846,
+    "skipPct": 30.76923076923077,
+    "leapPct": 7.6923076923076925,
+    "repeatPct": 23.076923076923077,
+    "maxLeap": 5,
+    "range": 7,
+    "distinctPitches": 5,
+    "distinctBars": 6,
+    "barSelfSimilarity": 7.142857142857143
+   },
+   "2": {
+    "notes": 53,
+    "stepPct": 50,
+    "skipPct": 25,
+    "leapPct": 5.769230769230769,
+    "repeatPct": 19.23076923076923,
+    "maxLeap": 7,
+    "range": 9,
+    "distinctPitches": 6,
+    "distinctBars": 5,
+    "barSelfSimilarity": 10.714285714285714
+   },
+   "4": {
+    "notes": 107,
+    "stepPct": 44.339622641509436,
+    "skipPct": 29.245283018867923,
+    "leapPct": 5.660377358490566,
+    "repeatPct": 20.754716981132077,
+    "maxLeap": 7,
+    "range": 9,
+    "distinctPitches": 6,
+    "distinctBars": 5,
+    "barSelfSimilarity": 10.714285714285714
+   },
+   "0.5": {
+    "notes": 13,
+    "stepPct": 58.333333333333336,
+    "skipPct": 16.666666666666668,
+    "leapPct": 16.666666666666668,
+    "repeatPct": 8.333333333333334,
+    "maxLeap": 7,
+    "range": 9,
+    "distinctPitches": 6,
+    "distinctBars": 4,
+    "barSelfSimilarity": 17.857142857142858
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.6018618940186298,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 75.96741344195519,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 0.3600000000000003,
+   "reverseChangedPct": 52.2567703109328,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 100,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 0,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 0,
+   "melodyStatic": 0,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 0,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0,
+   "chordClusters": 0,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 955,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 27,
+   "highestMidi": 97
+  }
+ },
+ {
+  "id": "11-the-archivist",
+  "bpm": 90,
+  "key": "F# Harmonic Minor",
+  "roles": [
+   "bass",
+   "drums",
+   "melody",
+   "chord"
+  ],
+  "formulas": [
+   "collatz",
+   "ca",
+   "digits",
+   "primes"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 8512,
+  "harshDownMean81": 0.6481481481481476,
+  "harshDownWorst81": 1.3888888888888888,
+  "harshBeatMean81": 0.8850362600362599,
+  "harshBeatWorst81": 2.272727272727273,
+  "harshDownMean4x": 0.9190476190476189,
+  "harshDownWorst4x": 2.0833333333333335,
+  "harshDownWorstPair": 3.125,
+  "worstPairLabel": "melody@0.5x + chord@0.5x",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 97.53086419753086,
+  "icHistogramDownPct": [
+   28.399122807017545,
+   1.206140350877193,
+   5.37280701754386,
+   21.82017543859649,
+   24.013157894736842,
+   19.18859649122807,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.25
+    },
+    "2": {
+     "onsetsPerBar": 12,
+     "maxPerBar": 12,
+     "minPerBar": 12,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4.5
+    },
+    "4": {
+     "onsetsPerBar": 24,
+     "maxPerBar": 24,
+     "minPerBar": 24,
+     "longestGapBeats": 0.25,
+     "grid16": 66.66666666666667,
+     "grid32": 100,
+     "notesPerSec": 9
+    },
+    "0.5": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.125
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 6.0625,
+     "maxPerBar": 7,
+     "minPerBar": 6,
+     "longestGapBeats": 1.25,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.625
+    },
+    "2": {
+     "onsetsPerBar": 12.0625,
+     "maxPerBar": 13,
+     "minPerBar": 12,
+     "longestGapBeats": 0.625,
+     "grid16": 66.83937823834196,
+     "grid32": 100,
+     "notesPerSec": 4.875
+    },
+    "4": {
+     "onsetsPerBar": 24.0625,
+     "maxPerBar": 25,
+     "minPerBar": 24,
+     "longestGapBeats": 0.3125,
+     "grid16": 66.75324675324676,
+     "grid32": 66.75324675324676,
+     "notesPerSec": 9.375
+    },
+    "0.5": {
+     "onsetsPerBar": 3.0625,
+     "maxPerBar": 4,
+     "minPerBar": 3,
+     "longestGapBeats": 2.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 5,
+     "maxPerBar": 5,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.875
+    },
+    "2": {
+     "onsetsPerBar": 10,
+     "maxPerBar": 10,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.75
+    },
+    "4": {
+     "onsetsPerBar": 20,
+     "maxPerBar": 20,
+     "minPerBar": 20,
+     "longestGapBeats": 0.25,
+     "grid16": 60,
+     "grid32": 100,
+     "notesPerSec": 7.5
+    },
+    "0.5": {
+     "onsetsPerBar": 2.5,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.125
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 1.5,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.75
+    },
+    "2": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.125
+    },
+    "4": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.25
+    },
+    "0.5": {
+     "onsetsPerBar": 0.75,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 6,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.375
+    }
+   }
+  ],
+  "grid16Pct": 93.84023099133782,
+  "grid32Pct": 100,
+  "grid32Pct4x": 89.19831223628692,
+  "maxSwingBeats": 0,
+  "mixMinPerBar": 8,
+  "mixMaxPerBar": 38,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "bass",
+    "medianHz": 92.4986056779086,
+    "lowHz": 46.2493028389543,
+    "highHz": 123.47082531403103
+   },
+   {
+    "role": "melody",
+    "medianHz": 587.3295358348151,
+    "lowHz": 369.9944227116344,
+    "highHz": 830.6093951598903
+   },
+   {
+    "role": "chord",
+    "medianHz": 369.9944227116344,
+    "lowHz": 184.9972113558172,
+    "highHz": 493.8833012561241
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 94.71544715447155,
+  "bassRootDownPct": 56.25,
+  "bassDistinctPitches": 8,
+  "bassRepeatPct": 34.73684210526316,
+  "chordClusterPct": 22.61904761904762,
+  "offGrid16LayerMean": 2.7633851468048363,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 8.311688311688311,
+  "melody": {
+   "1": {
+    "notes": 40,
+    "stepPct": 25.641025641025642,
+    "skipPct": 28.205128205128204,
+    "leapPct": 28.205128205128204,
+    "repeatPct": 17.94871794871795,
+    "maxLeap": 8,
+    "range": 15,
+    "distinctPitches": 9,
+    "distinctBars": 7,
+    "barSelfSimilarity": 3.5714285714285716
+   },
+   "2": {
+    "notes": 80,
+    "stepPct": 32.91139240506329,
+    "skipPct": 22.78481012658228,
+    "leapPct": 29.11392405063291,
+    "repeatPct": 15.189873417721518,
+    "maxLeap": 9,
+    "range": 15,
+    "distinctPitches": 9,
+    "distinctBars": 6,
+    "barSelfSimilarity": 7.142857142857143
+   },
+   "4": {
+    "notes": 160,
+    "stepPct": 30.18867924528302,
+    "skipPct": 24.528301886792452,
+    "leapPct": 27.044025157232703,
+    "repeatPct": 18.238993710691823,
+    "maxLeap": 9,
+    "range": 15,
+    "distinctPitches": 9,
+    "distinctBars": 5,
+    "barSelfSimilarity": 10.714285714285714
+   },
+   "0.5": {
+    "notes": 20,
+    "stepPct": 26.31578947368421,
+    "skipPct": 26.31578947368421,
+    "leapPct": 26.31578947368421,
+    "repeatPct": 21.05263157894737,
+    "maxLeap": 8,
+    "range": 15,
+    "distinctPitches": 8,
+    "distinctBars": 5,
+    "barSelfSimilarity": 14.285714285714286
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.5059711756368299,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 72.89377289377289,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 0.3600000000000003,
+   "reverseChangedPct": 68.4065934065934,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 90.2,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 1.3,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0.55,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 1.28,
+   "melodyStatic": 0.28,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 0.75,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0,
+   "chordClusters": 5.65,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 699,
+   "inScalePct": 100,
+   "chordTonePct": 95.23809523809524,
+   "tensePct": 4.761904761904762,
+   "tenseClasses": [
+    "enemyTelegraph",
+    "bossPhase",
+    "bossRecall"
+   ],
+   "lowestMidi": 30,
+   "highestMidi": 98
+  }
+ },
+ {
+  "id": "12-master-tape",
+  "bpm": 120,
+  "key": "G Major",
+  "roles": [
+   "melody",
+   "chord",
+   "bass",
+   "drums"
+  ],
+  "formulas": [
+   "fibonacci",
+   "harmonograph",
+   "lucas",
+   "euclid"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 8920,
+  "harshDownMean81": 2.083333333333334,
+  "harshDownWorst81": 2.0833333333333335,
+  "harshBeatMean81": 2.1086317425549805,
+  "harshBeatWorst81": 3.289473684210526,
+  "harshDownMean4x": 2.0833333333333304,
+  "harshDownWorst4x": 2.0833333333333335,
+  "harshDownWorstPair": 4.6875,
+  "worstPairLabel": "melody@0.5x + chord@0.5x",
+  "chordToneDownPct": 100,
+  "chordToneBeatPct": 99.44029850746269,
+  "icHistogramDownPct": [
+   28.780864197530864,
+   3.009259259259259,
+   8.101851851851851,
+   19.830246913580247,
+   16.280864197530864,
+   23.996913580246915,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 5,
+     "maxPerBar": 5,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "2": {
+     "onsetsPerBar": 10,
+     "maxPerBar": 10,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 5
+    },
+    "4": {
+     "onsetsPerBar": 20,
+     "maxPerBar": 20,
+     "minPerBar": 20,
+     "longestGapBeats": 0.25,
+     "grid16": 60,
+     "grid32": 100,
+     "notesPerSec": 10
+    },
+    "0.5": {
+     "onsetsPerBar": 2.5,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 2,
+     "maxPerBar": 2,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1
+    },
+    "2": {
+     "onsetsPerBar": 4,
+     "maxPerBar": 4,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2
+    },
+    "4": {
+     "onsetsPerBar": 8,
+     "maxPerBar": 8,
+     "minPerBar": 8,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 4
+    },
+    "0.5": {
+     "onsetsPerBar": 1,
+     "maxPerBar": 1,
+     "minPerBar": 1,
+     "longestGapBeats": 4,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 5,
+     "maxPerBar": 5,
+     "minPerBar": 5,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2.5
+    },
+    "2": {
+     "onsetsPerBar": 10,
+     "maxPerBar": 10,
+     "minPerBar": 10,
+     "longestGapBeats": 0.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 5
+    },
+    "4": {
+     "onsetsPerBar": 20,
+     "maxPerBar": 20,
+     "minPerBar": 20,
+     "longestGapBeats": 0.25,
+     "grid16": 60,
+     "grid32": 100,
+     "notesPerSec": 10
+    },
+    "0.5": {
+     "onsetsPerBar": 2.5,
+     "maxPerBar": 3,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.5
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 7,
+     "maxPerBar": 7,
+     "minPerBar": 7,
+     "longestGapBeats": 1.5600000000000023,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.5
+    },
+    "2": {
+     "onsetsPerBar": 14,
+     "maxPerBar": 14,
+     "minPerBar": 14,
+     "longestGapBeats": 0.7800000000000011,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 7
+    },
+    "4": {
+     "onsetsPerBar": 28,
+     "maxPerBar": 28,
+     "minPerBar": 28,
+     "longestGapBeats": 0.39000000000000057,
+     "grid16": 78.57142857142857,
+     "grid32": 100,
+     "notesPerSec": 14
+    },
+    "0.5": {
+     "onsetsPerBar": 3.5,
+     "maxPerBar": 4,
+     "minPerBar": 3,
+     "longestGapBeats": 3.120000000000001,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 2
+    }
+   }
+  ],
+  "grid16Pct": 100,
+  "grid32Pct": 100,
+  "grid32Pct4x": 100,
+  "maxSwingBeats": 0.120000000000001,
+  "mixMinPerBar": 8,
+  "mixMaxPerBar": 38,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "melody",
+    "medianHz": 739.9888454232688,
+    "lowHz": 391.99543598174927,
+    "highHz": 987.7666025122483
+   },
+   {
+    "role": "chord",
+    "medianHz": 391.99543598174927,
+    "lowHz": 220,
+    "highHz": 587.3295358348151
+   },
+   {
+    "role": "bass",
+    "medianHz": 73.41619197935188,
+    "lowHz": 48.999429497718666,
+    "highHz": 123.47082531403103
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 93.71428571428571,
+  "bassRootDownPct": 50,
+  "bassDistinctPitches": 9,
+  "bassRepeatPct": 12.658227848101266,
+  "chordClusterPct": 16.071428571428573,
+  "offGrid16LayerMean": 0,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 0,
+  "melody": {
+   "1": {
+    "notes": 40,
+    "stepPct": 20.512820512820515,
+    "skipPct": 28.205128205128204,
+    "leapPct": 28.205128205128204,
+    "repeatPct": 23.076923076923077,
+    "maxLeap": 9,
+    "range": 19,
+    "distinctPitches": 10,
+    "distinctBars": 7,
+    "barSelfSimilarity": 3.5714285714285716
+   },
+   "2": {
+    "notes": 80,
+    "stepPct": 25.31645569620253,
+    "skipPct": 24.050632911392405,
+    "leapPct": 32.91139240506329,
+    "repeatPct": 17.72151898734177,
+    "maxLeap": 9,
+    "range": 19,
+    "distinctPitches": 10,
+    "distinctBars": 8,
+    "barSelfSimilarity": 0
+   },
+   "4": {
+    "notes": 160,
+    "stepPct": 20.12578616352201,
+    "skipPct": 25.157232704402517,
+    "leapPct": 30.81761006289308,
+    "repeatPct": 23.89937106918239,
+    "maxLeap": 9,
+    "range": 19,
+    "distinctPitches": 10,
+    "distinctBars": 8,
+    "barSelfSimilarity": 0
+   },
+   "0.5": {
+    "notes": 20,
+    "stepPct": 26.31578947368421,
+    "skipPct": 26.31578947368421,
+    "leapPct": 21.05263157894737,
+    "repeatPct": 26.31578947368421,
+    "maxLeap": 9,
+    "range": 16,
+    "distinctPitches": 8,
+    "distinctBars": 7,
+    "barSelfSimilarity": 3.5714285714285716
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.5321428571428571,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 66.46825396825396,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 0.7200000000000006,
+   "reverseChangedPct": 56.326530612244895,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 87.8,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 4.17,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 1.28,
+   "melodyStatic": 0.28,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 2,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0.44,
+   "chordClusters": 4.02,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 1003,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 26,
+   "highestMidi": 110
+  }
+ },
+ {
+  "id": "menu",
+  "bpm": 72,
+  "key": "G Major Pentatonic",
+  "roles": [
+   "chord",
+   "melody",
+   "bass",
+   "drums"
+  ],
+  "formulas": [
+   "spiral",
+   "cardioid",
+   "sine",
+   "modgate"
+  ],
+  "inScalePct": 100,
+  "notesChecked": 3596,
+  "harshDownMean81": 0,
+  "harshDownWorst81": 0,
+  "harshBeatMean81": 0,
+  "harshBeatWorst81": 0,
+  "harshDownMean4x": 0,
+  "harshDownWorst4x": 0,
+  "harshDownWorstPair": 0,
+  "worstPairLabel": "-",
+  "chordToneDownPct": 98.828125,
+  "chordToneBeatPct": 97.62931034482759,
+  "icHistogramDownPct": [
+   26.666666666666668,
+   0,
+   15.357142857142858,
+   23.095238095238095,
+   16.071428571428573,
+   18.80952380952381,
+   0
+  ],
+  "layers": [
+   {
+    "1": {
+     "onsetsPerBar": 1,
+     "maxPerBar": 1,
+     "minPerBar": 1,
+     "longestGapBeats": 4,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.3
+    },
+    "2": {
+     "onsetsPerBar": 2,
+     "maxPerBar": 2,
+     "minPerBar": 2,
+     "longestGapBeats": 2,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.6
+    },
+    "4": {
+     "onsetsPerBar": 4,
+     "maxPerBar": 4,
+     "minPerBar": 4,
+     "longestGapBeats": 1,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.2
+    },
+    "0.5": {
+     "onsetsPerBar": 0.5,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 8,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.3
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 1.5,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.6
+    },
+    "2": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.8999999999999999
+    },
+    "4": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.7999999999999998
+    },
+    "0.5": {
+     "onsetsPerBar": 0.75,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 6,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.3
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 1.5,
+     "maxPerBar": 2,
+     "minPerBar": 1,
+     "longestGapBeats": 3,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.6
+    },
+    "2": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 1.5,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.8999999999999999
+    },
+    "4": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 0.75,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.7999999999999998
+    },
+    "0.5": {
+     "onsetsPerBar": 0.75,
+     "maxPerBar": 1,
+     "minPerBar": 0,
+     "longestGapBeats": 6,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.3
+    }
+   },
+   {
+    "1": {
+     "onsetsPerBar": 6,
+     "maxPerBar": 6,
+     "minPerBar": 6,
+     "longestGapBeats": 1.5600000000000023,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 1.7999999999999998
+    },
+    "2": {
+     "onsetsPerBar": 12,
+     "maxPerBar": 12,
+     "minPerBar": 12,
+     "longestGapBeats": 0.7800000000000011,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 3.5999999999999996
+    },
+    "4": {
+     "onsetsPerBar": 24,
+     "maxPerBar": 24,
+     "minPerBar": 24,
+     "longestGapBeats": 0.39000000000000057,
+     "grid16": 83.33333333333333,
+     "grid32": 100,
+     "notesPerSec": 7.199999999999999
+    },
+    "0.5": {
+     "onsetsPerBar": 3,
+     "maxPerBar": 3,
+     "minPerBar": 3,
+     "longestGapBeats": 3.120000000000001,
+     "grid16": 100,
+     "grid32": 100,
+     "notesPerSec": 0.8999999999999999
+    }
+   }
+  ],
+  "grid16Pct": 100,
+  "grid32Pct": 100,
+  "grid32Pct4x": 100,
+  "maxSwingBeats": 0.120000000000001,
+  "mixMinPerBar": 4,
+  "mixMaxPerBar": 20,
+  "densityFlags": [],
+  "register": [
+   {
+    "role": "chord",
+    "medianHz": 329.6275569128699,
+    "lowHz": 195.99771799087463,
+    "highHz": 587.3295358348151
+   },
+   {
+    "role": "melody",
+    "medianHz": 783.9908719634985,
+    "lowHz": 391.99543598174927,
+    "highHz": 987.7666025122483
+   },
+   {
+    "role": "bass",
+    "medianHz": 82.4068892282175,
+    "lowHz": 48.999429497718666,
+    "highHz": 97.99885899543733
+   }
+  ],
+  "mudPct": 0,
+  "leadAboveChordPct": 90.56372549019608,
+  "bassRootDownPct": 100,
+  "bassDistinctPitches": 5,
+  "bassRepeatPct": 47.82608695652174,
+  "chordClusterPct": 0,
+  "offGrid16LayerMean": 0,
+  "offGrid32LayerMean": 0,
+  "offGrid32LayerMean4x": 0,
+  "melody": {
+   "1": {
+    "notes": 12,
+    "stepPct": 45.45454545454545,
+    "skipPct": 45.45454545454545,
+    "leapPct": 0,
+    "repeatPct": 9.090909090909092,
+    "maxLeap": 5,
+    "range": 16,
+    "distinctPitches": 8,
+    "distinctBars": 3,
+    "barSelfSimilarity": 32.142857142857146
+   },
+   "2": {
+    "notes": 24,
+    "stepPct": 47.82608695652174,
+    "skipPct": 43.47826086956522,
+    "leapPct": 0,
+    "repeatPct": 8.695652173913043,
+    "maxLeap": 5,
+    "range": 16,
+    "distinctPitches": 8,
+    "distinctBars": 4,
+    "barSelfSimilarity": 14.285714285714286
+   },
+   "4": {
+    "notes": 48,
+    "stepPct": 48.93617021276596,
+    "skipPct": 42.5531914893617,
+    "leapPct": 0,
+    "repeatPct": 8.51063829787234,
+    "maxLeap": 5,
+    "range": 16,
+    "distinctPitches": 8,
+    "distinctBars": 2,
+    "barSelfSimilarity": 42.857142857142854
+   },
+   "0.5": {
+    "notes": 6,
+    "stepPct": 40,
+    "skipPct": 40,
+    "leapPct": 0,
+    "repeatPct": 20,
+    "maxLeap": 5,
+    "range": 14,
+    "distinctPitches": 5,
+    "distinctBars": 3,
+    "barSelfSimilarity": 28.571428571428573
+   }
+  },
+  "states": {
+   "deadDensityRatio": 0.6041666666666667,
+   "deadChordTonePct": 100,
+   "deadInScalePct": 100,
+   "driftChangedPct": 62.723214285714285,
+   "driftInScalePct": 100,
+   "driftMaxLateBeats": 1.4400000000000013,
+   "reverseChangedPct": 56.954887218045116,
+   "reverseInScalePct": 100,
+   "stoppedOnsetsPerBar": 5,
+   "stoppedInScalePct": 100
+  },
+  "score": 100,
+  "penalties": {
+   "outOfScale": 0,
+   "harshDownbeats": 0,
+   "harshWorstPair": 0,
+   "harshBeats": 0,
+   "nonChordDownbeats": 0,
+   "offGrid": 0,
+   "density": 0,
+   "mud": 0,
+   "leadBelowChords": 0,
+   "melodyLeapy": 0,
+   "melodyStatic": 0,
+   "melodyRange": 0,
+   "melodyForm": 0,
+   "bassUngrounded": 0,
+   "melodyLeapy@0.5": 0,
+   "melodyLeapy@2": 0,
+   "chordClusters": 0,
+   "deadNotThinner": 0,
+   "driftInert": 0
+  },
+  "sfx": {
+   "tonesChecked": 483,
+   "inScalePct": 100,
+   "chordTonePct": 100,
+   "tensePct": 0,
+   "tenseClasses": [],
+   "lowestMidi": 26,
+   "highestMidi": 107
+  }
+ }
+]

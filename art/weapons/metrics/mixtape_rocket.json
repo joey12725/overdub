@@ -1,0 +1,65 @@
+{
+ "id": "mixtape_rocket",
+ "kind": "ranged",
+ "style": "launcher",
+ "hands": 0,
+ "tris": {
+  "Weapon": 2788,
+  "Round": 1336
+ },
+ "tris_total": 4124,
+ "bounds_min": [
+  -0.0784,
+  -0.0847,
+  -0.1262
+ ],
+ "bounds_max": [
+  0.0978,
+  0.172,
+  0.2076
+ ],
+ "size": [
+  0.1762,
+  0.2567,
+  0.3338
+ ],
+ "empties": {
+  "Mount": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Muzzle": {
+   "pos": [
+    0.0,
+    0.092,
+    0.215
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_accent2",
+  "weapon_black",
+  "weapon_dark",
+  "weapon_glow",
+  "weapon_hot_glow",
+  "weapon_main",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_steel"
+ ],
+ "bones": []
+}

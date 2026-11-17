@@ -1,0 +1,88 @@
+{
+ "id": "speaker_knuckles",
+ "kind": "melee",
+ "style": "gauntlet",
+ "hands": 2,
+ "tris": {
+  "Gauntlet_R": 2650,
+  "Gauntlet_L": 2650
+ },
+ "tris_total": 5300,
+ "bounds_min": [
+  -0.063,
+  -0.105,
+  -0.059
+ ],
+ "bounds_max": [
+  0.063,
+  0.1007,
+  0.085
+ ],
+ "size": [
+  0.126,
+  0.2057,
+  0.144
+ ],
+ "empties": {
+  "Grip": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Tip": {
+   "pos": [
+    0.0,
+    0.098,
+    0.004
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailStart": {
+   "pos": [
+    0.0,
+    0.094,
+    -0.05
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailEnd": {
+   "pos": [
+    0.0,
+    0.094,
+    0.06
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_black",
+  "weapon_copper",
+  "weapon_dark",
+  "weapon_glow",
+  "weapon_main",
+  "weapon_metal",
+  "weapon_pink_glow",
+  "weapon_steel"
+ ],
+ "bones": []
+}

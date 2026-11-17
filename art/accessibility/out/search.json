@@ -1,0 +1,314 @@
+{
+ "rybg": [
+  {
+   "colors": [
+    "#ff7a60",
+    "#fbff00",
+    "#0095ff",
+    "#80ffcc"
+   ],
+   "worst_margin": 0.75,
+   "mean_margin": 1.221
+  },
+  {
+   "colors": [
+    "#ff7a60",
+    "#efff10",
+    "#5079ff",
+    "#5cb8b3"
+   ],
+   "worst_margin": 0.75,
+   "mean_margin": 1.221
+  },
+  {
+   "colors": [
+    "#ff7a60",
+    "#fbff00",
+    "#5079ff",
+    "#00c2b8"
+   ],
+   "worst_margin": 0.75,
+   "mean_margin": 1.221
+  },
+  {
+   "colors": [
+    "#ff7a60",
+    "#e1ff00",
+    "#0095ff",
+    "#80ffcc"
+   ],
+   "worst_margin": 0.75,
+   "mean_margin": 1.219
+  },
+  {
+   "colors": [
+    "#ff7a60",
+    "#fbff00",
+    "#0f7ef5",
+    "#5cb8b3"
+   ],
+   "worst_margin": 0.75,
+   "mean_margin": 1.217
+  }
+ ],
+ "free": [
+  {
+   "colors": [
+    "#c261b3",
+    "#ffff00",
+    "#80b9ff",
+    "#33cc4a"
+   ],
+   "worst_margin": 0.799,
+   "mean_margin": 1.306
+  },
+  {
+   "colors": [
+    "#ffff00",
+    "#33cc4a",
+    "#c261b3",
+    "#80b9ff"
+   ],
+   "worst_margin": 0.799,
+   "mean_margin": 1.306
+  },
+  {
+   "colors": [
+    "#ffff00",
+    "#33cc4a",
+    "#80b9ff",
+    "#c261b3"
+   ],
+   "worst_margin": 0.799,
+   "mean_margin": 1.306
+  },
+  {
+   "colors": [
+    "#ffff00",
+    "#80b9ff",
+    "#33cc4a",
+    "#c261b3"
+   ],
+   "worst_margin": 0.799,
+   "mean_margin": 1.306
+  },
+  {
+   "colors": [
+    "#c261b3",
+    "#80b9ff",
+    "#33cc4a",
+    "#ffff00"
+   ],
+   "worst_margin": 0.799,
+   "mean_margin": 1.306
+  }
+ ],
+ "high_contrast": [
+  {
+   "colors": [
+    "#c71902",
+    "#e1fa22",
+    "#105edb",
+    "#67b3af"
+   ],
+   "worst_margin": 1.091,
+   "mean_margin": 1.45
+  },
+  {
+   "colors": [
+    "#c71902",
+    "#e9fa03",
+    "#1158e6",
+    "#67b3af"
+   ],
+   "worst_margin": 1.091,
+   "mean_margin": 1.448
+  },
+  {
+   "colors": [
+    "#c71902",
+    "#e9fa03",
+    "#035ae6",
+    "#72b3af"
+   ],
+   "worst_margin": 1.091,
+   "mean_margin": 1.446
+  },
+  {
+   "colors": [
+    "#c71902",
+    "#e9fa03",
+    "#105edb",
+    "#72b3af"
+   ],
+   "worst_margin": 1.091,
+   "mean_margin": 1.446
+  },
+  {
+   "colors": [
+    "#c71902",
+    "#e9fa03",
+    "#1158e6",
+    "#72b3af"
+   ],
+   "worst_margin": 1.091,
+   "mean_margin": 1.443
+  }
+ ],
+ "rybg_fine": [
+  {
+   "colors": [
+    "#ff7a66",
+    "#ffff00",
+    "#0d86ff",
+    "#80ffcc"
+   ],
+   "worst_margin": 0.737,
+   "mean_margin": 1.223
+  },
+  {
+   "colors": [
+    "#ff7a66",
+    "#ffff00",
+    "#0091ff",
+    "#80ffcc"
+   ],
+   "worst_margin": 0.737,
+   "mean_margin": 1.221
+  },
+  {
+   "colors": [
+    "#ff7a66",
+    "#ffff00",
+    "#008df9",
+    "#80ffcc"
+   ],
+   "worst_margin": 0.737,
+   "mean_margin": 1.221
+  },
+  {
+   "colors": [
+    "#ff7a66",
+    "#ffff0d",
+    "#0091ff",
+    "#80ffcc"
+   ],
+   "worst_margin": 0.737,
+   "mean_margin": 1.22
+  },
+  {
+   "colors": [
+    "#ff7a66",
+    "#ffff0d",
+    "#0c8af9",
+    "#80ffcc"
+   ],
+   "worst_margin": 0.737,
+   "mean_margin": 1.219
+  }
+ ],
+ "rybg_rose": [
+  {
+   "colors": [
+    "#ff8cbe",
+    "#ffff00",
+    "#4d76ff",
+    "#33cc52"
+   ],
+   "worst_margin": 0.826,
+   "mean_margin": 1.302
+  },
+  {
+   "colors": [
+    "#cc7aa3",
+    "#ffff00",
+    "#0d7eff",
+    "#33cc52"
+   ],
+   "worst_margin": 0.826,
+   "mean_margin": 1.302
+  },
+  {
+   "colors": [
+    "#ff8cbe",
+    "#ffff00",
+    "#4079ff",
+    "#33cc52"
+   ],
+   "worst_margin": 0.826,
+   "mean_margin": 1.3
+  },
+  {
+   "colors": [
+    "#ff8cbe",
+    "#ffff00",
+    "#1a7dff",
+    "#33cc52"
+   ],
+   "worst_margin": 0.826,
+   "mean_margin": 1.295
+  },
+  {
+   "colors": [
+    "#cc7aa6",
+    "#f9f90c",
+    "#1a7dff",
+    "#99ffcf"
+   ],
+   "worst_margin": 0.81,
+   "mean_margin": 1.283
+  }
+ ],
+ "hc_fine": [
+  {
+   "colors": [
+    "#bd2652",
+    "#f6fa00",
+    "#0a67c4",
+    "#84bdb3"
+   ],
+   "worst_margin": 1.029,
+   "mean_margin": 1.411
+  },
+  {
+   "colors": [
+    "#bd2652",
+    "#f6fa00",
+    "#0066bd",
+    "#84bdb3"
+   ],
+   "worst_margin": 1.029,
+   "mean_margin": 1.409
+  },
+  {
+   "colors": [
+    "#bd2652",
+    "#f6fa00",
+    "#0a63cc",
+    "#84bdb3"
+   ],
+   "worst_margin": 1.029,
+   "mean_margin": 1.409
+  },
+  {
+   "colors": [
+    "#bd2652",
+    "#f6fa00",
+    "#0066cc",
+    "#84bdb3"
+   ],
+   "worst_margin": 1.029,
+   "mean_margin": 1.408
+  },
+  {
+   "colors": [
+    "#ad3d59",
+    "#f6fa00",
+    "#0065db",
+    "#84bdb3"
+   ],
+   "worst_margin": 1.029,
+   "mean_margin": 1.402
+  }
+ ]
+}

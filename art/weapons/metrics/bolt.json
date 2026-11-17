@@ -1,0 +1,56 @@
+{
+ "id": "bolt",
+ "kind": "projectile",
+ "style": "",
+ "hands": 0,
+ "tris": {
+  "Projectile": 216
+ },
+ "tris_total": 216,
+ "bounds_min": [
+  -0.074,
+  -0.0449,
+  -0.17
+ ],
+ "bounds_max": [
+  0.074,
+  0.0842,
+  0.15
+ ],
+ "size": [
+  0.1479,
+  0.1291,
+  0.32
+ ],
+ "empties": {
+  "Nose": {
+   "pos": [
+    0.0,
+    0.0,
+    0.15
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Tail": {
+   "pos": [
+    0.0,
+    0.0,
+    -0.17
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "bolt_dark",
+  "bolt_glow"
+ ],
+ "bones": []
+}

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "levels": [
+    "01-soft-open",
+    "02-hit-harder",
+    "03-hold-the-door",
+    "04-second-opinion",
+    "05-dead-air",
+    "06-crossfire",
+    "07-out-of-phase",
+    "08-loop-pedal",
+    "09-rewind",
+    "10-heavy-rotation",
+    "11-the-archivist",
+    "12-master-tape"
+  ],
+  "extra": [
+    "sandbox"
+  ]
+}

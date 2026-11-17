@@ -1,0 +1,64 @@
+{
+  "id": "01-soft-open",
+  "index": 1,
+  "name": "Soft Open",
+  "tagline": "One grunt. Then two. Press record.",
+  "theme": "upper",
+  "bpm": 90,
+  "bars": 8,
+  "horizonBars": 8,
+  "maxTapes": 1,
+  "speeds": [1],
+  "endModes": ["stop"],
+  "map": [
+    "################",
+    "#,,....=.....,,#",
+    "#,.....=.......#",
+    "#......=.......#",
+    "#..............#",
+    "#......=.......#",
+    "#......=......,#",
+    "#,,....=....,,,#",
+    "################"
+  ],
+  "start": { "x": 13.5, "y": 4.5 },
+  "startFacing": 3.141592653589793,
+  "entities": [
+    { "kind": "enemy", "id": "g1", "type": "grunt", "x": 8.5, "y": 4.5, "facing": 0 },
+    { "kind": "breakable", "id": "planks", "c": 7, "r": 4, "threshold": 1 },
+    { "kind": "enemy", "id": "g2", "type": "grunt", "x": 4.5, "y": 4.5, "facing": 0, "wakeWhen": { "sig": "planks" } },
+    { "kind": "enemy", "id": "g3", "type": "grunt", "x": 1.5, "y": 2.5, "facing": 0, "wakeWhen": { "sig": "planks" } },
+    { "kind": "decor", "type": "graffiti", "x": 11.5, "y": 0.6, "variant": "REC" },
+    { "kind": "decor", "type": "graffiti", "x": 3.5, "y": 0.6, "variant": "5 6 7 8" },
+    { "kind": "decor", "type": "vines", "x": 14.6, "y": 1.2 },
+    { "kind": "decor", "type": "vines", "x": 7.5, "y": 1.3 },
+    { "kind": "decor", "type": "vines", "x": 1.2, "y": 1.2 },
+    { "kind": "decor", "type": "bush", "x": 14.6, "y": 7.6 },
+    { "kind": "decor", "type": "bush", "x": 1.3, "y": 7.6 },
+    { "kind": "decor", "type": "pipe", "x": 9.5, "y": 0.6, "rot": 1 },
+    { "kind": "decor", "type": "lamp", "x": 14.6, "y": 2.4 },
+    { "kind": "decor", "type": "lamp", "x": 7.5, "y": 7.5 }
+  ],
+  "objective": { "type": "eliminate", "text": "Drop all three grunts" },
+  "music": {
+    "root": 7,
+    "scale": "Major Pentatonic",
+    "progression": [0, 2, 3, 0],
+    "chordBars": 2,
+    "tracks": [
+      {"role": "melody", "formula": "fibonacci", "params": {"m": 12, "contour": 0.6, "gravity": 0.5, "cycle": 8, "register": 1, "pulses": 5, "steps": 8}},
+      {"role": "chord", "formula": "sine", "params": {"cycles": 1, "phase": 0}},
+      {"role": "bass", "formula": "triangle", "params": {"cycles": 1, "phase": 0.5}},
+      {"role": "drums", "formula": "euclid", "genre": "Lo-fi 80", "params": {"k": 3, "n": 16, "rot": 0, "rate": 0.25}}
+    ]
+  },
+  "loot": ["stylus_shiv", "snap_trackies"],
+  "briefing": [
+    "One cassette. After the count-in, everything you do goes on tape.",
+    "Grunts walk straight at you and swing on the beat. Your blade is longer than their arm.",
+    "The planks in the gap are rotten. The two asleep behind them are not deaf."
+  ],
+  "hints": {
+    "1": "The ruler along the top is the beat. Grunts only ever strike on a tick of it."
+  }
+}

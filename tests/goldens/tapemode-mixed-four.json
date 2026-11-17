@@ -1,0 +1,493 @@
+{
+ "format": 1,
+ "name": "tapemode-mixed-four",
+ "description": "Four tapes at once, one per speed (0.5x stop, 1x repeat, 2x reverse, 4x repeat), striking one tough turret and toggling a switch; traversals, wraps and turns interleave.",
+ "covers": ["TIME-03","PLAY-05","PLAY-06","every speed and end mode"],
+ "level": {
+  "id": "test-level",
+  "index": 0,
+  "name": "Test Level",
+  "tagline": "A level built by a test.",
+  "theme": "upper",
+  "bpm": 120,
+  "maxTapes": 4,
+  "endModes": ["stop","repeat","reverse"],
+  "entities": [
+   {"kind":"enemy","id":"t1","type":"turret","x":8.5,"y":5.5,"hp":12,"beat":{"every":1000,"offset":999}},
+   {"kind":"switch","id":"sw","x":4.5,"y":8.5},
+   {"kind":"door","id":"d1","cells":[{"c":10,"r":2}],"openWhen":{"sig":"sw"}}
+  ],
+  "objective": {"type":"eliminate","text":"Test objective"},
+  "music": {
+   "root": 9,
+   "scale": "Minor",
+   "progression": [0,5,2,6],
+   "chordBars": 1,
+   "tracks": [{"role":"bass","formula":"triangular"},{"role":"drums","formula":"ruler"},{"role":"melody","formula":"recaman"},{"role":"chord","formula":"squares"}]
+  },
+  "loot": [],
+  "briefing": [],
+  "startFacing": 0,
+  "speeds": [0.5,1,2,4],
+  "bars": 1,
+  "start": {"x":2.5,"y":5.5},
+  "horizonBars": 2,
+  "map": ["############","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","############"]
+ },
+ "loadout": {
+  "gear": null,
+  "resolved": {
+   "loadout": {"helmet":"base-helmet","top":"base-top","pants":"base-pants","shoes":"base-shoes","melee":"base-melee","ranged":"base-missile"},
+   "mods": {
+    "moveSpeed": 1,
+    "accel": 1,
+    "momentumRetention": 1,
+    "dodgeDistance": 1,
+    "dodgeIframes": 1,
+    "dodgeCooldown": 1,
+    "meleeImpact": 1,
+    "damage": 1,
+    "knockback": 1,
+    "knockbackCap": 1,
+    "stagger": 1,
+    "approachBonus": 1,
+    "sparkSpeed": 1,
+    "interactRadiusAdd": 0,
+    "projectileSpeed": 1,
+    "rangedCooldown": 1
+   },
+   "abilities": [],
+   "melee": {
+    "reach": 1.1,
+    "arcDeg": 110,
+    "light": {"windup":6,"active":4,"recover":10,"impact":1.2,"moveMul":0.5},
+    "heavy": {"windup":16,"active":5,"recover":18,"impact":2,"moveMul":0.25},
+    "damageEff": 1,
+    "knockbackEff": 1,
+    "staggerEff": 1,
+    "style": "blade"
+   },
+   "ranged": {"archetype":"missile","speed":2.5,"range":14,"impact":1.2,"commit":12,"cooldown":45,"pierce":0,"passesWalls":false,"lobbed":false,"count":1,"spreadDeg":0,"turnRate":2.5,"blast":0}
+  }
+ },
+ "bossMemoryFrom": null,
+ "takes": [
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 0,
+    "speed": 0.5,
+    "endMode": "stop",
+    "ticks": 120,
+    "pos": "AAAgQAAAsEAK1ydAAACwQBSuL0AAALBAH4U3QAAAsEApXD9AAACwQDMzR0AAALBAPQpPQAAAsEBI4VZAAACwQFK4XkAAALBAXI9mQAAAsEBmZm5AAACwQHE9dkAAALBAexR+QAAAsEDD9YJAAACwQEjhhkAAALBAzcyKQAAAsEBSuI5AAACwQNejkkAAALBAXI+WQAAAsEDheppAAACwQGZmnkAAALBA7FGiQAAAsEBxPaZAAACwQPYoqkAAALBAexSuQAAAsEAAALJAAACwQIXrtUAAALBACte5QAAAsECPwr1AAACwQBSuwUAAALBAmpnFQAAAsEAfhclAAACwQKRwzUAAALBAKVzRQAAAsECuR9VAAACwQDMz2UAAALBAuB7dQAAAsEA9CuFAAACwQMP15EAAALBASOHoQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEDNzOxAAACwQM3M7EAAALBAzczsQAAAsEA=",
+    "facing": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "anim": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": [[60,0,0,7.400000095367432,5.5,0,0]]
+   }
+  },
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 1,
+    "speed": 1,
+    "endMode": "repeat",
+    "ticks": 120,
+    "pos": "AAAgQAAAsEAK1ydAH4WvQBSuL0A9Cq9AH4U3QFyPrkApXD9AexSuQDMzR0Cama1APQpPQLgerUBI4VZA16OsQFK4XkD2KKxAXI9mQBSuq0BmZm5AMzOrQHE9dkBSuKpAexR+QHE9qkDD9YJAj8KpQEjhhkCuR6lAzcyKQM3MqEBSuI5A7FGoQNejkkAK16dAXI+WQClcp0DheppASOGmQGZmnkBmZqZA7FGiQIXrpUBxPaZApHClQPYoqkDD9aRAexSuQOF6pEAAALJAAACkQIXrtUAfhaNACte5QD0Ko0CPwr1AXI+iQBSuwUB7FKJAmpnFQJqZoUAfhclAuB6hQKRwzUDXo6BAKVzRQPYooECuR9VAFK6fQDMz2UAzM59AuB7dQFK4nkA9CuFAcT2eQMP15ECPwp1ASOHoQK5HnUDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEDNzOxAzcycQM3M7EDNzJxAzczsQM3MnEA=",
+    "facing": "/4f5vQGK+b3fh/m9/4f5vf+H+b0Bivm934f5vf+H+b0Bivm9/4f5vd+H+b3/h/m94on5vf+H+b3/h/m9/4f5vQGK+b3/h/m9/4f5vQGK+b2/h/m9/4f5vf+H+b0Bivm9/4f5vf+H+b0Bivm9/4f5vf+H+b2/h/m9AYr5vf+H+b3/h/m9AYr5vf+H+b3/h/m9/4f5vcKJ+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vf+H+b3/h/m9/4f5vQ==",
+    "anim": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": [[50,0,0.4,7.400000095367432,4.900000095367432,0,0]]
+   }
+  },
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 2,
+    "speed": 2,
+    "endMode": "reverse",
+    "ticks": 120,
+    "pos": "AAAgQAAAsEBERCRADnSyQImIKEAb6LRAzcwsQClct0ARETFAN9C5QFVVNUBERLxAmpk5QFK4vkDe3T1AYCzBQCIiQkBtoMNAZmZGQHsUxkCrqkpAiYjIQO/uTkCW/MpAMzNTQKRwzUB3d1dAseTPQLy7W0C/WNJAAABgQM3M1EBERGRA2kDXQImIaEDotNlAzcxsQPYo3EAREXFAA53eQFVVdUAREeFAmpl5QB+F40De3X1ALPnlQBERgUA6behAMzODQEjh6kBVVYVAVVXtQHd3h0Bjye9AmpmJQHE98kC8u4tAfrH0QN7djUCMJfdAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UAAAJBAmpn5QAAAkECamflAAACQQJqZ+UA=",
+    "facing": "1uRaP4XkWj/W5Fo/1uRaP6PkWj+55Fo/1uRaP6PkWj/W5Fo/ueRaP6PkWj/W5Fo/o+RaP7nkWj/W5Fo/o+RaP7nkWj/W5Fo/o+RaP9bkWj+55Fo/o+RaP9bkWj/W5Fo/o+RaP9bkWj+b5Fo/o+RaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaP9bkWj/W5Fo/1uRaPw==",
+    "anim": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": [[40,4,0.8550542593002319,4.5,7.800000190734863,0,0]]
+   }
+  },
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 3,
+    "speed": 4,
+    "endMode": "repeat",
+    "ticks": 120,
+    "pos": "AAAgQAAAsEAK1ydA4XqwQBSuL0DD9bBAH4U3QKRwsUApXD9AheuxQDMzR0BmZrJAPQpPQEjhskBI4VZAKVyzQFK4XkAK17NAXI9mQOxRtEBmZm5Azcy0QHE9dkCuR7VAexR+QI/CtUDD9YJAcT22QEjhhkBSuLZAzcyKQDMzt0BSuI5AFK63QNejkkD2KLhAXI+WQNejuEDheppAuB65QGZmnkCamblA7FGiQHsUukBxPaZAXI+6QPYoqkA9CrtAexSuQB+Fu0AAALJAAAC8QIXrtUDherxACte5QMP1vECPwr1ApHC9QBSuwUCF671AmpnFQGZmvkAfhclASOG+QKRwzUApXL9AKVzRQArXv0CuR9VA7FHAQDMz2UDNzMBAuB7dQK5HwUA9CuFAj8LBQMP15EBxPcJASOHoQFK4wkDNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0DNzOxAMzPDQM3M7EAzM8NAzczsQDMzw0A=",
+    "facing": "/4f5PQGK+T3fh/k9/4f5Pf+H+T0Bivk934f5Pf+H+T0Bivk9/4f5Pd+H+T3/h/k94on5Pf+H+T3/h/k9/4f5PQGK+T3/h/k9/4f5PQGK+T2/h/k9/4f5Pf+H+T0Bivk9/4f5Pf+H+T0Bivk9/4f5Pf+H+T2/h/k9AYr5Pf+H+T3/h/k9AYr5Pf+H+T3/h/k9/4f5PcKJ+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5Pf+H+T3/h/k9/4f5PQ==",
+    "anim": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": [[70,0,-0.4,7.400000095367432,6.099999904632568,0,0]]
+   }
+  }
+ ],
+ "expected": {
+  "recordings": [],
+  "resolution": {
+   "bossMemory": null,
+   "horizonSubs": 960,
+   "outcome": {"win":true,"objectiveComplete":true,"survivors":[0,1,2,3],"notes":["Objective complete at beat 2.63: Test objective.","Survivors: Tape A, Tape B, Tape C, Tape D."]},
+   "events": [
+    {"sub":6,"type":"step","x":3.3575,"y":5.605,"tape":3,"detail":"alive"},
+    {"sub":13,"type":"step","x":4.215,"y":5.71,"tape":3,"detail":"alive"},
+    {"sub":16,"type":"step","x":3.0667,"y":6.1517,"tape":2,"detail":"alive"},
+    {"sub":20,"type":"step","x":5.0725,"y":5.815,"tape":3,"detail":"alive"},
+    {"sub":27,"type":"step","x":3.3575,"y":5.395,"tape":1,"detail":"alive"},
+    {"sub":27,"type":"step","x":5.93,"y":5.92,"tape":3,"detail":"alive"},
+    {"sub":33,"type":"step","x":3.6333,"y":6.8033,"tape":2,"detail":"alive"},
+    {"sub":34,"type":"step","x":6.7875,"y":6.025,"tape":3,"detail":"alive"},
+    {"sub":50,"type":"step","x":4.2,"y":7.455,"tape":2,"detail":"alive"},
+    {"sub":55,"type":"step","x":3.3575,"y":5.5,"tape":0,"detail":"alive"},
+    {"sub":55,"type":"step","x":4.215,"y":5.29,"tape":1,"detail":"alive"},
+    {"sub":76,"type":"swing","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":76,"type":"hit","x":8.5,"y":5.5,"tape":3,"id":"t1","dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":80,"type":"interact","x":4.5,"y":8.5,"tape":2,"id":"sw","detail":"on"},
+    {"sub":82,"type":"step","x":5.0419,"y":5.1887,"tape":1,"detail":"alive"},
+    {"sub":97,"type":"door","x":10.5,"y":2.5,"id":"d1","detail":"open"},
+    {"sub":110,"type":"step","x":5.8994,"y":5.0837,"tape":1,"detail":"alive"},
+    {"sub":111,"type":"step","x":4.215,"y":5.5,"tape":0,"detail":"alive"},
+    {"sub":119,"type":"tapeWrap","x":2.5,"y":5.5,"tape":3,"power":1},
+    {"sub":126,"type":"step","x":3.3575,"y":5.605,"tape":3,"detail":"alive"},
+    {"sub":133,"type":"step","x":4.215,"y":5.71,"tape":3,"detail":"alive"},
+    {"sub":137,"type":"step","x":6.7262,"y":4.9825,"tape":1,"detail":"alive"},
+    {"sub":140,"type":"step","x":5.0725,"y":5.815,"tape":3,"detail":"alive"},
+    {"sub":147,"type":"step","x":5.93,"y":5.92,"tape":3,"detail":"alive"},
+    {"sub":154,"type":"step","x":6.7875,"y":6.025,"tape":3,"detail":"alive"},
+    {"sub":166,"type":"step","x":5.0572,"y":5.5,"tape":0,"detail":"alive"},
+    {"sub":196,"type":"swing","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":196,"type":"hit","x":8.5,"y":5.5,"tape":3,"id":"t1","dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":222,"type":"step","x":5.9147,"y":5.5,"tape":0,"detail":"alive"},
+    {"sub":224,"type":"swing","x":7.4,"y":4.9,"tape":1,"dir":0.4,"power":1.2,"detail":"light"},
+    {"sub":224,"type":"hit","x":8.5,"y":5.5,"tape":1,"id":"t1","dir":0.4,"power":1.2,"detail":"light"},
+    {"sub":239,"type":"tapeTurn","x":4.5,"y":7.8,"tape":2,"power":1,"detail":"backward"},
+    {"sub":239,"type":"tapeWrap","x":2.5,"y":5.5,"tape":3,"power":2},
+    {"sub":246,"type":"step","x":3.3575,"y":5.605,"tape":3,"detail":"alive"},
+    {"sub":253,"type":"step","x":4.215,"y":5.71,"tape":3,"detail":"alive"},
+    {"sub":260,"type":"step","x":5.0725,"y":5.815,"tape":3,"detail":"alive"},
+    {"sub":267,"type":"step","x":5.93,"y":5.92,"tape":3,"detail":"alive"},
+    {"sub":274,"type":"step","x":6.7875,"y":6.025,"tape":3,"detail":"alive"},
+    {"sub":277,"type":"step","x":6.7569,"y":5.5,"tape":0,"detail":"alive"},
+    {"sub":316,"type":"swing","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":316,"type":"hit","x":8.5,"y":5.5,"tape":3,"id":"t1","dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":316,"type":"kill","x":8.5,"y":5.5,"tape":3,"id":"t1","dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":316,"type":"objective","x":0,"y":0,"detail":"eliminate"},
+    {"sub":359,"type":"tapeWrap","x":2.5,"y":5.5,"tape":3,"power":3},
+    {"sub":366,"type":"step","x":3.3575,"y":5.605,"tape":3,"detail":"alive"},
+    {"sub":373,"type":"step","x":4.215,"y":5.71,"tape":3,"detail":"alive"},
+    {"sub":380,"type":"step","x":5.0725,"y":5.815,"tape":3,"detail":"alive"},
+    {"sub":387,"type":"step","x":5.93,"y":5.92,"tape":3,"detail":"alive"},
+    {"sub":394,"type":"step","x":6.7875,"y":6.025,"tape":3,"detail":"alive"},
+    {"sub":400,"type":"interact","x":4.5,"y":8.5,"tape":2,"id":"sw","detail":"off"},
+    {"sub":418,"type":"door","x":10.5,"y":2.5,"id":"d1","detail":"closed"},
+    {"sub":436,"type":"swing","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":436,"type":"step","x":3.9333,"y":7.1483,"tape":2,"detail":"alive"},
+    {"sub":440,"type":"whiff","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":453,"type":"step","x":3.3667,"y":6.4967,"tape":2,"detail":"alive"},
+    {"sub":470,"type":"step","x":2.8,"y":5.845,"tape":2,"detail":"alive"},
+    {"sub":479,"type":"tapeWrap","x":2.5,"y":5.5,"tape":1,"power":1},
+    {"sub":479,"type":"tapeTurn","x":2.5,"y":5.5,"tape":2,"power":2,"detail":"forward"},
+    {"sub":479,"type":"tapeWrap","x":2.5,"y":5.5,"tape":3,"power":4},
+    {"sub":486,"type":"step","x":2.7333,"y":5.7683,"tape":2,"detail":"alive"},
+    {"sub":486,"type":"step","x":3.3575,"y":5.605,"tape":3,"detail":"alive"},
+    {"sub":493,"type":"step","x":4.215,"y":5.71,"tape":3,"detail":"alive"},
+    {"sub":500,"type":"step","x":5.0725,"y":5.815,"tape":3,"detail":"alive"},
+    {"sub":503,"type":"step","x":3.3,"y":6.42,"tape":2,"detail":"alive"},
+    {"sub":507,"type":"step","x":3.3575,"y":5.395,"tape":1,"detail":"alive"},
+    {"sub":507,"type":"step","x":5.93,"y":5.92,"tape":3,"detail":"alive"},
+    {"sub":514,"type":"step","x":6.7875,"y":6.025,"tape":3,"detail":"alive"},
+    {"sub":520,"type":"step","x":3.8667,"y":7.0717,"tape":2,"detail":"alive"},
+    {"sub":528,"type":"swing","x":7.4,"y":5.5,"tape":0,"dir":0,"power":0.6,"detail":"light"},
+    {"sub":535,"type":"step","x":4.215,"y":5.29,"tape":1,"detail":"alive"},
+    {"sub":537,"type":"step","x":4.4333,"y":7.7233,"tape":2,"detail":"alive"},
+    {"sub":556,"type":"swing","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":560,"type":"interact","x":4.5,"y":8.5,"tape":2,"id":"sw","detail":"on"},
+    {"sub":560,"type":"whiff","x":7.4,"y":5.5,"tape":0,"dir":0,"power":0.6,"detail":"light"},
+    {"sub":560,"type":"whiff","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":562,"type":"step","x":5.0419,"y":5.1887,"tape":1,"detail":"alive"},
+    {"sub":577,"type":"door","x":10.5,"y":2.5,"id":"d1","detail":"open"},
+    {"sub":590,"type":"step","x":5.8994,"y":5.0837,"tape":1,"detail":"alive"},
+    {"sub":599,"type":"tapeWrap","x":2.5,"y":5.5,"tape":3,"power":5},
+    {"sub":606,"type":"step","x":3.3575,"y":5.605,"tape":3,"detail":"alive"},
+    {"sub":613,"type":"step","x":4.215,"y":5.71,"tape":3,"detail":"alive"},
+    {"sub":617,"type":"step","x":6.7262,"y":4.9825,"tape":1,"detail":"alive"},
+    {"sub":620,"type":"step","x":5.0725,"y":5.815,"tape":3,"detail":"alive"},
+    {"sub":627,"type":"step","x":5.93,"y":5.92,"tape":3,"detail":"alive"},
+    {"sub":634,"type":"step","x":6.7875,"y":6.025,"tape":3,"detail":"alive"},
+    {"sub":676,"type":"swing","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":680,"type":"whiff","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":704,"type":"swing","x":7.4,"y":4.9,"tape":1,"dir":0.4,"power":1.2,"detail":"light"},
+    {"sub":719,"type":"tapeTurn","x":4.5,"y":7.8,"tape":2,"power":3,"detail":"backward"},
+    {"sub":719,"type":"tapeWrap","x":2.5,"y":5.5,"tape":3,"power":6},
+    {"sub":720,"type":"whiff","x":7.4,"y":4.9,"tape":1,"dir":0.4,"power":1.2,"detail":"light"},
+    {"sub":726,"type":"step","x":3.3575,"y":5.605,"tape":3,"detail":"alive"},
+    {"sub":733,"type":"step","x":4.215,"y":5.71,"tape":3,"detail":"alive"},
+    {"sub":740,"type":"step","x":5.0725,"y":5.815,"tape":3,"detail":"alive"},
+    {"sub":747,"type":"step","x":5.93,"y":5.92,"tape":3,"detail":"alive"},
+    {"sub":754,"type":"step","x":6.7875,"y":6.025,"tape":3,"detail":"alive"},
+    {"sub":796,"type":"swing","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":800,"type":"whiff","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":839,"type":"tapeWrap","x":2.5,"y":5.5,"tape":3,"power":7},
+    {"sub":846,"type":"step","x":3.3575,"y":5.605,"tape":3,"detail":"alive"},
+    {"sub":853,"type":"step","x":4.215,"y":5.71,"tape":3,"detail":"alive"},
+    {"sub":860,"type":"step","x":5.0725,"y":5.815,"tape":3,"detail":"alive"},
+    {"sub":867,"type":"step","x":5.93,"y":5.92,"tape":3,"detail":"alive"},
+    {"sub":874,"type":"step","x":6.7875,"y":6.025,"tape":3,"detail":"alive"},
+    {"sub":880,"type":"interact","x":4.5,"y":8.5,"tape":2,"id":"sw","detail":"off"},
+    {"sub":898,"type":"door","x":10.5,"y":2.5,"id":"d1","detail":"closed"},
+    {"sub":916,"type":"swing","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":916,"type":"step","x":3.9333,"y":7.1483,"tape":2,"detail":"alive"},
+    {"sub":920,"type":"whiff","x":7.4,"y":6.1,"tape":3,"dir":-0.4,"power":4.8,"detail":"light"},
+    {"sub":933,"type":"step","x":3.3667,"y":6.4967,"tape":2,"detail":"alive"},
+    {"sub":950,"type":"step","x":2.8,"y":5.845,"tape":2,"detail":"alive"}
+   ],
+   "snapshots": [
+    {
+     "sub": 0,
+     "beat": 0,
+     "actors": [
+      {"tape":0,"live":false,"x":2.5,"y":5.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":2.5,"y":5.5,"facing":-0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":2.5,"y":5.5,"facing":0.8551,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}},
+      {"tape":3,"live":false,"x":2.5,"y":5.5,"facing":0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":12,"maxHp":12,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0}],
+     "objective": {"complete":false,"progress":0,"survivors":4}
+    },
+    {
+     "sub": 60,
+     "beat": 0.5,
+     "actors": [
+      {"tape":0,"live":false,"x":3.4188,"y":5.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":7.5,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.3375,"y":5.275,"facing":-0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}},
+      {"tape":3,"live":false,"x":7.4,"y":6.1,"facing":0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":12,"maxHp":12,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0}],
+     "objective": {"complete":false,"progress":0,"survivors":4}
+    },
+    {
+     "sub": 120,
+     "beat": 1,
+     "actors": [
+      {"tape":0,"live":false,"x":4.3375,"y":5.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":6.175,"y":5.05,"facing":-0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}},
+      {"tape":3,"live":false,"x":2.5,"y":5.5,"facing":0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":1,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":8,"maxHp":12,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":true},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":4}
+    },
+    {
+     "sub": 180,
+     "beat": 1.5,
+     "actors": [
+      {"tape":0,"live":false,"x":5.2563,"y":5.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":22.5,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":7.4,"y":4.9,"facing":-0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}},
+      {"tape":3,"live":false,"x":7.4,"y":6.1,"facing":0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":1,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":8,"maxHp":12,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":true},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":4}
+    },
+    {
+     "sub": 240,
+     "beat": 2,
+     "actors": [
+      {"tape":0,"live":false,"x":6.175,"y":5.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":7.4,"y":4.9,"facing":-0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":120,"dir":-1,"traversal":1,"ended":false}},
+      {"tape":3,"live":false,"x":2.5,"y":5.5,"facing":0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":2,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":3,"maxHp":12,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":true},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":4}
+    },
+    {
+     "sub": 300,
+     "beat": 2.5,
+     "actors": [
+      {"tape":0,"live":false,"x":7.0938,"y":5.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":37.5,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":7.4,"y":4.9,"facing":-0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":-1,"traversal":1,"ended":false}},
+      {"tape":3,"live":false,"x":7.4,"y":6.1,"facing":0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":2,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":3,"maxHp":12,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":true},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":4}
+    },
+    {
+     "sub": 360,
+     "beat": 3,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":7.4,"y":4.9,"facing":-0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":-1,"traversal":1,"ended":false}},
+      {"tape":3,"live":false,"x":2.5,"y":5.5,"facing":0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":3,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":true},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    },
+    {
+     "sub": 420,
+     "beat": 3.5,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":52.5,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":7.4,"y":4.9,"facing":-0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":-1,"traversal":1,"ended":false}},
+      {"tape":3,"live":false,"x":7.4,"y":6.1,"facing":0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":3,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0.4444}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    },
+    {
+     "sub": 480,
+     "beat": 4,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":2.5,"y":5.5,"facing":-0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":1,"ended":false}},
+      {"tape":2,"live":false,"x":2.5,"y":5.5,"facing":0.8551,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":2,"ended":false}},
+      {"tape":3,"live":false,"x":2.5,"y":5.5,"facing":0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":4,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    },
+    {
+     "sub": 540,
+     "beat": 4.5,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":67.5,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.3375,"y":5.275,"facing":-0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":1,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":2,"ended":false}},
+      {"tape":3,"live":false,"x":7.4,"y":6.1,"facing":0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":4,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    },
+    {
+     "sub": 600,
+     "beat": 5,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":6.175,"y":5.05,"facing":-0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":1,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":2,"ended":false}},
+      {"tape":3,"live":false,"x":2.5,"y":5.5,"facing":0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":5,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":true},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    },
+    {
+     "sub": 660,
+     "beat": 5.5,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":82.5,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":7.4,"y":4.9,"facing":-0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":1,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":2,"ended":false}},
+      {"tape":3,"live":false,"x":7.4,"y":6.1,"facing":0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":5,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":true},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    },
+    {
+     "sub": 720,
+     "beat": 6,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":7.4,"y":4.9,"facing":-0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":1,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":120,"dir":-1,"traversal":3,"ended":false}},
+      {"tape":3,"live":false,"x":2.5,"y":5.5,"facing":0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":6,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":true},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    },
+    {
+     "sub": 780,
+     "beat": 6.5,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":97.5,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":7.4,"y":4.9,"facing":-0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":1,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":-1,"traversal":3,"ended":false}},
+      {"tape":3,"live":false,"x":7.4,"y":6.1,"facing":0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":6,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":true},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    },
+    {
+     "sub": 840,
+     "beat": 7,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":7.4,"y":4.9,"facing":-0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":1,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":-1,"traversal":3,"ended":false}},
+      {"tape":3,"live":false,"x":2.5,"y":5.5,"facing":0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":7,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":true},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    },
+    {
+     "sub": 900,
+     "beat": 7.5,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":112.5,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":7.4,"y":4.9,"facing":-0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":1,"ended":false}},
+      {"tape":2,"live":false,"x":4.5,"y":7.8,"facing":0.8551,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":-1,"traversal":3,"ended":false}},
+      {"tape":3,"live":false,"x":7.4,"y":6.1,"facing":0.1218,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":7,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0.4444}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    },
+    {
+     "sub": 960,
+     "beat": 8,
+     "actors": [
+      {"tape":0,"live":false,"x":7.4,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":120,"dir":0,"traversal":1,"ended":true}},
+      {"tape":1,"live":false,"x":2.5,"y":5.5,"facing":-0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":2,"ended":false}},
+      {"tape":2,"live":false,"x":2.5,"y":5.5,"facing":0.8551,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":4,"ended":false}},
+      {"tape":3,"live":false,"x":2.5,"y":5.5,"facing":0.1218,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":8,"ended":false}}
+     ],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5.5,"hp":0,"maxHp":12,"alive":false,"state":"dead"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0}],
+     "objective": {"complete":true,"progress":1,"survivors":4}
+    }
+   ]
+  }
+ }
+}

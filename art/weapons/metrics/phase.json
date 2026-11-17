@@ -1,0 +1,58 @@
+{
+ "id": "phase",
+ "kind": "projectile",
+ "style": "",
+ "hands": 0,
+ "tris": {
+  "Projectile": 980
+ },
+ "tris_total": 980,
+ "bounds_min": [
+  -0.155,
+  -0.1136,
+  -0.2325
+ ],
+ "bounds_max": [
+  0.155,
+  0.1136,
+  0.111
+ ],
+ "size": [
+  0.31,
+  0.2272,
+  0.3435
+ ],
+ "empties": {
+  "Nose": {
+   "pos": [
+    0.0,
+    0.0,
+    0.108
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Tail": {
+   "pos": [
+    0.0,
+    0.0,
+    -0.22
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_main",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_violet_glow"
+ ],
+ "bones": []
+}

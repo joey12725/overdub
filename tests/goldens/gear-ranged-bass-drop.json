@@ -1,0 +1,1473 @@
+{
+ "format": 1,
+ "name": "gear-ranged-bass-drop",
+ "description": "Catalogue ranged weapon bass_drop (arc): the live self steps forward and fires twice down a room of sleeping grunts; recorded from inputs, then resolved.",
+ "covers": ["WEAPON-01..03","every ranged archetype (arc)","catalogue gear"],
+ "level": {
+  "id": "test-level",
+  "index": 0,
+  "name": "Test Level",
+  "tagline": "A level built by a test.",
+  "theme": "upper",
+  "bpm": 120,
+  "maxTapes": 4,
+  "endModes": ["stop","repeat","reverse"],
+  "entities": [
+   {"kind":"enemy","id":"g1","type":"grunt","x":6.5,"y":5.5,"wakeWhen":{"const":false},"hp":3},
+   {"kind":"enemy","id":"g2","type":"grunt","x":10,"y":5.2,"wakeWhen":{"const":false},"hp":3},
+   {"kind":"enemy","id":"g3","type":"grunt","x":9.6,"y":7.6,"wakeWhen":{"const":false},"hp":3}
+  ],
+  "objective": {"type":"eliminate","text":"Test objective"},
+  "music": {
+   "root": 9,
+   "scale": "Minor",
+   "progression": [0,5,2,6],
+   "chordBars": 1,
+   "tracks": [{"role":"bass","formula":"triangular"},{"role":"drums","formula":"ruler"},{"role":"melody","formula":"recaman"},{"role":"chord","formula":"squares"}]
+  },
+  "loot": [],
+  "briefing": [],
+  "startFacing": 0,
+  "speeds": [1],
+  "bars": 4,
+  "map": ["############","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","############"],
+  "start": {"x":2.5,"y":5.5},
+  "horizonBars": 4
+ },
+ "loadout": {
+  "gear": {"helmet":"scrap_cap","top":"lined_bomber","pants":"olive_cargos","shoes":"beater_hightops","melee":"splice_blade","ranged":"bass_drop"},
+  "resolved": {
+   "loadout": {"helmet":"scrap_cap","top":"lined_bomber","pants":"olive_cargos","shoes":"beater_hightops","melee":"splice_blade","ranged":"bass_drop"},
+   "mods": {
+    "moveSpeed": 1,
+    "accel": 1,
+    "momentumRetention": 1,
+    "dodgeDistance": 1,
+    "dodgeIframes": 1,
+    "dodgeCooldown": 1,
+    "meleeImpact": 1,
+    "damage": 1,
+    "knockback": 1,
+    "knockbackCap": 1,
+    "stagger": 1,
+    "approachBonus": 1,
+    "sparkSpeed": 1,
+    "interactRadiusAdd": 0,
+    "projectileSpeed": 1,
+    "rangedCooldown": 1
+   },
+   "abilities": [],
+   "melee": {
+    "reach": 1.3,
+    "arcDeg": 100,
+    "light": {"windup":6,"active":4,"recover":10,"impact":1,"moveMul":0.7},
+    "heavy": {"windup":16,"active":5,"recover":20,"impact":1.8,"moveMul":0.4},
+    "damageEff": 1,
+    "knockbackEff": 1,
+    "staggerEff": 1,
+    "style": "blade"
+   },
+   "ranged": {"archetype":"arc","speed":7,"range":7,"impact":1.3,"commit":16,"cooldown":100,"pierce":0,"passesWalls":false,"lobbed":true,"count":1,"spreadDeg":0,"turnRate":0,"blast":1.2,"radius":0.3,"minRange":3}
+  }
+ },
+ "bossMemoryFrom": null,
+ "takes": [
+  {
+   "source": "inputs",
+   "index": 0,
+   "speed": 1,
+   "endMode": "stop",
+   "inputs": [
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [1,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,["ranged"]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0.35,["ranged"]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]],
+    [0,0,0,[]]
+   ]
+  }
+ ],
+ "expected": {
+  "recordings": [
+   {
+    "take": 0,
+    "bossMemory": null,
+    "tape": {
+     "v": 1,
+     "index": 0,
+     "speed": 1,
+     "endMode": "stop",
+     "ticks": 480,
+     "pos": "AAAgQAAAsEAmvyBAAACwQHE9IkAAALBA4nokQAAAsEB4dydAAACwQDQzK0AAALBAFa4vQAAAsEDiejRAAACwQK9HOUAAALBAfBQ+QAAAsEBJ4UJAAACwQBauR0AAALBA43pMQAAAsEDzrFBAAACwQEZEVEAAALBA3EBXQAAAsEC1ollAAACwQNFpW0AAALBAMZZcQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEDUJ11AAACwQNQnXUAAALBA1CddQAAAsEA=",
+     "facing": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPjMzsz4zM7M+MzOzPg==",
+     "anim": "AAEBAQEBAQEBAQEBAQEBAQEBAQEACQkJCQkJCQkJCQkJCQkJCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQkJCQkJCQkJCQkJCQkJCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+     "events": [[20,3,0,3.4555559158325195,5.5,0,0],[200,3,0.35,3.4555559158325195,5.5,0,0]]
+    },
+    "outcome": {"win":false,"objectiveComplete":false,"survivors":[0],"reason":"objective","notes":["Objective not complete: Test objective. Still standing: grunt g1, grunt g2, grunt g3.","Survivors: Tape A."]},
+    "events": [
+     {"sub":59,"type":"step","x":3.3633,"y":5.5,"tape":0,"detail":"alive"},
+     {"sub":96,"type":"fire","x":3.4556,"y":5.5,"tape":0,"dir":0,"power":1,"detail":"arc"},
+     {"sub":335,"type":"projectileHit","x":10.4556,"y":5.5,"tape":0,"dir":0,"power":1.2,"detail":"arc:land"},
+     {"sub":335,"type":"hit","x":10,"y":5.2,"tape":0,"id":"g2","dir":-2.5592,"power":1.3,"detail":"arc"},
+     {"sub":335,"type":"enemyStagger","x":10,"y":5.2,"id":"g2","power":0.65},
+     {"sub":816,"type":"fire","x":3.4556,"y":5.5,"tape":0,"dir":0.35,"power":1,"detail":"arc"},
+     {"sub":1055,"type":"projectileHit","x":10.0312,"y":7.9003,"tape":0,"dir":0.35,"power":1.2,"detail":"arc:land"},
+     {"sub":1055,"type":"hit","x":9.6,"y":7.6,"tape":0,"id":"g3","dir":-2.5333,"power":1.3,"detail":"arc"},
+     {"sub":1055,"type":"enemyStagger","x":9.6,"y":7.6,"id":"g3","power":0.65}
+    ],
+    "snapshots": [
+     {
+      "sub": 0,
+      "beat": 0,
+      "actors": [{"tape":0,"live":true,"x":2.5,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 60,
+      "beat": 0.5,
+      "actors": [{"tape":0,"live":true,"x":3.3633,"y":5.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 120,
+      "beat": 1,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"ranged","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [{"id":1,"owner":{"tape":0},"archetype":"arc","x":4.1556,"y":5.5,"z":0.54,"dir":0}],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 180,
+      "beat": 1.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [{"id":1,"owner":{"tape":0},"archetype":"arc","x":5.9056,"y":5.5,"z":1.365,"dir":0}],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 240,
+      "beat": 2,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [{"id":1,"owner":{"tape":0},"archetype":"arc","x":7.6556,"y":5.5,"z":1.44,"dir":0}],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 300,
+      "beat": 2.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [{"id":1,"owner":{"tape":0},"archetype":"arc","x":9.4056,"y":5.5,"z":0.765,"dir":0}],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 360,
+      "beat": 3,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":9.394,"y":4.8009,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 420,
+      "beat": 3.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 480,
+      "beat": 4,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":120,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 540,
+      "beat": 4.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":135,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 600,
+      "beat": 5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":150,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 660,
+      "beat": 5.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":165,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 720,
+      "beat": 6,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":180,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 780,
+      "beat": 6.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":195,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 840,
+      "beat": 7,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"ranged","life":"alive","synced":true,"iframes":false,"phase":{"tick":210,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [{"id":2,"owner":{"tape":0},"archetype":"arc","x":4.1131,"y":5.74,"z":0.54,"dir":0.35}],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 900,
+      "beat": 7.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":225,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [{"id":2,"owner":{"tape":0},"archetype":"arc","x":5.757,"y":6.3401,"z":1.365,"dir":0.35}],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 960,
+      "beat": 8,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":240,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [{"id":2,"owner":{"tape":0},"archetype":"arc","x":7.4009,"y":6.9402,"z":1.44,"dir":0.35}],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1020,
+      "beat": 8.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":255,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+      ],
+      "projectiles": [{"id":2,"owner":{"tape":0},"archetype":"arc","x":9.0448,"y":7.5402,"z":0.765,"dir":0.35}],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1080,
+      "beat": 9,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":270,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":9.0046,"y":7.1853,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1140,
+      "beat": 9.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":285,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1200,
+      "beat": 10,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":300,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1260,
+      "beat": 10.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":315,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1320,
+      "beat": 11,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":330,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1380,
+      "beat": 11.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":345,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1440,
+      "beat": 12,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":360,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1500,
+      "beat": 12.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":375,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1560,
+      "beat": 13,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":390,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1620,
+      "beat": 13.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":405,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1680,
+      "beat": 14,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":420,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1740,
+      "beat": 14.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":435,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1800,
+      "beat": 15,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":450,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1860,
+      "beat": 15.5,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":465,"dir":1,"traversal":0,"ended":false}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     },
+     {
+      "sub": 1920,
+      "beat": 16,
+      "actors": [{"tape":0,"live":true,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":480,"dir":0,"traversal":1,"ended":true}}],
+      "enemies": [
+       {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+       {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+       {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+      ],
+      "projectiles": [],
+      "mechs": [],
+      "objective": {"complete":false,"progress":0,"survivors":1}
+     }
+    ]
+   }
+  ],
+  "resolution": {
+   "bossMemory": null,
+   "horizonSubs": 1920,
+   "outcome": {"win":false,"objectiveComplete":false,"survivors":[0],"reason":"objective","notes":["Objective not complete: Test objective. Still standing: grunt g1, grunt g2, grunt g3.","Survivors: Tape A."]},
+   "events": [
+    {"sub":59,"type":"step","x":3.3633,"y":5.5,"tape":0,"detail":"alive"},
+    {"sub":96,"type":"fire","x":3.4556,"y":5.5,"tape":0,"dir":0,"power":1,"detail":"arc"},
+    {"sub":335,"type":"projectileHit","x":10.4556,"y":5.5,"tape":0,"dir":0,"power":1.2,"detail":"arc:land"},
+    {"sub":335,"type":"hit","x":10,"y":5.2,"tape":0,"id":"g2","dir":-2.5592,"power":1.3,"detail":"arc"},
+    {"sub":335,"type":"enemyStagger","x":10,"y":5.2,"id":"g2","power":0.65},
+    {"sub":816,"type":"fire","x":3.4556,"y":5.5,"tape":0,"dir":0.35,"power":1,"detail":"arc"},
+    {"sub":1055,"type":"projectileHit","x":10.0312,"y":7.9003,"tape":0,"dir":0.35,"power":1.2,"detail":"arc:land"},
+    {"sub":1055,"type":"hit","x":9.6,"y":7.6,"tape":0,"id":"g3","dir":-2.5333,"power":1.3,"detail":"arc"},
+    {"sub":1055,"type":"enemyStagger","x":9.6,"y":7.6,"id":"g3","power":0.65}
+   ],
+   "snapshots": [
+    {
+     "sub": 0,
+     "beat": 0,
+     "actors": [{"tape":0,"live":false,"x":2.5,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 60,
+     "beat": 0.5,
+     "actors": [{"tape":0,"live":false,"x":3.3633,"y":5.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 120,
+     "beat": 1,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"ranged","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [{"id":1,"owner":{"tape":0},"archetype":"arc","x":4.1556,"y":5.5,"z":0.54,"dir":0}],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 180,
+     "beat": 1.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [{"id":1,"owner":{"tape":0},"archetype":"arc","x":5.9056,"y":5.5,"z":1.365,"dir":0}],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 240,
+     "beat": 2,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [{"id":1,"owner":{"tape":0},"archetype":"arc","x":7.6556,"y":5.5,"z":1.44,"dir":0}],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 300,
+     "beat": 2.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":10,"y":5.2,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [{"id":1,"owner":{"tape":0},"archetype":"arc","x":9.4056,"y":5.5,"z":0.765,"dir":0}],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 360,
+     "beat": 3,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":9.394,"y":4.8009,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 420,
+     "beat": 3.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 480,
+     "beat": 4,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":120,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 540,
+     "beat": 4.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":135,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 600,
+     "beat": 5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":150,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 660,
+     "beat": 5.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":165,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 720,
+     "beat": 6,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":180,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 780,
+     "beat": 6.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":195,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 840,
+     "beat": 7,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"ranged","life":"alive","synced":true,"iframes":false,"phase":{"tick":210,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [{"id":2,"owner":{"tape":0},"archetype":"arc","x":4.1131,"y":5.74,"z":0.54,"dir":0.35}],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 900,
+     "beat": 7.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":225,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [{"id":2,"owner":{"tape":0},"archetype":"arc","x":5.757,"y":6.3401,"z":1.365,"dir":0.35}],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 960,
+     "beat": 8,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":240,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [{"id":2,"owner":{"tape":0},"archetype":"arc","x":7.4009,"y":6.9402,"z":1.44,"dir":0.35}],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1020,
+     "beat": 8.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":255,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.6,"y":7.6,"hp":3,"maxHp":3,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [{"id":2,"owner":{"tape":0},"archetype":"arc","x":9.0448,"y":7.5402,"z":0.765,"dir":0.35}],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1080,
+     "beat": 9,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":270,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":9.0046,"y":7.1853,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1140,
+     "beat": 9.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":285,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1200,
+     "beat": 10,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":300,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1260,
+     "beat": 10.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":315,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1320,
+     "beat": 11,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":330,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1380,
+     "beat": 11.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":345,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1440,
+     "beat": 12,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":360,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1500,
+     "beat": 12.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":375,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1560,
+     "beat": 13,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":390,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1620,
+     "beat": 13.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":405,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1680,
+     "beat": 14,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":420,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1740,
+     "beat": 14.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":435,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1800,
+     "beat": 15,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":450,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1860,
+     "beat": 15.5,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":465,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1920,
+     "beat": 16,
+     "actors": [{"tape":0,"live":false,"x":3.4556,"y":5.5,"facing":0.35,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":480,"dir":0,"traversal":1,"ended":true}}],
+     "enemies": [
+      {"id":"g1","type":"grunt","x":6.5,"y":5.5,"hp":3,"maxHp":3,"alive":true,"state":"asleep"},
+      {"id":"g2","type":"grunt","x":8.9143,"y":4.485,"hp":2,"maxHp":3,"alive":true,"state":"stagger"},
+      {"id":"g3","type":"grunt","x":8.5332,"y":6.857,"hp":2,"maxHp":3,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    }
+   ]
+  }
+ }
+}

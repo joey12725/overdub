@@ -1,0 +1,1561 @@
+[
+ {
+  "file": "assets/textures/graffiti/1.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.3,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/1_bar_2_bar.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.448,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/2_keys.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.23,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/2_of_me.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.213,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/34.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.33,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/5.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.425,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/5678.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.183,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/ab.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.249,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/after_you.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.159,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/again.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.215,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/again_again.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.375,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/amp.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.214,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/arrow.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.161,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/arrow_down.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.182,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/ask_twice.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.204,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/bolt.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.219,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/boombox.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.277,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/cassette.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.379,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/crown.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.359,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/dead_air.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.199,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/dock.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.224,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/down.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.17,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/dub.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.337,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/far_one_first.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.289,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/flat_rate.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.15,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/ghost.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.287,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/ghost_me.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.194,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/headphones.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.27,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/heart.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.346,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/hiss.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.197,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/hot_side.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.217,
+  "corners_clear": true,
+  "raw_touched_edge": true,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/keep_it.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.17,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/kept.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.194,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/list_only.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.143,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/long_way.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.179,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/look_away.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.178,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/loop.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.282,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/loud.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.196,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/mains.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.231,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/mind_the_teeth.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.371,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/mind_yr_head.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.305,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/mox.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.283,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/moxie_was_here.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.32,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/no_skips.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.141,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/off_air.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.166,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/on_air.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.191,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/on_file.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.153,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/one.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.256,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/overdub.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.218,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/play.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.185,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/rec.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.23,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/reel.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.227,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/rewind.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.149,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/roll_tape.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.18,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/run_it.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.195,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/side_b.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.234,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/skull.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.374,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/smiley.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.294,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/smiley_violet.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.309,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/splat.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.349,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/star.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.269,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/star_yellow.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.323,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/take_4.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.215,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/tally.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.256,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/three.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.218,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/two.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.257,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/wait_4_ur_spark.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.323,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/warning.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.309,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/wave.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.071,
+  "corners_clear": true,
+  "raw_touched_edge": true,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/x.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.354,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/graffiti/x2.png",
+  "size": [
+   768,
+   768
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.379,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/lane_arrow.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.174,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/lane_arrow_turn.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.194,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/worn_paint_yellow.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.224,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/do_not_stand.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.445,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/keep_clear.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.49,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/moss_a.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.33,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/leaves.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.141,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/crack_a.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.047,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/crack_b.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.059,
+  "corners_clear": true,
+  "raw_touched_edge": true,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/scorch_a.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 253,
+  "coverage": 0.434,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/hazard_chevrons.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.256,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/moss_b.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.07,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/scorch_b.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 254,
+  "coverage": 0.168,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/exit.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.298,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/hazard_stripe.png",
+  "size": [
+   1024,
+   256
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.435,
+  "corners_clear": true,
+  "raw_touched_edge": true,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/worn_line.png",
+  "size": [
+   1024,
+   256
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.153,
+  "corners_clear": true,
+  "raw_touched_edge": true,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/bay_01.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.457,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/bay_02.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.479,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/bay_03.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.48,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/bay_04.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.474,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/bay_a.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.389,
+  "corners_clear": true,
+  "raw_touched_edge": true,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/bay_b.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.433,
+  "corners_clear": true,
+  "raw_touched_edge": true,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/bay_c.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.388,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/bay_d.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.38,
+  "corners_clear": true,
+  "raw_touched_edge": true,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/runes/rune_glyphs_atlas.png",
+  "size": [
+   1024,
+   640
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.34,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/runes/rune_strip_h_01.png",
+  "size": [
+   1024,
+   128
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.367,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/runes/rune_strip_h_02.png",
+  "size": [
+   1024,
+   128
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.39,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/runes/rune_strip_h_03.png",
+  "size": [
+   1024,
+   128
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.412,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/runes/rune_strip_v_01.png",
+  "size": [
+   128,
+   1024
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.373,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/runes/rune_strip_v_02.png",
+  "size": [
+   128,
+   1024
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.396,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/decals/runes/rune_ring.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.169,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/backdrops/upper.png",
+  "size": [
+   1536,
+   1024
+  ],
+  "ok": true
+ },
+ {
+  "file": "assets/textures/backdrops/mid.png",
+  "size": [
+   1536,
+   1024
+  ],
+  "ok": true
+ },
+ {
+  "file": "assets/textures/backdrops/lower.png",
+  "size": [
+   1536,
+   1024
+  ],
+  "ok": true
+ },
+ {
+  "file": "assets/textures/backdrops/core.png",
+  "size": [
+   1536,
+   1024
+  ],
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/jcard_a.png",
+  "size": [
+   1024,
+   1536
+  ],
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/label_a.png",
+  "size": [
+   1024,
+   640
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.477,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/jcard_b.png",
+  "size": [
+   1024,
+   1536
+  ],
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/label_b.png",
+  "size": [
+   1024,
+   640
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.478,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/jcard_c.png",
+  "size": [
+   1024,
+   1536
+  ],
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/label_c.png",
+  "size": [
+   1024,
+   640
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.479,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/jcard_d.png",
+  "size": [
+   1024,
+   1536
+  ],
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/label_d.png",
+  "size": [
+   1024,
+   640
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.478,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/stickers/5678.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.596,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/stickers/clang.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.429,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/stickers/commit.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.411,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/stickers/desync.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.504,
+  "corners_clear": true,
+  "raw_touched_edge": true,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/stickers/rec.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.6,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/stickers/resync.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.439,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/stickers/retry.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.495,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/stickers/take.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.659,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ },
+ {
+  "file": "assets/textures/tape/stickers/wipe.png",
+  "size": [
+   1024,
+   512
+  ],
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "coverage": 0.45,
+  "corners_clear": true,
+  "raw_touched_edge": false,
+  "ok": true
+ }
+]

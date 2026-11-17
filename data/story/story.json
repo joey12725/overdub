@@ -1,0 +1,342 @@
+{
+  "version": 1,
+  "title": {
+    "tagline": "Be your own backing band."
+  },
+  "characters": [
+    {
+      "id": "moxie",
+      "name": "Moxie",
+      "color": "#f5c518",
+      "portraits": ["neutral", "grin", "smug", "annoyed", "surprised", "thinking", "determined", "soft"]
+    },
+    {
+      "id": "opal",
+      "name": "Opal",
+      "color": "#e9a36b",
+      "portraits": ["neutral", "dry", "amused", "worried", "soft"]
+    },
+    {
+      "id": "tolly",
+      "name": "Tolliver",
+      "color": "#9bb7ff",
+      "portraits": ["neutral", "earnest", "flustered", "impressed"]
+    },
+    {
+      "id": "archivist",
+      "name": "The Archivist",
+      "color": "#58f0dc",
+      "portraits": ["idle", "playback", "still"]
+    }
+  ],
+  "chapters": [
+    { "id": "upper", "title": "Side A", "subtitle": "The Upper Ruins", "card": "chapter-upper", "before": "01-soft-open" },
+    { "id": "middle", "title": "Dead Air", "subtitle": "The Middle Floors", "card": "chapter-middle", "before": "05-dead-air" },
+    { "id": "lower", "title": "Side B", "subtitle": "The Neon Depths", "card": "chapter-lower", "before": "08-loop-pedal" },
+    { "id": "machine", "title": "Master Tape", "subtitle": "The Bottom", "card": "chapter-machine", "before": "12-master-tape" }
+  ],
+  "levels": {
+    "01-soft-open": {
+      "intro": [
+        { "who": "opal", "expression": "dry", "line": "Radio check. If you can hear me, you still owe me for the headphones." },
+        { "who": "moxie", "expression": "grin", "line": "Loud and clear, Opal. Put it on my tab." },
+        { "who": "opal", "expression": "dry", "line": "The head in that deck came out of those ruins. Sold as-is. No refunds." },
+        { "who": "moxie", "expression": "smug", "line": "Bottom floor, biggest score, back by dinner. Easy money." }
+      ],
+      "outro": [
+        { "who": "moxie", "expression": "surprised", "line": "Opal. There were two of me in there." },
+        { "who": "opal", "expression": "dry", "line": "Mm. Did either of you find anything worth selling?" }
+      ],
+      "firstDeath": [
+        { "who": "moxie", "expression": "surprised", "line": "That one got me. Properly got me. And I'm back at the door." },
+        { "who": "opal", "expression": "dry", "line": "Mm. It does that. Try not to make a habit of it." }
+      ],
+      "idle": [
+        { "who": "opal", "expression": "dry", "line": "I'm billing you for this radio time." }
+      ]
+    },
+    "02-hit-harder": {
+      "intro": [
+        { "who": "opal", "expression": "amused", "line": "One floor down and the price of that deck just went up." },
+        { "who": "moxie", "expression": "annoyed", "line": "You already sold it to me." },
+        { "who": "opal", "expression": "dry", "line": "I sold you a Walkman. You're wearing a miracle. Different shelf." }
+      ],
+      "outro": [
+        { "who": "moxie", "expression": "grin", "line": "Good crew. One quick, one patient, both gorgeous." },
+        { "who": "opal", "expression": "dry", "line": "Crew. You've never split a take in your life." },
+        { "who": "moxie", "expression": "smug", "line": "Still haven't." }
+      ],
+      "idle": [
+        { "who": "moxie", "expression": "thinking", "line": "Somebody carved every inch of this wall. Nobody signed it." }
+      ]
+    },
+    "03-hold-the-door": {
+      "intro": [
+        { "who": "moxie", "expression": "thinking", "line": "This place really wants me to be in two spots at once." },
+        { "who": "opal", "expression": "neutral", "line": "Most people bring a partner for that." },
+        { "who": "moxie", "expression": "smug", "line": "I did. She's great. Little bossy." }
+      ],
+      "outro": [
+        { "who": "moxie", "expression": "annoyed", "line": "Take One stood there the whole time and didn't complain once." },
+        { "who": "moxie", "expression": "thinking", "line": "...Which is weird, because I would have." }
+      ],
+      "idle": [
+        { "who": "opal", "expression": "amused", "line": "You've gone quiet. Either you're thinking or you're dead." }
+      ]
+    },
+    "04-second-opinion": {
+      "intro": [
+        { "who": "tolly", "expression": "earnest", "line": "Licensed survey, Tolliver Vance. You're not on my site list." },
+        { "who": "moxie", "expression": "neutral", "line": "I'm not on anybody's list. That's the appeal." },
+        { "who": "tolly", "expression": "flustered", "line": "This floor needs four people. My four went home. Sensibly." },
+        { "who": "moxie", "expression": "smug", "line": "I brought four." },
+        { "who": "tolly", "expression": "neutral", "line": "...I count one." }
+      ],
+      "outro": [
+        { "who": "tolly", "expression": "impressed", "line": "That was all you. That was four of all you." },
+        { "who": "moxie", "expression": "grin", "line": "Write it up however you like, Tolly." },
+        { "who": "tolly", "expression": "flustered", "line": "It's Tolliver. And I don't have a form for this." }
+      ],
+      "idle": [
+        { "who": "tolly", "expression": "earnest", "line": "Take your time! I'm only timing you for the report." }
+      ]
+    },
+    "05-dead-air": {
+      "intro": [
+        { "who": "opal", "expression": "neutral", "line": "You're about to lose me. The rock gets thick from here down." },
+        { "who": "moxie", "expression": "grin", "line": "Finally. Some quiet." },
+        { "who": "opal", "expression": "worried", "line": "Don't sell anything without me. And don't you d--" },
+        { "who": "moxie", "expression": "neutral", "line": "...Opal?" },
+        { "who": "moxie", "expression": "thinking", "line": "Huh. Just us, then." }
+      ],
+      "outro": [
+        { "who": "moxie", "expression": "annoyed", "line": "Turns out I talk a lot when nobody's listening." },
+        { "who": "moxie", "expression": "soft", "line": "Take Three thought it was funny, though. I could tell." }
+      ],
+      "idle": [
+        { "who": "moxie", "expression": "neutral", "line": "Opal would have said something rude by now." }
+      ]
+    },
+    "06-crossfire": {
+      "intro": [
+        { "who": "tolly", "expression": "earnest", "line": "You again! Mind the next room. It's very pointed at people." },
+        { "who": "moxie", "expression": "neutral", "line": "How pointed?" },
+        { "who": "tolly", "expression": "flustered", "line": "I've stopped counting the holes in my survey flag." },
+        { "who": "moxie", "expression": "grin", "line": "Stay back here, Tolly. Some of me are about to get shot at." }
+      ],
+      "outro": [
+        { "who": "tolly", "expression": "impressed", "line": "You sent yourself out as bait. Twice." },
+        { "who": "moxie", "expression": "smug", "line": "She volunteered." },
+        { "who": "tolly", "expression": "earnest", "line": "I'd offer to come along. You seem... staffed." }
+      ]
+    },
+    "07-out-of-phase": {
+      "intro": [
+        { "who": "moxie", "expression": "annoyed", "line": "Headphones keep picking something up. It isn't Opal." },
+        { "who": "archivist", "expression": "idle", "line": "Moxie. Take one. Kept." },
+        { "who": "moxie", "expression": "surprised", "line": "...Nope. Didn't hear that." }
+      ],
+      "outro": [
+        { "who": "moxie", "expression": "soft", "line": "She skipped, she ran, she made it. I'd have waited. Probably." }
+      ]
+    },
+    "08-loop-pedal": {
+      "intro": [
+        { "who": "archivist", "expression": "idle", "line": "Scavenger. One recording head. Four tracks. All kept." },
+        { "who": "moxie", "expression": "annoyed", "line": "Okay, headphones. Who is that." },
+        { "who": "archivist", "expression": "idle", "line": "I keep what this place records. You are keeping me busy." },
+        { "who": "moxie", "expression": "smug", "line": "You're welcome. I'm very watchable." }
+      ],
+      "outro": [
+        { "who": "archivist", "expression": "playback", "line": "\"Easy money.\" Floor one. Kept." },
+        { "who": "moxie", "expression": "annoyed", "line": "Don't quote me to me." }
+      ],
+      "idle": [
+        { "who": "archivist", "expression": "idle", "line": "Standing still is also recorded." }
+      ]
+    },
+    "09-rewind": {
+      "intro": [
+        { "who": "moxie", "expression": "thinking", "line": "Hey. Voice. What's at the bottom? Rumour says time machine." },
+        { "who": "archivist", "expression": "idle", "line": "The master deck. It does not replay. It records over." },
+        { "who": "moxie", "expression": "grin", "line": "So it's real. Opal owes me a drink." },
+        { "who": "archivist", "expression": "still", "line": "Opal. Three takes. Kept. The fourth was never recorded." },
+        { "who": "moxie", "expression": "surprised", "line": "...She's been down here?" }
+      ],
+      "outro": [
+        { "who": "moxie", "expression": "thinking", "line": "All that 'sold as-is'. She knew exactly what it does." },
+        { "who": "moxie", "expression": "determined", "line": "She turned back at three. I've got four." }
+      ]
+    },
+    "10-heavy-rotation": {
+      "intro": [
+        { "who": "moxie", "expression": "determined", "line": "Okay, team meeting. One, you're reckless. Two, you're late." },
+        { "who": "moxie", "expression": "thinking", "line": "Three, you were perfect. Don't let it go to your head." },
+        { "who": "archivist", "expression": "idle", "line": "You are speaking to recordings." },
+        { "who": "moxie", "expression": "grin", "line": "Best crew I ever had. Nobody argues about the split." }
+      ],
+      "outro": [
+        { "who": "archivist", "expression": "idle", "line": "The next door is mine. The rooms rewind. I do not." },
+        { "who": "moxie", "expression": "smug", "line": "So you'll remember me. Good. Most people do." }
+      ],
+      "idle": [
+        { "who": "moxie", "expression": "annoyed", "line": "Four, you've been very quiet. I'm watching you, Four." }
+      ]
+    },
+    "11-the-archivist": {
+      "intro": [
+        { "who": "archivist", "expression": "idle", "line": "Everything you commit, I keep. Everything I keep, I have read." },
+        { "who": "archivist", "expression": "playback", "line": "\"Back by dinner.\" Floor one. Kept." },
+        { "who": "moxie", "expression": "determined", "line": "Then I'll have to be somebody you haven't filed yet." }
+      ],
+      "outro": [
+        { "who": "archivist", "expression": "still", "line": "Four takes. None of them the one I expected. All kept." },
+        { "who": "archivist", "expression": "still", "line": "It records over, Moxie. Go and look. Then decide what I lose." }
+      ],
+      "firstDeath": [
+        { "who": "archivist", "expression": "playback", "line": "That step is from take one. I was already waiting in it." },
+        { "who": "moxie", "expression": "annoyed", "line": "Rude. Accurate. Rude." }
+      ],
+      "idle": [
+        { "who": "archivist", "expression": "idle", "line": "I can wait. It is most of what I do." }
+      ]
+    },
+    "12-master-tape": {
+      "intro": [
+        { "who": "moxie", "expression": "surprised", "line": "That's it? It's a tape deck. A very big tape deck." },
+        { "who": "archivist", "expression": "still", "line": "One reel. Every beat this place has kept. Wind it back and the rest is gone." },
+        { "who": "moxie", "expression": "thinking", "line": "Any beat. I could fix the haircut. The red bike. That one night." },
+        { "who": "moxie", "expression": "determined", "line": "...First things first. This room wants four of me." }
+      ],
+      "outro": [
+        { "who": "moxie", "expression": "soft", "line": "Listen to that. All four of us. Nobody cut." }
+      ]
+    }
+  },
+  "once": {
+    "firstDeath": [
+      { "who": "moxie", "expression": "surprised", "line": "Okay. That killed me. And I'm fine. Not thrilled. Fine." }
+    ],
+    "firstGhostTake": [
+      { "who": "moxie", "expression": "thinking", "line": "Huh. See-through. Well, I'm here now." }
+    ],
+    "firstDesync": [
+      { "who": "moxie", "expression": "surprised", "line": "She's skipping. Like a scratched record." },
+      { "who": "moxie", "expression": "determined", "line": "Catch up, you. We rehearsed this." }
+    ],
+    "firstResetAll": [
+      { "who": "moxie", "expression": "annoyed", "line": "Whole tape, gone. Fine. They were all rehearsals anyway." }
+    ],
+    "firstLoot": [
+      { "who": "moxie", "expression": "smug", "line": "First find. Opal will say twenty. It's worth sixty." }
+    ]
+  },
+  "barks": {
+    "countIn": [
+      { "who": "moxie", "expression": "determined", "line": "From the top." },
+      { "who": "moxie", "expression": "grin", "line": "Rolling." },
+      { "who": "moxie", "expression": "neutral", "line": "One more for the tape." },
+      { "who": "moxie", "expression": "smug", "line": "Okay, me. Places." },
+      { "who": "moxie", "expression": "annoyed", "line": "Quiet in the booth. That means you, Two." }
+    ],
+    "takeCommitted": [
+      { "who": "moxie", "expression": "grin", "line": "Keeper." },
+      { "who": "moxie", "expression": "smug", "line": "Lock it. She's on the crew." },
+      { "who": "moxie", "expression": "determined", "line": "Print it." },
+      { "who": "moxie", "expression": "thinking", "line": "Nobody touch it. It's perfect. Ish." }
+    ],
+    "retry": [
+      { "who": "moxie", "expression": "neutral", "line": "Nobody saw that." },
+      { "who": "moxie", "expression": "annoyed", "line": "Scrap it. Again." },
+      { "who": "moxie", "expression": "determined", "line": "Cut. I can do that prettier." },
+      { "who": "moxie", "expression": "thinking", "line": "Closer. Not close. Closer." }
+    ],
+    "resetAll": [
+      { "who": "moxie", "expression": "grin", "line": "Everybody's fired. Everybody's rehired." },
+      { "who": "moxie", "expression": "thinking", "line": "Wasn't you, team. Was me. Was all of us." },
+      { "who": "moxie", "expression": "determined", "line": "New plan. Same four idiots." }
+    ],
+    "death": [
+      { "who": "moxie", "expression": "annoyed", "line": "Ow. Okay. Noted." },
+      { "who": "moxie", "expression": "surprised", "line": "Cut from the mix." },
+      { "who": "moxie", "expression": "smug", "line": "Meant to do that. For the next me." }
+    ],
+    "ghostTake": [
+      { "who": "moxie", "expression": "determined", "line": "Tape's still rolling. So am I." },
+      { "who": "moxie", "expression": "thinking", "line": "Dead on tape. Still on the clock." },
+      { "who": "moxie", "expression": "neutral", "line": "Fine. Scouting run." }
+    ],
+    "rescue": [
+      { "who": "moxie", "expression": "grin", "line": "Got you. You owe me. I owe me." },
+      { "who": "moxie", "expression": "smug", "line": "Not today, Two." },
+      { "who": "moxie", "expression": "soft", "line": "There. She gets to finish." },
+      { "who": "moxie", "expression": "grin", "line": "She lives! Told you I'm good company." }
+    ],
+    "desync": [
+      { "who": "moxie", "expression": "surprised", "line": "She's skipping." },
+      { "who": "moxie", "expression": "annoyed", "line": "Lost the groove." },
+      { "who": "moxie", "expression": "thinking", "line": "That wall wasn't there last take." },
+      { "who": "moxie", "expression": "annoyed", "line": "Okay, that one's my fault." }
+    ],
+    "resync": [
+      { "who": "moxie", "expression": "grin", "line": "Back in the pocket." },
+      { "who": "moxie", "expression": "soft", "line": "There she is." },
+      { "who": "moxie", "expression": "smug", "line": "Welcome back. You missed a lot." }
+    ],
+    "fail": [
+      { "who": "moxie", "expression": "thinking", "line": "Close. Not close enough to brag about." },
+      { "who": "moxie", "expression": "annoyed", "line": "Everybody died. Team meeting." },
+      { "who": "moxie", "expression": "neutral", "line": "The plan's good. The plan's fine. New plan." }
+    ],
+    "lastTape": [
+      { "who": "moxie", "expression": "smug", "line": "Four, you're up. No pressure. All the pressure." }
+    ],
+    "win": [
+      { "who": "moxie", "expression": "grin", "line": "And that's the mix." },
+      { "who": "moxie", "expression": "smug", "line": "All of me. Zero notes." },
+      { "who": "moxie", "expression": "grin", "line": "Play it back. I want to watch." },
+      { "who": "moxie", "expression": "soft", "line": "Nice work, all of you." },
+      { "who": "moxie", "expression": "smug", "line": "Told you. Easy money." }
+    ],
+    "loot": [
+      { "who": "moxie", "expression": "grin", "line": "Ooh. Mine." },
+      { "who": "moxie", "expression": "smug", "line": "Finders, keepers, resellers." },
+      { "who": "moxie", "expression": "grin", "line": "This one goes on me, not on the shelf." }
+    ],
+    "bossRecall": [
+      { "who": "moxie", "expression": "annoyed", "line": "It read that one." },
+      { "who": "moxie", "expression": "thinking", "line": "Old trick. It kept the receipt." },
+      { "who": "moxie", "expression": "annoyed", "line": "Stop remembering me!" }
+    ],
+    "archivistRecall": [
+      { "who": "archivist", "expression": "playback", "line": "I have this." },
+      { "who": "archivist", "expression": "playback", "line": "You have stood there before." },
+      { "who": "archivist", "expression": "playback", "line": "Kept. Read. Answered." },
+      { "who": "archivist", "expression": "playback", "line": "This step is on file." }
+    ],
+    "archivistSurprised": [
+      { "who": "archivist", "expression": "still", "line": "That is not on file." },
+      { "who": "archivist", "expression": "still", "line": "New. Noted." },
+      { "who": "archivist", "expression": "idle", "line": "I never received that." }
+    ]
+  },
+  "ending": [
+    { "who": "archivist", "expression": "idle", "line": "Choose your beat. I will not remember being asked." },
+    { "who": "moxie", "expression": "thinking", "line": "Every take I wanted to cut was holding a door for the next one." },
+    { "who": "moxie", "expression": "grin", "line": "So don't rewind. Record. All four of me, one tape." },
+    { "who": "archivist", "expression": "still", "line": "...Nobody has asked it to keep anything in a long time." },
+    { "who": "moxie", "expression": "smug", "line": "And Opal's three. Those are coming up with me." },
+    { "who": "archivist", "expression": "still", "line": "Moxie. Master. Kept." },
+    { "who": "opal", "expression": "worried", "line": "--oxie? Eleven hours of static. Well? Did you find it?" },
+    { "who": "moxie", "expression": "grin", "line": "Found it. Bolted to the planet. Wouldn't sell it anyway." },
+    { "who": "opal", "expression": "dry", "line": "So you came up with nothing." },
+    { "who": "moxie", "expression": "smug", "line": "I came up with a mixtape. And this. It has your name on it." },
+    { "who": "opal", "expression": "soft", "line": "...Three tracks. I never did the fourth." },
+    { "who": "moxie", "expression": "soft", "line": "I know. I played it. Hope you don't mind the company." },
+    { "who": "opal", "expression": "amused", "line": "Forty for the mixtape." },
+    { "who": "moxie", "expression": "grin", "line": "Not for sale. Put the kettle on. I'll play you both." }
+  ],
+  "stinger": [
+    { "who": "tolly", "expression": "earnest", "line": "I've drafted a form for you. It has four signature lines." }
+  ]
+}

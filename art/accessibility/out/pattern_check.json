@@ -1,0 +1,48 @@
+{
+ "size": 128,
+ "supersample": 8,
+ "repeats_per_tile": 4,
+ "coverage_target": 0.4,
+ "patterns": [
+  {
+   "pattern": "stripes",
+   "wrap_max_abs_diff_u8": 0,
+   "coverage": 0.4023,
+   "seam_step_x": 0.0625,
+   "max_interior_step_x": 0.0625,
+   "seam_step_y": 0.0625,
+   "max_interior_step_y": 0.0625,
+   "ok": true
+  },
+  {
+   "pattern": "dots",
+   "wrap_max_abs_diff_u8": 0,
+   "coverage": 0.3995,
+   "seam_step_x": 0.3574,
+   "max_interior_step_x": 0.3574,
+   "seam_step_y": 0.3574,
+   "max_interior_step_y": 0.3574,
+   "ok": true
+  },
+  {
+   "pattern": "chevrons",
+   "wrap_max_abs_diff_u8": 0,
+   "coverage": 0.4023,
+   "seam_step_x": 0.0,
+   "max_interior_step_x": 0.0625,
+   "seam_step_y": 0.0352,
+   "max_interior_step_y": 0.125,
+   "ok": true
+  },
+  {
+   "pattern": "grid",
+   "wrap_max_abs_diff_u8": 0,
+   "coverage": 0.4018,
+   "seam_step_x": 0.7734,
+   "max_interior_step_x": 0.7734,
+   "seam_step_y": 0.7734,
+   "max_interior_step_y": 0.7734,
+   "ok": true
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+ "cell": 128,
+ "columns": 8,
+ "rows": 5,
+ "count": 40,
+ "note": "glyph i is at column i % 8, row i // 8; white on transparent, tint with modulate"
+}

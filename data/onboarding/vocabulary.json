@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "about": "Machine-readable vocabulary for data/onboarding/coachmarks.json and failure_hints.json. docs/ONBOARDING.md is the specification; data/onboarding/validate.py checks the data files (and the document) against this file.",
+
+  "phases": ["briefing", "setup", "countin", "recording", "review", "decision", "cinematic", "results"],
+
+  "levels": [
+    "01-soft-open", "02-hit-harder", "03-hold-the-door", "04-second-opinion", "05-dead-air", "06-crossfire",
+    "07-out-of-phase", "08-loop-pedal", "09-rewind", "10-heavy-rotation", "11-the-archivist", "12-master-tape"
+  ],
+
+  "deckStatuses": ["unavailable", "empty", "armed", "recording", "pending", "committed"],
+  "endModes": ["stop", "repeat", "reverse"],
+  "speeds": [0.5, 1, 2, 4],
+
+  "inputs": ["move", "aim", "light", "heavy", "dodge", "ranged", "interact", "ability"],
+  "sessionActions": ["start", "speedUp", "speedDown", "cycleEndMode", "record", "skip", "endAttempt", "retryTake", "commit", "resetAll", "continue", "quit"],
+
+  "simEvents": [
+    "step", "swing", "hit", "whiff", "kill", "break", "clang", "dodge", "fire", "projectileHit", "interact", "interactFail",
+    "door", "plate", "laser", "core", "selfDeath", "desync", "resync", "tapeWrap", "tapeTurn", "tapeEnd",
+    "enemyTelegraph", "enemyAttack", "enemyShot", "enemyStagger", "bossPhase", "bossRecall", "trap", "objective"
+  ],
+
+  "scopes": ["shown", "phase", "take", "attempt", "level", "save"],
+  "tapeSelectors": ["live", "previous", "any", 0, 1, 2, 3],
+  "deckSelectors": ["active", "any", 0, 1, 2, 3],
+  "liveStates": ["alive", "recGhost", "desynced"],
+  "selfStates": ["alive", "ghost", "desynced"],
+  "nearKinds": ["enemy", "switch", "plate", "door", "breakable", "core", "exit", "laser", "trap"],
+  "eventTargets": ["enemy", "mech", "trap"],
+  "outcomes": ["win", "fail", "none"],
+  "fates": ["alive", "dead"],
+
+  "combinators": ["all", "any", "not"],
+
+  "predicates": {
+    "firstTimePhase": "phase",
+    "phaseIs": "phase | [phase]",
+    "phaseElapsed": "N seconds",
+    "shownFor": "N seconds",
+    "beat": "N master beats",
+    "takeProgress": "N (0..1)",
+    "tapesCommitted": "N",
+    "deckStatusIs": "{ deck: deckSelector, status: deckStatus }",
+    "speedsOffered": "N",
+    "activeSpeedIs": "N",
+    "endModesOffered": "N",
+    "activeEndModeIs": "endMode",
+    "outcomeIs": "outcome",
+    "retriesThisTake": "N",
+    "levelsCleared": "N",
+    "liveSelfIs": "liveState",
+    "selfIs": "{ who: 'previous' | 0..3, state: selfState }",
+    "selfFateChanged": "{ who: 'previous' | 0..3, to: fate }",
+    "liveSelfNear": "{ kind: nearKind, tiles: number }",
+    "liveSelfTravelled": "{ tiles: number, scope?: scope }",
+    "eventSeen": "{ type: simEvent, tape?: tapeSelector, detail?: string, detailPrefix?: string, detailSuffix?: string, detailIn?: [string], target?: eventTarget, scope?: scope, count?: N }",
+    "inputUsed": "{ input: input | 'any', scope?: scope, count?: N }",
+    "inputNotUsedFor": "{ input: input, seconds: number }",
+    "sessionActionUsed": "{ action: sessionAction | [sessionAction], scope?: scope }",
+    "markDone": "mark id"
+  },
+
+  "anchors": {
+    "deck:<n>": "^deck:(0|1|2|3|active|subject)$",
+    "deck.<part>": "^deck\\.(speed|endMode|reels|status)$",
+    "ruler": "^ruler$",
+    "ruler.playhead": "^ruler\\.playhead$",
+    "ruler.lane:<n>": "^ruler\\.lane:(0|1|2|3|active|subject)$",
+    "objective": "^objective$",
+    "countin": "^countin$",
+    "world:self": "^world:self$",
+    "world:self:<n>": "^world:self:(0|1|2|3|subject)$",
+    "world:spark:<n>": "^world:spark:(0|1|2|3|subject)$",
+    "world:entity:<id>": "^world:entity:(subject|[A-Za-z0-9_\\-]+)$",
+    "world:nearest:<kind>": "^world:nearest:(enemy|switch|plate|door|breakable|core|exit|laser|trap)$",
+    "world:event": "^world:event$",
+    "prompt:<action>": "^prompt:(move|aim|light|heavy|dodge|ranged|interact|ability|start|speedUp|speedDown|cycleEndMode|record|skip|endAttempt|retryTake|commit|resetAll|continue|quit)$"
+  },
+
+  "tokens": {
+    "{btn:<action>}": "^\\{btn:(move|aim|light|heavy|dodge|ranged|interact|ability|start|speedUp|speedDown|cycleEndMode|record|skip|endAttempt|retryTake|commit|resetAll|continue|quit)\\}$",
+    "{speed}": "^\\{speed\\}$",
+    "{tape}": "^\\{tape\\}$"
+  },
+
+  "markFields": {
+    "required": ["id", "level", "phase", "trigger", "anchor", "text", "dismissOn", "once"],
+    "optional": ["skipIf", "urgent", "linger", "teaches"]
+  },
+
+  "maxWords": 14
+}

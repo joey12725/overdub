@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# Image generation through the CLI proxy (model: gpt-image-2.6-sunburst).
+#
+#   bash tools/img gen  <out.png> "<prompt>" [size] [background]
+#   bash tools/img edit <out.png> "<prompt>" <input.png> [more inputs...]     (reference-guided)
+#
+# size: 1024x1024 (default) | 1536x1024 | 1024x1536 | auto      background: auto (default) | transparent | opaque
+# Options via env: IMG_SIZE, IMG_BG, IMG_QUALITY (low|medium|high, default high).
+# The proxy listens only on the server, so this opens an SSH tunnel on demand. The API key is read
+# from a private file and never printed. Requests take 30-120 s; run at most two at a time.
+set -u
+KEYFILE="${OD_IMG_KEYFILE:-/c/Users/joeya/.t3/userdata/secrets/files/f3b399dfc713106618d4f5d4f9c445cb}"
+PORT=18317
+BASE="http://127.0.0.1:$PORT/v1"
+MODEL="gpt-image-2.6-sunburst"
+
+tunnel() {
+  if ! curl -s -m 3 -o /dev/null "http://127.0.0.1:$PORT/"; then
+    ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes -o ExitOnForwardFailure=yes \
+        -o ServerAliveInterval=30 -f -N -L "$PORT:127.0.0.1:8317" root@your-server.example 2>/dev/null
+    sleep 2
+  fi
+}
+auth() { printf 'Authorization: Bearer %s\n' "$(tr -d '\r\n' < "$KEYFILE")"; }
+save() { # <response.json> <out.png>
+  node -e '
+    const fs=require("fs");const j=JSON.parse(fs.readFileSync(process.argv[1],"utf8"));
+    if(!j.data||!j.data[0]){console.error("image error:",JSON.stringify(j).slice(0,400));process.exit(1)}
+    const d=j.data[0];
+    if(d.b64_json){fs.writeFileSync(process.argv[2],Buffer.from(d.b64_json,"base64"));console.log("saved",process.argv[2])}
+    else if(d.url){console.log("URL",d.url)} else {console.error("no image in response");process.exit(1)}' "$1" "$2"
+}
+
+cmd="${1:-}"; out="${2:-}"; prompt="${3:-}"
+[ -z "$cmd" ] || [ -z "$out" ] || [ -z "$prompt" ] && { sed -n 2,10p "$0"; exit 2; }
+shift 3
+mkdir -p "$(dirname "$out")"
+tmp="$(mktemp)"; trap 'rm -f "$tmp" "$tmp.req"' EXIT
+tunnel
+case "$cmd" in
+  gen)
+    size="${1:-${IMG_SIZE:-1024x1024}}"; bg="${2:-${IMG_BG:-auto}}"
+    node -e 'process.stdout.write(JSON.stringify({model:process.argv[1],prompt:process.argv[2],size:process.argv[3],background:process.argv[4],quality:process.argv[5],n:1}))' \
+      "$MODEL" "$prompt" "$size" "$bg" "${IMG_QUALITY:-high}" > "$tmp.req"
+    auth | curl -s -m 300 -H @- -H 'Content-Type: application/json' --data-binary "@$tmp.req" "$BASE/images/generations" -o "$tmp"
+    ;;
+  edit)
+    args=(); for f in "$@"; do args+=(-F "image[]=@$f"); done
+    auth | curl -s -m 300 -H @- -F "model=$MODEL" -F "prompt=$prompt" -F "size=${IMG_SIZE:-1024x1024}" \
+      -F "background=${IMG_BG:-auto}" -F "quality=${IMG_QUALITY:-high}" "${args[@]}" "$BASE/images/edits" -o "$tmp"
+    ;;
+  *) echo "unknown command $cmd" >&2; exit 2 ;;
+esac
+save "$(cygpath -w "$tmp")" "$out"

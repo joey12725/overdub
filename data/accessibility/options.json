@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "about": "Accessibility options OVERDUB should expose, their defaults and exactly what each one changes, plus the photosensitivity limits every effect must respect whatever the options say. Keys use the prototype spelling of SaveSettings (core/types/save_settings.gd KEY_TO_FIELD). 'exists' says whether SaveSettings already has the field.",
+  "always_on": [
+    "Cassette letter (A-D) wherever a cassette colour identifies a cassette.",
+    "Cassette shape (circle, triangle, square, plus) on floor rings, sparks, lane ends, map pips and off-screen markers.",
+    "Ink keyline around every cassette-coloured mark in the world.",
+    "A word and an icon for every deck state (data/accessibility/state_channels.json).",
+    "Visual count-in alongside the audible one (UI-04)."
+  ],
+  "options": [
+    {
+      "key": "patterns",
+      "field": "patterns",
+      "exists": true,
+      "label": "Cassette patterns",
+      "help": "Adds a pattern to each cassette (A stripes, B dots, C chevrons, D grid) so tapes read without colour.",
+      "type": "bool",
+      "default": false,
+      "changes": [
+        "HUD: deck shell, ruler lane fills (every pass, not only the first), lane-start chip, results and campaign tape strips.",
+        "World: the faint floor disc under each self is filled with the pattern; the swing trail ribbon carries it along its length.",
+        "Menus: the same four patterns as the HUD (data/accessibility/patterns.json), not a separate set."
+      ],
+      "owner": "ui/hud, ui/menus, actors"
+    },
+    {
+      "key": "cassettePalette",
+      "field": "cassette_palette",
+      "exists": false,
+      "label": "Cassette colours",
+      "help": "Standard, or a high-contrast set that also separates the four tapes by lightness.",
+      "type": "choice",
+      "choices": ["default", "high_contrast"],
+      "default": "default",
+      "changes": [
+        "Swaps the four cassette colours everywhere (OD.tape_color, UiPalette.TAPE and its deep / night shades) for the set in data/accessibility/palette.json.",
+        "Uses that set's on_color and text_on_panel for text, because high-contrast C needs paper text on its fill and a lifted tone as text on the panel."
+      ],
+      "owner": "core (OD.tape_color), ui/theme, actors, fx"
+    },
+    {
+      "key": "highContrast",
+      "field": "high_contrast",
+      "exists": false,
+      "label": "High-contrast outlines",
+      "help": "Thicker outlines and a light rim around selves, enemies, sparks and hazards.",
+      "type": "bool",
+      "default": false,
+      "changes": [
+        "Self and enemy ink hulls 1.5x wider; a 2 px paper line between cassette colour and ink on rings, sparks, tethers and projectiles (palette.json keylines.high_contrast).",
+        "Enemy telegraph decals and laser beams get a paper edge line.",
+        "X-ray silhouettes behind walls drawn at full opacity.",
+        "Ambient motes, speed lines and non-gameplay neon bloom reduced by half; floors are not darkened.",
+        "HUD: panel opacity 1.0, panel edge line at full paper."
+      ],
+      "owner": "actors, world, fx, ui/hud"
+    },
+    {
+      "key": "reduceFlashing",
+      "field": "reduce_flashing",
+      "exists": false,
+      "label": "Reduce flashing",
+      "help": "Removes full-screen flashes, strobing lights and flicker. States stay readable through shapes and outlines.",
+      "type": "bool",
+      "default": false,
+      "changes": [
+        "Full-screen flash and chromatic kicks (PostControls.flash / chromatic, FxDirector screen.flash_a / glitch) are capped to photosensitivity.reduced below.",
+        "Impact freeze-frames keep their ink splash but drop the white flash ring; hit-flash on enemies becomes a single 120 ms white outline, not a body flash.",
+        "Desync and i-frame flicker become steady translucency; the dashed outline, tether and afterimages carry the state.",
+        "REC lamp and laser emitters stop blinking / flickering; neon music pulses change by 15 % brightness at most.",
+        "Cinematic chord-change flashes become a 0.4 s vignette-colour fade."
+      ],
+      "owner": "fx, world (post), actors, ui/hud"
+    },
+    {
+      "key": "screenShake",
+      "field": "screen_shake",
+      "exists": true,
+      "label": "Screen shake",
+      "help": "Camera kick on heavy impacts.",
+      "type": "choice",
+      "choices": ["off", "reduced", "full"],
+      "values": {"off": 0.0, "reduced": 0.4, "full": 1.0},
+      "default": "full",
+      "migration": "The saved bool maps true -> full, false -> off. Store the scale as shakeScale (float) and keep reading screenShake for old saves.",
+      "changes": [
+        "WorldView.request_shake multiplies the magnitude by the scale.",
+        "With shake off, heavy impacts still get the ink splash and the 1-frame hit-stop so weight is not lost."
+      ],
+      "owner": "world, game (settings)"
+    },
+    {
+      "key": "holdMode",
+      "field": "hold_mode",
+      "exists": false,
+      "label": "Hold actions",
+      "help": "Hold to confirm, or press once to arm and again to confirm.",
+      "type": "choice",
+      "choices": ["hold", "press"],
+      "default": "hold",
+      "changes": [
+        "Every hold-to-confirm (RESET ALL TAPES and any other held input) accepts press-then-press: the first press arms it for 3 s and shows the ring full with 'PRESS AGAIN TO CONFIRM', the second confirms, anything else cancels.",
+        "No gameplay action may require a sustained hold without this alternative."
+      ],
+      "owner": "game (input), ui/hud (decision panel text)"
+    },
+    {
+      "key": "textScale",
+      "field": "text_scale",
+      "exists": false,
+      "label": "Text size",
+      "help": "Size of HUD and menu text.",
+      "type": "choice",
+      "choices": [1.0, 1.15, 1.3, 1.5],
+      "default": 1.0,
+      "changes": [
+        "Multiplies the UI unit (UiPalette.unit_for) for text and badges; decks drop optional rows before shrinking text.",
+        "Minimum rendered text height: 11 px at 1080p at scale 1.0 (the current floor of 7 px in HudDraw.fit_size is too small)."
+      ],
+      "owner": "ui/theme, ui/hud, ui/menus"
+    },
+    {
+      "key": "avOffsetMs",
+      "field": "av_offset_ms",
+      "exists": true,
+      "label": "Audio / visual offset",
+      "help": "Delays the picture to match late audio (e.g. Bluetooth headphones). Positive = picture later.",
+      "type": "int",
+      "default": 0,
+      "min": -200,
+      "max": 300,
+      "step": 5,
+      "changes": [
+        "Shifts every beat-synced visual (ruler playhead, count-in, beat pulses, fx music drive) by the offset; never shifts the simulation or the recorded input timing.",
+        "The settings row shows a metronome dot and click so the value can be set by eye and ear."
+      ],
+      "owner": "game, audio, ui/menus"
+    }
+  ],
+  "not_offered": [
+    {
+      "idea": "Slow-recording / slow-motion assist",
+      "why": "Tape speed is the mechanic: a slower take is a real, visible choice with a cost on the master timeline. A hidden slowdown would break the shared-world timing the game is built on. Players who need more time pick a slower tape."
+    },
+    {
+      "idea": "Per-cassette custom colours",
+      "why": "Any pair a player picks has to be re-checked against four themes and the danger colours; the two measured sets plus always-on letters, shapes and optional patterns cover the need without unreadable combinations."
+    }
+  ],
+  "first_run": "Offer cassettePalette, patterns, reduceFlashing and screenShake once before the first level (four rows, defaults preselected), and show the photosensitivity notice there.",
+  "photosensitivity": {
+    "about": "Limits for effects engineers. They apply to the final picture, not to one effect: the effect director must budget them across everything on screen. Check a capture with: python -I art/accessibility/flash_check.py <frames_dir> --fps 60 --limits default|reduced",
+    "definitions": {
+      "flash": "a pair of opposing changes in relative luminance of 0.10 or more (10 % of full white) where the darker state is below 0.80",
+      "large_area": "more than 2.8 % of the screen in total (25 % of a 10 degree field: a 341 x 256 px block at 1024 x 768)",
+      "saturated_red": "R / (R + G + B) >= 0.8"
+    },
+    "standard": "WCAG 2.3.1 allows at most 3 flashes in any second over a large area. The limits below are stricter.",
+    "default": {
+      "max_large_area_flashes_per_second": 2,
+      "min_seconds_between_fullscreen_flashes": 0.5,
+      "fullscreen_flash_max_alpha": 0.25,
+      "fullscreen_flash_min_fade_seconds": 0.2,
+      "saturated_red_large_area_flashes": 0,
+      "small_area_flicker_max_hz": 10,
+      "small_area_max_fraction_each": 0.01,
+      "small_area_max_fraction_total": 0.028,
+      "screen_shake_max_fraction_of_view": 0.045,
+      "screen_shake_max_seconds": 0.6,
+      "chromatic_split_max": 1.0
+    },
+    "reduced": {
+      "max_large_area_flashes_per_second": 0,
+      "fullscreen_luminance_step_max": 0.08,
+      "fullscreen_flash_max_alpha": 0.06,
+      "fullscreen_change_min_fade_seconds": 0.4,
+      "saturated_red_large_area_flashes": 0,
+      "small_area_flicker_max_hz": 0,
+      "neon_pulse_max_brightness_change": 0.15,
+      "chromatic_split_max": 0.25
+    },
+    "always": [
+      "Never flash a large area in saturated red, in any mode.",
+      "Never alternate two high-contrast full-screen frames (strobe), in any mode.",
+      "Striped or gridded patterns never flicker, counter-scroll or cover more than 10 % of the screen.",
+      "A rate limiter in the effect director drops or merges full-screen flashes that would exceed the budget; four selves landing hits on consecutive beats must not add up to a strobe.",
+      "Beat-synced pulses of large emissive areas use a smooth ramp (no steps) and stay under a 0.10 luminance change per beat."
+    ]
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "id": "08-loop-pedal",
+  "index": 8,
+  "name": "Loop Pedal",
+  "tagline": "One of you stays. One of you lasts. One of you comes round again.",
+  "theme": "lower",
+  "bpm": 120,
+  "bars": 4,
+  "horizonBars": 8,
+  "maxTapes": 3,
+  "speeds": [0.5, 1, 2, 4],
+  "endModes": ["stop", "repeat"],
+  "map": [
+    "######################",
+    "#::::::::::::::::::::#",
+    "#==..=.==============#",
+    "#..~~=...#####.......#",
+    "#.====...#####.......#",
+    "#.=......:::::.......#",
+    "#.=......#####.......#",
+    "#........#####......~#",
+    "######################"
+  ],
+  "start": {
+    "x": 6.5,
+    "y": 5.5
+  },
+  "startFacing": -1.5707963267948966,
+  "entities": [
+    {
+      "kind": "plate",
+      "id": "drive",
+      "c": 18,
+      "r": 5
+    },
+    {
+      "kind": "plate",
+      "id": "deadman",
+      "c": 6,
+      "r": 2
+    },
+    {
+      "kind": "conveyor",
+      "id": "line",
+      "dir": "w",
+      "speed": 1,
+      "cells": [
+        { "c": 20, "r": 1 },
+        { "c": 19, "r": 1 },
+        { "c": 18, "r": 1 },
+        { "c": 17, "r": 1 },
+        { "c": 16, "r": 1 },
+        { "c": 15, "r": 1 },
+        { "c": 14, "r": 1 },
+        { "c": 13, "r": 1 },
+        { "c": 12, "r": 1 },
+        { "c": 11, "r": 1 },
+        { "c": 10, "r": 1 },
+        { "c": 9, "r": 1 },
+        { "c": 8, "r": 1 },
+        { "c": 7, "r": 1 },
+        { "c": 6, "r": 1 },
+        { "c": 5, "r": 1 },
+        { "c": 4, "r": 1 },
+        { "c": 3, "r": 1 },
+        { "c": 2, "r": 1 },
+        { "c": 1, "r": 1 }
+      ],
+      "runWhen": {
+        "sig": "drive"
+      }
+    },
+    {
+      "kind": "door",
+      "id": "hatch",
+      "cells": [
+        { "c": 6, "r": 3 }
+      ],
+      "openWhen": {
+        "not": {
+          "sig": "drive"
+        }
+      }
+    },
+    {
+      "kind": "laser",
+      "id": "scan",
+      "from": {
+        "x": 20.5,
+        "y": 1.5
+      },
+      "to": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "onWhen": {
+        "const": true
+      }
+    },
+    {
+      "kind": "relay",
+      "id": "fault",
+      "trigger": {
+        "and": [
+          {
+            "sig": "drive"
+          },
+          {
+            "not": {
+              "sig": "deadman"
+            }
+          }
+        ]
+      },
+      "mode": "latch",
+      "quantize": 1,
+      "x": 5.5,
+      "y": 2.5
+    },
+    {
+      "kind": "spikes",
+      "id": "press",
+      "cells": [
+        { "c": 3, "r": 2 },
+        { "c": 4, "r": 2 }
+      ],
+      "upWhen": {
+        "or": [
+          {
+            "beat": {
+              "every": 8,
+              "from": 0,
+              "to": 4
+            }
+          },
+          {
+            "sig": "fault"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "spikes",
+      "id": "teeth",
+      "cells": [
+        { "c": 9, "r": 5 },
+        { "c": 10, "r": 5 },
+        { "c": 11, "r": 5 },
+        { "c": 12, "r": 5 },
+        { "c": 13, "r": 5 }
+      ],
+      "upWhen": {
+        "beat": {
+          "every": 4,
+          "from": 2,
+          "to": 4
+        }
+      }
+    },
+    { "kind": "enemy", "id": "can1", "type": "shielder", "x": 6.75, "y": 1.5, "facing": 1.5707963267948966, "wakeWhen": { "const": false } },
+    { "kind": "enemy", "id": "can2", "type": "shielder", "x": 10.75, "y": 1.5, "facing": 1.5707963267948966, "wakeWhen": { "const": false } },
+    { "kind": "enemy", "id": "can3", "type": "shielder", "x": 14.75, "y": 1.5, "facing": 1.5707963267948966, "wakeWhen": { "const": false } },
+    { "kind": "enemy", "id": "can4", "type": "shielder", "x": 18.75, "y": 1.5, "facing": 1.5707963267948966, "wakeWhen": { "const": false } },
+    { "kind": "decor", "type": "graffiti", "x": 9.5, "y": 0.5, "variant": "AGAIN AGAIN" },
+    { "kind": "decor", "type": "graffiti", "x": 11.5, "y": 4.6, "variant": "MIND THE TEETH" },
+    { "kind": "decor", "type": "graffiti", "x": 2.5, "y": 8.4, "variant": "1 BAR 2 BAR" },
+    { "kind": "decor", "type": "neon", "x": 3.5, "y": 0.5, "variant": "cyan" },
+    { "kind": "decor", "type": "neon", "x": 17.5, "y": 0.5, "variant": "magenta" },
+    { "kind": "decor", "type": "neon", "x": 11.5, "y": 6.4, "variant": "violet" },
+    { "kind": "decor", "type": "runePanel", "x": 0.6, "y": 5.5, "rot": 1 },
+    { "kind": "decor", "type": "runePanel", "x": 21.4, "y": 4.5, "rot": 3 },
+    { "kind": "decor", "type": "runePanel", "x": 13.5, "y": 0.5 },
+    { "kind": "decor", "type": "console", "x": 20.4, "y": 3.4, "rot": 3 },
+    { "kind": "decor", "type": "cable", "x": 19.5, "y": 3.4, "rot": 1 },
+    { "kind": "decor", "type": "cable", "x": 18.5, "y": 3.4, "rot": 1 },
+    { "kind": "decor", "type": "generator", "x": 20.4, "y": 7.4, "rot": 3 },
+    { "kind": "decor", "type": "waveScreen", "x": 8.4, "y": 3.4, "rot": 3 },
+    { "kind": "decor", "type": "vent", "x": 6.5, "y": 8.4 },
+    { "kind": "decor", "type": "pipe", "x": 5.5, "y": 8.5, "rot": 1 },
+    { "kind": "decor", "type": "pipe", "x": 21.4, "y": 1.5 },
+    { "kind": "decor", "type": "lamp", "x": 8.4, "y": 6.6 },
+    { "kind": "decor", "type": "lamp", "x": 7.5, "y": 3.3 },
+    { "kind": "decor", "type": "crate", "x": 7.5, "y": 7.5 },
+    { "kind": "decor", "type": "barrel", "x": 3.5, "y": 5.5 },
+    { "kind": "decor", "type": "crate", "x": 14.5, "y": 7.5 }
+  ],
+  "objective": {
+    "type": "eliminate",
+    "text": "Scrap all four cans before the line carries them out of reach"
+  },
+  "music": {
+    "root": 0,
+    "scale": "Minor Pentatonic",
+    "progression": [0, 3, 0, 2],
+    "chordBars": 2,
+    "tracks": [
+      {"role": "bass", "formula": "polygon", "params": {"p": 6, "q": 2, "pulses": 5, "steps": 8, "phrase": 8}},
+      {"role": "drums", "formula": "bit", "genre": "House", "params": {"bit": 0, "rate": 0.5}},
+      {"role": "melody", "formula": "kolakoski", "params": {"contour": 0.3, "gravity": 0.5, "cycle": 8, "register": 1, "pulses": 5, "steps": 8, "phrase": 8}},
+      {"role": "chord", "formula": "triangle", "params": {"cycles": 1, "phase": 0}}
+    ]
+  },
+  "loot": [
+    "razor_mesh",
+    "static_runners",
+    "prism_goggles"
+  ],
+  "briefing": [
+    "A line of sleeping cans. Stand on the far plate and it rolls, and the booth hatch locks. A can you miss goes down the chute for good.",
+    "Cans are shielded: one of you knocks, a different one hits. A half-speed knock is plenty. A half-speed hit is nothing.",
+    "If the line ever runs with nobody standing in the booth it faults, and the press over the bay stays shut. Otherwise the press lifts for the back half of every two bars.",
+    "A tape that ends, stops. A tape on REPEAT comes round again, into whatever the room is doing by then."
+  ],
+  "hints": {
+    "1": "Tape speed is tape length: 4x lasts one bar, 2x two, 1x four, 0.5x all eight.",
+    "3": "A loop restarts where every take starts. The way it walked on the first pass has to be open, and safe, on every pass."
+  }
+}

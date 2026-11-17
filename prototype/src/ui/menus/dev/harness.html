@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OVERDUB menus harness</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #14110f;
+        overflow: hidden;
+      }
+      /* Stand-in for the 3D canvas: a warm-to-neon diorama gradient so translucency can be judged. */
+      #fake-world {
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(40% 30% at 70% 35%, rgba(255, 210, 63, 0.35), transparent 70%),
+          radial-gradient(30% 25% at 25% 70%, rgba(255, 79, 163, 0.25), transparent 70%),
+          repeating-linear-gradient(30deg, rgba(0, 0, 0, 0.18) 0 2px, transparent 2px 48px),
+          repeating-linear-gradient(150deg, rgba(0, 0, 0, 0.18) 0 2px, transparent 2px 48px),
+          linear-gradient(160deg, #b98a4f 0%, #7d6a45 40%, #3f4a3a 70%, #1d2230 100%);
+      }
+      #fake-world[data-theme='lower'] {
+        background:
+          radial-gradient(35% 30% at 65% 40%, rgba(79, 243, 255, 0.3), transparent 70%),
+          radial-gradient(30% 25% at 30% 65%, rgba(255, 79, 163, 0.35), transparent 70%),
+          repeating-linear-gradient(30deg, rgba(0, 0, 0, 0.3) 0 2px, transparent 2px 48px),
+          repeating-linear-gradient(150deg, rgba(0, 0, 0, 0.3) 0 2px, transparent 2px 48px),
+          linear-gradient(160deg, #262838 0%, #171a28 50%, #0b0a14 100%);
+      }
+      #dev-bar {
+        position: fixed;
+        left: 8px;
+        bottom: 8px;
+        z-index: 100;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        max-width: 60vw;
+        font: 12px system-ui, sans-serif;
+      }
+      #dev-bar button {
+        font: inherit;
+        padding: 3px 8px;
+        border-radius: 4px;
+        border: 1px solid #555;
+        background: #222;
+        color: #ddd;
+        cursor: pointer;
+      }
+      #dev-log {
+        position: fixed;
+        left: 8px;
+        bottom: 40px;
+        z-index: 100;
+        max-width: 40vw;
+        font: 11px Consolas, monospace;
+        color: #9f9;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 4px 6px;
+        border-radius: 4px;
+        pointer-events: none;
+        white-space: pre;
+      }
+      body.shot #dev-bar,
+      body.shot #dev-log {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fake-world"></div>
+    <div id="dev-log"></div>
+    <div id="dev-bar"></div>
+    <script type="module" src="./harness.ts"></script>
+  </body>
+</html>

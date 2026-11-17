@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "about": "Redundant channels for every state that must never be confused (UI-03, NEW-11). Each state names what it uses on each channel. Colour is listed last and is never a deciding channel: remove it and every pair below must still differ on at least two other channels. HUD and actor engineers check their work against this file; docs/ACCESSIBILITY.md lists the gaps found in the current implementation.",
+  "channels": {
+    "body": "how the figure itself is drawn (fill, opacity, texture)",
+    "outline": "the ink hull / silhouette line",
+    "ring": "the floor ring under a self (its outline is the cassette shape: A circle, B triangle, C square, D plus)",
+    "marker": "an icon or mark above the head or attached to the figure",
+    "motion": "what moves, and how fast",
+    "word": "the word shown on that cassette's HUD deck",
+    "hud_icon": "the icon next to the word (ui/hud/hud_icons.gd ids)",
+    "audio": "what the music layer does; reinforcement only, never the sole carrier",
+    "colour": "what colour does; reinforcement only"
+  },
+  "rule": "Any two states in must_differ differ on at least two channels other than colour and audio, and at least one of those does not depend on motion (so a paused frame, a screenshot and the reduce-flashing option all still read).",
+  "actor_states": [
+    {
+      "id": "alive",
+      "means": "living, synchronised self",
+      "source": "ActorStyle.ALIVE",
+      "body": "opaque cel-shaded Moxie",
+      "outline": "continuous, full width, cassette colour",
+      "ring": "solid cassette-shape ring, full opacity, letter badge",
+      "marker": "none (the self being recorded adds a bouncing chevron and a pulsing outer ring)",
+      "motion": "animates normally",
+      "word": "ALIVE",
+      "hud_icon": "alive",
+      "audio": "full layer pattern",
+      "colour": "cassette colour on outline, ring, headphone glow"
+    },
+    {
+      "id": "recording_ghost",
+      "means": "the take being recorded right now, after its self died; the player still steers it",
+      "source": "ActorStyle.REC_GHOST",
+      "body": "translucent hologram (opacity about 0.55) with horizontal scanlines",
+      "outline": "continuous, 1.25x width, cassette colour",
+      "ring": "dotted cassette-shape ring (round dots), letter badge",
+      "marker": "broken halo above the head",
+      "motion": "slow halo wobble, rising holo bits; scanlines scroll slowly",
+      "word": "DIED - RECORDING AS GHOST",
+      "hud_icon": "recGhost",
+      "audio": "layer thins to chord tones",
+      "colour": "cassette-tinted hologram"
+    },
+    {
+      "id": "playback_ghost",
+      "means": "a recorded tape replaying a self that died; inert, cannot act on the world",
+      "source": "ActorStyle.GHOST",
+      "body": "hollow: no fill at all, only the rim",
+      "outline": "continuous, thin, neutral grey",
+      "ring": "thin single-line cassette-shape ring at no less than 0.35 opacity, letter badge at no less than 0.6",
+      "marker": "none",
+      "motion": "replays its moves; trailing dust; no impact effects",
+      "word": "DEAD - GHOST",
+      "hud_icon": "ghost",
+      "audio": "layer thinned",
+      "colour": "grey; cassette colour survives only on ring and letter"
+    },
+    {
+      "id": "desynced_projection",
+      "means": "alive but desynchronised from its tape; a recovery spark is chasing it",
+      "source": "ActorStyle.DESYNCED",
+      "body": "translucent (about 0.42), sliced into offset horizontal bands, doubled by a split echo",
+      "outline": "dashed (even dash and gap), 0.8x width",
+      "ring": "dashed cassette-shape ring, drawn twice with a small offset",
+      "marker": "dashed tether line from the figure to its spark; broken-link glyph above the head",
+      "motion": "irregular flicker (reduce-flashing: steady, bands drift slowly instead)",
+      "word": "DESYNCED - SPARK CHASING",
+      "hud_icon": "desync",
+      "audio": "layer detuned / filtered",
+      "colour": "desaturated; red/cyan split"
+    },
+    {
+      "id": "recovery_spark",
+      "means": "the point that travels the recorded path to re-synchronise a desynced self",
+      "source": "SelfView._spark",
+      "body": "not a figure: a small solid core in the cassette shape with a white-hot centre and an ink keyline",
+      "outline": "ink keyline around the core (paper + ink in high contrast)",
+      "ring": "none",
+      "marker": "the tether to its self; comet trail of shrinking copies of the cassette shape",
+      "motion": "travels along the path; pulses once per beat",
+      "word": "SPARK CHASING (part of the desynced badge); RESYNCED on arrival",
+      "hud_icon": "resync on arrival",
+      "audio": "rising tone as it closes in",
+      "colour": "cassette colour halo"
+    },
+    {
+      "id": "iframes",
+      "means": "dodge invulnerability window on a living self",
+      "source": "ActorStyle.Resolved.dodging",
+      "body": "opaque-to-translucent (0.3 / 0.85); never the sliced bands of a desync",
+      "outline": "continuous, switches to paper white for the window",
+      "ring": "unchanged solid ring (it is still an alive self)",
+      "marker": "three afterimage copies trailing behind",
+      "motion": "fast, short (the length of the dodge); flicker (reduce-flashing: steady 0.6 opacity)",
+      "word": "none (transient; the dodge glyph is written on the ruler lane)",
+      "hud_icon": "none",
+      "audio": "dodge whoosh",
+      "colour": "afterimages in cassette colour"
+    },
+    {
+      "id": "stopped",
+      "means": "a 'stop' tape reached its end; the self holds its last pose and is still solid",
+      "source": "ActorStyle.Resolved.stopped",
+      "body": "opaque, held pose, desaturated by 0.45",
+      "outline": "continuous, greyed cassette colour",
+      "ring": "solid cassette-shape ring, letter badge",
+      "marker": "pause glyph (two bars) above the head",
+      "motion": "none at all: frozen; only the pause glyph breathes slowly",
+      "word": "STOPPED - HOLDING POSE",
+      "hud_icon": "hold",
+      "audio": "layer holds its last chord",
+      "colour": "muted"
+    }
+  ],
+  "actor_combinations": [
+    {"id": "recording_ghost_desynced", "rule": "recording_ghost body, halo and dotted ring; add the tether, the broken-link glyph and the split echo"},
+    {"id": "playback_ghost_desynced", "rule": "playback_ghost hollow body; add the tether and make the thin ring dashed"},
+    {"id": "stopped_ghost", "rule": "playback_ghost hollow body plus the pause glyph"}
+  ],
+  "actor_must_differ": [
+    {"pair": ["recording_ghost", "playback_ghost"], "by": ["body: filled hologram vs hollow rim", "marker: halo vs none", "ring: dotted vs thin line", "outline: thick cassette colour vs thin grey"]},
+    {"pair": ["recording_ghost", "desynced_projection"], "by": ["body: scanlines vs sliced bands + echo", "marker: halo vs tether + broken link", "outline: continuous vs dashed", "ring: dotted vs dashed double"]},
+    {"pair": ["desynced_projection", "iframes"], "by": ["marker: tether vs afterimages", "outline: dashed vs continuous white", "ring: dashed double vs solid", "duration: persistent vs one dodge"]},
+    {"pair": ["playback_ghost", "stopped"], "by": ["body: hollow vs opaque", "marker: none vs pause glyph", "motion: replaying vs frozen"]},
+    {"pair": ["alive", "stopped"], "by": ["marker: none vs pause glyph", "motion: animating vs frozen", "outline: full vs greyed"]},
+    {"pair": ["alive", "iframes"], "by": ["marker: afterimages", "outline: cassette colour vs white", "body: opaque vs translucent"]},
+    {"pair": ["alive", "desynced_projection"], "by": ["body", "outline", "ring", "marker"]},
+    {"pair": ["recovery_spark", "enemy_projectile"], "by": ["shape: cassette shape core vs elongated bolt", "marker: tether", "outline: ink keyline vs none"]}
+  ],
+  "ring_line_styles": {
+    "solid": "alive, iframes, stopped",
+    "dotted": "recording_ghost (round dots, dot = gap)",
+    "thin": "playback_ghost (one third of the solid width, never below 2 px at 1080p)",
+    "dashed_double": "desynced_projection (dash = gap = 1/16 of the perimeter, second copy offset 6 % of the radius)"
+  },
+  "deck_states": [
+    {
+      "id": "unavailable",
+      "means": "this cassette is not offered in the level",
+      "word": "NOT IN THIS LEVEL",
+      "hud_icon": "none",
+      "shell": "dark, diagonal hatch over the whole shell",
+      "cassette": "no reels, muted label",
+      "motion": "none",
+      "lane": "hatched track",
+      "colour": "no cassette colour"
+    },
+    {
+      "id": "unrecorded",
+      "means": "offered, nothing recorded",
+      "word": "NOT RECORDED",
+      "hud_icon": "empty",
+      "shell": "dark shell with a dashed outline",
+      "cassette": "empty window: hubs only, no tape pack",
+      "motion": "none",
+      "lane": "empty lane between two dashed lines, text 'NOT RECORDED'",
+      "colour": "dashed outline in cassette colour"
+    },
+    {
+      "id": "armed",
+      "means": "selected and set up; the next count-in records it",
+      "word": "ARMED",
+      "hud_icon": "arm",
+      "shell": "active halo, paper frame and a tab reading SETTING UP / GET READY",
+      "cassette": "tape pack shown at the start",
+      "motion": "halo pulses on the beat",
+      "lane": "dashed outline preview of the tape's span",
+      "colour": "cassette colour halo"
+    },
+    {
+      "id": "recording",
+      "means": "being recorded now",
+      "word": "RECORDING",
+      "hud_icon": "rec",
+      "shell": "active halo, tab reading RECORDING with a lamp",
+      "cassette": "REC lamp on the label",
+      "motion": "lamp blinks at about 1.1 Hz (reduce-flashing: steady lamp); reels turn; lane fills",
+      "lane": "solid fill growing to a paper playhead",
+      "colour": "REC red on lamp and tab"
+    },
+    {
+      "id": "pending",
+      "means": "a finished take that is not committed yet",
+      "word": "TAKE - NOT COMMITTED",
+      "hud_icon": "take",
+      "shell": "normal",
+      "cassette": "diagonal hazard stripes across the label",
+      "motion": "follows transport",
+      "lane": "fill with diagonal stripes",
+      "colour": "amber stripes"
+    },
+    {
+      "id": "committed",
+      "means": "locked in",
+      "word": "COMMITTED",
+      "hud_icon": "lock",
+      "shell": "normal",
+      "cassette": "round lock sticker on the corner",
+      "motion": "follows transport",
+      "lane": "plain solid fill",
+      "colour": "full cassette colour"
+    },
+    {
+      "id": "stopped",
+      "means": "a 'stop' tape has ended; the self holds its pose",
+      "word": "STOPPED - HOLDING POSE",
+      "hud_icon": "hold",
+      "shell": "normal",
+      "cassette": "two pause bars between the reels",
+      "motion": "reels still",
+      "lane": "dashed hold line from a square end marker to the horizon, text 'HOLDS POSE'",
+      "colour": "unchanged"
+    },
+    {
+      "id": "looping",
+      "means": "a 'repeat' tape on its second or later pass",
+      "word": "LOOPING - PASS n",
+      "hud_icon": "repeat",
+      "shell": "normal",
+      "cassette": "forward chevrons between the reels",
+      "motion": "reels turn forward",
+      "lane": "hard ink cut at each pass boundary, forward arrows on later passes",
+      "colour": "later passes at lower opacity"
+    },
+    {
+      "id": "reversing",
+      "means": "a 'reverse' tape playing backwards",
+      "word": "REVERSING - PASS n",
+      "hud_icon": "rewind",
+      "shell": "normal",
+      "cassette": "backward chevrons between the reels",
+      "motion": "reels turn backward",
+      "lane": "turn notch at the boundary, backward arrows on the returning pass",
+      "colour": "later passes at lower opacity"
+    },
+    {
+      "id": "dead",
+      "means": "the self on this tape died",
+      "word": "DEAD - GHOST (DIED - RECORDING AS GHOST while still recording)",
+      "hud_icon": "ghost / recGhost",
+      "shell": "greyed shell",
+      "cassette": "grey tape pack; letter sticker keeps the cassette colour",
+      "motion": "follows transport",
+      "lane": "death glyph at the beat, dead stretch drawn hollow from there",
+      "colour": "grey"
+    },
+    {
+      "id": "desynced",
+      "means": "the self is out of sync; a spark is chasing",
+      "word": "DESYNCED - SPARK CHASING",
+      "hud_icon": "desync",
+      "shell": "normal",
+      "cassette": "round desync sticker on the corner; offset bars across the cassette",
+      "motion": "bars jitter (reduce-flashing: static offset)",
+      "lane": "desync glyph at the beat, stretch drawn dashed until the resync glyph",
+      "colour": "violet sticker"
+    }
+  ],
+  "deck_must_differ": [
+    {"pair": ["unrecorded", "unavailable"], "by": ["word", "shell: dashed outline vs full hatch", "lane: empty dashed vs hatched"]},
+    {"pair": ["armed", "recording"], "by": ["word", "hud_icon", "cassette: REC lamp", "lane: dashed preview vs solid fill"]},
+    {"pair": ["pending", "committed"], "by": ["word", "hud_icon: take vs lock", "cassette: stripes vs lock sticker", "lane: striped vs plain"]},
+    {"pair": ["stopped", "looping"], "by": ["word", "hud_icon", "motion: reels still vs turning", "lane: hold line vs pass cuts"]},
+    {"pair": ["looping", "reversing"], "by": ["word", "hud_icon", "motion: reel direction", "cassette: chevron direction", "lane: arrows direction, notch"]},
+    {"pair": ["dead", "desynced"], "by": ["word", "hud_icon", "cassette: grey pack vs sticker + bars", "lane: hollow vs dashed stretch"]},
+    {"pair": ["dead", "stopped"], "by": ["word", "hud_icon", "shell: greyed vs normal", "cassette: grey pack vs pause bars"]},
+    {"pair": ["committed", "dead"], "by": ["word", "hud_icon", "shell"]}
+  ],
+  "compact_deck_rule": "A deck too small for all badge rows still shows, without colour: the status icon, the life icon when not alive, and the transport as reel direction plus chevrons or pause bars. The cinematic strip counts as a compact deck."
+}

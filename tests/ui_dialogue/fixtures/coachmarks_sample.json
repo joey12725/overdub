@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "about": "Test fixture in the docs/ONBOARDING.md format.",
+  "limits": { "maxVisible": 1, "minGapSeconds": 1.5, "maxPerPhaseVisit": 2, "maxUrgentPerPhaseVisit": 2, "defaultLingerSeconds": 10, "minShownSecondsToCount": 1.5 },
+  "marks": [
+    {
+      "id": "deck-armed", "level": "t-one", "phase": "setup",
+      "trigger": { "all": [ { "firstTimePhase": "setup" }, { "deckStatusIs": { "deck": "active", "status": "armed" } } ] },
+      "anchor": "deck:active",
+      "text": "This cassette is your take. {btn:record} rolls tape.",
+      "dismissOn": { "sessionActionUsed": { "action": "record", "scope": "shown" } },
+      "linger": 30, "once": true
+    },
+    {
+      "id": "speed-pick", "level": "any", "phase": "setup",
+      "trigger": { "all": [ { "speedsOffered": { "min": 2 } }, { "deckStatusIs": { "deck": "active", "status": "armed" } } ] },
+      "anchor": "deck.speed",
+      "text": "Tape speed. {btn:speedUp} for faster, now {speed}.",
+      "dismissOn": { "sessionActionUsed": { "action": ["speedUp", "speedDown"], "scope": "shown" } },
+      "skipIf": { "sessionActionUsed": { "action": ["speedUp", "speedDown"], "scope": "save" } },
+      "once": true
+    },
+    {
+      "id": "count-in", "level": "any", "phase": "countin",
+      "trigger": { "firstTimePhase": "countin" },
+      "anchor": "countin",
+      "text": "Five, six, seven, eight. You're on at beat zero.",
+      "dismissOn": { "phaseIs": "recording" },
+      "once": true
+    },
+    {
+      "id": "desync", "level": "any", "phase": "recording", "urgent": true,
+      "trigger": { "eventSeen": { "type": "desync", "tape": "previous", "scope": "phase" } },
+      "anchor": "world:self:subject",
+      "text": "{tape} is skipping. That outline is only the recording.",
+      "dismissOn": { "any": [ { "eventSeen": { "type": "resync", "scope": "shown" } }, { "shownFor": { "min": 6 } } ] },
+      "once": true
+    },
+    {
+      "id": "move", "level": "any", "phase": "recording",
+      "trigger": { "inputNotUsedFor": { "input": "move", "seconds": 2 } },
+      "anchor": "prompt:move",
+      "text": "{btn:move} to move.",
+      "dismissOn": { "liveSelfTravelled": { "tiles": 2, "scope": "shown" } },
+      "skipIf": { "liveSelfTravelled": { "tiles": 3, "scope": "save" } },
+      "once": true
+    },
+    {
+      "id": "ruler-lane", "level": "any", "phase": "recording",
+      "trigger": { "all": [ { "markDone": "move" }, { "takeProgress": { "min": 0.25 } } ] },
+      "anchor": "ruler.lane:active",
+      "text": "Your lane. The bright line is now.",
+      "dismissOn": { "shownFor": { "min": 4 } },
+      "once": false
+    },
+    {
+      "id": "decide", "level": "any", "phase": "decision",
+      "trigger": { "firstTimePhase": "decision" },
+      "anchor": "prompt:commit",
+      "text": "{btn:commit} keeps it. {btn:retryTake} tries again.",
+      "dismissOn": { "sessionActionUsed": { "action": ["commit", "retryTake", "resetAll"], "scope": "shown" } },
+      "once": true
+    }
+  ]
+}

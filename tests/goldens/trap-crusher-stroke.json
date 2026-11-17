@@ -1,0 +1,445 @@
+{
+ "format": 1,
+ "name": "trap-crusher-stroke",
+ "description": "A piston across the room strokes on its beat window: it crushes the self and the enemies on its cells (drone included), pushes a 5 hp survivor out, only walls off a self beside it, and desyncs a self that dodged the stroke on a cell.",
+ "covers": ["TRAPS crusher","crusher push-out","dodge i-frames vs traps","desync blocked by crusher"],
+ "level": {
+  "id": "test-level",
+  "index": 0,
+  "name": "Test Level",
+  "tagline": "A level built by a test.",
+  "theme": "upper",
+  "bpm": 120,
+  "maxTapes": 4,
+  "endModes": ["stop","repeat","reverse"],
+  "entities": [
+   {"kind":"crusher","id":"cr","cells":[{"c":5,"r":1},{"c":5,"r":2},{"c":5,"r":3},{"c":5,"r":4},{"c":5,"r":5},{"c":5,"r":6},{"c":5,"r":7},{"c":5,"r":8}],"extendWhen":{"beat":{"every":8,"from":1,"to":2}}},
+   {"kind":"enemy","id":"g","type":"grunt","x":5.5,"y":2.5,"wakeWhen":{"const":false}},
+   {"kind":"enemy","id":"dr","type":"drone","x":5.5,"y":6.5,"wakeWhen":{"const":false}},
+   {"kind":"enemy","id":"tough","type":"grunt","x":5.4,"y":7.5,"wakeWhen":{"const":false},"hp":5}
+  ],
+  "objective": {"type":"eliminate","text":"Test objective"},
+  "music": {
+   "root": 9,
+   "scale": "Minor",
+   "progression": [0,5,2,6],
+   "chordBars": 1,
+   "tracks": [{"role":"bass","formula":"triangular"},{"role":"drums","formula":"ruler"},{"role":"melody","formula":"recaman"},{"role":"chord","formula":"squares"}]
+  },
+  "loot": [],
+  "briefing": [],
+  "startFacing": 0,
+  "speeds": [1],
+  "bars": 2,
+  "start": {"x":1.5,"y":1.5},
+  "horizonBars": 2,
+  "map": ["############","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","############"]
+ },
+ "loadout": {
+  "gear": null,
+  "resolved": {
+   "loadout": {"helmet":"base-helmet","top":"base-top","pants":"base-pants","shoes":"base-shoes","melee":"base-melee","ranged":"base-missile"},
+   "mods": {
+    "moveSpeed": 1,
+    "accel": 1,
+    "momentumRetention": 1,
+    "dodgeDistance": 1,
+    "dodgeIframes": 1,
+    "dodgeCooldown": 1,
+    "meleeImpact": 1,
+    "damage": 1,
+    "knockback": 1,
+    "knockbackCap": 1,
+    "stagger": 1,
+    "approachBonus": 1,
+    "sparkSpeed": 1,
+    "interactRadiusAdd": 0,
+    "projectileSpeed": 1,
+    "rangedCooldown": 1
+   },
+   "abilities": [],
+   "melee": {
+    "reach": 1.1,
+    "arcDeg": 110,
+    "light": {"windup":6,"active":4,"recover":10,"impact":1.2,"moveMul":0.5},
+    "heavy": {"windup":16,"active":5,"recover":18,"impact":2,"moveMul":0.25},
+    "damageEff": 1,
+    "knockbackEff": 1,
+    "staggerEff": 1,
+    "style": "blade"
+   },
+   "ranged": {"archetype":"missile","speed":2.5,"range":14,"impact":1.2,"commit":12,"cooldown":45,"pierce":0,"passesWalls":false,"lobbed":false,"count":1,"spreadDeg":0,"turnRate":2.5,"blast":0}
+  }
+ },
+ "bossMemoryFrom": null,
+ "takes": [
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 0,
+    "speed": 1,
+    "endMode": "stop",
+    "ticks": 240,
+    "pos": "AACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEAAALBAAACQQAAAsEAAAJBAAACwQAAAkEA=",
+    "facing": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "anim": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": []
+   }
+  },
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 1,
+    "speed": 1,
+    "endMode": "stop",
+    "ticks": 240,
+    "pos": "AACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEAAAJBAAACQQAAAkEA=",
+    "facing": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "anim": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": []
+   }
+  },
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 2,
+    "speed": 1,
+    "endMode": "stop",
+    "ticks": 240,
+    "pos": "pHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsECkcK1AAACwQKRwrUAAALBApHCtQAAAsEA=",
+    "facing": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "anim": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": [[28,2,0,5.420000076293945,5.5,0,0]]
+   }
+  }
+ ],
+ "expected": {
+  "recordings": [],
+  "resolution": {
+   "bossMemory": null,
+   "horizonSubs": 960,
+   "outcome": {
+    "win": false,
+    "objectiveComplete": false,
+    "survivors": [1,2],
+    "reason": "objective",
+    "notes": [
+     "Objective not complete: Test objective. Still standing: grunt tough.",
+     "Tape A died at beat 0.99: crushed by crusher cr.",
+     "Tape C desynced at beat 1 (blocked by crusher cr); its spark caught up at beat 2.65.",
+     "Survivors: Tape B, Tape C."
+    ]
+   },
+   "events": [
+    {"sub":0,"type":"trap","x":5.5,"y":5,"id":"cr","power":0.9917,"detail":"crusher:warn"},
+    {"sub":112,"type":"dodge","x":5.42,"y":5.5,"tape":2,"dir":0},
+    {"sub":119,"type":"trap","x":5.5,"y":5,"id":"cr","power":5,"detail":"crusher:slam"},
+    {"sub":119,"type":"selfDeath","x":5.5,"y":4.5,"tape":0,"dir":0,"detail":"crushed by crusher cr"},
+    {"sub":119,"type":"hit","x":5.5,"y":2.5,"id":"g","dir":0,"power":3,"detail":"crusher"},
+    {"sub":119,"type":"kill","x":5.5,"y":2.5,"id":"g","dir":0,"power":3,"detail":"crusher"},
+    {"sub":119,"type":"hit","x":5.5,"y":6.5,"id":"dr","dir":0,"power":3,"detail":"crusher"},
+    {"sub":119,"type":"kill","x":5.5,"y":6.5,"id":"dr","dir":0,"power":3,"detail":"crusher"},
+    {"sub":119,"type":"hit","x":5.4,"y":7.5,"id":"tough","dir":0,"power":3,"detail":"crusher"},
+    {"sub":119,"type":"enemyStagger","x":5.4,"y":7.5,"id":"tough","power":0.25},
+    {"sub":120,"type":"desync","x":5.42,"y":5.5,"tape":2,"detail":"blocked by crusher cr"},
+    {"sub":239,"type":"trap","x":5.5,"y":5,"id":"cr","detail":"crusher:retract"},
+    {"sub":299,"type":"trap","x":5.5,"y":5,"id":"cr","detail":"crusher:open"},
+    {"sub":318,"type":"resync","x":5.42,"y":5.5,"tape":2}
+   ],
+   "snapshots": [
+    {
+     "sub": 0,
+     "beat": 0,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"asleep"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":2,"maxHp":2,"alive":true,"state":"asleep"},
+      {"id":"tough","type":"grunt","x":5.4,"y":7.5,"hp":5,"maxHp":5,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0,"survivors":3}
+    },
+    {
+     "sub": 60,
+     "beat": 0.5,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"asleep"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":2,"maxHp":2,"alive":true,"state":"asleep"},
+      {"id":"tough","type":"grunt","x":5.4,"y":7.5,"hp":5,"maxHp":5,"alive":true,"state":"asleep"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0.5,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0,"survivors":3}
+    },
+    {
+     "sub": 120,
+     "beat": 1,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":true,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":5.4,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":true,"t":1,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 180,
+     "beat": 1.5,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":false,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false},"spark":{"x":4.5,"y":5.5}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":true,"t":1,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 240,
+     "beat": 2,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":false,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false},"spark":{"x":4.5,"y":5.5}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":true,"t":1,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 300,
+     "beat": 2.5,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":false,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false},"spark":{"x":4.5,"y":5.5}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 360,
+     "beat": 3,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 420,
+     "beat": 3.5,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 480,
+     "beat": 4,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":120,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":120,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":120,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 540,
+     "beat": 4.5,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":135,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":135,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":135,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 600,
+     "beat": 5,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":150,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":150,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":150,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 660,
+     "beat": 5.5,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":165,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":165,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":165,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 720,
+     "beat": 6,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":180,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":180,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":180,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 780,
+     "beat": 6.5,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":195,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":195,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":195,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 840,
+     "beat": 7,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":210,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":210,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":210,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 900,
+     "beat": 7.5,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":225,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":225,"dir":1,"traversal":0,"ended":false}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":225,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    },
+    {
+     "sub": 960,
+     "beat": 8,
+     "actors": [
+      {"tape":0,"live":false,"x":5.5,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":240,"dir":0,"traversal":1,"ended":true}},
+      {"tape":1,"live":false,"x":4.5,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":240,"dir":0,"traversal":1,"ended":true}},
+      {"tape":2,"live":false,"x":5.42,"y":5.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":240,"dir":0,"traversal":1,"ended":true}}
+     ],
+     "enemies": [
+      {"id":"g","type":"grunt","x":5.5,"y":2.5,"hp":0,"maxHp":1,"alive":false,"state":"dead"},
+      {"id":"dr","type":"drone","x":5.5,"y":6.5,"hp":0,"maxHp":2,"alive":false,"state":"dead"},
+      {"id":"tough","type":"grunt","x":4.679,"y":7.5,"hp":2,"maxHp":5,"alive":true,"state":"stagger"}
+     ],
+     "projectiles": [],
+     "mechs": [{"id":"cr","kind":"crusher","on":false,"t":0,"warn":0,"dir":1.5708}],
+     "objective": {"complete":false,"progress":0.6667,"survivors":2}
+    }
+   ]
+  }
+ }
+}

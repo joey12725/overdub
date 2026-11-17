@@ -1,0 +1,113 @@
+{
+ "id": "vinyl_glaive",
+ "kind": "melee",
+ "style": "polearm",
+ "hands": 2,
+ "tris": {
+  "Weapon": 4236,
+  "Disc": 3300
+ },
+ "tris_total": 7536,
+ "bounds_min": [
+  -0.047,
+  -0.56,
+  -0.15
+ ],
+ "bounds_max": [
+  0.047,
+  1.45,
+  0.45
+ ],
+ "size": [
+  0.094,
+  2.01,
+  0.6
+ ],
+ "empties": {
+  "Grip": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Grip2": {
+   "pos": [
+    0.0,
+    -0.3,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Tip": {
+   "pos": [
+    0.0,
+    1.3428,
+    0.3798
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailStart": {
+   "pos": [
+    0.0,
+    1.0,
+    0.4098
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailEnd": {
+   "pos": [
+    0.0,
+    1.45,
+    0.15
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "DiscAxis": {
+   "pos": [
+    0.0,
+    1.15,
+    0.15
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_accent2",
+  "weapon_black",
+  "weapon_dark",
+  "weapon_main",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_pink_glow",
+  "weapon_steel",
+  "weapon_wood"
+ ],
+ "bones": []
+}

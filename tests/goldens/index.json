@@ -1,0 +1,1386 @@
+{
+ "format": 1,
+ "sampleSubs": 60,
+ "decimals": 4,
+ "scenarios": [
+  {
+   "name": "clock-record-0_5x",
+   "file": "clock-record-0_5x.json",
+   "description": "A 0.5x take runs east for its whole 1-bar allowance (120 local ticks) and is then resolved; the world advances 8 substeps per local tick.",
+   "covers": ["TEST-01","TIME-02","TIME-03","kernel clock"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 6
+  },
+  {
+   "name": "clock-record-1x",
+   "file": "clock-record-1x.json",
+   "description": "A 1x take runs east for its whole 1-bar allowance (120 local ticks) and is then resolved; the world advances 4 substeps per local tick.",
+   "covers": ["TEST-01","TIME-02","TIME-03","kernel clock"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 7
+  },
+  {
+   "name": "clock-record-2x",
+   "file": "clock-record-2x.json",
+   "description": "A 2x take runs east for its whole 1-bar allowance (120 local ticks) and is then resolved; the world advances 2 substeps per local tick.",
+   "covers": ["TEST-01","TIME-02","TIME-03","kernel clock"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 7
+  },
+  {
+   "name": "clock-record-4x",
+   "file": "clock-record-4x.json",
+   "description": "A 4x take runs east for its whole 1-bar allowance (120 local ticks) and is then resolved; the world advances 1 substeps per local tick.",
+   "covers": ["TEST-01","TIME-02","TIME-03","kernel clock"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 7
+  },
+  {
+   "name": "clock-plate-2x-record-replay",
+   "file": "clock-plate-2x-record-replay.json",
+   "description": "A 2x take lands on a plate; the plate event happens at the same master substep in recording and in replay.",
+   "covers": ["TEST-02"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 13
+  },
+  {
+   "name": "record-busy-death",
+   "file": "record-busy-death.json",
+   "description": "Record-then-resolve fidelity: a busy 1x take (switch, door, plate, grunt, turret) dies part-way; the replay reproduces positions, kills and the death.",
+   "covers": ["kernel determinism","record → resolve reproduction","GHOST-01"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 24
+  },
+  {
+   "name": "record-two-takes-busy",
+   "file": "record-two-takes-busy.json",
+   "description": "Take A (2x, busy script) is recorded, then take B (1x, reverse) is recorded live against A; the combined run is resolved.",
+   "covers": ["TEST-03","TEST-04","kernel determinism"],
+   "takes": ["inputs","inputs"],
+   "win": false,
+   "events": 50
+  },
+  {
+   "name": "record-calm-kill-win",
+   "file": "record-calm-kill-win.json",
+   "description": "A surviving take waits for an awake grunt and kills it with a standing 1x light; recording and replay agree exactly and the run wins.",
+   "covers": ["kernel determinism","AI-01","win with one survivor"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 8
+  },
+  {
+   "name": "mech-dead-signal-opens-door",
+   "file": "mech-dead-signal-opens-door.json",
+   "description": "A standing 1x light kills a sleeping one-hit grunt; the door wired to dead:g1 starts opening on the next mechanisms update.",
+   "covers": ["dead:<enemy> signal","LEVEL signal expressions"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 5
+  },
+  {
+   "name": "clock-empty-run",
+   "file": "clock-empty-run.json",
+   "description": "No tapes at all (after a reset): the encounter runs to the horizon with no selves and fails with no survivor.",
+   "covers": ["TEST-06"],
+   "takes": [],
+   "win": false,
+   "events": 0
+  },
+  {
+   "name": "tapemode-stop",
+   "file": "tapemode-stop.json",
+   "description": "A 2x 'stop' tape (1 bar, horizon 2 bars) walks to a switch and a turret, toggles and swings; end behaviour applies against a world that keeps going.",
+   "covers": ["PLAY-05","OPEN-05"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 8
+  },
+  {
+   "name": "tapemode-repeat",
+   "file": "tapemode-repeat.json",
+   "description": "A 2x 'repeat' tape (1 bar, horizon 2 bars) walks to a switch and a turret, toggles and swings; end behaviour applies against a world that keeps going.",
+   "covers": ["TEST-25","Scenario G"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 33
+  },
+  {
+   "name": "tapemode-reverse",
+   "file": "tapemode-reverse.json",
+   "description": "A 2x 'reverse' tape (1 bar, horizon 2 bars) walks to a switch and a turret, toggles and swings; end behaviour applies against a world that keeps going.",
+   "covers": ["TEST-26","PLAY-06"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 34
+  },
+  {
+   "name": "tapemode-mixed-four",
+   "file": "tapemode-mixed-four.json",
+   "description": "Four tapes at once, one per speed (0.5x stop, 1x repeat, 2x reverse, 4x repeat), striking one tough turret and toggling a switch; traversals, wraps and turns interleave.",
+   "covers": ["TIME-03","PLAY-05","PLAY-06","every speed and end mode"],
+   "takes": ["tape","tape","tape","tape"],
+   "win": true,
+   "events": 111
+  },
+  {
+   "name": "tapemode-record-4x-reverse",
+   "file": "tapemode-record-4x-reverse.json",
+   "description": "A 4x reverse take is recorded from inputs (one world substep per local tick), toggling a switch; the resolution ping-pongs it eight times over the horizon.",
+   "covers": ["TIME-03","PLAY-06","record at 4x"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 64
+  },
+  {
+   "name": "ghost-scenario-c",
+   "file": "ghost-scenario-c.json",
+   "description": "Scenario C: the take is shot early, keeps going as a recording ghost (strikes the grunt, flips the lever, walks through the door); replayed, it dies again and none of that happens.",
+   "covers": ["Scenario C","TEST-07","TEST-09","TEST-10","GHOST-01..05"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "ghost-recghost-blocked-by-door",
+   "file": "ghost-recghost-blocked-by-door.json",
+   "description": "The recording ghost is still blocked by a closed door (the door here never opens).",
+   "covers": ["TEST-08","GHOST-02"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "ghost-rescue",
+   "file": "ghost-rescue.json",
+   "description": "Rescue: take B (2x) destroys the turret before its first shot, so take A survives and its later strike and lever become effective; both survive and win.",
+   "covers": ["TEST-11","rescue","Scenario C"],
+   "takes": ["inputs","inputs"],
+   "win": true,
+   "events": 23
+  },
+  {
+   "name": "ghost-scenario-d-alone",
+   "file": "ghost-scenario-d-alone.json",
+   "description": "Scenario D control: tape A alone survives the corridor and lights the lamp.",
+   "covers": ["Scenario D"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 7
+  },
+  {
+   "name": "ghost-scenario-d",
+   "file": "ghost-scenario-d.json",
+   "description": "Scenario D: tape B opens the door late, exposing A to the turret; A dies at a new time, keeps moving as a ghost, its lamp switch does not count, and B wins alone.",
+   "covers": ["Scenario D","TEST-12","GHOST-05","win with one survivor"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 13
+  },
+  {
+   "name": "survivors-one-wins",
+   "file": "survivors-one-wins.json",
+   "description": "Three selves burn in a laser; the fourth kills the grunt and survives: the attempt is won with one survivor.",
+   "covers": ["TEST-23","REC-07","win with one survivor"],
+   "takes": ["tape","tape","tape","tape"],
+   "win": true,
+   "events": 33
+  },
+  {
+   "name": "survivors-none-fails",
+   "file": "survivors-none-fails.json",
+   "description": "The objective completes but every self dies afterwards: not a win (reason noSurvivor).",
+   "covers": ["TEST-24","REC-07","fail with none"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 20
+  },
+  {
+   "name": "ghost-final-tape-edge",
+   "file": "ghost-final-tape-edge.json",
+   "description": "Final-tape edge case: take B dies in a laser, then as a recording ghost kills the grunt (the provisional run latches the objective); the authoritative resolve does not.",
+   "covers": ["OPEN-07","REC-06","GHOST-03"],
+   "takes": ["inputs","inputs"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "desync-scenario-i-detour",
+   "file": "desync-scenario-i-detour.json",
+   "description": "Scenario I: a door closes across the runner, which desyncs; its spark takes the open detour at finite speed and resyncs on catch-up; the runner then holds the exit.",
+   "covers": ["Scenario I","TEST-13","TEST-14","DESYNC-01..05","detour recovery"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 17
+  },
+  {
+   "name": "desync-scenario-i-reopened",
+   "file": "desync-scenario-i-reopened.json",
+   "description": "Scenario I: the switcher reopens the direct route at tick 150, so the spark catches up sooner than by the detour.",
+   "covers": ["Scenario I","reopened route","DESYNC-04"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 19
+  },
+  {
+   "name": "desync-no-route",
+   "file": "desync-no-route.json",
+   "description": "With no route the spark never catches up; nothing teleports or kills it; the alive-but-desynced self is a survivor that cannot hold the exit.",
+   "covers": ["DESYNC-03","TEST-15"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 15
+  },
+  {
+   "name": "desync-route-reopened-by-other",
+   "file": "desync-route-reopened-by-other.json",
+   "description": "Another tape reopens the blocked route at tick 300; the spark recovers and the run wins.",
+   "covers": ["TEST-15","Scenario J","reopened route"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 19
+  },
+  {
+   "name": "desync-repeat-cut-spark",
+   "file": "desync-repeat-cut-spark.json",
+   "description": "A 2x repeat runner desyncs at the closed door; at the cut the projection teleports back to the start but the spark has to travel, then resyncs with the new traversal.",
+   "covers": ["DESYNC","What a tape is","repeat"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 30
+  },
+  {
+   "name": "desync-harmless-invulnerable",
+   "file": "desync-harmless-invulnerable.json",
+   "description": "A self desynced on a low barrier swings at a grunt for no damage; the turret ignores it and shoots the self standing behind it, straight through the projection.",
+   "covers": ["TEST-16","DESYNC-07","AI-07 targeting policy"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 12
+  },
+  {
+   "name": "desync-scenario-j-control",
+   "file": "desync-scenario-j-control.json",
+   "description": "Scenario J control: without desync the turret kills the crossing tape in its lane.",
+   "covers": ["Scenario J","TEST-17"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 12
+  },
+  {
+   "name": "desync-scenario-j",
+   "file": "desync-scenario-j.json",
+   "description": "Scenario J: desync protects the crossing, the spark detours, the tape resyncs behind the turret and breaks it.",
+   "covers": ["Scenario J","DESYNC-02..07","detour recovery"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 20
+  },
+  {
+   "name": "desync-scenario-j-no-detour",
+   "file": "desync-scenario-j-no-detour.json",
+   "description": "TEST-17: the spark never catches up, so the desynced strike cannot hurt the turret.",
+   "covers": ["TEST-17","Scenario J"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 15
+  },
+  {
+   "name": "enemy-grunt-strike",
+   "file": "enemy-grunt-strike.json",
+   "description": "A grunt walks at the only self and strikes on its beat grid after a telegraph; one strike kills; the ghost is never targeted again.",
+   "covers": ["AI-01","AI-07","HEALTH-01"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 3
+  },
+  {
+   "name": "enemy-grunt-target-switch",
+   "file": "enemy-grunt-target-switch.json",
+   "description": "A closer self (B) changes the grunt’s target on a beat boundary while A’s path is unchanged.",
+   "covers": ["TEST-18","AI-02..04"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 12
+  },
+  {
+   "name": "combat-knockback-alone-whiff",
+   "file": "combat-knockback-alone-whiff.json",
+   "description": "Knockback control: alone, A’s swing at an empty spot whiffs.",
+   "covers": ["TEST-19"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 14
+  },
+  {
+   "name": "combat-knockback-changes-later-hit",
+   "file": "combat-knockback-changes-later-hit.json",
+   "description": "B knocks the grunt east into the spot where A swings later; the same recorded swing now kills.",
+   "covers": ["TEST-19","MOM-05","knockback changing later hits"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 23
+  },
+  {
+   "name": "momentum-0_5x-stand",
+   "file": "momentum-0_5x-stand.json",
+   "description": "One light swing at a tough sleeping grunt from a 0.5x tape, standing: momentum sets damage, knockback and stagger.",
+   "covers": ["TEST-20","MOM-01..04"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "momentum-1x-stand",
+   "file": "momentum-1x-stand.json",
+   "description": "One light swing at a tough sleeping grunt from a 1x tape, standing: momentum sets damage, knockback and stagger.",
+   "covers": ["TEST-20","MOM-01..04"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "momentum-2x-stand",
+   "file": "momentum-2x-stand.json",
+   "description": "One light swing at a tough sleeping grunt from a 2x tape, standing: momentum sets damage, knockback and stagger.",
+   "covers": ["TEST-20","MOM-01..04"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "momentum-1x-into",
+   "file": "momentum-1x-into.json",
+   "description": "One light swing at a tough sleeping grunt from a 1x tape, moving into the strike: momentum sets damage, knockback and stagger.",
+   "covers": ["TEST-20","MOM-01..04"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 6
+  },
+  {
+   "name": "momentum-1x-away",
+   "file": "momentum-1x-away.json",
+   "description": "One light swing at a tough sleeping grunt from a 1x tape, moving away from the strike: momentum sets damage, knockback and stagger.",
+   "covers": ["TEST-20","MOM-01..04"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 5
+  },
+  {
+   "name": "dodge-iframes-pass-through",
+   "file": "dodge-iframes-pass-through.json",
+   "description": "A bolt arriving inside the dodge’s i-frames passes through and breaks on the wall behind.",
+   "covers": ["TEST-21","COMBAT-04"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "dodge-too-early-dies",
+   "file": "dodge-too-early-dies.json",
+   "description": "The same dodge started far too early: its i-frames are over when the bolt arrives, which kills.",
+   "covers": ["TEST-21","COMBAT-04","fail with none"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 5
+  },
+  {
+   "name": "dodge-record-live-iframes",
+   "file": "dodge-record-live-iframes.json",
+   "description": "A recorded dodge gives the live self the same i-frames (10 local ticks) during recording.",
+   "covers": ["TEST-21","COMBAT-04","record"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "momentum-wall-1x-stand-light",
+   "file": "momentum-wall-1x-stand-light.json",
+   "description": "Scenario K: a 1x standing light clangs (momentum 1.2 of 5).",
+   "covers": ["Scenario K","MOM-01..04","momentum thresholds"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 10
+  },
+  {
+   "name": "momentum-wall-1x-run-heavy",
+   "file": "momentum-wall-1x-run-heavy.json",
+   "description": "Scenario K: a 1x running heavy is still too weak (momentum 3).",
+   "covers": ["Scenario K","MOM-01..04","momentum thresholds"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 9
+  },
+  {
+   "name": "momentum-wall-2x-stand-heavy",
+   "file": "momentum-wall-2x-stand-heavy.json",
+   "description": "Scenario K: a 2x standing heavy is still too weak (momentum 4).",
+   "covers": ["Scenario K","MOM-01..04","momentum thresholds"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 10
+  },
+  {
+   "name": "momentum-wall-2x-run-heavy",
+   "file": "momentum-wall-2x-run-heavy.json",
+   "description": "Scenario K: a 2x running heavy breaks it (momentum 6) and the self walks through the gap.",
+   "covers": ["Scenario K","MOM-01..04","momentum thresholds"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 14
+  },
+  {
+   "name": "mech-door-closes-on-playback",
+   "file": "mech-door-closes-on-playback.json",
+   "description": "A door closing on a playback self desyncs it (doors never delete a body); the spark starts beside the door.",
+   "covers": ["DESYNC-01","doors never delete a body"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 8
+  },
+  {
+   "name": "mech-door-closes-on-live",
+   "file": "mech-door-closes-on-live.json",
+   "description": "A door closing on the live self pushes it out to the nearest free side; it stays alive and synced.",
+   "covers": ["doors never delete a body","record"],
+   "takes": ["tape","inputs"],
+   "win": true,
+   "events": 9
+  },
+  {
+   "name": "mech-door-pushes-enemy",
+   "file": "mech-door-pushes-enemy.json",
+   "description": "A door closing on a sleeping grunt pushes it out of the doorway.",
+   "covers": ["doors never delete a body"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 2
+  },
+  {
+   "name": "mech-interact-nothing",
+   "file": "mech-interact-nothing.json",
+   "description": "An interact with nothing in reach emits interactFail \"nothing in reach\".",
+   "covers": ["interactFail"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 3
+  },
+  {
+   "name": "mech-plate-holds-laser-off",
+   "file": "mech-plate-holds-laser-off.json",
+   "description": "An effective body holds a plate, which switches a laser off for another self crossing it.",
+   "covers": ["plates","lasers","signals"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 17
+  },
+  {
+   "name": "mech-laser-kills",
+   "file": "mech-laser-kills.json",
+   "description": "Without the plate held the laser kills the crossing self (fail with no survivor).",
+   "covers": ["lasers","fail with none"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 10
+  },
+  {"name":"ability-laser-proof","file":"ability-laser-proof.json","description":"laserProof: the same crossing survives the live laser.","covers":["laserProof","every ability"],"takes":["tape"],"win":true,"events":12},
+  {"name":"mech-heavy-plate-needs-heavystep","file":"mech-heavy-plate-needs-heavystep.json","description":"A heavy plate ignores an ordinary self.","covers":["plates","heavyStep"],"takes":["tape"],"win":true,"events":4},
+  {
+   "name": "ability-heavy-step",
+   "file": "ability-heavy-step.json",
+   "description": "heavyStep: the same self holds the heavy plate and turns the laser off.",
+   "covers": ["heavyStep","every ability"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 6
+  },
+  {
+   "name": "mech-dead-ghost-no-plate",
+   "file": "mech-dead-ghost-no-plate.json",
+   "description": "A self dies to a laser on the way; its ghost then stands on the plate, which stays off.",
+   "covers": ["GHOST-05","plates"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "objective-reach-win",
+   "file": "objective-reach-win.json",
+   "description": "reach: an alive, synced self is in the exit when the horizon ends (the objective latches on the last substep).",
+   "covers": ["reach objective","exit"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 9
+  },
+  {
+   "name": "objective-reach-pass-by-fails",
+   "file": "objective-reach-pass-by-fails.json",
+   "description": "reach: passing through the exit and leaving again does not count.",
+   "covers": ["reach objective","exit"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 12
+  },
+  {
+   "name": "objective-core-weak-clang",
+   "file": "objective-core-weak-clang.json",
+   "description": "activate: a 0.5x light (momentum 0.6) clangs off a threshold-1 core.",
+   "covers": ["activate objective","cores"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 2
+  },
+  {
+   "name": "objective-core-activated",
+   "file": "objective-core-activated.json",
+   "description": "activate: a 1x light (momentum 1.2) lights the core and wins.",
+   "covers": ["activate objective","cores"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 5
+  },
+  {"name":"enemy-stalker-alone","file":"enemy-stalker-alone.json","description":"A stalker wakes on beat 1 and hunts the only self.","covers":["AI-01","AI-02","stalker"],"takes":["tape"],"win":false,"events":3},
+  {
+   "name": "enemy-stalker-farthest",
+   "file": "enemy-stalker-farthest.json",
+   "description": "A stalker hunts the FARTHEST self past a nearer one, kills it on its beat grid, then re-picks the survivor.",
+   "covers": ["AI-01","AI-02","AI-07","stalker"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 15
+  },
+  {
+   "name": "enemy-shielder-alone-clangs",
+   "file": "enemy-shielder-alone-clangs.json",
+   "description": "One self alone can never hurt a shielder: eight lights all clang off the shield.",
+   "covers": ["Scenario A","AI-05","shielder"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 17
+  },
+  {
+   "name": "enemy-shielder-pair-hit",
+   "file": "enemy-shielder-pair-hit.json",
+   "description": "A pops the shield, B follows inside the window and lands; the shield is back at once, so A’s next swing only pops it again.",
+   "covers": ["Scenario A","AI-05","shielder"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 9
+  },
+  {
+   "name": "enemy-shielder-two-pairs-kill",
+   "file": "enemy-shielder-two-pairs-kill.json",
+   "description": "Two coordinated pairs kill it: B’s landed hit shoves it toward C, who supplies the second follow-up after A pops it again.",
+   "covers": ["Scenario A","shielder two-self kill","MOM-05"],
+   "takes": ["tape","tape","tape"],
+   "win": true,
+   "events": 14
+  },
+  {
+   "name": "enemy-shielder-same-substep-kill",
+   "file": "enemy-shielder-same-substep-kill.json",
+   "description": "Two selves strike on the same substep with 1x heavies: the first pops, the second kills (the classic two-self kill).",
+   "covers": ["Scenario A","shielder two-self kill"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 8
+  },
+  {
+   "name": "enemy-shielder-blocks-bolts",
+   "file": "enemy-shielder-blocks-bolts.json",
+   "description": "A self hides behind a shielder from a turret: the bolts clang off the shield without popping it.",
+   "covers": ["shielder","turret"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 13
+  },
+  {
+   "name": "enemy-brute-three-lights",
+   "file": "enemy-brute-three-lights.json",
+   "description": "Three standing 1x lights kill a brute; the first two neither move nor stagger it (poise).",
+   "covers": ["HEALTH-02","MOM-05","brute"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 8
+  },
+  {
+   "name": "enemy-brute-poise-broken",
+   "file": "enemy-brute-poise-broken.json",
+   "description": "A 2x standing heavy (momentum 4) is above the brute’s poise: it really moves and staggers it.",
+   "covers": ["MOM-05","brute"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 4
+  },
+  {"name":"enemy-grunt-shoved","file":"enemy-grunt-shoved.json","description":"The same light that a brute shrugs off shoves a grunt back.","covers":["MOM-05","knockback"],"takes":["tape"],"win":false,"events":3},
+  {
+   "name": "enemy-brute-running-heavy",
+   "file": "enemy-brute-running-heavy.json",
+   "description": "One 1x running heavy (approach clamps to 1: momentum 3) kills a brute outright.",
+   "covers": ["MOM-01..04","brute"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 7
+  },
+  {
+   "name": "enemy-brute-slam-wide",
+   "file": "enemy-brute-slam-wide.json",
+   "description": "An awake brute telegraphs its slam and lands it on its grid beat; the slam is wide enough to kill a self at its side as well.",
+   "covers": ["AI-04","AI-07","brute","fail with none"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 4
+  },
+  {"name":"enemy-brute-holds-heavy-plate","file":"enemy-brute-holds-heavy-plate.json","description":"A sleeping brute’s body holds a heavy plate.","covers":["brute","plates"],"takes":["tape"],"win":false,"events":1},
+  {
+   "name": "enemy-drone-backs-off",
+   "file": "enemy-drone-backs-off.json",
+   "description": "A drone backs off from a self that is too close until it is at its keep distance.",
+   "covers": ["AI-01","drone"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 0
+  },
+  {
+   "name": "enemy-drone-hovers-over-void",
+   "file": "enemy-drone-hovers-over-void.json",
+   "description": "A drone closes in over a void trench and a low barrier that would stop a walker.",
+   "covers": ["AI-01","drone","void"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 0
+  },
+  {
+   "name": "enemy-drone-fire",
+   "file": "enemy-drone-fire.json",
+   "description": "A drone fires telegraphed bolts on the off-beat along its locked aim at three spread-out selves.",
+   "covers": ["AI-06","AI-07","drone"],
+   "takes": ["tape","tape","tape"],
+   "win": false,
+   "events": 21
+  },
+  {"name":"enemy-drone-two-hits","file":"enemy-drone-two-hits.json","description":"A drone takes two hit points: a 2x light (2 damage) kills it.","covers":["HEALTH-02","drone"],"takes":["tape"],"win":true,"events":5},
+  {
+   "name": "boss-coordinated-win",
+   "file": "boss-coordinated-win.json",
+   "description": "One self holds the boss’s eye in front, another lands 2x heavies on its back: phases 2 and 3, then the kill; both survive.",
+   "covers": ["BOSS-03","HEALTH-03","boss fight without memory"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 17
+  },
+  {
+   "name": "boss-alone-armour",
+   "file": "boss-alone-armour.json",
+   "description": "One self alone can never hurt the boss (armour clangs) and is cleaved on the bar grid.",
+   "covers": ["BOSS-03","AI-07"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 13
+  },
+  {
+   "name": "boss-phases",
+   "file": "boss-phases.json",
+   "description": "Two back hits move the boss to phase 2 (adds the sweep ring of shock shots) and phase 3 (attacks every two beats).",
+   "covers": ["HEALTH-03","AI-07","shock projectiles"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 96
+  },
+  {
+   "name": "boss-memory-none",
+   "file": "boss-memory-none.json",
+   "description": "First take, no memory: only the base pattern; the pillar shelters tape A.",
+   "covers": ["BOSS-01","boss fight without memory"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 22
+  },
+  {
+   "name": "boss-memory-dwell",
+   "file": "boss-memory-dwell.json",
+   "description": "With memory of committed tape A the boss pre-empts A’s remembered dwell: telegraphed at the remembered place, then struck.",
+   "covers": ["BOSS-01","BOSS-02","boss fight with memory"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 21
+  },
+  {
+   "name": "boss-memory-blind-armour",
+   "file": "boss-memory-blind-armour.json",
+   "description": "Without memory, B is the nearest self, holds the boss’s attention and clangs off its armour.",
+   "covers": ["BOSS-03","boss fight without memory"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 27
+  },
+  {
+   "name": "boss-memory-exploited",
+   "file": "boss-memory-exploited.json",
+   "description": "With memory, the boss commits to punishing A’s old spot and B’s back hit lands.",
+   "covers": ["BOSS-02","BOSS-03","boss fight with memory"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 28
+  },
+  {
+   "name": "boss-memory-guard-cancels",
+   "file": "boss-memory-guard-cancels.json",
+   "description": "A strong back hit during the recall telegraph staggers the boss and cancels the memory strike, protecting the remembered tape.",
+   "covers": ["BOSS-02","boss fight with memory"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 28
+  },
+  {
+   "name": "boss-memory-attack-recall",
+   "file": "boss-memory-attack-recall.json",
+   "description": "A remembered attack (a light swung while passing) is pre-empted on the nearest whole beat.",
+   "covers": ["BOSS-02","boss fight with memory"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 7
+  },
+  {
+   "name": "boss-memory-record",
+   "file": "boss-memory-record.json",
+   "description": "Recording take B (idle) with memory of committed tape A sees the same memory strike as its authoritative resolve.",
+   "covers": ["BOSS-01","BOSS-02","record","boss fight with memory"],
+   "takes": ["tape","inputs"],
+   "win": false,
+   "events": 21
+  },
+  {
+   "name": "ranged-pierce-line",
+   "file": "ranged-pierce-line.json",
+   "description": "A piercing shot strikes three enemies in its line, each exactly once, then ends at the far wall.",
+   "covers": ["NEW-04","WEAPON-01","pierce"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 11
+  },
+  {"name":"ranged-pierce-1-stops","file":"ranged-pierce-1-stops.json","description":"pierce 1 passes through one enemy and stops at the next.","covers":["NEW-04","pierce"],"takes":["tape"],"win":false,"events":7},
+  {
+   "name": "ranged-phase-through-wall",
+   "file": "ranged-phase-through-wall.json",
+   "description": "A phase shot passes a full wall and kills the enemy behind it.",
+   "covers": ["NEW-05","phase"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 5
+  },
+  {"name":"ranged-phase-map-edge","file":"ranged-phase-map-edge.json","description":"A long-range phase shot stops at the map edge.","covers":["NEW-05","phase"],"takes":["tape"],"win":true,"events":3},
+  {"name":"ranged-burst-wall","file":"ranged-burst-wall.json","description":"A burst is stopped by a full wall: every pellet breaks on it.","covers":["NEW-05","burst"],"takes":["tape"],"win":false,"events":6},
+  {
+   "name": "ranged-arc-over-wall",
+   "file": "ranged-arc-over-wall.json",
+   "description": "An arc shot is lobbed over a full wall and lands on the enemy behind it.",
+   "covers": ["NEW-05","arc"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 5
+  },
+  {
+   "name": "ranged-arc-blast",
+   "file": "ranged-arc-blast.json",
+   "description": "An arc shot flies over a near enemy, lands at its range and its blast strikes every enemy it overlaps, pushing each away from the centre.",
+   "covers": ["arc","blast"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 6
+  },
+  {"name":"ranged-arc-min-range","file":"ranged-arc-min-range.json","description":"A short arc shot never lands closer than its minRange.","covers":["arc","minRange"],"takes":["tape"],"win":true,"events":3},
+  {
+   "name": "ranged-burst-fan",
+   "file": "ranged-burst-fan.json",
+   "description": "A burst fans five pellets across 40°; pellets reach enemies on the fan’s edges but fizzle before a far one.",
+   "covers": ["burst","WEAPON-01"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 13
+  },
+  {
+   "name": "ranged-momentum-model",
+   "file": "ranged-momentum-model.json",
+   "description": "A ranged hit delivers def.impact through the melee damage / knockback / stagger arithmetic (efficiencies 1, the damage mod applies).",
+   "covers": ["WEAPON-03","momentum model"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 4
+  },
+  {"name":"ranged-door-blocks-straight-shot","file":"ranged-door-blocks-straight-shot.json","description":"A closed door stops a straight shot.","covers":["NEW-05","doors"],"takes":["tape"],"win":false,"events":2},
+  {
+   "name": "ranged-reverse-pass-fires-again",
+   "file": "ranged-reverse-pass-fires-again.json",
+   "description": "A reverse tape fires again on every pass with the recorded direction, and each shot that arrives hurts again.",
+   "covers": ["PLAY-06","reverse"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 16
+  },
+  {
+   "name": "missile-scenario-f-alone",
+   "file": "missile-scenario-f-alone.json",
+   "description": "Scenario F: alone, the missile locks the nearest enemy (g1) at launch and strikes it.",
+   "covers": ["Scenario F","TEST-22","NEW-03","missile"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "missile-scenario-f-target-change",
+   "file": "missile-scenario-f-target-change.json",
+   "description": "Scenario F: tape B knocks g2 closer before A’s launch; the same recorded launch locks g2 instead.",
+   "covers": ["Scenario F","TEST-22","missile target change"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 7
+  },
+  {
+   "name": "missile-no-retarget",
+   "file": "missile-no-retarget.json",
+   "description": "After launch the missile never retargets, even when another enemy is shoved nearer to it.",
+   "covers": ["MISSILE-03","NEW-03"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 7
+  },
+  {
+   "name": "missile-target-dies-first",
+   "file": "missile-target-dies-first.json",
+   "description": "When its target dies first the missile flies straight on and still never switches.",
+   "covers": ["MISSILE-03","NEW-03"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 5
+  },
+  {
+   "name": "missile-turn-rate",
+   "file": "missile-turn-rate.json",
+   "description": "A missile fired away from the only enemy turns round no faster than its turn rate and strikes it.",
+   "covers": ["MISSILE-02","missile"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 4
+  },
+  {
+   "name": "missile-no-enemy-straight",
+   "file": "missile-no-enemy-straight.json",
+   "description": "With no enemy the missile flies straight along the recorded direction until it breaks on the wall.",
+   "covers": ["MISSILE-04","missile"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 3
+  },
+  {
+   "name": "ranged-ghost-launch-gating",
+   "file": "ranged-ghost-launch-gating.json",
+   "description": "The recording ghost’s missile flies and kills the turret in its own take; under playback the self dies at the same moment and its ghost fires nothing.",
+   "covers": ["GHOST-03","GHOST-05","launch gating"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 5
+  },
+  {
+   "name": "ranged-desynced-launches-nothing",
+   "file": "ranged-desynced-launches-nothing.json",
+   "description": "A self desynced at a shut door launches nothing.",
+   "covers": ["DESYNC-07","launch gating"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 6
+  },
+  {
+   "name": "ranged-synced-launches",
+   "file": "ranged-synced-launches.json",
+   "description": "Control: with the door open the same tape launches its missile.",
+   "covers": ["launch gating","missile"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 9
+  },
+  {
+   "name": "ability-manual-desync-record",
+   "file": "ability-manual-desync-record.json",
+   "description": "manualDesync live: the first press desyncs in place and holds the spark; the second re-syncs the body where it is. Replayed, the released spark must catch up by ordinary spark rules.",
+   "covers": ["manualDesync","every ability","OPEN-11","record"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 13
+  },
+  {
+   "name": "ability-manual-desync-turret",
+   "file": "ability-manual-desync-turret.json",
+   "description": "While voluntarily desynced the self is harmless and invulnerable: a turret never shoots at it.",
+   "covers": ["manualDesync","DESYNC-07"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 1
+  },
+  {
+   "name": "ability-manual-desync-paired",
+   "file": "ability-manual-desync-paired.json",
+   "description": "An involuntary desync (a beat-timed door) is held by the next press, so recorded on/off presses stay paired.",
+   "covers": ["manualDesync","beat signals"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 9
+  },
+  {
+   "name": "desync-beat-door",
+   "file": "desync-beat-door.json",
+   "description": "Control: without the gear the same tape resyncs as soon as the beat-timed door opens.",
+   "covers": ["DESYNC-04","beat signals"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 9
+  },
+  {
+   "name": "ability-low-profile",
+   "file": "ability-low-profile.json",
+   "description": "lowProfile: a self 9 tiles from a turret (reach 12) is read as 13.5 tiles away and never shot.",
+   "covers": ["lowProfile","every ability"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 0
+  },
+  {
+   "name": "ability-low-profile-control",
+   "file": "ability-low-profile-control.json",
+   "description": "Control: without lowProfile the same self is shot.",
+   "covers": ["lowProfile","turret"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 6
+  },
+  {
+   "name": "ability-loudmouth",
+   "file": "ability-loudmouth.json",
+   "description": "loudmouth: a self 14 tiles from a turret is read as 10.5 tiles away and shot.",
+   "covers": ["loudmouth","every ability"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 8
+  },
+  {
+   "name": "ability-beat-sight",
+   "file": "ability-beat-sight.json",
+   "description": "beatSight: upcoming enemy attack beats (8-beat look-ahead) are listed in every sampled snapshot (threatBeats) and match the beats the turret’s shots land on.",
+   "covers": ["beatSight","every ability"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 5
+  },
+  {
+   "name": "ability-phase-dodge-record",
+   "file": "ability-phase-dodge-record.json",
+   "description": "phaseDodge: a dodge passes through a column of low barriers live and replays without desync.",
+   "covers": ["phaseDodge","every ability","record"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 3
+  },
+  {
+   "name": "ability-phase-dodge-blocked",
+   "file": "ability-phase-dodge-blocked.json",
+   "description": "Without phaseDodge the same dodge is stopped by the barrier while recording.",
+   "covers": ["phaseDodge","dodge"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 3
+  },
+  {
+   "name": "ability-phase-dodge-replayed-without-gear",
+   "file": "ability-phase-dodge-replayed-without-gear.json",
+   "description": "The phased tape replayed without the gear cannot cross the barrier: it desyncs there.",
+   "covers": ["phaseDodge","DESYNC-01"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 4
+  },
+  {
+   "name": "ability-slide-strike",
+   "file": "ability-slide-strike.json",
+   "description": "slideStrike: a strike started straight out of a dodge carries extra momentum, only on a forward pass of a reverse tape.",
+   "covers": ["slideStrike","every ability","reverse"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 16
+  },
+  {
+   "name": "ability-parry",
+   "file": "ability-parry.json",
+   "description": "parry: a heavy swing turns an enemy shot inside its arc back at the shooter; the reflected bolt destroys the turret.",
+   "covers": ["parry","every ability"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 8
+  },
+  {
+   "name": "ability-parry-control",
+   "file": "ability-parry-control.json",
+   "description": "Control: without the gear the same swing does nothing to the shot, which kills.",
+   "covers": ["parry","turret"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 6
+  },
+  {
+   "name": "ability-kill-refresh",
+   "file": "ability-kill-refresh.json",
+   "description": "killRefresh: a melee kill by the live self refunds its dodge cooldown, so the second dodge press (tick 26) is accepted.",
+   "covers": ["killRefresh","every ability","record"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 7
+  },
+  {
+   "name": "ability-kill-refresh-control",
+   "file": "ability-kill-refresh-control.json",
+   "description": "Control: without the gear the second dodge press falls inside the cooldown and is dropped.",
+   "covers": ["killRefresh","dodge cooldown"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 6
+  },
+  {
+   "name": "gear-ranged-mixtape-rocket",
+   "file": "gear-ranged-mixtape-rocket.json",
+   "description": "Catalogue ranged weapon mixtape_rocket (missile): the live self steps forward and fires twice down a room of sleeping grunts; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-01..03","every ranged archetype (missile)","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 9
+  },
+  {
+   "name": "gear-ranged-needle-rail",
+   "file": "gear-ranged-needle-rail.json",
+   "description": "Catalogue ranged weapon needle_rail (pierce): the live self steps forward and fires twice down a room of sleeping grunts; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-01..03","every ranged archetype (pierce)","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 14
+  },
+  {
+   "name": "gear-ranged-bleed-emitter",
+   "file": "gear-ranged-bleed-emitter.json",
+   "description": "Catalogue ranged weapon bleed_emitter (phase): the live self steps forward and fires twice down a room of sleeping grunts; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-01..03","every ranged archetype (phase)","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 9
+  },
+  {
+   "name": "gear-ranged-bass-drop",
+   "file": "gear-ranged-bass-drop.json",
+   "description": "Catalogue ranged weapon bass_drop (arc): the live self steps forward and fires twice down a room of sleeping grunts; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-01..03","every ranged archetype (arc)","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 9
+  },
+  {
+   "name": "gear-ranged-static-spray",
+   "file": "gear-ranged-static-spray.json",
+   "description": "Catalogue ranged weapon static_spray (burst): the live self steps forward and fires twice down a room of sleeping grunts; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-01..03","every ranged archetype (burst)","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 6
+  },
+  {
+   "name": "gear-melee-splice-blade",
+   "file": "gear-melee-splice-blade.json",
+   "description": "Catalogue melee weapon splice_blade: the live self walks up to a tough sleeping grunt and swings light and heavy, standing and running; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-04","COMBAT-01..03","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 15
+  },
+  {
+   "name": "gear-melee-stylus-shiv",
+   "file": "gear-melee-stylus-shiv.json",
+   "description": "Catalogue melee weapon stylus_shiv: the live self walks up to a tough sleeping grunt and swings light and heavy, standing and running; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-04","COMBAT-01..03","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 17
+  },
+  {
+   "name": "gear-melee-amp-sledge",
+   "file": "gear-melee-amp-sledge.json",
+   "description": "Catalogue melee weapon amp_sledge: the live self walks up to a tough sleeping grunt and swings light and heavy, standing and running; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-04","COMBAT-01..03","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 15
+  },
+  {
+   "name": "gear-melee-reel-lash",
+   "file": "gear-melee-reel-lash.json",
+   "description": "Catalogue melee weapon reel_lash: the live self walks up to a tough sleeping grunt and swings light and heavy, standing and running; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-04","COMBAT-01..03","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 16
+  },
+  {
+   "name": "gear-melee-speaker-knuckles",
+   "file": "gear-melee-speaker-knuckles.json",
+   "description": "Catalogue melee weapon speaker_knuckles: the live self walks up to a tough sleeping grunt and swings light and heavy, standing and running; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-04","COMBAT-01..03","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 15
+  },
+  {
+   "name": "gear-melee-vinyl-glaive",
+   "file": "gear-melee-vinyl-glaive.json",
+   "description": "Catalogue melee weapon vinyl_glaive: the live self walks up to a tough sleeping grunt and swings light and heavy, standing and running; recorded from inputs, then resolved.",
+   "covers": ["WEAPON-04","COMBAT-01..03","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 15
+  },
+  {
+   "name": "gear-apparel-mods",
+   "file": "gear-apparel-mods.json",
+   "description": "Apparel stat mods combined (moveSpeed, accel, momentumRetention, approachBonus, meleeImpact, dodgeIframes, sparkSpeed): the live self runs, turns, dodges and lands a running heavy on a grunt.",
+   "covers": ["GEAR-01..03","APPAREL-01..03","catalogue gear","combineMods"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 10
+  },
+  {
+   "name": "gear-abilities-catalogue",
+   "file": "gear-abilities-catalogue.json",
+   "description": "Catalogue ability gear (dropout_jacket manualDesync, slick_sliders slideStrike, click_visor beatSight): the live self dodges into a slide strike, then desyncs and re-syncs on demand while a turret looks for it.",
+   "covers": ["manualDesync","slideStrike","beatSight","catalogue gear"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 14
+  },
+  {
+   "name": "trap-spikes",
+   "file": "trap-spikes.json",
+   "description": "Spikes on a beat window kill a playback self standing on a raised cell (and only there), publish their id to a door and telegraph a beat ahead; always-raised spikes kill a grunt on contact, hit a brute once per beat and clang off a shielder.",
+   "covers": ["TRAPS spikes","trap signals","trap telegraph","HAZARD_RETICK_BEATS","shielder immune to traps"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 25
+  },
+  {
+   "name": "trap-spikes-dodge",
+   "file": "trap-spikes-dodge.json",
+   "description": "A recorded dodge carries a playback self across a quarter-beat spike window; the same path one row down without the dodge dies inside the window.",
+   "covers": ["TRAPS spikes","dodge i-frames vs traps"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 9
+  },
+  {
+   "name": "trap-spikes-live",
+   "file": "trap-spikes-live.json",
+   "description": "Raised spikes kill the live self once; the recording ghost then walks on over them freely.",
+   "covers": ["TRAPS spikes","record","recGhost"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 3
+  },
+  {
+   "name": "trap-crusher-stroke",
+   "file": "trap-crusher-stroke.json",
+   "description": "A piston across the room strokes on its beat window: it crushes the self and the enemies on its cells (drone included), pushes a 5 hp survivor out, only walls off a self beside it, and desyncs a self that dodged the stroke on a cell.",
+   "covers": ["TRAPS crusher","crusher push-out","dodge i-frames vs traps","desync blocked by crusher"],
+   "takes": ["tape","tape","tape"],
+   "win": false,
+   "events": 14
+  },
+  {
+   "name": "trap-crusher-desync-recover",
+   "file": "trap-crusher-desync-recover.json",
+   "description": "A playback self walking into an extended piston desyncs (\"blocked by crusher cr\"); its spark waits at the face and resyncs once the retract completes.",
+   "covers": ["TRAPS crusher","desync blocked by crusher","DESYNC-02..05"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 13
+  },
+  {
+   "name": "trap-crusher-live-hold",
+   "file": "trap-crusher-live-hold.json",
+   "description": "The live self standing in a piston lane is crushed on the stroke and its body is pushed out; the signal returns mid-retract, so the piston re-extends without a second stroke.",
+   "covers": ["TRAPS crusher","crusher:hold","record"],
+   "takes": ["inputs"],
+   "win": false,
+   "events": 8
+  },
+  {
+   "name": "trap-flame",
+   "file": "trap-flame.json",
+   "description": "A flame jet is cut short by a closed door and burns the self behind it the moment another tape opens the door; a second jet stops at an extended crusher and passes a low barrier; a third burns a turret, a drone and a brute once per beat.",
+   "covers": ["TRAPS flame","doors are shields","flame reach","HAZARD_RETICK_BEATS"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 18
+  },
+  {
+   "name": "trap-conveyor",
+   "file": "trap-conveyor.json",
+   "description": "Belts carry a sleeping grunt in master time and reverse on a switch (publishing <id>.rev to a door); turrets, drones and playback selves are never carried; a body is stopped by a wall, not pushed through it; a belt with runWhen stops and starts.",
+   "covers": ["TRAPS conveyor","<id>.rev","trap signals"],
+   "takes": ["tape","tape"],
+   "win": false,
+   "events": 7
+  },
+  {
+   "name": "trap-conveyor-dart-drift",
+   "file": "trap-conveyor-dart-drift.json",
+   "description": "A dart crossing a belt that runs across its lane drifts sideways with the belt without turning.",
+   "covers": ["TRAPS conveyor","TRAPS dart","floor-height projectiles drift"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 3
+  },
+  {
+   "name": "trap-conveyor-live-ride",
+   "file": "trap-conveyor-live-ride.json",
+   "description": "The live self is carried by a belt by what the world moves per local tick (1x take, then a 2x take after a later tape reversed the belt); the rides are baked into the tapes and replay unchanged.",
+   "covers": ["TRAPS conveyor","liveCarry","PlayerController.displace","record","TIME-02"],
+   "takes": ["inputs","tape","inputs"],
+   "win": true,
+   "events": 7
+  },
+  {
+   "name": "trap-bumper",
+   "file": "trap-bumper.json",
+   "description": "Bumpers fire once per rising edge: a grunt is thrown the full power with real knockback, a brute by power / mass, a turret and a recorded self not at all, and a grunt thrown into a wall staggers.",
+   "covers": ["TRAPS bumper","MOM-05","MOM-06","wall slam stagger"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 11
+  },
+  {
+   "name": "trap-bumper-live",
+   "file": "trap-bumper-live.json",
+   "description": "A bumper throws the live self (1x take, then a 2x take standing on the same plate); the flights are recorded as ordinary movement and replay without the plate.",
+   "covers": ["TRAPS bumper","liveCarry","BUMPER_FLIGHT_SUBS","record","TIME-02"],
+   "takes": ["inputs","inputs"],
+   "win": true,
+   "events": 5
+  },
+  {
+   "name": "trap-magnet",
+   "file": "trap-magnet.json",
+   "description": "A magnet drags enemies in range toward its centre at pull / mass and holds them short of it (turret never, a far grunt never, selves never); a beat-driven magnet pulls a drone only while on.",
+   "covers": ["TRAPS magnet"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 2
+  },
+  {
+   "name": "trap-dart",
+   "file": "trap-dart.json",
+   "description": "Dart launchers fire on their beat grids, never aim: the first vulnerable self in a lane is shot and the next dart flies through its ghost to the self behind; darts strike a grunt and then a brute behind it (1 damage each, credited to the launcher); offset and enabledWhen gate a third launcher.",
+   "covers": ["TRAPS dart","dart archetype","trap kills count for eliminate"],
+   "takes": ["tape","tape","tape"],
+   "win": true,
+   "events": 28
+  },
+  {
+   "name": "trap-dart-crusher",
+   "file": "trap-dart-crusher.json",
+   "description": "An extended crusher stops darts at its face and a crusher plugging the muzzle stops the launcher firing at all.",
+   "covers": ["TRAPS dart","TRAPS crusher","muzzle blocked"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 22
+  },
+  {
+   "name": "trap-dart-dodge-parry",
+   "file": "trap-dart-dodge-parry.json",
+   "description": "A dart passes through a self inside recorded dodge i-frames; with parry, a heavy swing turns another launcher's dart like any enemy shot.",
+   "covers": ["TRAPS dart","dodge i-frames vs traps","parry"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 10
+  },
+  {
+   "name": "trap-sensor",
+   "file": "trap-sensor.json",
+   "description": "Beam sensors: a self crossing a beam trips it (and a door on it starts opening that substep); a latched beam stays on; an enemies-only beam ignores the self; a beam cut by a closed door sees the grunt before the door, not the one beyond.",
+   "covers": ["TRAPS sensor","trap signals","latch","detects"],
+   "takes": ["tape"],
+   "win": false,
+   "events": 9
+  },
+  {
+   "name": "trap-sensor-relay-chain",
+   "file": "trap-sensor-relay-chain.json",
+   "description": "A belt carries a grunt through an enemies-only tripwire: the door on the wire starts opening that substep and a relay (quantize 1, delay 1) fires a crusher onto the grunt exactly one beat after the next beat.",
+   "covers": ["TRAPS sensor","TRAPS relay","TRAPS crusher","TRAPS conveyor","chained machines"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 14
+  },
+  {
+   "name": "trap-relay-modes",
+   "file": "trap-relay-modes.json",
+   "description": "Relays turn a switch into a pulse (next beat, one beat), a quantize-2 / delay-1 / half-beat pulse, an immediate quarter-beat pulse, a latch and a toggle; a hold-2 relay ignores triggers while armed or pulsing and publishes <id>.armed; a delay-1 relay gives the crusher it drives a full one-beat telegraph.",
+   "covers": ["TRAPS relay","<id>.armed","relay forecast telegraph"],
+   "takes": ["tape","tape","tape"],
+   "win": true,
+   "events": 51
+  },
+  {
+   "name": "trap-machines-vs-enemies",
+   "file": "trap-machines-vs-enemies.json",
+   "description": "Machines turned against enemies: a belt delivers a sleeping grunt into a recorded swing, and a 0.5x swing too weak to hurt shoves a grunt into a dart lane where the next dart kills it.",
+   "covers": ["TRAPS puzzle uses","MOM-05","trap kills count for eliminate"],
+   "takes": ["tape","tape"],
+   "win": true,
+   "events": 26
+  },
+  {
+   "name": "trap-spikes-hunter",
+   "file": "trap-spikes-hunter.json",
+   "description": "An awake grunt hunting a self walks onto raised spikes and dies: the trap does not care who it is.",
+   "covers": ["TRAPS spikes","TRAPS puzzle uses"],
+   "takes": ["tape"],
+   "win": true,
+   "events": 3
+  },
+  {
+   "name": "trap-gauntlet",
+   "file": "trap-gauntlet.json",
+   "description": "One of every machine with awake enemies in one room; two live takes (1x wandering with every action, then 2x) recorded through the player controller and resolved: everything interacts.",
+   "covers": ["TRAPS all nine kinds","trap determinism","record","liveCarry"],
+   "takes": ["inputs","inputs"],
+   "win": false,
+   "events": 132
+  },
+  {
+   "name": "sandbox-bot-solo",
+   "file": "sandbox-bot-solo.json",
+   "description": "The shipped sandbox level with the baseline loadout: one 1x take opens the gate, clears both grunts and the turret while dodging its bolt (bot inputs, recorded open-loop).",
+   "covers": ["APP-TEST-03","sandbox","catalogue gear","every enemy type (grunt, turret)"],
+   "takes": ["inputs"],
+   "win": true,
+   "events": 27
+  },
+  {
+   "name": "sandbox-bot-two-cassettes",
+   "file": "sandbox-bot-two-cassettes.json",
+   "description": "The sandbox with two cassettes: A (1x) opens the door and holds the plate, B (2x) fights.",
+   "covers": ["APP-TEST-03","sandbox","plates","lasers","record against playback"],
+   "takes": ["inputs","inputs"],
+   "win": true,
+   "events": 38
+  }
+ ]
+}
