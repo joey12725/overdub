@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "level": "sandbox",
+  "note": "One self does everything with the baseline kit: lever, door, both grunts, then the turret from above, dodging its bolt (prototype tests/game/bot.test.ts soloSweep).",
+  "expect": { "win": true, "takes": 1 },
+  "takes": [
+    {
+      "speed": 1,
+      "endMode": "stop",
+      "steps": [
+        { "goto": [3.5, 2.3] },
+        { "interact": true },
+        { "goto": [4.5, 3.5] },
+        { "goto": [7.0, 3.5] },
+        { "goto": [11.5, 3.4] },
+        { "hold": [11.5, 3.4] }
+      ],
+      "reflex": { "dodgeRange": 1.2 }
+    }
+  ]
+}

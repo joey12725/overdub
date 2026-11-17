@@ -1,0 +1,65 @@
+{
+ "id": "static_spray",
+ "kind": "ranged",
+ "style": "boombox",
+ "hands": 0,
+ "tris": {
+  "Weapon": 3930
+ },
+ "tris_total": 3930,
+ "bounds_min": [
+  -0.144,
+  -0.0847,
+  -0.147
+ ],
+ "bounds_max": [
+  0.1219,
+  0.226,
+  0.227
+ ],
+ "size": [
+  0.2659,
+  0.3107,
+  0.374
+ ],
+ "empties": {
+  "Mount": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Muzzle": {
+   "pos": [
+    0.0,
+    0.052,
+    0.23
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_accent2",
+  "weapon_black",
+  "weapon_copper",
+  "weapon_dark",
+  "weapon_glow",
+  "weapon_hot_glow",
+  "weapon_main",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_steel"
+ ],
+ "bones": []
+}

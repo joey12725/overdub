@@ -1,0 +1,5 @@
+_blender_user/
+_dl/
+__pycache__/
+*.blend1
+_stage/

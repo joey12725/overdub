@@ -1,0 +1,411 @@
+{
+ "format": 1,
+ "name": "desync-scenario-j-control",
+ "description": "Scenario J control: without desync the turret kills the crossing tape in its lane.",
+ "covers": ["Scenario J","TEST-17"],
+ "level": {
+  "id": "test-level",
+  "index": 0,
+  "name": "Test Level",
+  "tagline": "A level built by a test.",
+  "theme": "upper",
+  "bpm": 120,
+  "maxTapes": 4,
+  "endModes": ["stop","repeat","reverse"],
+  "entities": [
+   {"kind":"switch","id":"sw","x":1.5,"y":1.5},
+   {"kind":"door","id":"d1","cells":[{"c":5,"r":3}],"openWhen":{"not":{"sig":"sw"}}},
+   {"kind":"enemy","id":"t1","type":"turret","x":8.5,"y":5,"facing":3.141592653589793,"arc":3.141592653589793}
+  ],
+  "objective": {"type":"eliminate","targets":["t1"],"text":"Destroy the turret"},
+  "music": {
+   "root": 9,
+   "scale": "Minor",
+   "progression": [0,5,2,6],
+   "chordBars": 1,
+   "tracks": [{"role":"bass","formula":"triangular"},{"role":"drums","formula":"ruler"},{"role":"melody","formula":"recaman"},{"role":"chord","formula":"squares"}]
+  },
+  "loot": [],
+  "briefing": [],
+  "startFacing": 0,
+  "speeds": [1],
+  "bars": 4,
+  "map": ["################","#..............#","#..............#","#####.######...#","#..............#","#..............#","################"],
+  "start": {"x":2.5,"y":1.5},
+  "horizonBars": 4
+ },
+ "loadout": {
+  "gear": null,
+  "resolved": {
+   "loadout": {"helmet":"base-helmet","top":"base-top","pants":"base-pants","shoes":"base-shoes","melee":"base-melee","ranged":"base-missile"},
+   "mods": {
+    "moveSpeed": 1,
+    "accel": 1,
+    "momentumRetention": 1,
+    "dodgeDistance": 1,
+    "dodgeIframes": 1,
+    "dodgeCooldown": 1,
+    "meleeImpact": 1,
+    "damage": 1,
+    "knockback": 1,
+    "knockbackCap": 1,
+    "stagger": 1,
+    "approachBonus": 1,
+    "sparkSpeed": 1,
+    "interactRadiusAdd": 0,
+    "projectileSpeed": 1,
+    "rangedCooldown": 1
+   },
+   "abilities": [],
+   "melee": {
+    "reach": 1.1,
+    "arcDeg": 110,
+    "light": {"windup":6,"active":4,"recover":10,"impact":1.2,"moveMul":0.5},
+    "heavy": {"windup":16,"active":5,"recover":18,"impact":2,"moveMul":0.25},
+    "damageEff": 1,
+    "knockbackEff": 1,
+    "staggerEff": 1,
+    "style": "blade"
+   },
+   "ranged": {"archetype":"missile","speed":2.5,"range":14,"impact":1.2,"commit":12,"cooldown":45,"pierce":0,"passesWalls":false,"lobbed":false,"count":1,"spreadDeg":0,"turnRate":2.5,"blast":0}
+  }
+ },
+ "bossMemoryFrom": null,
+ "takes": [
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 0,
+    "speed": 1,
+    "endMode": "stop",
+    "ticks": 480,
+    "pos": "AAAgQAAAwD/FJSNAAADAP4pLJkAAAMA/UHEpQAAAwD8VlyxAAADAP9q8L0AAAMA/n+IyQAAAwD9lCDZAAADAPyouOUAAAMA/71M8QAAAwD+0eT9AAADAP3qfQkAAAMA/P8VFQAAAwD8E60hAAADAP8kQTEAAAMA/jzZPQAAAwD9UXFJAAADAPxmCVUAAAMA/3qdYQAAAwD+kzVtAAADAP2nzXkAAAMA/LhliQAAAwD/zPmVAAADAP7lkaEAAAMA/foprQAAAwD9DsG5AAADAPwjWcUAAAMA/zvt0QAAAwD+TIXhAAADAP1hHe0AAAMA/HW1+QAAAwD9xyYBAAADAP1RcgkAAAMA/N++DQAAAwD8ZgoVAAADAP/wUh0AAAMA/3qeIQAAAwD/BOopAAADAP6TNi0AAAMA/hmCNQAAAwD9p845AAADAP0yGkEAAAMA/LhmSQAAAwD8RrJNAAADAP/M+lUAAAMA/1tGWQAAAwD+5ZJhAAADAP5v3mUAAAMA/foqbQAAAwD9hHZ1AAADAP0OwnkAAAMA/JkOgQAAAwD8I1qFAAADAP+too0AAAMA/zvukQAAAwD+wjqZAAADAP5MhqEAAAMA/drSpQAAAwD9YR6tAAADAPzvarEAAAMA/HW2uQAAAwD8AALBAAADAPwAAsECMMcY/AACwQBljzD8AALBApZTSPwAAsEAyxtg/AACwQL733j8AALBASinlPwAAsEDXWus/AACwQGOM8T8AALBA7733PwAAsEB87/0/AACwQIQQAkAAALBASikFQAAAsEARQghAAACwQNdaC0AAALBAnXMOQAAAsEBjjBFAAACwQCmlFEAAALBA770XQAAAsEC21hpAAACwQHzvHUAAALBAQgghQAAAsEAIISRAAACwQM45J0AAALBAlVIqQAAAsEBbay1AAACwQCGEMEAAALBA55wzQAAAsECttTZAAACwQHTOOUAAALBAOuc8QAAAsEAAAEBAAACwQMYYQ0AAALBAjDFGQAAAsEBTSklAAACwQBljTEAAALBA33tPQAAAsECllFJAAACwQGutVUAAALBAMsZYQAAAsED43ltAAACwQL73XkAAALBAhBBiQAAAsEBKKWVAAACwQBFCaEAAALBA11prQAAAsECdc25AAACwQGOMcUAAALBAKaV0QAAAsEDvvXdAAACwQLbWekAAALBAfO99QAAAsEAhhIBAAACwQIQQgkAAALBA55yDQAAAsEBKKYVAAACwQK21hkAAALBAEUKIQAAAsEB0zolAAACwQNdai0AAALBAOueMQAAAsECdc45AAACwQAAAkEDHS7NAAACQQI2XtkAAAJBAVOO5QAAAkEAbL71AAACQQOF6wEAAAJBAqMbDQAAAkEBvEsdAAACQQDVeykAAAJBA/KnNQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBAw/XQQAAAkEDD9dBAAACQQMP10EAAAJBA65jSQFnyj0ATPNRAseSPQDvf1UAK149AZILXQGPJj0CMJdlAvLuPQLTI2kAUro9A3WvcQG2gj0AFD95AxpKPQC2y30AfhY9AVVXhQHd3j0B++OJA0GmPQKab5EApXI9Azj7mQIJOj0D24edA2kCPQB+F6UAzM49ARyjrQIwlj0Bvy+xA5RePQJhu7kA9Co9AwBHwQJb8jkDotPFA7+6OQBBY80BI4Y5AOfv0QKDTjkBhnvZA+cWOQIlB+EBSuI5AseT5QKuqjkDah/tAA52OQAIr/UBcj45AKs7+QLWBjkCpOABBDnSOQD0KAUFmZo5A0tsBQb9YjkBmrQJBGEuOQPp+A0FxPY5AjlAEQckvjkAiIgVBIiKOQLbzBUF7FI5ASsUGQdQGjkDflgdBLPmNQHNoCEGF641ABzoJQd7djUCbCwpBN9CNQC/dCkGPwo1Aw64LQei0jUBXgAxBQaeNQOxRDUGamY1AgCMOQfKLjUAU9Q5BS36NQKjGD0GkcI1APJgQQf1ijUDQaRFBVVWNQGQ7EkGuR41A+AwTQQc6jUCN3hNBYCyNQCGwFEG4Ho1AtYEVQRERjUBJUxZBagONQN0kF0HD9YxAcfYXQRvojEAFyBhBdNqMQJqZGUHNzIxAmpkZQVK4jkCamRlB16OQQJqZGUFcj5JAmpkZQeF6lECamRlBZmaWQJqZGUHsUZhAmpkZQXE9mkCamRlB9iicQJqZGUF7FJ5AmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoECamRlBAACgQJqZGUEAAKBAmpkZQQAAoEA=",
+    "facing": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANsPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdXQW94GYFvR1dBb3MXAW9HV0FveBmBb3MXAW9HV0FvR1dBb3gZgW9zFwFvR1dBb0dXQW94GYFvcxcBb0dXQW9HV0FvY9mBb0dXQW9HV0FvR1dBb2PZgW9HV0FvR1dBb0dXQW9j2YFvR1dBb0dXQW9HV0FveBmBb16XAW9HV0FvR1dBb3gZgW9HV0FvR1dBb0dXQW9PWYFvR1dBb0dXQW9HV0FveBmBb0dXQW9HV0FvXpcBb3gZgW9HV0FvR1dBb0dXQW94GYFvR1dBb0dXQW9elwFveBmBb0dXQW9HV0FvR1dBb3gZgW9HV0FvXpcBb3bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JPw==",
+    "anim": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": [[400,0,3.141592653589793,9.600000381469727,5,0,0]]
+   }
+  }
+ ],
+ "expected": {
+  "recordings": [],
+  "resolution": {
+   "bossMemory": null,
+   "horizonSubs": 1920,
+   "outcome": {"win":false,"objectiveComplete":false,"survivors":[],"reason":"objective","notes":["Objective not complete: Destroy the turret. Still standing: turret t1.","Tape A died at beat 6.33: shot by turret t1."]},
+   "events": [
+    {"sub":69,"type":"step","x":3.3607,"y":1.5,"tape":0,"detail":"alive"},
+    {"sub":138,"type":"step","x":4.209,"y":1.5,"tape":0,"detail":"alive"},
+    {"sub":207,"type":"step","x":5.0574,"y":1.5,"tape":0,"detail":"alive"},
+    {"sub":277,"type":"step","x":5.5,"y":1.9113,"tape":0,"detail":"alive"},
+    {"sub":347,"type":"step","x":5.5,"y":2.7581,"tape":0,"detail":"alive"},
+    {"sub":417,"type":"step","x":5.5,"y":3.6048,"tape":0,"detail":"alive"},
+    {"sub":487,"type":"step","x":5.5,"y":4.4516,"tape":0,"detail":"alive"},
+    {"sub":523,"type":"step","x":6.324,"y":4.5,"tape":0,"detail":"alive"},
+    {"sub":600,"type":"enemyTelegraph","x":8.5,"y":5,"tape":0,"id":"t1","dir":-2.893,"detail":"bolt"},
+    {"sub":720,"type":"enemyShot","x":8.5,"y":5,"tape":0,"id":"t1","dir":-2.893,"detail":"bolt"},
+    {"sub":760,"type":"projectileHit","x":6.9662,"y":4.6107,"tape":0,"dir":-2.893,"detail":"bolt"},
+    {"sub":760,"type":"selfDeath","x":6.53,"y":4.5,"tape":0,"dir":-2.893,"detail":"shot by turret t1"}
+   ],
+   "snapshots": [
+    {
+     "sub": 0,
+     "beat": 0,
+     "actors": [{"tape":0,"live":false,"x":2.5,"y":1.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 60,
+     "beat": 0.5,
+     "actors": [{"tape":0,"live":false,"x":3.2377,"y":1.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 120,
+     "beat": 1,
+     "actors": [{"tape":0,"live":false,"x":3.9754,"y":1.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 180,
+     "beat": 1.5,
+     "actors": [{"tape":0,"live":false,"x":4.7131,"y":1.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 240,
+     "beat": 2,
+     "actors": [{"tape":0,"live":false,"x":5.4508,"y":1.5,"facing":0,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 300,
+     "beat": 2.5,
+     "actors": [{"tape":0,"live":false,"x":5.5,"y":2.1774,"facing":1.5708,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 360,
+     "beat": 3,
+     "actors": [{"tape":0,"live":false,"x":5.5,"y":2.9032,"facing":1.5708,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 420,
+     "beat": 3.5,
+     "actors": [{"tape":0,"live":false,"x":5.5,"y":3.629,"facing":1.5708,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 480,
+     "beat": 4,
+     "actors": [{"tape":0,"live":false,"x":5.5,"y":4.3548,"facing":1.5708,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":120,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 540,
+     "beat": 4.5,
+     "actors": [{"tape":0,"live":false,"x":6.53,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":135,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 600,
+     "beat": 5,
+     "actors": [{"tape":0,"live":false,"x":6.53,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":150,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 660,
+     "beat": 5.5,
+     "actors": [{"tape":0,"live":false,"x":6.53,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":165,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"telegraph","target":0}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 720,
+     "beat": 6,
+     "actors": [{"tape":0,"live":false,"x":6.53,"y":4.5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":180,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"telegraph","target":0}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 780,
+     "beat": 6.5,
+     "actors": [{"tape":0,"live":false,"x":6.53,"y":4.5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":195,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 840,
+     "beat": 7,
+     "actors": [{"tape":0,"live":false,"x":7.0417,"y":4.4833,"facing":-0.0326,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":210,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 900,
+     "beat": 7.5,
+     "actors": [{"tape":0,"live":false,"x":7.8092,"y":4.4583,"facing":-0.0326,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":225,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 960,
+     "beat": 8,
+     "actors": [{"tape":0,"live":false,"x":8.5767,"y":4.4333,"facing":-0.0326,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":240,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1020,
+     "beat": 8.5,
+     "actors": [{"tape":0,"live":false,"x":9.3442,"y":4.4083,"facing":-0.0326,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":255,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1080,
+     "beat": 9,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":270,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1140,
+     "beat": 9.5,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":285,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1200,
+     "beat": 10,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":300,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1260,
+     "beat": 10.5,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":315,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1320,
+     "beat": 11,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":330,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1380,
+     "beat": 11.5,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":345,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1440,
+     "beat": 12,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":360,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1500,
+     "beat": 12.5,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":375,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1560,
+     "beat": 13,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":390,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1620,
+     "beat": 13.5,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":405,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1680,
+     "beat": 14,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":420,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1740,
+     "beat": 14.5,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":435,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1800,
+     "beat": 15,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":450,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1860,
+     "beat": 15.5,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":465,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1920,
+     "beat": 16,
+     "actors": [{"tape":0,"live":false,"x":9.6,"y":5,"facing":1.5708,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":480,"dir":0,"traversal":1,"ended":true}}],
+     "enemies": [{"id":"t1","type":"turret","x":8.5,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":true,"t":1}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    }
+   ]
+  }
+ }
+}

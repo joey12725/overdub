@@ -1,0 +1,87 @@
+{
+  "id": "05-dead-air",
+  "index": 5,
+  "name": "Dead Air",
+  "tagline": "Four jobs. Three cassettes. One of you works a double shift, dead.",
+  "theme": "mid",
+  "bpm": 120,
+  "bars": 8,
+  "horizonBars": 8,
+  "maxTapes": 3,
+  "speeds": [0.5, 1, 2],
+  "endModes": ["stop"],
+  "map": [
+    "####################",
+    "#....#~......##.~~.#",
+    "#....:.......##....#",
+    "#....#=======#    .#",
+    "#,...#.......#    .#",
+    "#....#.......#####.#",
+    "#....#.......::::..#",
+    "#....#.......::::..#",
+    "#,...........#######",
+    "#,,..#......,#######",
+    "####################"
+  ],
+  "start": { "x": 2.5, "y": 4.5 },
+  "startFacing": 0,
+  "entities": [
+    { "kind": "plate", "id": "key_w", "c": 6, "r": 5 },
+    { "kind": "plate", "id": "key_e", "c": 10, "r": 5 },
+    { "kind": "door", "id": "gate", "cells": [{ "c": 5, "r": 2 }], "openWhen": { "and": [{ "sig": "key_w" }, { "sig": "key_e" }] } },
+    { "kind": "enemy", "id": "sentry", "type": "turret", "x": 9.5, "y": 2.5, "facing": 1.5707963267948966, "arc": 2.6, "beat": { "every": 8, "offset": 3 } },
+    { "kind": "plate", "id": "mute", "c": 11, "r": 1 },
+    { "kind": "laser", "id": "static1", "from": { "x": 14.5, "y": 5.5 }, "to": { "x": 14.5, "y": 8.5 }, "onWhen": { "not": { "sig": "mute" } } },
+    { "kind": "laser", "id": "static2", "from": { "x": 15.5, "y": 5.5 }, "to": { "x": 15.5, "y": 8.5 }, "onWhen": { "not": { "sig": "mute" } } },
+    { "kind": "laser", "id": "static3", "from": { "x": 16.5, "y": 5.5 }, "to": { "x": 16.5, "y": 8.5 }, "onWhen": { "not": { "sig": "mute" } } },
+    { "kind": "laser", "id": "static4", "from": { "x": 14.5, "y": 6.5 }, "to": { "x": 16.5, "y": 6.5 }, "onWhen": { "not": { "sig": "mute" } } },
+    { "kind": "laser", "id": "static5", "from": { "x": 14.5, "y": 7.5 }, "to": { "x": 16.5, "y": 7.5 }, "onWhen": { "not": { "sig": "mute" } } },
+    { "kind": "breakable", "id": "booth_wall", "c": 18, "r": 3, "threshold": 1.6 },
+    { "kind": "switch", "id": "on_air", "x": 16.5, "y": 1.5 },
+
+    { "kind": "decor", "type": "graffiti", "x": 16.5, "y": 0.6, "variant": "ON AIR" },
+    { "kind": "decor", "type": "graffiti", "x": 9.5, "y": 9.6, "variant": "DEAD AIR" },
+    { "kind": "decor", "type": "graffiti", "x": 2.5, "y": 0.6, "variant": "2 KEYS" },
+    { "kind": "decor", "type": "waveScreen", "x": 17.5, "y": 0.7 },
+    { "kind": "decor", "type": "console", "x": 15.5, "y": 0.7 },
+    { "kind": "decor", "type": "cable", "x": 13.5, "y": 1.5, "rot": 1 },
+    { "kind": "decor", "type": "cable", "x": 15.5, "y": 5.6 },
+    { "kind": "decor", "type": "generator", "x": 7.5, "y": 0.6 },
+    { "kind": "decor", "type": "neon", "x": 15.5, "y": 5.4, "variant": "magenta" },
+    { "kind": "decor", "type": "runePanel", "x": 5.5, "y": 0.7 },
+    { "kind": "decor", "type": "pipe", "x": 3.5, "y": 0.6, "rot": 1 },
+    { "kind": "decor", "type": "pipe", "x": 0.6, "y": 6.5 },
+    { "kind": "decor", "type": "vent", "x": 12.4, "y": 9.4 },
+    { "kind": "decor", "type": "crate", "x": 1.4, "y": 1.4 },
+    { "kind": "decor", "type": "crate", "x": 12.4, "y": 4.4 },
+    { "kind": "decor", "type": "barrel", "x": 6.4, "y": 9.4 },
+    { "kind": "decor", "type": "vines", "x": 1.3, "y": 9.4 },
+    { "kind": "decor", "type": "vines", "x": 1.2, "y": 4.4 },
+    { "kind": "decor", "type": "rubble", "x": 18.75, "y": 4.2 },
+    { "kind": "decor", "type": "lamp", "x": 0.6, "y": 2.5 },
+    { "kind": "decor", "type": "lamp", "x": 13.4, "y": 9.4 }
+  ],
+  "objective": { "type": "signal", "when": { "sig": "on_air" }, "text": "Throw the ON AIR switch" },
+  "music": {
+    "root": 11,
+    "scale": "Minor",
+    "progression": [0, 4, 3, 0],
+    "chordBars": 2,
+    "tracks": [
+      {"role": "bass", "formula": "recaman", "params": {"contour": 0.4, "cycle": 8, "rate": 1, "pulses": 3, "steps": 7}},
+      {"role": "melody", "formula": "primes", "params": {"m": 11, "contour": 0.6, "gravity": 0.5, "cycle": 8, "register": 1, "pulses": 4, "steps": 7}},
+      {"role": "chord", "formula": "cardioid", "params": {"rate": 4}},
+      {"role": "drums", "formula": "logistic", "genre": "Trap", "params": {"r": 3.83, "threshold": 0.6, "density": 0.5, "rate": 0.25}}
+    ]
+  },
+  "loot": ["static_spray", "click_visor", "slick_sliders"],
+  "briefing": [
+    "Both floor keys down opens the gate. The pad behind the gate mutes the lasers. The switch is past the lasers.",
+    "That is four jobs and you own three cassettes. The sentry shoots whoever stands nearest, once every two bars.",
+    "Getting shot does not stop the tape. A dead take keeps recording, and none of it counts unless a later take keeps her alive."
+  ],
+  "hints": {
+    "1": "If the deck says DEAD you are still recording. Lasers and bolts pass through a ghost; walls do not.",
+    "3": "Watch the ruler: an earlier take's death mark moves, or vanishes, when you change what killed her."
+  }
+}

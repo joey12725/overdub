@@ -1,0 +1,56 @@
+{
+ "id": "shock",
+ "kind": "projectile",
+ "style": "",
+ "hands": 0,
+ "tris": {
+  "Projectile": 288
+ },
+ "tris_total": 288,
+ "bounds_min": [
+  -0.2758,
+  -0.04,
+  -0.1697
+ ],
+ "bounds_max": [
+  0.2758,
+  0.04,
+  0.08
+ ],
+ "size": [
+  0.5516,
+  0.08,
+  0.2497
+ ],
+ "empties": {
+  "Nose": {
+   "pos": [
+    0.0,
+    0.0,
+    0.08
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Tail": {
+   "pos": [
+    0.0,
+    0.0,
+    -0.1
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "shock_dark",
+  "shock_glow"
+ ],
+ "bones": []
+}

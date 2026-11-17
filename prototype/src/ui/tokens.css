@@ -1,0 +1,44 @@
+/* OVERDUB UI design tokens. Shared by the HUD (src/ui/hud) and menus (src/ui/menus). */
+:root {
+  /* cassette identities — must match TAPE_COLORS in src/core/types.ts */
+  --tape-a: #ff4d6d;
+  --tape-b: #ffd23f;
+  --tape-c: #3ec5ff;
+  --tape-d: #7dff6b;
+
+  /* Moxie's palette */
+  --moxie-yellow: #ffd23f;
+  --ink: #14110f;
+  --ink-soft: #2a2420;
+  --paper: #f3ead8;
+  --paper-dim: #c9bfa9;
+  --olive: #6b6a3a;
+  --rust: #d9662b;
+  --graffiti-pink: #ff4fa3;
+  --graffiti-violet: #a25bff;
+  --neon-cyan: #4ff3ff;
+
+  /* state colours */
+  --state-dead: #9aa3b5;
+  --state-desync: #c98bff;
+  --state-good: #7dff6b;
+  --state-warn: #ffb347;
+  --state-bad: #ff4d6d;
+
+  --panel: rgba(20, 17, 15, 0.86);
+  --panel-edge: rgba(243, 234, 216, 0.16);
+  --panel-solid: #1b1714;
+
+  --font-display: 'Bungee', 'Arial Black', 'Impact', system-ui, sans-serif;
+  --font-ui: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Mono', 'Consolas', monospace;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --gap: 12px;
+  --hud-pad: 16px;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --z-hud: 10;
+  --z-menu: 20;
+  --z-overlay: 30;
+}

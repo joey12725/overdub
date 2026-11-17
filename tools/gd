@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+# Serialised access to Godot for a shared checkout. Several engineers (and agents) work in this
+# repo at once; Godot's .godot/ cache does not tolerate concurrent imports, so every headless Godot
+# invocation goes through this wrapper, which holds a lock for its duration.
+#
+#   bash tools/gd import                 refresh the import + class_name cache
+#   bash tools/gd test [filter]          import, then run tests whose path contains <filter>
+#   bash tools/gd script <res://x.gd> [args...]   import, then run a SceneTree script headless
+#   bash tools/gd shot <res://x.gd> [args...]     run a script WINDOWED (needs a GPU; for screenshots)
+#   bash tools/gd raw <godot args...>    anything else, under the lock
+#
+# GODOT can override the executable path.
+set -u
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+if [ -z "${GODOT:-}" ]; then
+  for c in godot_console.exe godot4 godot "$HOME/.t3/tools/godot/godot_console.exe"; do
+    if command -v "$c" >/dev/null 2>&1; then GODOT="$c"; break; fi
+  done
+fi
+if [ -z "${GODOT:-}" ]; then
+  echo "[gd] Godot 4.4 not found: put godot4 / godot on PATH or set GODOT=/path/to/godot" >&2
+  exit 2
+fi
+LOCK="$ROOT/.godot-lock"
+STALE_SECONDS=900
+
+acquire() {
+  local waited=0
+  while ! mkdir "$LOCK" 2>/dev/null; do
+    local age=0
+    if [ -d "$LOCK" ]; then
+      age=$(( $(date +%s) - $(stat -c %Y "$LOCK" 2>/dev/null || date +%s) ))
+    fi
+    if [ "$age" -gt "$STALE_SECONDS" ]; then
+      rmdir "$LOCK" 2>/dev/null || rm -rf "$LOCK"
+      continue
+    fi
+    sleep 1
+    waited=$((waited + 1))
+    if [ $((waited % 30)) -eq 0 ]; then echo "[gd] waiting for the Godot lock (${waited}s)..." >&2; fi
+  done
+  trap 'rmdir "$LOCK" 2>/dev/null' EXIT INT TERM
+}
+
+import() {
+  # Two passes: the first registers new class_names, the second resolves scripts that use them.
+  "$GODOT" --headless --path "$ROOT" --import >/dev/null 2>&1
+  "$GODOT" --headless --path "$ROOT" --import 2>&1 | grep -E "SCRIPT ERROR|Parse Error|ERROR: Failed" | head -40
+  return 0
+}
+
+cmd="${1:-}"
+[ $# -gt 0 ] && shift
+acquire
+case "$cmd" in
+  import)
+    import
+    ;;
+  test)
+    import
+    "$GODOT" --headless --path "$ROOT" -s res://tests/run_tests.gd -- "$@"
+    ;;
+  script)
+    import
+    script="$1"; shift
+    "$GODOT" --headless --path "$ROOT" -s "$script" -- "$@"
+    ;;
+  shot)
+    import
+    script="$1"; shift
+    "$GODOT" --path "$ROOT" --resolution 1600x900 --position 40,40 -s "$script" -- "$@"
+    ;;
+  raw)
+    "$GODOT" --path "$ROOT" "$@"
+    ;;
+  *)
+    echo "usage: bash tools/gd {import|test [filter]|script <res://x.gd> [args]|shot <res://x.gd> [args]|raw <args>}" >&2
+    exit 2
+    ;;
+esac

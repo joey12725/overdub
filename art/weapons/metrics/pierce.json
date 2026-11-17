@@ -1,0 +1,59 @@
+{
+ "id": "pierce",
+ "kind": "projectile",
+ "style": "",
+ "hands": 0,
+ "tris": {
+  "Projectile": 276
+ },
+ "tris_total": 276,
+ "bounds_min": [
+  -0.0233,
+  -0.0175,
+  -0.27
+ ],
+ "bounds_max": [
+  0.0233,
+  0.026,
+  0.305
+ ],
+ "size": [
+  0.0465,
+  0.0435,
+  0.575
+ ],
+ "empties": {
+  "Nose": {
+   "pos": [
+    0.0,
+    0.0,
+    0.305
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Tail": {
+   "pos": [
+    0.0,
+    0.0,
+    -0.27
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_accent2",
+  "weapon_glow",
+  "weapon_metal",
+  "weapon_steel"
+ ],
+ "bones": []
+}

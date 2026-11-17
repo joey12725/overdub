@@ -1,0 +1,529 @@
+{
+ "format": 1,
+ "name": "enemy-stalker-farthest",
+ "description": "A stalker hunts the FARTHEST self past a nearer one, kills it on its beat grid, then re-picks the survivor.",
+ "covers": ["AI-01","AI-02","AI-07","stalker"],
+ "level": {
+  "id": "test-level",
+  "index": 0,
+  "name": "Test Level",
+  "tagline": "A level built by a test.",
+  "theme": "upper",
+  "bpm": 120,
+  "maxTapes": 4,
+  "endModes": ["stop","repeat","reverse"],
+  "entities": [{"kind":"enemy","id":"s1","type":"stalker","x":6,"y":5,"wakeWhen":{"beat":{"every":1000,"from":1,"to":1000}}}],
+  "objective": {"type":"eliminate","text":"Test objective"},
+  "music": {
+   "root": 9,
+   "scale": "Minor",
+   "progression": [0,5,2,6],
+   "chordBars": 1,
+   "tracks": [{"role":"bass","formula":"triangular"},{"role":"drums","formula":"ruler"},{"role":"melody","formula":"recaman"},{"role":"chord","formula":"squares"}]
+  },
+  "loot": [],
+  "briefing": [],
+  "startFacing": 0,
+  "speeds": [1],
+  "bars": 4,
+  "start": {"x":2,"y":5},
+  "horizonBars": 4,
+  "map": ["############","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","############"]
+ },
+ "loadout": {
+  "gear": null,
+  "resolved": {
+   "loadout": {"helmet":"base-helmet","top":"base-top","pants":"base-pants","shoes":"base-shoes","melee":"base-melee","ranged":"base-missile"},
+   "mods": {
+    "moveSpeed": 1,
+    "accel": 1,
+    "momentumRetention": 1,
+    "dodgeDistance": 1,
+    "dodgeIframes": 1,
+    "dodgeCooldown": 1,
+    "meleeImpact": 1,
+    "damage": 1,
+    "knockback": 1,
+    "knockbackCap": 1,
+    "stagger": 1,
+    "approachBonus": 1,
+    "sparkSpeed": 1,
+    "interactRadiusAdd": 0,
+    "projectileSpeed": 1,
+    "rangedCooldown": 1
+   },
+   "abilities": [],
+   "melee": {
+    "reach": 1.1,
+    "arcDeg": 110,
+    "light": {"windup":6,"active":4,"recover":10,"impact":1.2,"moveMul":0.5},
+    "heavy": {"windup":16,"active":5,"recover":18,"impact":2,"moveMul":0.25},
+    "damageEff": 1,
+    "knockbackEff": 1,
+    "staggerEff": 1,
+    "style": "blade"
+   },
+   "ranged": {"archetype":"missile","speed":2.5,"range":14,"impact":1.2,"commit":12,"cooldown":45,"pierce":0,"passesWalls":false,"lobbed":false,"count":1,"spreadDeg":0,"turnRate":2.5,"blast":0}
+  }
+ },
+ "bossMemoryFrom": null,
+ "takes": [
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 0,
+    "speed": 1,
+    "endMode": "stop",
+    "ticks": 480,
+    "pos": "AAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEAAAABAAACgQAAAAEAAAKBAAAAAQAAAoEA=",
+    "facing": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "anim": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": []
+   }
+  },
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 1,
+    "speed": 1,
+    "endMode": "stop",
+    "ticks": 480,
+    "pos": "AAAAQAAAoECamRlAzcykQDMzM0CamalAzcxMQGZmrkBmZmZAMzOzQAAAgEAAALhAzcyMQM3MvECamZlAmpnBQGZmpkBmZsZAMzOzQDMzy0AAAMBAAADQQM3MzEDNzNRAmpnZQJqZ2UBmZuZAZmbeQDMz80AzM+NAAAAAQQAA6EBmZgZBzczsQM3MDEGamfFAMzMTQWZm9kCamRlBMzP7QAAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEEAACBBAAAAQQAAIEEAAABBAAAgQQAAAEE=",
+    "facing": "zrC3PtWwtz6rsLc+1bC3Ps6wtz7OsLc+zrC3Prmwtz7OsLc+zrC3Ps6wtz7OsLc+ubC3Ps6wtz7OsLc+3LC3PsGwtz65sLc+wbC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Ptywtz7csLc+3LC3Pg==",
+    "anim": "AQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": []
+   }
+  }
+ ],
+ "expected": {
+  "recordings": [],
+  "resolution": {
+   "bossMemory": null,
+   "horizonSubs": 1920,
+   "outcome": {
+    "win": false,
+    "objectiveComplete": false,
+    "survivors": [],
+    "reason": "objective",
+    "notes": ["Objective not complete: Test objective. Still standing: stalker s1.","Tape B died at beat 5: struck by stalker s1.","Tape A died at beat 11: struck by stalker s1."]
+   },
+   "events": [
+    {"sub":7,"type":"step","x":2.8,"y":5.3,"tape":1,"detail":"alive"},
+    {"sub":15,"type":"step","x":3.6,"y":5.6,"tape":1,"detail":"alive"},
+    {"sub":23,"type":"step","x":4.4,"y":5.9,"tape":1,"detail":"alive"},
+    {"sub":31,"type":"step","x":5.2,"y":6.2,"tape":1,"detail":"alive"},
+    {"sub":39,"type":"step","x":6,"y":6.5,"tape":1,"detail":"alive"},
+    {"sub":47,"type":"step","x":6.8,"y":6.8,"tape":1,"detail":"alive"},
+    {"sub":55,"type":"step","x":7.6,"y":7.1,"tape":1,"detail":"alive"},
+    {"sub":63,"type":"step","x":8.4,"y":7.4,"tape":1,"detail":"alive"},
+    {"sub":71,"type":"step","x":9.2,"y":7.7,"tape":1,"detail":"alive"},
+    {"sub":540,"type":"enemyTelegraph","x":9.568,"y":7.676,"tape":1,"id":"s1","dir":0.6435,"detail":"lunge"},
+    {"sub":600,"type":"enemyAttack","x":9.568,"y":7.676,"id":"s1","dir":0.6435,"detail":"lunge"},
+    {"sub":600,"type":"selfDeath","x":10,"y":8,"tape":1,"dir":0.6435,"detail":"struck by stalker s1"},
+    {"sub":1260,"type":"enemyTelegraph","x":2.5091,"y":5.18,"tape":0,"id":"s1","dir":-2.8017,"detail":"lunge"},
+    {"sub":1320,"type":"enemyAttack","x":2.5091,"y":5.18,"id":"s1","dir":-2.8017,"detail":"lunge"},
+    {"sub":1320,"type":"selfDeath","x":2,"y":5,"tape":0,"dir":-2.8017,"detail":"struck by stalker s1"}
+   ],
+   "snapshots": [
+    {
+     "sub": 0,
+     "beat": 0,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":2,"y":5,"facing":0.3588,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":6,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"asleep"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 60,
+     "beat": 0.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":8,"y":7.25,"facing":0.3588,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":6,"y":5,"hp":1,"maxHp":1,"alive":true,"state":"asleep"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 120,
+     "beat": 1,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":6.012,"y":5.009,"hp":1,"maxHp":1,"alive":true,"state":"move","target":1}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 180,
+     "beat": 1.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":6.732,"y":5.549,"hp":1,"maxHp":1,"alive":true,"state":"move","target":1}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 240,
+     "beat": 2,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":7.452,"y":6.089,"hp":1,"maxHp":1,"alive":true,"state":"move","target":1}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 300,
+     "beat": 2.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":8.172,"y":6.629,"hp":1,"maxHp":1,"alive":true,"state":"move","target":1}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 360,
+     "beat": 3,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":8.892,"y":7.169,"hp":1,"maxHp":1,"alive":true,"state":"move","target":1}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 420,
+     "beat": 3.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":9.568,"y":7.676,"hp":1,"maxHp":1,"alive":true,"state":"idle","target":1}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 480,
+     "beat": 4,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":120,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":120,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":9.568,"y":7.676,"hp":1,"maxHp":1,"alive":true,"state":"idle","target":1}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 540,
+     "beat": 4.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":135,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":135,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":9.568,"y":7.676,"hp":1,"maxHp":1,"alive":true,"state":"idle","target":1}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 600,
+     "beat": 5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":150,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":150,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":9.568,"y":7.676,"hp":1,"maxHp":1,"alive":true,"state":"telegraph","target":1}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":2}
+    },
+    {
+     "sub": 660,
+     "beat": 5.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":165,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":165,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":9.1437,"y":7.526,"hp":1,"maxHp":1,"alive":true,"state":"move","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 720,
+     "beat": 6,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":180,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":180,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":8.2952,"y":7.226,"hp":1,"maxHp":1,"alive":true,"state":"move","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 780,
+     "beat": 6.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":195,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":195,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":7.4467,"y":6.9259,"hp":1,"maxHp":1,"alive":true,"state":"move","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 840,
+     "beat": 7,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":210,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":210,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":6.5982,"y":6.6259,"hp":1,"maxHp":1,"alive":true,"state":"move","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 900,
+     "beat": 7.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":225,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":225,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":5.7497,"y":6.3259,"hp":1,"maxHp":1,"alive":true,"state":"move","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 960,
+     "beat": 8,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":240,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":240,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":4.9012,"y":6.0258,"hp":1,"maxHp":1,"alive":true,"state":"move","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1020,
+     "beat": 8.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":255,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":255,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":4.0526,"y":5.7258,"hp":1,"maxHp":1,"alive":true,"state":"move","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1080,
+     "beat": 9,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":270,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":270,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":3.2041,"y":5.4258,"hp":1,"maxHp":1,"alive":true,"state":"move","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1140,
+     "beat": 9.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":285,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":285,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1200,
+     "beat": 10,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":300,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":300,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1260,
+     "beat": 10.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":315,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":315,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1320,
+     "beat": 11,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"alive","synced":true,"iframes":false,"phase":{"tick":330,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":330,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"telegraph","target":0}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 1380,
+     "beat": 11.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":345,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":345,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1440,
+     "beat": 12,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":360,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":360,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1500,
+     "beat": 12.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":375,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":375,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1560,
+     "beat": 13,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":390,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":390,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1620,
+     "beat": 13.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":405,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":405,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1680,
+     "beat": 14,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":420,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":420,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1740,
+     "beat": 14.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":435,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":435,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1800,
+     "beat": 15,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":450,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":450,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1860,
+     "beat": 15.5,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":465,"dir":1,"traversal":0,"ended":false}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":465,"dir":1,"traversal":0,"ended":false}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1920,
+     "beat": 16,
+     "actors": [
+      {"tape":0,"live":false,"x":2,"y":5,"facing":0,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":480,"dir":0,"traversal":1,"ended":true}},
+      {"tape":1,"live":false,"x":10,"y":8,"facing":0.3588,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":480,"dir":0,"traversal":1,"ended":true}}
+     ],
+     "enemies": [{"id":"s1","type":"stalker","x":2.5091,"y":5.18,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    }
+   ]
+  }
+ }
+}

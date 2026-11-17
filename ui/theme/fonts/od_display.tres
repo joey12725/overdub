@@ -1,0 +1,10 @@
+[gd_resource type="FontVariation" load_steps=2 format=3]
+
+[ext_resource type="FontFile" path="res://ui/theme/fonts/Inter.woff2" id="1_lfiwh"]
+
+[resource]
+base_font = ExtResource("1_lfiwh")
+variation_opentype = {
+2003265652: 900
+}
+spacing_glyph = -1

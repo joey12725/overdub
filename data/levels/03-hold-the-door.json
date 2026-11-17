@@ -1,0 +1,78 @@
+{
+  "id": "03-hold-the-door",
+  "index": 3,
+  "name": "Hold the Door",
+  "tagline": "One of you holds it. The other has to still be around when it opens.",
+  "theme": "upper",
+  "bpm": 120,
+  "bars": 4,
+  "horizonBars": 8,
+  "maxTapes": 2,
+  "speeds": [0.5, 1, 2],
+  "endModes": ["stop"],
+  "map": [
+    "####################",
+    "#,,..............,,#",
+    "#,................,#",
+    "#..              ..#",
+    "#..              ..#",
+    "#..              ..#",
+    "#..              ..#",
+    "#,.              ..#",
+    "#......#############",
+    "#,.....#...........#",
+    "#..................#",
+    "#,,....#.........,,#",
+    "####################"
+  ],
+  "start": { "x": 4.5, "y": 10.5 },
+  "startFacing": 0,
+  "entities": [
+    { "kind": "plate", "id": "plate", "c": 18, "r": 7 },
+    { "kind": "door", "id": "gate", "cells": [{ "c": 7, "r": 10 }], "openWhen": { "sig": "plate" } },
+    { "kind": "enemy", "id": "g1", "type": "grunt", "x": 10.5, "y": 9.5, "facing": 3.141592653589793, "wakeWhen": { "sig": "plate" } },
+    { "kind": "enemy", "id": "g2", "type": "grunt", "x": 11.5, "y": 11.5, "facing": 3.141592653589793, "wakeWhen": { "sig": "plate" } },
+    { "kind": "exit", "id": "stairs", "c": 15, "r": 9, "w": 4, "h": 3 },
+    { "kind": "decor", "type": "arch", "x": 7.5, "y": 10.5, "rot": 1 },
+    { "kind": "decor", "type": "cable", "x": 17.5, "y": 7.5 },
+    { "kind": "decor", "type": "lamp", "x": 18.6, "y": 5.5 },
+    { "kind": "decor", "type": "lamp", "x": 6.6, "y": 9.4 },
+    { "kind": "decor", "type": "graffiti", "x": 4.5, "y": 0.6, "variant": "LONG WAY" },
+    { "kind": "decor", "type": "graffiti", "x": 13.5, "y": 0.6, "variant": "2 OF ME" },
+    { "kind": "decor", "type": "graffiti", "x": 11.5, "y": 8.6, "variant": "AFTER YOU" },
+    { "kind": "decor", "type": "pipe", "x": 9.5, "y": 0.6, "rot": 1 },
+    { "kind": "decor", "type": "vines", "x": 1.2, "y": 1.2 },
+    { "kind": "decor", "type": "vines", "x": 18.6, "y": 1.2 },
+    { "kind": "decor", "type": "vines", "x": 14.5, "y": 8.7 },
+    { "kind": "decor", "type": "vines", "x": 1.2, "y": 7.4 },
+    { "kind": "decor", "type": "bush", "x": 1.3, "y": 11.6 },
+    { "kind": "decor", "type": "bush", "x": 8.4, "y": 11.6 },
+    { "kind": "decor", "type": "rubble", "x": 18.6, "y": 2.4 },
+    { "kind": "decor", "type": "crate", "x": 1.4, "y": 8.5 },
+    { "kind": "decor", "type": "barrel", "x": 6.5, "y": 11.6 },
+    { "kind": "decor", "type": "generator", "x": 6.4, "y": 8.5 }
+  ],
+  "objective": { "type": "reach", "text": "Get one of you to the stairs" },
+  "music": {
+    "root": 0,
+    "scale": "Lydian",
+    "progression": [0, 1, 2, 1],
+    "chordBars": 2,
+    "tracks": [
+      {"role": "chord", "formula": "spiral", "params": {"rate": 4}},
+      {"role": "bass", "formula": "ruler", "params": {"rate": 1, "pulses": 3, "steps": 8}},
+      {"role": "melody", "formula": "popcount", "params": {"bits": 3, "contour": 0.45, "gravity": 0.5, "cycle": 8, "register": 1, "pulses": 3, "steps": 8}},
+      {"role": "drums", "formula": "modgate", "genre": "Dancehall", "params": {"d": 6, "rot": 0, "threshold": 0.4, "density": 0.7, "rate": 0.25}}
+    ]
+  },
+  "loot": ["needle_rail", "hush_hood"],
+  "briefing": [
+    "Two cassettes. Tape B plays over tape A: whatever you did first, you do again, right beside you.",
+    "The plate across the pit holds the gate. Only while somebody is standing on it.",
+    "A tape that runs out stops where it stands. Fast tapes run out sooner; slow ones are still going."
+  ],
+  "hints": {
+    "1": "The speed dial is per cassette. The two of you do not have to run at the same speed.",
+    "2": "Wrong speed on tape A? Retry only redoes this take. Reset wipes both cassettes."
+  }
+}

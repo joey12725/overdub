@@ -1,0 +1,65 @@
+{
+ "id": "needle_rail",
+ "kind": "ranged",
+ "style": "rail",
+ "hands": 0,
+ "tris": {
+  "Weapon": 4392
+ },
+ "tris_total": 4392,
+ "bounds_min": [
+  -0.06,
+  -0.0847,
+  -0.1073
+ ],
+ "bounds_max": [
+  0.0663,
+  0.176,
+  0.45
+ ],
+ "size": [
+  0.1263,
+  0.2607,
+  0.5573
+ ],
+ "empties": {
+  "Mount": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Muzzle": {
+   "pos": [
+    0.0,
+    0.045,
+    0.45
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_accent2",
+  "weapon_black",
+  "weapon_copper",
+  "weapon_dark",
+  "weapon_glow",
+  "weapon_main",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_pink_glow",
+  "weapon_steel"
+ ],
+ "bones": []
+}

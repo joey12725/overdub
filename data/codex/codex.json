@@ -1,0 +1,661 @@
+{
+  "version": 1,
+  "title": "Field Guide",
+  "subtitle": "Moxie's notebook. If it's written here, I watched it happen twice.",
+  "illustrationPath": "res://assets/codex/{illustration}.png",
+  "lockedText": "Blank page. Haven't met it yet.",
+  "baseline": {
+    "note": "Hit numbers are for the starting loadout (Splice Blade: light 1.0, heavy 1.8). Other blades shift them; the rules do not move.",
+    "melee": "splice_blade",
+    "counting": "Beats are counted 1-2-3-4 inside a bar. Count 1 is the first beat of the room.",
+    "placements": "A room can re-time or re-armour a machine. The deck readout wins over this page."
+  },
+  "groups": [
+    { "id": "machines", "title": "Machines", "blurb": "They follow rules. Rules can be led around by the nose." },
+    { "id": "traps", "title": "Traps", "blurb": "Don't care who I am. Don't care who anyone is. Useful." },
+    { "id": "tape", "title": "Tape", "blurb": "What the deck keeps, and what it doesn't." },
+    { "id": "force", "title": "Force", "blurb": "Hitting things. How hard, and where they end up." },
+    { "id": "gear", "title": "Gear", "blurb": "What I'm wearing. All four of me." }
+  ],
+  "entries": [
+    {
+      "id": "grunt",
+      "group": "machines",
+      "title": "Grunt",
+      "rule": "Walks at the nearest living self. Strikes on every second beat.",
+      "notes": [
+        "It only winds up if someone is inside its reach half a beat before its beat. Not there then? It skips the swing and waits two more beats.",
+        "It picks again on every beat, so a closer self takes it off a farther one right on the count. Dead-level tie goes to the earlier tape.",
+        "Aim locks when the wind-up starts. Step out of the 120-degree swing, or roll, and it hits air."
+      ],
+      "numbers": [
+        { "label": "Hit points", "value": "1" },
+        { "label": "Strikes on", "value": "counts 1 and 3" },
+        { "label": "Wind-up", "value": "1/2 beat" },
+        { "label": "Reach", "value": "winds up at 0.9 tiles, hits out to 1.2" },
+        { "label": "Walks", "value": "2.2 tiles/s (I run 4.5 at 1x)" },
+        { "label": "Drops to", "value": "one standing light at 1x" }
+      ],
+      "unlock": { "any": [ { "type": "enemySeen", "enemy": "grunt" } ] },
+      "illustration": "grunt"
+    },
+    {
+      "id": "stalker",
+      "group": "machines",
+      "title": "Stalker",
+      "rule": "Hunts the farthest living self. Chooses on the bar line, then commits. Strikes on the off beats.",
+      "notes": [
+        "Park a self at the far end of the room and it crosses the whole floor to get there. Everything on the way is where I want it to walk.",
+        "Once its prey is within 2.5 tiles it stops reconsidering. It only picks again after it lunges, or if the prey dies or skips.",
+        "Faster than a half-speed me. A 0.5x tape cannot outrun it; a 1x tape can."
+      ],
+      "numbers": [
+        { "label": "Hit points", "value": "1" },
+        { "label": "Strikes on", "value": "counts 2 and 4" },
+        { "label": "Wind-up", "value": "1/2 beat" },
+        { "label": "Reach", "value": "winds up at 0.9 tiles, hits out to 1.2, 90-degree lunge" },
+        { "label": "Runs", "value": "3.6 tiles/s" },
+        { "label": "Re-picks", "value": "every bar line (4 beats)" }
+      ],
+      "unlock": { "any": [ { "type": "enemySeen", "enemy": "stalker" } ] },
+      "illustration": "stalker"
+    },
+    {
+      "id": "turret",
+      "group": "machines",
+      "title": "Turret",
+      "rule": "Bolted down. Shoots the nearest living self it can see, on every second beat.",
+      "notes": [
+        "It chooses a full beat before it fires and tracks until the shot. Nobody in sight at that moment means no shot for two beats.",
+        "Walls and shut doors stop its bolts. Low barriers do not. Its bolts hit other machines too: one damage and a flinch.",
+        "It never looks at a dead or skipping self. Those cross the lane for free."
+      ],
+      "numbers": [
+        { "label": "Hit points", "value": "1" },
+        { "label": "Fires on", "value": "counts 1 and 3" },
+        { "label": "Warning", "value": "1 beat" },
+        { "label": "Range", "value": "12 tiles" },
+        { "label": "Bolt speed", "value": "6 tiles/s" },
+        { "label": "Shove / stagger", "value": "never" }
+      ],
+      "unlock": { "any": [ { "type": "enemySeen", "enemy": "turret" } ] },
+      "illustration": "turret"
+    },
+    {
+      "id": "shielder",
+      "group": "machines",
+      "title": "Shielder",
+      "rule": "The first hit only pops the shield. A hit from a different self within one beat lands, and the shield snaps back.",
+      "notes": [
+        "One of me can never hurt it, at any speed. My own second hit is just another pop.",
+        "Two hit points. The follow-up has to carry 2 to finish it in one go: a 2x light, or a 1x heavy on the run. Otherwise pop it twice.",
+        "Traps and other machines' bolts clang off without popping anything. It has to be two of me."
+      ],
+      "numbers": [
+        { "label": "Hit points", "value": "2" },
+        { "label": "Shield window", "value": "1 beat" },
+        { "label": "Strikes on", "value": "count 1" },
+        { "label": "Wind-up", "value": "3/4 beat" },
+        { "label": "Reach", "value": "winds up at 0.9 tiles, hits out to 1.2" },
+        { "label": "Walks", "value": "1.8 tiles/s, at the nearest self" }
+      ],
+      "unlock": { "any": [ { "type": "enemySeen", "enemy": "shielder" } ] },
+      "illustration": "shielder"
+    },
+    {
+      "id": "brute",
+      "group": "machines",
+      "title": "Brute",
+      "rule": "Walks at the nearest living self. Slams once a bar. Small hits hurt it but never move it.",
+      "notes": [
+        "A hit under momentum 3 chips it and nothing else. At 3 or more it gets shoved and staggered, and a stagger cancels the slam.",
+        "The slam covers 240 degrees. The only safe ground near it is square behind, or out past 1.7 tiles.",
+        "It stands still for a full beat after the slam. It is also heavy enough to hold a heavy plate down for me."
+      ],
+      "numbers": [
+        { "label": "Hit points", "value": "3" },
+        { "label": "Slams on", "value": "count 3" },
+        { "label": "Wind-up", "value": "1 1/2 beats" },
+        { "label": "Reach", "value": "winds up at 1.4 tiles, hits out to 1.7" },
+        { "label": "Walks", "value": "1.4 tiles/s" },
+        { "label": "One-hit kill", "value": "2x light on the run, or 2x heavy" }
+      ],
+      "unlock": { "any": [ { "type": "enemySeen", "enemy": "brute" } ] },
+      "illustration": "brute"
+    },
+    {
+      "id": "drone",
+      "group": "machines",
+      "title": "Drone",
+      "rule": "Hovers five tiles from the nearest living self. Fires on the off-beat, never on the beat.",
+      "notes": [
+        "Its aim locks half a beat before the shot. Move sideways after the lock and the bolt goes where I was.",
+        "Every self closer than five tiles pushes it away, and the pushes add up. Two of me can pin it between us.",
+        "Flies over low barriers and pits. Walls and shut doors stop it. It never weighs down a plate, and spikes cannot reach it."
+      ],
+      "numbers": [
+        { "label": "Hit points", "value": "2" },
+        { "label": "Fires on", "value": "the 'and' after counts 2 and 4" },
+        { "label": "Warning", "value": "1/2 beat" },
+        { "label": "Range", "value": "8 tiles" },
+        { "label": "Keeps", "value": "5 tiles away" },
+        { "label": "Flies", "value": "2.5 tiles/s; bolts 5 tiles/s" }
+      ],
+      "unlock": { "any": [ { "type": "enemySeen", "enemy": "drone" } ] },
+      "illustration": "drone"
+    },
+    {
+      "id": "archivist",
+      "group": "machines",
+      "title": "The Archivist",
+      "rule": "Watches the nearest self. Only a self it is not watching can hurt it, and only from behind. It has read every take I committed.",
+      "notes": [
+        "It strikes the spots a committed take stood still for two beats, and the spots it attacked from. While it does, it is watching that old take, so everyone else gets its back.",
+        "A take I threw away never reached it. Only commits and a full wipe change what it knows.",
+        "It cannot be shoved. A hit of momentum 4 through the back staggers it and cancels whatever it was winding up, memory strikes included."
+      ],
+      "numbers": [
+        { "label": "Hit points", "value": "40" },
+        { "label": "Attacks on", "value": "count 1 of every bar; twice a bar in its last third" },
+        { "label": "Warning", "value": "2 beats" },
+        { "label": "Cleave", "value": "150 degrees, catches me within 3.4 tiles of its centre" },
+        { "label": "Out of cleave range", "value": "3 bolts in a fan instead" },
+        { "label": "Below 2/3 health", "value": "every other attack is a ring, 6 tiles; walls stop it, a roll passes it" },
+        { "label": "Memory strike", "value": "about 1.5 tiles round the remembered spot, 2-beat warning, walls do not shelter" }
+      ],
+      "unlock": { "any": [ { "type": "enemySeen", "enemy": "boss" }, { "type": "levelStarted", "level": "11-the-archivist" } ] },
+      "illustration": "archivist"
+    },
+
+    {
+      "id": "spikes",
+      "group": "traps",
+      "title": "Spikes",
+      "rule": "Floor that kills while it is raised, and only while it is raised.",
+      "notes": [
+        "A roll carries me across raised spikes. A recorded roll does the same on playback.",
+        "Machines on the floor take 1 on contact and 1 more for each full beat they stay. Grunts and stalkers die on contact.",
+        "Drones float over. Shielders and the Archivist ignore the damage: a trap is not one of me."
+      ],
+      "numbers": [
+        { "label": "Warning", "value": "1 beat before a beat-timed raise" },
+        { "label": "Damage to machines", "value": "1 on contact, 1 per beat after" },
+        { "label": "Blocks", "value": "nothing: not movement, shots or sight" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "spikes" } ] },
+      "illustration": "spikes"
+    },
+    {
+      "id": "crusher",
+      "group": "traps",
+      "title": "Crusher",
+      "rule": "Kills on the stroke. After that it is just a wall until it pulls back.",
+      "notes": [
+        "Out, it blocks everything a shut door blocks: bodies, shots, flame, sight. A moving shield, if I time it.",
+        "A take whose path runs through an extended piston skips there, and its spark waits for the piston to retract.",
+        "The stroke deals 3 to any machine under it, drones included. That is a brute in one."
+      ],
+      "numbers": [
+        { "label": "Stroke damage", "value": "3 to machines; a self dies unless rolling" },
+        { "label": "Warning", "value": "1 beat before a beat-timed stroke" },
+        { "label": "Retract", "value": "1/4 second, solid and harmless throughout" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "crusher" } ] },
+      "illustration": "crusher"
+    },
+    {
+      "id": "conveyor",
+      "group": "traps",
+      "title": "Conveyor",
+      "rule": "Carries whatever stands on it. Never carries a recorded self.",
+      "notes": [
+        "The ride is baked into the take. Reverse the belt later and that take still glides the old way.",
+        "It moves machines while they walk, fight, stagger or sleep. It will deliver a sleeping grunt into a swing I recorded earlier.",
+        "It runs in world time. On a 2x take it feels half as fast under my feet."
+      ],
+      "numbers": [
+        { "label": "Speed", "value": "2 tiles/s unless the room says otherwise" },
+        { "label": "Carries", "value": "walking machines, the live self, low shots" },
+        { "label": "Ignores", "value": "playback selves, sparks, drones, turrets" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "conveyor" } ] },
+      "illustration": "conveyor"
+    },
+    {
+      "id": "flame",
+      "group": "traps",
+      "title": "Flame Jet",
+      "rule": "Burns every tile in its lane while it is on. Stops at the first thing that stops a shot.",
+      "notes": [
+        "A shut door, an unbroken wall or an extended crusher cuts the jet short. Open the door and the fire is through that instant.",
+        "Low barriers do not stop it, and bodies do not shade what is behind them.",
+        "It burns drones too. Prism Goggles do nothing here; they are for lasers."
+      ],
+      "numbers": [
+        { "label": "Warning", "value": "1 beat before a beat-timed burn" },
+        { "label": "Damage to machines", "value": "1 on contact, 1 per beat after" },
+        { "label": "Reach", "value": "set by the room, in whole tiles" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "flame" } ] },
+      "illustration": "flame"
+    },
+    {
+      "id": "dart",
+      "group": "traps",
+      "title": "Dart Launcher",
+      "rule": "Fires straight down its lane on its beat. Aims at nothing. Cannot be broken.",
+      "notes": [
+        "A dart stops in the first living thing it touches, me or a machine. A machine in the lane is cover.",
+        "It deals 1 and a flinch to a machine. Knock something into the lane just before the beat.",
+        "It flies over low barriers. Walls, shut doors, unbroken walls and extended crushers stop it."
+      ],
+      "numbers": [
+        { "label": "Fires", "value": "every 2 beats unless the room says otherwise" },
+        { "label": "Dart speed", "value": "8 tiles/s" },
+        { "label": "Damage to machines", "value": "1, plus 1/4 second flinch" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "dart" } ] },
+      "illustration": "dart"
+    },
+    {
+      "id": "bumper",
+      "group": "traps",
+      "title": "Bumper",
+      "rule": "Fires once each time its signal comes on. Throws whatever stands on it. Never throws a recorded self.",
+      "notes": [
+        "It is a free knockback: no damage, but it breaks a wind-up, and a machine thrown into a wall staggers.",
+        "Heavier machines fly shorter: a brute goes a third of the distance.",
+        "It throws the live me the full distance, and the flight is recorded as plain movement. A door shut across that flight later makes the take skip."
+      ],
+      "numbers": [
+        { "label": "Throw", "value": "3 tiles for a grunt-weight body" },
+        { "label": "Ignores", "value": "drones, turrets, playback selves" },
+        { "label": "Re-arms", "value": "when its signal goes off and on again" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "bumper" } ] },
+      "illustration": "bumper"
+    },
+    {
+      "id": "sensor",
+      "group": "traps",
+      "title": "Beam Sensor",
+      "rule": "A tripwire. On while a living body is in the beam. Hurts nothing.",
+      "notes": [
+        "Machines trip it too, awake or asleep. A grunt walked through the beam opens the door for me.",
+        "Dead takes, skipping takes, sparks and shots do not trip it. A take that dies before the beam leaves the door shut.",
+        "The beam ends at the first wall, shut door or extended crusher. Anything past that is not seen."
+      ],
+      "numbers": [
+        { "label": "Sees", "value": "selves, machines or both, set by the room" },
+        { "label": "Damage", "value": "none" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "sensor" } ] },
+      "illustration": "sensor"
+    },
+    {
+      "id": "relay",
+      "group": "traps",
+      "title": "Relay",
+      "rule": "Takes a trigger and answers on the beat: a pulse, a latch or a toggle.",
+      "notes": [
+        "It does one job at a time. Triggers that arrive while it is armed or pulsing are ignored.",
+        "Its lamp is lit from trigger to firing. That lamp is my warning for whatever it drives.",
+        "It turns 'something walked through' into 'the crusher slams on the next beat'. I can count that."
+      ],
+      "numbers": [
+        { "label": "Fires on", "value": "the next whole beat, unless the room says otherwise" },
+        { "label": "Pulse length", "value": "1 beat unless the room says otherwise" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "relay" } ] },
+      "illustration": "relay"
+    },
+    {
+      "id": "magnet",
+      "group": "traps",
+      "title": "Magnet",
+      "rule": "Drags every machine in range toward it. Never drags me.",
+      "notes": [
+        "Walls do not shield from the pull. Machines keep thinking and swinging while they slide.",
+        "Lighter means faster: drones come quickest, a brute at a third of a grunt's pace. Turrets do not budge.",
+        "It gathers a spread-out crowd into one swing's arc, or holds a drone where a flame lane runs."
+      ],
+      "numbers": [
+        { "label": "Pull", "value": "1.5 tiles/s for a grunt-weight body" },
+        { "label": "Lets go", "value": "inside 0.6 tiles of the centre" },
+        { "label": "Range", "value": "set by the room" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "magnet" } ] },
+      "illustration": "magnet"
+    },
+    {
+      "id": "laser",
+      "group": "traps",
+      "title": "Laser",
+      "rule": "Kills a living, in-sync self that touches the beam while it is on. Machines walk through it.",
+      "notes": [
+        "A roll crosses it. So does a dead take, and so does a skipping one.",
+        "It is on exactly while its signal is on. Find the plate or switch and the beam is somebody's job.",
+        "Prism Goggles make every one of me immune. Nothing else in the room respects them."
+      ],
+      "numbers": [
+        { "label": "Damage to a self", "value": "lethal" },
+        { "label": "Damage to machines", "value": "none" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "laser" } ] },
+      "illustration": "laser"
+    },
+
+    {
+      "id": "tape-speed",
+      "group": "tape",
+      "title": "Tape Speed",
+      "rule": "Every take records for the same length of time. A fast tape lives in a slow world and plays back short; a slow tape plays back long.",
+      "notes": [
+        "At 2x, machines move at half pace while I record, and my take fills half as many bars on playback.",
+        "Swings carry the tape's speed: a 2x light hits like two. A 0.5x light will not drop a grunt.",
+        "Machines keep their own beat whatever speed I pick. Speed changes how many of their beats my take covers."
+      ],
+      "numbers": [
+        { "label": "Speeds", "value": "0.5x, 1x, 2x, 4x (the room chooses which are on offer)" },
+        { "label": "Playback length", "value": "recorded bars divided by speed" },
+        { "label": "World while recording", "value": "runs at 1 / speed" }
+      ],
+      "unlock": { "any": [ { "type": "always" } ] },
+      "illustration": "tape-speed"
+    },
+    {
+      "id": "count-in",
+      "group": "tape",
+      "title": "The Count-In",
+      "rule": "Four beats, five-six-seven-eight, then the room starts from its first beat. Every take starts on that same beat.",
+      "notes": [
+        "The room is identical at the top of every take. What a machine does on beat nine, it does on beat nine again, unless one of me changed something.",
+        "The count is at the base tempo whatever the tape speed.",
+        "No pausing to think once it starts. A pause during the count or the take throws the take away."
+      ],
+      "numbers": [
+        { "label": "Length", "value": "4 beats" }
+      ],
+      "unlock": { "any": [ { "type": "always" } ] },
+      "illustration": "count-in"
+    },
+    {
+      "id": "retry-commit-reset",
+      "group": "tape",
+      "title": "Retry, Commit, Reset",
+      "rule": "Retry throws away the take I just made. Commit locks it and arms the next cassette. Reset wipes all four.",
+      "notes": [
+        "Nothing is kept unless I say so. A committed tape can only be changed by wiping every tape.",
+        "The room does not need all four. The first combined run that wins, wins.",
+        "A win needs the job done and at least one of me alive when the tape runs out."
+      ],
+      "numbers": [
+        { "label": "Cassettes", "value": "up to 4, fewer in some rooms" }
+      ],
+      "unlock": { "any": [ { "type": "always" } ] },
+      "illustration": "retry-commit-reset"
+    },
+    {
+      "id": "dying-on-tape",
+      "group": "tape",
+      "title": "Dying on Tape",
+      "rule": "One hit kills. The take keeps rolling: I finish it as a ghost that walls still stop and nothing can hurt.",
+      "notes": [
+        "What the ghost does counts in that take only. On playback a dead take walks its path through everything and touches nothing.",
+        "So a door only my ghost opened stays shut next run, unless a later take keeps that self alive.",
+        "Machines never aim at a dead take. It is no good as bait."
+      ],
+      "numbers": [
+        { "label": "Hits to kill a self", "value": "1" },
+        { "label": "Roll", "value": "2.4 tiles, untouchable for most of it" }
+      ],
+      "unlock": { "any": [ { "type": "simEvent", "event": "selfDeath" } ] },
+      "illustration": "dying-on-tape"
+    },
+    {
+      "id": "rescue",
+      "group": "tape",
+      "title": "Rescue",
+      "rule": "Who lives is worked out fresh every run. Stop the thing that killed an earlier take and everything it recorded after that becomes real.",
+      "notes": [
+        "It cuts both ways: a take that used to survive can die sooner once the room has changed, and its later actions stop counting.",
+        "Recording past my own death is laying down a route for a self I plan to save.",
+        "A rescued take can still skip if its old route is blocked now. Alive is not the same as on time."
+      ],
+      "numbers": [],
+      "unlock": { "any": [ { "type": "storyTrigger", "trigger": "rescue" }, { "type": "storyTrigger", "trigger": "ghostTake" } ] },
+      "illustration": "rescue"
+    },
+    {
+      "id": "desync",
+      "group": "tape",
+      "title": "Skipping and the Spark",
+      "rule": "If a take's next step is blocked, the picture carries on and the girl is left behind as a spark that has to run round and catch up.",
+      "notes": [
+        "A skipping take does nothing and nothing can hurt it. Machines stop aiming at it. It crosses a firing lane for free.",
+        "The spark cannot open, press or hit anything, and it never gives up or jumps. If the way round is sealed, it waits.",
+        "A skipping take that is alive at the end still counts as a survivor. It cannot hold the exit."
+      ],
+      "numbers": [
+        { "label": "Spark speed", "value": "7.5 tiles/s (I run 4.5 at 1x)" },
+        { "label": "Rejoins", "value": "within 0.35 tiles of the picture, with a clear line" },
+        { "label": "Blocked by", "value": "walls, shut doors, unbroken walls, low barriers, extended crushers" }
+      ],
+      "unlock": { "any": [ { "type": "simEvent", "event": "desync" } ] },
+      "illustration": "desync"
+    },
+    {
+      "id": "end-modes",
+      "group": "tape",
+      "title": "Stop, Repeat, Reverse",
+      "rule": "When a tape runs out it stops and holds, cuts back to its start, or plays backward. Every action fires again each pass.",
+      "notes": [
+        "A stopped take is still a body: it holds a plate, draws aim and can be killed where it stands.",
+        "On a backward pass a switch flips back and a swing swings again. But a run-up is now a retreat, so that swing lands at 3/4 of a standing hit instead of 1 1/2.",
+        "Dead stays dead across the loop. On a repeat the picture jumps to the start; a spark has to travel there."
+      ],
+      "numbers": [
+        { "label": "Stop", "value": "holds the last pose to the end of the room's time" },
+        { "label": "Repeat", "value": "a 4x take loops four times for each pass of a 1x take" },
+        { "label": "Reverse", "value": "forward, backward, forward" }
+      ],
+      "unlock": { "any": [ { "type": "endModeOffered", "modes": ["repeat", "reverse"] } ] },
+      "illustration": "end-modes"
+    },
+
+    {
+      "id": "momentum",
+      "group": "force",
+      "title": "Momentum",
+      "rule": "Momentum is the swing's weight times the tape's speed, plus up to half again for running into it. Whole points of momentum are damage.",
+      "notes": [
+        "Running straight in adds 50%. Backing away takes 25% off. Standing still is the plain number.",
+        "Tape speed counts once. A 2x standing light is 2; a 2x heavy on the run is 5.4.",
+        "Shots do not carry tape speed. Once it leaves the weapon it belongs to the room."
+      ],
+      "numbers": [
+        { "label": "Light, standing", "value": "0.5 / 1 / 2 / 4 at 0.5x / 1x / 2x / 4x" },
+        { "label": "Light, running in", "value": "0.75 / 1.5 / 3 / 6" },
+        { "label": "Heavy, standing", "value": "0.9 / 1.8 / 3.6 / 7.2" },
+        { "label": "Heavy, running in", "value": "1.35 / 2.7 / 5.4 / 10.8" },
+        { "label": "Damage", "value": "momentum rounded down" }
+      ],
+      "unlock": { "any": [ { "type": "simEvent", "event": "clang" }, { "type": "levelStarted", "level": "02-hit-harder" } ] },
+      "illustration": "momentum"
+    },
+    {
+      "id": "knockback",
+      "group": "force",
+      "title": "Knockback",
+      "rule": "A hit that does not kill shoves the machine: momentum divided by its weight, in tiles, three at most. It carries on from where it lands.",
+      "notes": [
+        "A shove breaks a wind-up. The machine then waits for its next beat; it never swings off the beat.",
+        "Shoved into a wall, the leftover distance turns into stagger.",
+        "Machines never shove a recorded self. They kill it or they do nothing."
+      ],
+      "numbers": [
+        { "label": "Weights", "value": "drone 0.7, stalker 0.8, grunt 1, shielder 1.2, brute 3" },
+        { "label": "Cannot be shoved", "value": "turret, the Archivist" },
+        { "label": "Cap", "value": "3 tiles" },
+        { "label": "Slide time", "value": "under 1/5 second" },
+        { "label": "Wall slam", "value": "1/4 second of stagger per tile left over" }
+      ],
+      "unlock": { "any": [ { "type": "simEvent", "event": "hit" }, { "type": "levelStarted", "level": "02-hit-harder" } ] },
+      "illustration": "knockback"
+    },
+    {
+      "id": "stagger",
+      "group": "force",
+      "title": "Stagger",
+      "rule": "A hit that does not kill freezes the machine: momentum divided by its poise, in seconds. A stagger cancels a wind-up.",
+      "notes": [
+        "A staggered machine does not walk, pick a target or wind up. Whoever it was chasing gets that time.",
+        "A brute only staggers from momentum 3 or more, the Archivist from 4 through its back. With the Splice Blade, a hit that big kills a fresh brute anyway.",
+        "Trap hits and stray bolts give a flat quarter second instead."
+      ],
+      "numbers": [
+        { "label": "Poise", "value": "stalker 1.5, drone 1.5, grunt 2, shielder 2.5, brute 6, Archivist 20" },
+        { "label": "1x heavy on a drone", "value": "1.2 seconds" },
+        { "label": "1x heavy on an open shielder", "value": "0.7 seconds" },
+        { "label": "4x light on the Archivist's back", "value": "0.2 seconds" }
+      ],
+      "unlock": { "any": [ { "type": "simEvent", "event": "enemyStagger" }, { "type": "levelStarted", "level": "02-hit-harder" } ] },
+      "illustration": "stagger"
+    },
+    {
+      "id": "breakables",
+      "group": "force",
+      "title": "Breakable Walls",
+      "rule": "One swing with enough momentum breaks it. Weak swings clang and do not add up.",
+      "notes": [
+        "Until it breaks it is a wall: it stops shots, flame and darts, and a take whose path runs through it skips.",
+        "Only a swing breaks it. Shots do not.",
+        "Each wall has its own number, and a clang shows what was missing. Speed and a run-up are the cheap ways to find it."
+      ],
+      "numbers": [
+        { "label": "Standard wall", "value": "5: a 2x heavy on the run, or a 4x heavy" },
+        { "label": "Not enough", "value": "2x standing heavy (3.6), 1x heavy on the run (2.7)" }
+      ],
+      "unlock": { "any": [ { "type": "entitySeen", "kind": "breakable" } ] },
+      "illustration": "breakables"
+    },
+
+    {
+      "id": "gear-slots",
+      "group": "gear",
+      "title": "Six Slots",
+      "rule": "Helmet, top, pants, shoes, melee, ranged. One loadout, worn by all four takes, locked while I am in the room.",
+      "notes": [
+        "Gear changes between rooms only, so a committed tape never means something different later.",
+        "A find is mine for good once I clear its room. Swapping costs nothing.",
+        "Every room on the way down can be done in what I walked in wearing."
+      ],
+      "numbers": [
+        { "label": "Slots", "value": "6" },
+        { "label": "Starting kit", "value": "Scrap Cap, Lined Bomber, Olive Cargos, Beater High-Tops, Splice Blade, Mixtape Rocket" }
+      ],
+      "unlock": { "any": [ { "type": "always" } ] },
+      "illustration": "gear-slots"
+    },
+    {
+      "id": "ranged-rule",
+      "group": "gear",
+      "title": "Shots",
+      "rule": "The tape keeps when, where and which way I fired. Everything after the trigger is the room's business.",
+      "notes": [
+        "The same recorded shot can hit, miss or find a different machine next run. The take did not change; the room did.",
+        "Only a living, in-sync self fires. A shot already in the air keeps flying if she dies.",
+        "Recharge runs on the tape's own clock, so a 2x take recharges in half the world's time."
+      ],
+      "numbers": [
+        { "label": "Shot momentum", "value": "the weapon's own; tape speed not added" }
+      ],
+      "unlock": { "any": [ { "type": "always" } ] },
+      "illustration": "gear-ranged"
+    },
+    {
+      "id": "ranged-missile",
+      "group": "gear",
+      "title": "Homing Rocket",
+      "rule": "Locks the nearest living machine once, at launch. Chases only that one. Very slow.",
+      "notes": [
+        "Nearest is measured at launch on each run. Shove a different machine closer before the trigger and the same old shot picks the new one.",
+        "It needs no line of sight to lock, but walls still stop it. If its target dies it flies straight on.",
+        "It hits whatever machine it touches first, locked or not."
+      ],
+      "numbers": [
+        { "label": "Mixtape Rocket", "value": "3 tiles/s, 20 tiles, momentum 1.5" },
+        { "label": "Recharge", "value": "1.5 seconds of tape" }
+      ],
+      "unlock": { "any": [ { "type": "always" } ] },
+      "illustration": "gear-ranged"
+    },
+    {
+      "id": "ranged-pierce",
+      "group": "gear",
+      "title": "Piercing Shot",
+      "rule": "Fast and straight. Passes through machines, hitting each once, and stops in the last one it is allowed.",
+      "notes": [
+        "The puzzle is the line. Knockback and bait are how I draw it.",
+        "Walls and shut doors stop it like any shot."
+      ],
+      "numbers": [
+        { "label": "Needle Rail", "value": "24 tiles/s, 12 tiles, momentum 1" },
+        { "label": "Passes through", "value": "3 machines, stops in the 4th" },
+        { "label": "Recharge", "value": "1.25 seconds of tape" }
+      ],
+      "unlock": { "any": [ { "type": "gearOwned", "item": "needle_rail" } ] },
+      "illustration": "gear-ranged"
+    },
+    {
+      "id": "ranged-phase",
+      "group": "gear",
+      "title": "Wall-Passer",
+      "rule": "Goes through walls, shut doors and unbroken walls. Stops in the first machine it touches.",
+      "notes": [
+        "Slow and short. The machine has to be where the shot will be, not where it was.",
+        "It ends at the edge of the map and nowhere before that but a machine."
+      ],
+      "numbers": [
+        { "label": "Bleedthrough Emitter", "value": "6 tiles/s, 8 tiles, momentum 1" },
+        { "label": "Recharge", "value": "2.5 seconds of tape" }
+      ],
+      "unlock": { "any": [ { "type": "gearOwned", "item": "bleed_emitter" } ] },
+      "illustration": "gear-ranged"
+    },
+    {
+      "id": "ranged-arc",
+      "group": "gear",
+      "title": "Lobbed Shell",
+      "rule": "Flies over everything and bursts where it lands, a fixed distance out. Nothing in between is touched.",
+      "notes": [
+        "It cannot land close. Anything nearer than the landing spot is safe from it.",
+        "Walls shield machines from the burst, unless the shell lands on top of the wall.",
+        "The burst pushes machines away from its centre."
+      ],
+      "numbers": [
+        { "label": "Bass Drop", "value": "lands 7 tiles out, 1.2-tile burst, momentum 1.3" },
+        { "label": "Flight", "value": "7 tiles/s, so one second in the air" },
+        { "label": "Recharge", "value": "1.7 seconds of tape" }
+      ],
+      "unlock": { "any": [ { "type": "gearOwned", "item": "bass_drop" } ] },
+      "illustration": "gear-ranged"
+    },
+    {
+      "id": "ranged-burst",
+      "group": "gear",
+      "title": "Short Burst",
+      "rule": "A fan of pellets, each a full hit, each stopping in the first thing it touches. Gone after a few tiles.",
+      "notes": [
+        "Point-blank, several pellets land on one machine and the damage stacks.",
+        "Quickest recharge there is, which matters most on a fast tape."
+      ],
+      "numbers": [
+        { "label": "Static Spray", "value": "5 pellets, 40-degree fan, 3.5 tiles, momentum 1 each" },
+        { "label": "Recharge", "value": "1 second of tape" }
+      ],
+      "unlock": { "any": [ { "type": "gearOwned", "item": "static_spray" } ] },
+      "illustration": "gear-ranged"
+    }
+  ]
+}

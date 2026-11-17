@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# ElevenLabs through the key stored in Joy's Infisical (cached in a private local file; never printed).
+#
+#   bash tools/voice voices                                   list available voices (id, name, labels) as JSON
+#   bash tools/voice tts  <out.mp3> <voice_id> "<text>" [model] [json voice_settings]
+#   bash tools/voice sfx  <out.mp3> "<description>" [duration_seconds] [prompt_influence 0..1]
+#   bash tools/voice raw  <METHOD> <path> [curl args...]      any other endpoint, e.g. raw GET /v1/models
+#
+# Default TTS model: eleven_v3 (expressive; supports audio tags like [laughs], [whispers], [shouting]);
+# alternatives: eleven_multilingual_v2, eleven_turbo_v2_5, eleven_flash_v2_5. Output is MP3 44.1 kHz;
+# convert with Python (pydub/ffmpeg if present) or request another format via ?output_format=pcm_44100.
+# The key lacks account-read permission, so quota cannot be queried: be economical (short lines, no
+# needless retakes) and stop if the API reports quota exhaustion.
+set -u
+KEYFILE="${OD_XI_KEYFILE:-/c/Users/joeya/.t3/userdata/secrets/files/overdub_elevenlabs}"
+BASE="https://api.elevenlabs.io"
+auth() { printf 'xi-api-key: %s\n' "$(tr -d '\r\n' < "$KEYFILE")"; }
+check() { # <file> : fail loudly if the API returned JSON instead of audio
+  if head -c 1 "$1" | grep -q '{'; then echo "voice error: $(head -c 400 "$1")" >&2; rm -f "$1"; exit 1; fi
+  echo "saved $1 ($(wc -c < "$1") bytes)"
+}
+cmd="${1:-}"; [ $# -gt 0 ] && shift
+case "$cmd" in
+  voices) auth | curl -s -m 60 -H @- "$BASE/v2/voices?page_size=100" ;;
+  tts)
+    out="$1"; voice="$2"; text="$3"; model="${4:-eleven_v3}"; settings="${5:-}"
+    mkdir -p "$(dirname "$out")"; req="$(mktemp)"; trap 'rm -f "$req"' EXIT
+    node -e 'const b={text:process.argv[1],model_id:process.argv[2]};if(process.argv[3])b.voice_settings=JSON.parse(process.argv[3]);process.stdout.write(JSON.stringify(b))' "$text" "$model" "$settings" > "$req"
+    auth | curl -s -m 180 -H @- -H 'Content-Type: application/json' --data-binary "@$req" "$BASE/v1/text-to-speech/$voice?output_format=mp3_44100_128" -o "$out"
+    check "$out" ;;
+  sfx)
+    out="$1"; text="$2"; dur="${3:-}"; infl="${4:-0.5}"
+    mkdir -p "$(dirname "$out")"; req="$(mktemp)"; trap 'rm -f "$req"' EXIT
+    node -e 'const b={text:process.argv[1],prompt_influence:Number(process.argv[3])};if(process.argv[2])b.duration_seconds=Number(process.argv[2]);process.stdout.write(JSON.stringify(b))' "$text" "$dur" "$infl" > "$req"
+    auth | curl -s -m 180 -H @- -H 'Content-Type: application/json' --data-binary "@$req" "$BASE/v1/sound-generation?output_format=mp3_44100_128" -o "$out"
+    check "$out" ;;
+  raw) method="$1"; path="$2"; shift 2; auth | curl -s -m 180 -X "$method" -H @- "$@" "$BASE$path" ;;
+  *) sed -n 2,14p "$0"; exit 2 ;;
+esac

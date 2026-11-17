@@ -1,0 +1,64 @@
+{
+ "id": "bass_drop",
+ "kind": "ranged",
+ "style": "mortar",
+ "hands": 0,
+ "tris": {
+  "Weapon": 3378
+ },
+ "tris_total": 3378,
+ "bounds_min": [
+  -0.079,
+  -0.0847,
+  -0.1747
+ ],
+ "bounds_max": [
+  0.079,
+  0.2314,
+  0.1335
+ ],
+ "size": [
+  0.158,
+  0.3161,
+  0.3083
+ ],
+ "empties": {
+  "Mount": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Muzzle": {
+   "pos": [
+    0.0,
+    0.1811,
+    0.0964
+   ],
+   "z_axis": [
+    0.0,
+    0.6428,
+    0.766
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_black",
+  "weapon_dark",
+  "weapon_glow",
+  "weapon_green_glow",
+  "weapon_hot_glow",
+  "weapon_main",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_steel"
+ ],
+ "bones": []
+}

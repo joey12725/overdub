@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "rules": { "showAfter": 2 },
+  "ignore": [
+    { "id": "survivors", "match": "^Survivors: .*\\.$" },
+    { "id": "objective.complete", "match": "^Objective complete at beat [0-9.]+: .*\\.$" }
+  ],
+  "hints": [
+    { "id": "weak.breakable", "match": "^Tape (?P<tape>[A-D])'s (?P<kind>\\w+) at beat [0-9.]+ hit breakable wall (?P<id>.+) with momentum [0-9.]+; it needs [0-9.]+\\.$", "signature": ["id"], "text": "Still bouncing off. Stack swing, run-up and tape speed." },
+    { "id": "death.struck", "match": "^Tape (?P<tape>[A-D]) died at beat [0-9.]+: struck by (?P<type>\\w+) (?P<id>.+)\\.$", "signature": ["tape", "id"], "text": "{tape} keeps meeting that swing. It hits on the beat." },
+    { "id": "noSurvivor", "match": "^No self survived to the end: .*$", "signature": [], "text": "Nobody made it. Keep one self out of harm's way." },
+    { "id": "objective.other", "match": "^Objective not complete: .*$", "signature": [], "text": "The job isn't done yet." }
+  ]
+}

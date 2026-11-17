@@ -1,0 +1,1420 @@
+{
+ "version": 1,
+ "note": "Every factual claim in codex.json with the source line it was read from. Re-check with: python -I data/codex/check_sources.py",
+ "claims": [
+  {
+   "entry": "grunt",
+   "claim": "Targets the nearest targetable self",
+   "file": "prototype/src/core/enemies/grunt.ts",
+   "line": 26,
+   "text": "const t = nearestTarget(w, e.x, e.y);"
+  },
+  {
+   "entry": "grunt",
+   "claim": "Re-targets on every beat, not while winding up or recovering",
+   "file": "prototype/src/core/enemies/grunt.ts",
+   "line": 52,
+   "text": "if (e.state === 'telegraph' || e.state === 'attack') return;"
+  },
+  {
+   "entry": "grunt",
+   "claim": "Winds up only if the target is within reach exactly one telegraph before a grid beat; facing locks then",
+   "file": "prototype/src/core/enemies/grunt.ts",
+   "line": 83,
+   "text": "if (d <= e.stats.reach && isGridSub(w, e, s + tel)) {"
+  },
+  {
+   "entry": "grunt",
+   "claim": "Strike arc 120 degrees",
+   "file": "prototype/src/core/enemies/grunt.ts",
+   "line": 19,
+   "text": "export const GRUNT_ARC = (2 * Math.PI) / 3;"
+  },
+  {
+   "entry": "grunt",
+   "claim": "Strike hits selves within reach + body radius (0.9 + 0.3)",
+   "file": "prototype/src/core/enemies/grunt.ts",
+   "line": 31,
+   "text": "const reach = e.stats.reach + BASE.actorRadius;"
+  },
+  {
+   "entry": "grunt",
+   "claim": "hp 1, speed 2.2, every 2 beats offset 0, reach 0.9, telegraph 0.5 beat",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 281,
+   "text": "grunt: { hp: 1, mass: 1, poise: 2,"
+  },
+  {
+   "entry": "grunt",
+   "claim": "Ties go to the lowest tape index",
+   "file": "prototype/src/core/enemies/common.ts",
+   "line": 142,
+   "text": "* Ties go to the lowest tape index (selves are kept sorted by index; strict comparison)."
+  },
+  {
+   "entry": "grunt",
+   "claim": "Only alive, synced selves are targeted",
+   "file": "prototype/src/core/enemies/common.ts",
+   "line": 127,
+   "text": "return self.vulnerable;"
+  },
+  {
+   "entry": "grunt",
+   "claim": "Self run speed 4.5 tiles per local second",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 87,
+   "text": "runSpeed: 4.5,"
+  },
+  {
+   "entry": "grunt",
+   "claim": "Self body radius 0.3",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 86,
+   "text": "actorRadius: 0.3,"
+  },
+  {
+   "entry": "grunt",
+   "claim": "Baseline light impact 1.0 / heavy 1.8 (Splice Blade)",
+   "file": "data/gear.json",
+   "line": 390,
+   "text": "\"id\": \"splice_blade\","
+  },
+  {
+   "entry": "stalker",
+   "claim": "Picks the farthest targetable self",
+   "file": "prototype/src/core/enemies/stalker.ts",
+   "line": 174,
+   "text": "pick: (w, e) => farthestTarget(w, e.x, e.y),"
+  },
+  {
+   "entry": "stalker",
+   "claim": "Re-picks only on bar lines",
+   "file": "prototype/src/core/enemies/stalker.ts",
+   "line": 176,
+   "text": "if (beat % BEATS_PER_BAR !== 0) return false;"
+  },
+  {
+   "entry": "stalker",
+   "claim": "Keeps its quarry once within 2.5 tiles",
+   "file": "prototype/src/core/enemies/stalker.ts",
+   "line": 148,
+   "text": "export const STALKER_COMMIT_RANGE = 2.5;"
+  },
+  {
+   "entry": "stalker",
+   "claim": "Re-picks after each strike",
+   "file": "prototype/src/core/enemies/stalker.ts",
+   "line": 180,
+   "text": "retargetAfterStrike: true,"
+  },
+  {
+   "entry": "stalker",
+   "claim": "Lunge arc 90 degrees",
+   "file": "prototype/src/core/enemies/stalker.ts",
+   "line": 144,
+   "text": "export const STALKER_ARC = Math.PI / 2;"
+  },
+  {
+   "entry": "stalker",
+   "claim": "hp 1, speed 3.6, every 2 beats offset 1, reach 0.9, telegraph 0.5 beat",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 282,
+   "text": "stalker: { hp: 1, mass: 0.8, poise: 1.5,"
+  },
+  {
+   "entry": "turret",
+   "claim": "hp 1, immovable, never staggers, every 2 beats offset 0, range 12, telegraph 1 beat, bolt 6 tiles/s",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 283,
+   "text": "turret: { hp: 1, mass: Infinity, poise: Infinity,"
+  },
+  {
+   "entry": "turret",
+   "claim": "Chooses only at one telegraph before a grid beat; otherwise does nothing",
+   "file": "prototype/src/core/enemies/turret.ts",
+   "line": 79,
+   "text": "if (!isGridSub(w, e, s + tel)) return;"
+  },
+  {
+   "entry": "turret",
+   "claim": "Nearest self in range, in sight, inside its aim arc",
+   "file": "prototype/src/core/enemies/turret.ts",
+   "line": 39,
+   "text": "return nearestTarget(w, e.x, e.y, (s) => canShoot(w, e, s));"
+  },
+  {
+   "entry": "turret",
+   "claim": "Tracks its target while telegraphing",
+   "file": "prototype/src/core/enemies/turret.ts",
+   "line": 70,
+   "text": "if (t && canShoot(w, e, t)) e.facing = Math.atan2(t.pose.y - e.y, t.pose.x - e.x);"
+  },
+  {
+   "entry": "turret",
+   "claim": "Line of sight uses projectile solidity (walls and closed doors block, low barriers do not)",
+   "file": "prototype/src/core/enemies/turret.ts",
+   "line": 35,
+   "text": "return !w.grid.segmentBlocked(e.x, e.y, s.pose.x, s.pose.y, true);"
+  },
+  {
+   "entry": "turret",
+   "claim": "A bolt strikes other enemies: 1 damage, no knockback, 0.25 s stagger",
+   "file": "prototype/src/core/projectiles.ts",
+   "line": 353,
+   "text": "stagger: BOLT_ENEMY_STAGGER,"
+  },
+  {
+   "entry": "turret",
+   "claim": "A bolt never hits the enemy that fired it",
+   "file": "prototype/src/core/projectiles.ts",
+   "line": 264,
+   "text": "if (!e.alive || e.id === ownerEnemy || p.struck.has(`enemy:${e.id}`)) continue;"
+  },
+  {
+   "entry": "turret",
+   "claim": "A bolt passes a self inside dodge i-frames",
+   "file": "prototype/src/core/projectiles.ts",
+   "line": 333,
+   "text": "// Dodged: the bolt flies on through and never re-tests this self (TEST-21)."
+  },
+  {
+   "entry": "shielder",
+   "claim": "hp 2, speed 1.8, every 4 beats offset 0, reach 0.9, telegraph 0.75 beat",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 284,
+   "text": "shielder: { hp: 2, mass: 1.2, poise: 2.5,"
+  },
+  {
+   "entry": "shielder",
+   "claim": "Shield window 1 beat",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 291,
+   "text": "export const SHIELDER_WINDOW_BEATS = 1;"
+  },
+  {
+   "entry": "shielder",
+   "claim": "A hit from a different self inside the window lands and the shield returns",
+   "file": "prototype/src/core/enemies/shielder.ts",
+   "line": 66,
+   "text": "if (shieldDownAt(w, e, w.s) && e.mem.popBy !== by) {"
+  },
+  {
+   "entry": "shielder",
+   "claim": "Hits from anything that is not a self clang and do not pop",
+   "file": "prototype/src/core/enemies/shielder.ts",
+   "line": 64,
+   "text": "if (!('tape' in strike.source)) return { kind: 'block', reason: 'shield' };"
+  },
+  {
+   "entry": "shielder",
+   "claim": "Walks at the nearest self, re-picked every beat",
+   "file": "prototype/src/core/enemies/shielder.ts",
+   "line": 49,
+   "text": "pick: (w, e) => nearestTarget(w, e.x, e.y),"
+  },
+  {
+   "entry": "brute",
+   "claim": "hp 3, mass 3, poise 6, speed 1.4, every 4 beats offset 2, reach 1.4, telegraph 1.5 beats",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 285,
+   "text": "brute: { hp: 3, mass: 3, poise: 6,"
+  },
+  {
+   "entry": "brute",
+   "claim": "Slam arc 240 degrees",
+   "file": "prototype/src/core/enemies/brute.ts",
+   "line": 22,
+   "text": "export const BRUTE_ARC = (4 * Math.PI) / 3;"
+  },
+  {
+   "entry": "brute",
+   "claim": "Recovers for 1 beat after a slam",
+   "file": "prototype/src/core/enemies/brute.ts",
+   "line": 24,
+   "text": "export const BRUTE_RECOVER_BEATS = 1;"
+  },
+  {
+   "entry": "brute",
+   "claim": "Hits under momentum 3 keep their damage but lose knockback and stagger",
+   "file": "prototype/src/core/enemies/brute.ts",
+   "line": 49,
+   "text": "return { kind: 'replace', strike: { ...strike, knockback: 0, stagger: 0 } };"
+  },
+  {
+   "entry": "brute",
+   "claim": "Poise threshold: momentum 3",
+   "file": "prototype/src/core/enemies/brute.ts",
+   "line": 29,
+   "text": "export const BRUTE_POISE_MOMENTUM = 3;"
+  },
+  {
+   "entry": "brute",
+   "claim": "Heavy body: holds heavy pressure plates",
+   "file": "prototype/src/core/enemies/brute.ts",
+   "line": 44,
+   "text": "heavyBody: true,"
+  },
+  {
+   "entry": "brute",
+   "claim": "Heavy plates need a heavy body",
+   "file": "prototype/src/core/mechanisms.ts",
+   "line": 341,
+   "text": "if (def.heavy && !beh.heavyBody) continue;"
+  },
+  {
+   "entry": "drone",
+   "claim": "hp 2, mass 0.7, speed 2.5, every 2 beats offset 1, range 8, telegraph 0.5 beat, bolt 5 tiles/s",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 286,
+   "text": "drone: { hp: 2, mass: 0.7, poise: 1.5,"
+  },
+  {
+   "entry": "drone",
+   "claim": "Keeps 5 tiles from its target",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 293,
+   "text": "export const DRONE_KEEP_DISTANCE = 5;"
+  },
+  {
+   "entry": "drone",
+   "claim": "Comfort band of half a tile either side",
+   "file": "prototype/src/core/enemies/drone.ts",
+   "line": 32,
+   "text": "export const DRONE_KEEP_BAND = 0.5;"
+  },
+  {
+   "entry": "drone",
+   "claim": "Fires half a beat off its grid",
+   "file": "prototype/src/core/enemies/drone.ts",
+   "line": 36,
+   "text": "export const DRONE_OFFBEAT = 0.5;"
+  },
+  {
+   "entry": "drone",
+   "claim": "Aim locks at telegraph start",
+   "file": "prototype/src/core/enemies/drone.ts",
+   "line": 149,
+   "text": "if (clear && isDroneFireSub(w, e, s + tel)) {"
+  },
+  {
+   "entry": "drone",
+   "claim": "Pushes from every self inside the comfort distance add up",
+   "file": "prototype/src/core/enemies/drone.ts",
+   "line": 172,
+   "text": "rx += (ox / od) * (DRONE_KEEP_DISTANCE - od);"
+  },
+  {
+   "entry": "drone",
+   "claim": "Hover collision: only shot-blocking tiles (walls, closed doors) stop it",
+   "file": "prototype/src/core/enemies/drone.ts",
+   "line": 51,
+   "text": "if (!grid.blocksShot(c, r)) continue;"
+  },
+  {
+   "entry": "drone",
+   "claim": "Hovering bodies never press plates",
+   "file": "prototype/src/core/mechanisms.ts",
+   "line": 340,
+   "text": "if (beh.hovering) continue;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "hp 40, every 4 beats, reach 2.2, radius 0.9, telegraph 2 beats",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 287,
+   "text": "boss: { hp: 40, mass: 8, poise: 20,"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Attention is the nearest self, re-chosen each beat when not committed",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 167,
+   "text": "const t = nearestTarget(w, e.x, e.y);"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Hits from the self holding its attention clang",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 369,
+   "text": "if (strike.source.tape === bossAttention(w, e)) return { kind: 'block', reason: 'armour' };"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Hits must land on the back half",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 370,
+   "text": "if (Math.abs(angleDelta(e.facing, strike.dir)) > BOSS_BACK_HALF_ARC) return { kind: 'block', reason: 'armour' };"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Hits from non-selves (traps, bolts) clang",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 368,
+   "text": "if (!('tape' in strike.source)) return { kind: 'block', reason: 'armour' };"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Never shoved; staggers only from momentum 4+",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 387,
+   "text": "return { kind: 'replace', strike: { ...strike, damage, knockback: 0, stagger } };"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Stagger threshold: momentum 4",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 83,
+   "text": "export const BOSS_STAGGER_MOMENTUM = 4;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Cleave arc 150 degrees",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 68,
+   "text": "export const BOSS_CLEAVE_ARC = (5 * Math.PI) / 6;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Cleave reach = radius + reach (3.1), plus the self body radius when it lands (3.4)",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 129,
+   "text": "return e.stats.radius + e.stats.reach;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Volley instead of cleave when its attention is beyond cleave range",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 354,
+   "text": "} else if (target && Math.hypot(target.pose.x - e.x, target.pose.y - e.y) > cleaveReach(e) + BASE.actorRadius) {"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Volley is 3 bolts",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 70,
+   "text": "export const BOSS_VOLLEY_COUNT = 3;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "From phase 2 every other attack is a sweep",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 352,
+   "text": "if ((e.mem.phase as number) >= 2 && (k & 1) === 1) {"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Sweep range 6 tiles",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 74,
+   "text": "export const BOSS_SWEEP_RANGE = 6;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Sweep passes a self in i-frames",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 263,
+   "text": "p.struck.add(`self:${self.index}`);"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Phase 3 at one third health (phase 2 at two thirds on the next line)",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 117,
+   "text": "if (hp * 3 <= maxHp) return 3;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Phase 3 halves the attack period",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 143,
+   "text": "return (e.mem.phase as number) >= 3 ? Math.max(1, Math.round(p / 2)) : p;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Memory strike telegraph 2 beats",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 79,
+   "text": "export const BOSS_RECALL_TELEGRAPH_BEATS = 2;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Memory strike radius 1.25 tiles (+0.3 body radius)",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 80,
+   "text": "export const BOSS_RECALL_RADIUS = 1.25;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "During a memory strike its attention is the remembered tape",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 161,
+   "text": "if (mode(e) === 'recall') return e.mem.recallTape as TapeIndex;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "A memory strike whose start passes while it is staggered or busy is dropped",
+   "file": "prototype/src/core/enemies/boss.ts",
+   "line": 328,
+   "text": "while (rt.next < rt.recalls.length && rt.recalls[rt.next].startSub < s) rt.next++;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "A dwell is staying within 0.75 tiles",
+   "file": "prototype/src/core/bossMemory.ts",
+   "line": 27,
+   "text": "export const BOSS_DWELL_RADIUS = 0.75;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "...for at least 2 beats",
+   "file": "prototype/src/core/bossMemory.ts",
+   "line": 29,
+   "text": "export const BOSS_DWELL_BEATS = 2;"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Remembers light, heavy and ranged attempts",
+   "file": "prototype/src/core/bossMemory.ts",
+   "line": 24,
+   "text": "export const REMEMBERED_ACTIONS: readonly ActionKind[] = ['light', 'heavy', 'ranged'];"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Memory is rebuilt only on commit and reset",
+   "file": "prototype/src/game/session.ts",
+   "line": 560,
+   "text": "this._bossMemory = this.rebuildBossMemory();"
+  },
+  {
+   "entry": "archivist",
+   "claim": "Memory is built only from committed tapes",
+   "file": "prototype/src/core/bossMemory.ts",
+   "line": 5,
+   "text": "*   - Memory is built ONLY from committed tapes. A discarded take, a whole-attempt reset (which"
+  },
+  {
+   "entry": "spikes",
+   "claim": "Kills vulnerable selves on a raised cell; i-frames protect",
+   "file": "docs/TRAPS.md",
+   "line": 133,
+   "text": "- While raised, every vulnerable self standing on a cell is killed (\"skewered by spikes sp1\");"
+  },
+  {
+   "entry": "spikes",
+   "claim": "Raised spikes block nothing",
+   "file": "docs/TRAPS.md",
+   "line": 132,
+   "text": "Raised spikes never block movement, shots or sight."
+  },
+  {
+   "entry": "spikes",
+   "claim": "Hovering enemies are not touched",
+   "file": "prototype/src/core/traps/system.ts",
+   "line": 678,
+   "text": "const touching = !getEnemyBehaviour(e.type).hovering && t.cells.has(this.tileIndexAt(e.x, e.y));"
+  },
+  {
+   "entry": "spikes",
+   "claim": "Damage 1",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 31,
+   "text": "export const SPIKES_DAMAGE = 1;"
+  },
+  {
+   "entry": "spikes",
+   "claim": "Enemies are hit on contact and after each full beat of contact",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 27,
+   "text": "export const HAZARD_RETICK_BEATS = 1;"
+  },
+  {
+   "entry": "spikes",
+   "claim": "Hazard hits are environment strikes (so shields and boss armour block them)",
+   "file": "prototype/src/core/traps/system.ts",
+   "line": 638,
+   "text": "source: { env: cause },"
+  },
+  {
+   "entry": "spikes",
+   "claim": "Warning ramps over 1 beat before a beat-timed activation",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 20,
+   "text": "export const TRAP_WARN_BEATS = 1;"
+  },
+  {
+   "entry": "crusher",
+   "claim": "Stroke damage 3",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 34,
+   "text": "export const CRUSHER_DAMAGE = 3;"
+  },
+  {
+   "entry": "crusher",
+   "claim": "Retract takes 60 substeps (0.25 s), solid and harmless",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 36,
+   "text": "export const CRUSHER_RETRACT_SUBS = 60;"
+  },
+  {
+   "entry": "crusher",
+   "claim": "On the stroke all cells become solid like a closed door; selves on them die unless in i-frames",
+   "file": "docs/TRAPS.md",
+   "line": 179,
+   "text": "- **Stroke.** On the substep `extendWhen` becomes true, all cells become SOLID at once (movement,"
+  },
+  {
+   "entry": "crusher",
+   "claim": "A playback self whose path enters an extended piston desyncs",
+   "file": "docs/TRAPS.md",
+   "line": 198,
+   "text": "| playback self | killed on the stroke; if its recorded path enters an extended piston it **desyncs**"
+  },
+  {
+   "entry": "conveyor",
+   "claim": "Default speed 2 tiles per master second",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 39,
+   "text": "export const CONVEYOR_SPEED = 2;"
+  },
+  {
+   "entry": "conveyor",
+   "claim": "Carries grounded enemies, the live self, floor-height projectiles",
+   "file": "docs/TRAPS.md",
+   "line": 236,
+   "text": "- Carried: grounded enemies (awake, asleep, staggered or sliding); the LIVE self (alive or recording"
+  },
+  {
+   "entry": "conveyor",
+   "claim": "Does not carry playback selves, sparks, ghosts, drones, turrets",
+   "file": "docs/TRAPS.md",
+   "line": 239,
+   "text": "- Not carried: playback selves (the belt's effect is already in the tape), sparks, ghosts, drones,"
+  },
+  {
+   "entry": "conveyor",
+   "claim": "At 2x the belt feels half as fast",
+   "file": "docs/TRAPS.md",
+   "line": 242,
+   "text": "so at 2× the belt feels half as fast to the hands"
+  },
+  {
+   "entry": "flame",
+   "claim": "Jet is cut at the first shot-blocking tile; low barriers do not stop it",
+   "file": "docs/TRAPS.md",
+   "line": 285,
+   "text": "- While on, the jet covers the tiles in front of the nozzle up to `range`, cut short at the first"
+  },
+  {
+   "entry": "flame",
+   "claim": "laserProof does not protect",
+   "file": "docs/TRAPS.md",
+   "line": 290,
+   "text": "protect. The `laserProof` ability does not."
+  },
+  {
+   "entry": "flame",
+   "claim": "Burns drones; bodies do not shield",
+   "file": "docs/TRAPS.md",
+   "line": 291,
+   "text": "- Every living enemy on a covered tile — drones included — takes `damage` on contact and each full"
+  },
+  {
+   "entry": "flame",
+   "claim": "Damage 1",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 41,
+   "text": "export const FLAME_DAMAGE = 1;"
+  },
+  {
+   "entry": "dart",
+   "claim": "Fires every 2 beats by default",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 44,
+   "text": "export const DART_EVERY = 2;"
+  },
+  {
+   "entry": "dart",
+   "claim": "Dart speed 8 tiles per master second",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 46,
+   "text": "export const DART_SPEED = 8;"
+  },
+  {
+   "entry": "dart",
+   "claim": "1 damage, 0.25 s stagger, no knockback, and the dart stops",
+   "file": "prototype/src/core/traps/dart.ts",
+   "line": 42,
+   "text": "damage: DART_DAMAGE,"
+  },
+  {
+   "entry": "dart",
+   "claim": "Hazard stagger 0.25 s",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 29,
+   "text": "export const HAZARD_STAGGER = 0.25;"
+  },
+  {
+   "entry": "dart",
+   "claim": "Stops at walls, closed doors, unbroken breakables, extended crushers; flies over low barriers",
+   "file": "docs/TRAPS.md",
+   "line": 333,
+   "text": "stops at walls, closed doors, unbroken breakables and extended crushers; it flies over low"
+  },
+  {
+   "entry": "bumper",
+   "claim": "Default throw 3 tiles for mass 1",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 54,
+   "text": "export const BUMPER_POWER = 3;"
+  },
+  {
+   "entry": "bumper",
+   "claim": "Knockback is power / mass",
+   "file": "prototype/src/core/traps/system.ts",
+   "line": 892,
+   "text": "applyKnockback(w, e, dir, power / e.stats.mass);"
+  },
+  {
+   "entry": "bumper",
+   "claim": "Fires on the rising edge of its signal",
+   "file": "docs/TRAPS.md",
+   "line": 369,
+   "text": "| `fireWhen` | The plate fires once each time this BECOMES true (rising edge). |"
+  },
+  {
+   "entry": "bumper",
+   "claim": "Never launches a playback self, a drone or a turret",
+   "file": "docs/TRAPS.md",
+   "line": 379,
+   "text": "- A playback self is never launched (MOM-06: the world never displaces a recorded self). Drones and"
+  },
+  {
+   "entry": "sensor",
+   "claim": "True while a detected body overlaps the beam; selves must be effective and synced",
+   "file": "docs/TRAPS.md",
+   "line": 422,
+   "text": "- Signal `trip1` is true while at least one detected body overlaps the beam (centre within its own"
+  },
+  {
+   "entry": "sensor",
+   "claim": "Projectiles, sparks, dead ghosts and desynced projections never trip it",
+   "file": "docs/TRAPS.md",
+   "line": 428,
+   "text": "- Projectiles, sparks, dead ghosts and desynced projections never trip it."
+  },
+  {
+   "entry": "sensor",
+   "claim": "Beam is cut at the first shot-blocking tile",
+   "file": "docs/TRAPS.md",
+   "line": 425,
+   "text": "- The beam is cut at the first tile that blocks shots between `from` and `to` (wall, closed door,"
+  },
+  {
+   "entry": "relay",
+   "claim": "Quantises to 1 beat by default",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 66,
+   "text": "export const RELAY_QUANTIZE = 1;"
+  },
+  {
+   "entry": "relay",
+   "claim": "Pulse holds 1 beat by default",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 68,
+   "text": "export const RELAY_HOLD = 1;"
+  },
+  {
+   "entry": "relay",
+   "claim": "Ignores triggers while armed or pulsing",
+   "file": "docs/TRAPS.md",
+   "line": 470,
+   "text": "While armed, or while a pulse is still running, further rising edges are ignored (one job at a"
+  },
+  {
+   "entry": "relay",
+   "claim": "The armed signal is a ready-made telegraph",
+   "file": "docs/TRAPS.md",
+   "line": 473,
+   "text": "the trigger until it fires — a ready-made telegraph: drive a warning lamp with it."
+  },
+  {
+   "entry": "magnet",
+   "claim": "Default pull 1.5 tiles/s for mass 1",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 61,
+   "text": "export const MAGNET_PULL = 1.5;"
+  },
+  {
+   "entry": "magnet",
+   "claim": "Stops pulling inside 0.6 tiles",
+   "file": "prototype/src/core/traps/tuning.ts",
+   "line": 63,
+   "text": "export const MAGNET_HOLD_RADIUS = 0.6;"
+  },
+  {
+   "entry": "magnet",
+   "claim": "Infinite-mass bodies (turrets) are skipped; pull is divided by mass",
+   "file": "prototype/src/core/traps/system.ts",
+   "line": 921,
+   "text": "if (!e.alive || !Number.isFinite(e.stats.mass) || !(e.stats.mass > 0)) continue;"
+  },
+  {
+   "entry": "magnet",
+   "claim": "Walls do not shield; enemies keep thinking",
+   "file": "docs/TRAPS.md",
+   "line": 508,
+   "text": "- While on, each substep every living enemy within `radius` (centre distance; walls do not shield)"
+  },
+  {
+   "entry": "magnet",
+   "claim": "Selves, sparks and projectiles are never pulled",
+   "file": "docs/TRAPS.md",
+   "line": 513,
+   "text": "- Selves, sparks and projectiles are never pulled."
+  },
+  {
+   "entry": "laser",
+   "claim": "Kills selves touching the beam while on (laser hit); enemies are not tested",
+   "file": "prototype/src/core/mechanisms.ts",
+   "line": 324,
+   "text": "w.combat.hitSelf({ self: s, cause: `burned by laser ${l.def.id}`, x: s.pose.x, y: s.pose.y, dir: 0, laser: true });"
+  },
+  {
+   "entry": "laser",
+   "claim": "laserProof ignores laser hits",
+   "file": "prototype/src/core/combat.ts",
+   "line": 111,
+   "text": "if (h.laser && w.loadout.abilities.includes('laserProof')) continue;"
+  },
+  {
+   "entry": "laser",
+   "claim": "Any self hit is skipped inside i-frames (and for non-vulnerable selves, one line above)",
+   "file": "prototype/src/core/combat.ts",
+   "line": 110,
+   "text": "if (s.inIframes(w.s)) continue;"
+  },
+  {
+   "entry": "laser",
+   "claim": "On while its signal expression is true",
+   "file": "prototype/src/core/types.ts",
+   "line": 420,
+   "text": "/** Laser is on while this evaluates true. */"
+  },
+  {
+   "entry": "tape-speed",
+   "claim": "Speeds are 0.5, 1, 2, 4",
+   "file": "prototype/src/core/types.ts",
+   "line": 27,
+   "text": "export type TapeSpeed = 0.5 | 1 | 2 | 4;"
+  },
+  {
+   "entry": "tape-speed",
+   "claim": "Every recording has the same local length",
+   "file": "prototype/src/core/time.ts",
+   "line": 43,
+   "text": "/** Local ticks in one recording: level.bars of the level tempo, identical for every speed (TIME-02, TIME-04). */"
+  },
+  {
+   "entry": "tape-speed",
+   "claim": "One traversal spans bars / speed master bars",
+   "file": "prototype/src/core/time.ts",
+   "line": 88,
+   "text": "return level.bars / speed;"
+  },
+  {
+   "entry": "tape-speed",
+   "claim": "Fast tape sees a slow world",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 34,
+   "text": "So a fast tape sees a slow world, and its recording"
+  },
+  {
+   "entry": "tape-speed",
+   "claim": "The level lists which speeds are offered",
+   "file": "prototype/src/core/types.ts",
+   "line": 710,
+   "text": "speeds: TapeSpeed[];"
+  },
+  {
+   "entry": "tape-speed",
+   "claim": "Enemies act on the master beat grid",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 143,
+   "text": "Enemies are deterministic rule-followers that act on the beat grid (AI-01..07, MUSIC-10). The boss"
+  },
+  {
+   "entry": "count-in",
+   "claim": "Count-in is 4 beats",
+   "file": "prototype/src/game/session.ts",
+   "line": 55,
+   "text": "export const COUNT_IN_BEATS = 4;"
+  },
+  {
+   "entry": "count-in",
+   "claim": "Count-in is heard at base tempo",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 41,
+   "text": "- Count-in and the active cassette's own layer are heard at the base tempo in wall time; the rest of"
+  },
+  {
+   "entry": "count-in",
+   "claim": "Pausing mid-take aborts the take",
+   "file": "prototype/src/game/session.ts",
+   "line": 249,
+   "text": "if (this._phase === 'countin' || this._phase === 'recording') this.abortTake();"
+  },
+  {
+   "entry": "retry-commit-reset",
+   "claim": "Retry discards only the pending take",
+   "file": "prototype/src/game/session.ts",
+   "line": 547,
+   "text": "private retryTake(): void {"
+  },
+  {
+   "entry": "retry-commit-reset",
+   "claim": "Commit locks the take",
+   "file": "prototype/src/game/session.ts",
+   "line": 558,
+   "text": "this.committed.push(take);"
+  },
+  {
+   "entry": "retry-commit-reset",
+   "claim": "Reset wipes every committed tape",
+   "file": "prototype/src/game/session.ts",
+   "line": 573,
+   "text": "this.committed = [];"
+  },
+  {
+   "entry": "retry-commit-reset",
+   "claim": "Win = objective latched and at least one self alive at the horizon",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 97,
+   "text": "that, decides victory: objective latched **and** at least one self `alive` when the horizon ends"
+  },
+  {
+   "entry": "retry-commit-reset",
+   "claim": "A level can be won with fewer tapes",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 101,
+   "text": "A level can be won with fewer tapes than it offers: the first combined run that wins, wins."
+  },
+  {
+   "entry": "retry-commit-reset",
+   "claim": "1 to 4 tapes per level",
+   "file": "prototype/src/core/types.ts",
+   "line": 708,
+   "text": "maxTapes: 1 | 2 | 3 | 4;"
+  },
+  {
+   "entry": "dying-on-tape",
+   "claim": "One hit kills; a live self becomes a recording ghost, a playback self a ghost",
+   "file": "prototype/src/core/combat.ts",
+   "line": 122,
+   "text": "s.life = s.live ? 'recGhost' : 'ghost';"
+  },
+  {
+   "entry": "dying-on-tape",
+   "claim": "A dead playback self loses its pending attempts",
+   "file": "prototype/src/core/combat.ts",
+   "line": 128,
+   "text": "s.swings.length = 0;"
+  },
+  {
+   "entry": "dying-on-tape",
+   "claim": "recGhost: walls still block, affects this take only, takes no hits",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 74,
+   "text": "| live, `recGhost` | player physics, walls still block | yes, in this take only | no |"
+  },
+  {
+   "entry": "dying-on-tape",
+   "claim": "Playback ghost: passes through everything, affects nothing",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 76,
+   "text": "| playback, `ghost` | fixed path, passes through everything | no | no |"
+  },
+  {
+   "entry": "dying-on-tape",
+   "claim": "Vulnerable (targetable) = synced and alive",
+   "file": "prototype/src/core/actors.ts",
+   "line": 160,
+   "text": "return this.synced && this.life === 'alive';"
+  },
+  {
+   "entry": "dying-on-tape",
+   "claim": "Dodge 2.4 tiles",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 96,
+   "text": "dodgeDistance: 2.4,"
+  },
+  {
+   "entry": "dying-on-tape",
+   "claim": "Dodge i-frames 10 ticks of a 14-tick dodge",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 98,
+   "text": "dodgeIframes: 10,"
+  },
+  {
+   "entry": "rescue",
+   "claim": "Survival is recomputed every run",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 69,
+   "text": "Survival is recomputed every run."
+  },
+  {
+   "entry": "rescue",
+   "claim": "GHOST-06: a later cassette can prevent an earlier death, and the reverse",
+   "file": "docs/requirements.txt",
+   "line": 500,
+   "text": "GHOST-06 — Survival is recalculated each run."
+  },
+  {
+   "entry": "rescue",
+   "claim": "A rescued but obstructed character can still desynchronize",
+   "file": "docs/requirements.txt",
+   "line": 577,
+   "text": "A rescued but obstructed character can still desynchronize."
+  },
+  {
+   "entry": "desync",
+   "claim": "Obstruction: recorded position in solid geometry or the step to it blocked",
+   "file": "prototype/src/core/actors.ts",
+   "line": 207,
+   "text": "if (grid.isSolidAt(x, y, OBSTRUCTION_RADIUS, opts)) return true;"
+  },
+  {
+   "entry": "desync",
+   "claim": "Solid for this test: walls, void, low barriers, closed doors, unbroken breakables",
+   "file": "prototype/src/core/actors.ts",
+   "line": 200,
+   "text": "position overlaps solid geometry (walls, void, low barriers, closed doors, unbroken breakables)"
+  },
+  {
+   "entry": "desync",
+   "claim": "Spark speed 7.5 tiles per master second",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 111,
+   "text": "sparkSpeed: 7.5,"
+  },
+  {
+   "entry": "desync",
+   "claim": "Resync within 0.35 tiles",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 113,
+   "text": "resyncTolerance: 0.35,"
+  },
+  {
+   "entry": "desync",
+   "claim": "...with a clear line",
+   "file": "prototype/src/core/actors.ts",
+   "line": 236,
+   "text": "return !grid.sweepCircleBlocked(spark.x, spark.y, self.pose.x, self.pose.y, BASE.sparkRadius);"
+  },
+  {
+   "entry": "desync",
+   "claim": "Can act only when synced",
+   "file": "prototype/src/core/actors.ts",
+   "line": 155,
+   "text": "return this.synced && (this.life === 'alive' || this.life === 'recGhost');"
+  },
+  {
+   "entry": "desync",
+   "claim": "The spark cannot operate anything",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 83,
+   "text": "It cannot operate anything. It resyncs"
+  },
+  {
+   "entry": "desync",
+   "claim": "No timeout, no teleport, no auto-death",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 84,
+   "text": "when it is within a small tolerance of the projection with a clear line. No timeout, no teleport,"
+  },
+  {
+   "entry": "desync",
+   "claim": "A desynced survivor counts but cannot hold an exit",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 98,
+   "text": "(a desynced-but-alive self counts as a survivor; it cannot hold an exit)."
+  },
+  {
+   "entry": "end-modes",
+   "claim": "Three end modes",
+   "file": "prototype/src/core/types.ts",
+   "line": 36,
+   "text": "export type EndMode = 'stop' | 'repeat' | 'reverse';"
+  },
+  {
+   "entry": "end-modes",
+   "claim": "Stop: holds, stays solid for plates, targetable, killable, a survivor",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 56,
+   "text": "- **stop** — the self holds its final pose. It stays physically present: solid for plates,"
+  },
+  {
+   "entry": "end-modes",
+   "claim": "Repeat: cuts to sample 0, events fire again",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 58,
+   "text": "- **repeat** — cuts straight back to sample 0 and plays again; events fire again each traversal"
+  },
+  {
+   "entry": "end-modes",
+   "claim": "Reverse: events fire again on the backward pass; a toggle toggles again",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 60,
+   "text": "- **reverse** — ping-pongs. On a backward pass each event fires again when the playhead crosses"
+  },
+  {
+   "entry": "end-modes",
+   "claim": "On a reverse pass the recorded velocity is negated",
+   "file": "prototype/src/core/combat.ts",
+   "line": 187,
+   "text": "const base = swingMomentum(swing, w.loadout.mods, self.tape.speed, ev.vx * passDir, ev.vy * passDir, ev.dir);"
+  },
+  {
+   "entry": "end-modes",
+   "claim": "Approach is clamped at -0.5 (so 1 + 0.5 x -0.5 = 0.75)",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 169,
+   "text": "export const APPROACH_MIN = -0.5;"
+  },
+  {
+   "entry": "end-modes",
+   "claim": "Dead stays dead; on a repeat cut the spark does not teleport",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 63,
+   "text": "- Life and desync state persist across boundaries: a dead tape stays dead for the rest of the run."
+  },
+  {
+   "entry": "end-modes",
+   "claim": "The level lists which end modes are offered",
+   "file": "prototype/src/core/types.ts",
+   "line": 711,
+   "text": "endModes: EndMode[];"
+  },
+  {
+   "entry": "momentum",
+   "claim": "momentum = impact x meleeImpact x tapeSpeed x (1 + approachBonus x approach)",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 203,
+   "text": "return impact * meleeImpactMod * tapeSpeed * (1 + BASE.approachBonus * approachBonusMod * approach);"
+  },
+  {
+   "entry": "momentum",
+   "claim": "Approach bonus 0.5",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 116,
+   "text": "approachBonus: 0.5,"
+  },
+  {
+   "entry": "momentum",
+   "claim": "Approach capped at +1",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 170,
+   "text": "export const APPROACH_MAX = 1;"
+  },
+  {
+   "entry": "momentum",
+   "claim": "Damage = floor(momentum x damageEff x damageMod)",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 220,
+   "text": "const d = Math.floor((momentum * damageEff * damageMod) / DAMAGE_UNIT + 1e-9);"
+  },
+  {
+   "entry": "momentum",
+   "claim": "Projectiles do not multiply in tape speed",
+   "file": "prototype/src/core/weapons/common.ts",
+   "line": 11,
+   "text": "Tape speed is deliberately NOT multiplied in:"
+  },
+  {
+   "entry": "knockback",
+   "claim": "knockback = momentum x eff / mass, capped",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 233,
+   "text": "const k = (momentum * knockbackEff * knockbackMod) / enemyMass;"
+  },
+  {
+   "entry": "knockback",
+   "claim": "Cap 3 tiles",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 117,
+   "text": "knockbackCap: 3,"
+  },
+  {
+   "entry": "knockback",
+   "claim": "Slide lasts 0.18 master seconds",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 248,
+   "text": "export const KNOCKBACK_SECONDS = 0.18;"
+  },
+  {
+   "entry": "knockback",
+   "claim": "Wall slam: 0.25 s stagger per remaining tile",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 250,
+   "text": "export const WALL_SLAM_STAGGER_PER_TILE = 0.25;"
+  },
+  {
+   "entry": "knockback",
+   "claim": "A shove cancels a telegraph",
+   "file": "prototype/src/core/enemies/common.ts",
+   "line": 238,
+   "text": "// A shove breaks a telegraph: the attack would otherwise land off the beat grid (AI-07)."
+  },
+  {
+   "entry": "knockback",
+   "claim": "Knockback is applied only if the hit did not kill (the kill branch returns above this line)",
+   "file": "prototype/src/core/combat.ts",
+   "line": 173,
+   "text": "if (kb > 0) applyKnockback(w, e, st.dir, kb);"
+  },
+  {
+   "entry": "knockback",
+   "claim": "Enemy hits never displace a recorded self",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 136,
+   "text": "Enemy hits never displace a recorded self (MOM-06)"
+  },
+  {
+   "entry": "stagger",
+   "claim": "stagger seconds = momentum x eff / poise",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 241,
+   "text": "const s = (momentum * staggerEff * staggerMod) / enemyPoise;"
+  },
+  {
+   "entry": "stagger",
+   "claim": "A staggered enemy skips its beat and step logic",
+   "file": "prototype/src/core/enemies/common.ts",
+   "line": 76,
+   "text": "if (s < e.staggerUntil) {"
+  },
+  {
+   "entry": "stagger",
+   "claim": "Stagger cancels any telegraph",
+   "file": "prototype/src/core/enemies/common.ts",
+   "line": 267,
+   "text": "/** Stagger for `subs` master substeps: cancels any telegraph, emits 'enemyStagger'. */"
+  },
+  {
+   "entry": "stagger",
+   "claim": "A longer stagger replaces, never adds to, a shorter one",
+   "file": "prototype/src/core/enemies/common.ts",
+   "line": 271,
+   "text": "if (until <= e.staggerUntil) return;"
+  },
+  {
+   "entry": "breakables",
+   "claim": "One swing with momentum >= threshold breaks it",
+   "file": "prototype/src/core/mechanisms.ts",
+   "line": 236,
+   "text": "if (sw.momentum >= b.def.threshold) {"
+  },
+  {
+   "entry": "breakables",
+   "claim": "A weak swing clangs and reports the threshold",
+   "file": "prototype/src/core/mechanisms.ts",
+   "line": 243,
+   "text": "detail: `needs ${b.def.threshold}` });"
+  },
+  {
+   "entry": "breakables",
+   "claim": "Tutorial wall threshold 5",
+   "file": "prototype/src/core/tuning.ts",
+   "line": 176,
+   "text": "export const TUTORIAL_WALL_THRESHOLD = 5;"
+  },
+  {
+   "entry": "breakables",
+   "claim": "Only melee swings are tested against breakables",
+   "file": "prototype/src/core/combat.ts",
+   "line": 277,
+   "text": "w.mechs.strikeObjects(w, self, sw, ox, oy, reach, arc);"
+  },
+  {
+   "entry": "gear-slots",
+   "claim": "Six slots; items are data",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 148,
+   "text": "Six slots: helmet, top, pants, shoes, melee, ranged. Items are data (`GearItem`): stat multipliers,"
+  },
+  {
+   "entry": "gear-slots",
+   "claim": "All four cassettes share the loadout; found on first clear",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 149,
+   "text": "ability flags, weapon definitions. All four cassettes share the loadout. Found on first clear of a"
+  },
+  {
+   "entry": "gear-slots",
+   "claim": "Never lost; every mandatory level beatable with the baseline",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 150,
+   "text": "level; never lost; swapped freely between levels. Every mandatory level is beatable with the"
+  },
+  {
+   "entry": "gear-slots",
+   "claim": "Equipment is locked for the attempt",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 115,
+   "text": "- Equipment is locked for the attempt; loadouts change between levels only."
+  },
+  {
+   "entry": "gear-slots",
+   "claim": "Base loadout",
+   "file": "data/gear.json",
+   "line": 724,
+   "text": "\"baseLoadout\": {"
+  },
+  {
+   "entry": "ranged-rule",
+   "claim": "Fixed trigger, simulated projectile",
+   "file": "prototype/src/core/weapons/common.ts",
+   "line": 4,
+   "text": "The rule is \"fixed trigger, simulated projectile\" (Revision 1): a tape records when, where and in"
+  },
+  {
+   "entry": "ranged-rule",
+   "claim": "Only an alive, synced self launches",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 141,
+   "text": "Only an alive, synced self launches."
+  },
+  {
+   "entry": "ranged-rule",
+   "claim": "A missile keeps flying if its launcher dies or desyncs",
+   "file": "prototype/src/core/weapons/missile.ts",
+   "line": 19,
+   "text": "The missile is a world object: it keeps flying if its launcher later dies or desyncs (left"
+  },
+  {
+   "entry": "ranged-rule",
+   "claim": "Action timings are local ticks, so tape speed scales them in master time",
+   "file": "docs/ARCHITECTURE.md",
+   "line": 120,
+   "text": "Actions: light, heavy, dodge (i-frames), ranged, interact. All timings are in local ticks and come"
+  },
+  {
+   "entry": "ranged-missile",
+   "claim": "Locks the nearest living enemy once at launch",
+   "file": "prototype/src/core/weapons/missile.ts",
+   "line": 50,
+   "text": "const target = acquireNearestEnemy(w, self.pose.x, self.pose.y);"
+  },
+  {
+   "entry": "ranged-missile",
+   "claim": "Never retargets; a dead target just stops the homing",
+   "file": "prototype/src/core/weapons/missile.ts",
+   "line": 61,
+   "text": "// MISSILE-03: the lock is never moved to another enemy; a dead target just stops the homing."
+  },
+  {
+   "entry": "ranged-missile",
+   "claim": "No line of sight needed; walls stop it",
+   "file": "prototype/src/core/weapons/missile.ts",
+   "line": 8,
+   "text": "is deterministic (MISSILE-03 leaves ties open). Line of sight is not required: the missile"
+  },
+  {
+   "entry": "ranged-missile",
+   "claim": "Strikes whatever enemy it touches first",
+   "file": "prototype/src/core/weapons/missile.ts",
+   "line": 13,
+   "text": "It strikes whatever enemy it actually touches first (the lock steers it; it does not make it"
+  },
+  {
+   "entry": "ranged-missile",
+   "claim": "Mixtape Rocket numbers (speed 3, range 20, impact 1.5, cooldown 90 ticks)",
+   "file": "data/gear.json",
+   "line": 588,
+   "text": "\"id\": \"mixtape_rocket\","
+  },
+  {
+   "entry": "ranged-pierce",
+   "claim": "Passes through up to `pierce` enemies and stops at the next",
+   "file": "prototype/src/core/weapons/common.ts",
+   "line": 124,
+   "text": "if (p.pierceLeft > 0) {"
+  },
+  {
+   "entry": "ranged-pierce",
+   "claim": "Needle Rail numbers (speed 24, range 12, impact 1, pierce 3, cooldown 75 ticks)",
+   "file": "data/gear.json",
+   "line": 615,
+   "text": "\"id\": \"needle_rail\","
+  },
+  {
+   "entry": "ranged-phase",
+   "claim": "Always passes walls",
+   "file": "prototype/src/core/weapons/phase.ts",
+   "line": 19,
+   "text": "spec.passesWalls = true;"
+  },
+  {
+   "entry": "ranged-phase",
+   "claim": "Ends at the map edge",
+   "file": "prototype/src/core/weapons/phase.ts",
+   "line": 34,
+   "text": "detail: 'phase:edge' });"
+  },
+  {
+   "entry": "ranged-phase",
+   "claim": "Bleedthrough Emitter numbers (speed 6, range 8, impact 1, cooldown 150 ticks)",
+   "file": "data/gear.json",
+   "line": 642,
+   "text": "\"id\": \"bleed_emitter\","
+  },
+  {
+   "entry": "ranged-arc",
+   "claim": "Lands at max(minRange, range), cut only by the map edge",
+   "file": "prototype/src/core/weapons/arc.ts",
+   "line": 36,
+   "text": "const wanted = Math.max(def.minRange ?? 0, def.range);"
+  },
+  {
+   "entry": "ranged-arc",
+   "claim": "Touches no enemy in flight",
+   "file": "prototype/src/core/weapons/arc.ts",
+   "line": 40,
+   "text": "spec.hitsEnemies = false;"
+  },
+  {
+   "entry": "ranged-arc",
+   "claim": "Walls shield from the blast unless the shell lands in a solid tile",
+   "file": "prototype/src/core/weapons/common.ts",
+   "line": 106,
+   "text": "if (!inSolid && w.grid.segmentBlocked(x, y, e.x, e.y, true)) continue;"
+  },
+  {
+   "entry": "ranged-arc",
+   "claim": "Blast pushes away from the centre",
+   "file": "prototype/src/core/weapons/common.ts",
+   "line": 108,
+   "text": "const dir = d > 1e-9 ? Math.atan2(dy, dx) : p.dir;"
+  },
+  {
+   "entry": "ranged-arc",
+   "claim": "Bass Drop numbers (speed 7, range 7, minRange 3, blast 1.2, impact 1.3, cooldown 100 ticks)",
+   "file": "data/gear.json",
+   "line": 669,
+   "text": "\"id\": \"bass_drop\","
+  },
+  {
+   "entry": "ranged-burst",
+   "claim": "Each pellet is its own projectile with full impact",
+   "file": "prototype/src/core/weapons/burst.ts",
+   "line": 27,
+   "text": "for (const h of headings) w.projectiles.spawn(w, selfShot(w, self, 'burst', h, passDir));"
+  },
+  {
+   "entry": "ranged-burst",
+   "claim": "Static Spray numbers (5 pellets, 40 degrees, range 3.5, impact 1, cooldown 60 ticks)",
+   "file": "data/gear.json",
+   "line": 697,
+   "text": "\"id\": \"static_spray\","
+  }
+ ]
+}

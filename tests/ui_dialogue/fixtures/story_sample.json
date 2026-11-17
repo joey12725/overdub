@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "characters": [
+    { "id": "moxie", "name": "Moxie", "color": "#f5c518", "portraits": ["neutral", "grin", "smug"] },
+    { "id": "opal", "name": "Opal", "color": "#e9a36b", "portraits": ["neutral", "dry"] },
+    { "id": "tolly", "name": "Tolliver", "color": "#9bb7ff", "portraits": ["neutral", "earnest"] }
+  ],
+  "levels": {
+    "t-one": {
+      "intro": [
+        { "who": "opal", "expression": "dry", "line": "Radio check. You still owe me for the headphones." },
+        { "who": "moxie", "expression": "grin", "line": "Loud and clear. Put it on my tab." },
+        { "who": "moxie", "expression": "smug", "line": "Back by dinner." }
+      ],
+      "outro": [
+        { "who": "moxie", "expression": "grin", "line": "Two of me in there." }
+      ],
+      "firstDeath": [
+        { "who": "moxie", "expression": "neutral", "line": "That one got me." }
+      ],
+      "idle": [
+        { "who": "opal", "expression": "dry", "line": "I'm billing you for this radio time." }
+      ]
+    },
+    "t-two": {
+      "intro": [
+        { "who": "tolly", "expression": "earnest", "line": "Licensed survey!" }
+      ]
+    }
+  },
+  "once": {
+    "firstDeath": [ { "who": "moxie", "expression": "neutral", "line": "Okay. That killed me." } ],
+    "firstDesync": [ { "who": "moxie", "expression": "neutral", "line": "She's skipping." } ],
+    "firstLoot": [ { "who": "moxie", "expression": "grin", "line": "Now THIS is why I get out of bed." } ]
+  },
+  "barks": {
+    "countIn": [
+      { "who": "moxie", "expression": "neutral", "line": "From the top." },
+      { "who": "moxie", "expression": "grin", "line": "Rolling." },
+      { "who": "moxie", "expression": "smug", "line": "Okay, me. Places." }
+    ],
+    "death": [
+      { "who": "moxie", "expression": "neutral", "line": "Ow. Okay. Noted." },
+      { "who": "moxie", "expression": "neutral", "line": "Rude." }
+    ],
+    "takeCommitted": [ { "who": "moxie", "expression": "grin", "line": "Keeper." }, { "who": "moxie", "expression": "smug", "line": "Print it." } ],
+    "win": [ { "who": "moxie", "expression": "grin", "line": "And that's the mix." } ],
+    "desync": [ { "who": "moxie", "expression": "neutral", "line": "Lost the groove." } ],
+    "loot": [ { "who": "moxie", "expression": "grin", "line": "Ooh. Mine." } ]
+  },
+  "ending": [
+    { "who": "moxie", "expression": "neutral", "line": "One." },
+    { "who": "moxie", "expression": "neutral", "line": "Two." },
+    { "who": "moxie", "expression": "neutral", "line": "Three." },
+    { "who": "moxie", "expression": "neutral", "line": "Four." },
+    { "who": "moxie", "expression": "neutral", "line": "Five." },
+    { "who": "moxie", "expression": "neutral", "line": "Six." },
+    { "who": "opal", "expression": "dry", "line": "--oxie? Seven." },
+    { "who": "moxie", "expression": "grin", "line": "Eight." }
+  ],
+  "stinger": [ { "who": "tolly", "expression": "earnest", "line": "Four signature lines." } ]
+}

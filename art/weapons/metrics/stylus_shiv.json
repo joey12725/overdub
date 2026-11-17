@@ -1,0 +1,89 @@
+{
+ "id": "stylus_shiv",
+ "kind": "melee",
+ "style": "shiv",
+ "hands": 1,
+ "tris": {
+  "Weapon": 2640
+ },
+ "tris_total": 2640,
+ "bounds_min": [
+  -0.0365,
+  -0.142,
+  -0.0365
+ ],
+ "bounds_max": [
+  0.058,
+  0.432,
+  0.0365
+ ],
+ "size": [
+  0.0945,
+  0.574,
+  0.073
+ ],
+ "empties": {
+  "Grip": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Tip": {
+   "pos": [
+    0.0,
+    0.432,
+    0.023
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailStart": {
+   "pos": [
+    0.0,
+    0.275,
+    0.02
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailEnd": {
+   "pos": [
+    0.0,
+    0.432,
+    0.023
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_accent2",
+  "weapon_black",
+  "weapon_dark",
+  "weapon_glow",
+  "weapon_grip",
+  "weapon_main",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_pink_glow",
+  "weapon_steel"
+ ],
+ "bones": []
+}

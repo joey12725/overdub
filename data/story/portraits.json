@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "houseStyle": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette.",
+  "bustFraming": "Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen left, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark.",
+  "bustFramingMoxie": "Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen right, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark.",
+  "facingNote": "Moxie sits on the left of the dialogue box and faces right; Opal and Tolliver sit on the right and face left; the Archivist is strictly frontal. Do not mirror Moxie: her cheek stripes, strap and headphone mark are asymmetric.",
+  "wideStyle": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Skies and deep backgrounds may use two flat bands of colour. No text, no logo, no watermark.",
+  "negativePrompt": "photorealistic, 3D render, painterly, soft airbrush gradients, multiple shadow tones, text, logo, watermark, frame, extra fingers, magenta or purple hair on Moxie, star emblem on headphones, yellow outer jacket on Moxie",
+  "bustNegativePrompt": "background scenery, extra characters",
+  "reference": "docs/reference/R01-moxie-concept.png is the anchor for Moxie; attach it as an image reference where the generator allows.",
+  "portraits": [
+    {
+      "id": "moxie.neutral",
+      "character": "moxie",
+      "expression": "neutral",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen right, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Moxie, a scrappy tomboyish young woman scavenger: warm tan-brown skin, sharp amber eyes with thick dark lashes, messy dark-brown hair in two high scruffy pigtails with many loose strands and a ragged fringe, bright yellow over-ear headphones with a dark triangle mark on the ear cup, a small red hinge and a thin yellow cable, two short pale cream face-paint stripes on one cheek, black choker with a metal ring, light cream cropped top with dark trim, a dark angular graphic on the chest and a dark diagonal chest strap with a buckle, oversized charcoal-black jacket worn slipping off both shoulders with bright yellow lining showing at the collar and cuffs and pale chevron marks on the upper sleeve, fingerless dark gloves and a chunky scavenged wrist device with a small teal screen, the waistband of olive low-rise cargo trousers just visible at the bottom edge. Palette: yellow, charcoal, olive, cream on tan-brown skin, with tiny red-pink strap accents. Expression and pose: relaxed and alert, chin slightly up, mouth closed in a faint lopsided line, one eyebrow a touch higher, headphones on.",
+      "facing": "right"
+    },
+    {
+      "id": "moxie.grin",
+      "character": "moxie",
+      "expression": "grin",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen right, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Moxie, a scrappy tomboyish young woman scavenger: warm tan-brown skin, sharp amber eyes with thick dark lashes, messy dark-brown hair in two high scruffy pigtails with many loose strands and a ragged fringe, bright yellow over-ear headphones with a dark triangle mark on the ear cup, a small red hinge and a thin yellow cable, two short pale cream face-paint stripes on one cheek, black choker with a metal ring, light cream cropped top with dark trim, a dark angular graphic on the chest and a dark diagonal chest strap with a buckle, oversized charcoal-black jacket worn slipping off both shoulders with bright yellow lining showing at the collar and cuffs and pale chevron marks on the upper sleeve, fingerless dark gloves and a chunky scavenged wrist device with a small teal screen, the waistband of olive low-rise cargo trousers just visible at the bottom edge. Palette: yellow, charcoal, olive, cream on tan-brown skin, with tiny red-pink strap accents. Expression and pose: wide toothy grin, eyes bright and narrowed with delight, head tilted, one hand raised to the back of her head, headphones on.",
+      "facing": "right"
+    },
+    {
+      "id": "moxie.smug",
+      "character": "moxie",
+      "expression": "smug",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen right, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Moxie, a scrappy tomboyish young woman scavenger: warm tan-brown skin, sharp amber eyes with thick dark lashes, messy dark-brown hair in two high scruffy pigtails with many loose strands and a ragged fringe, bright yellow over-ear headphones with a dark triangle mark on the ear cup, a small red hinge and a thin yellow cable, two short pale cream face-paint stripes on one cheek, black choker with a metal ring, light cream cropped top with dark trim, a dark angular graphic on the chest and a dark diagonal chest strap with a buckle, oversized charcoal-black jacket worn slipping off both shoulders with bright yellow lining showing at the collar and cuffs and pale chevron marks on the upper sleeve, fingerless dark gloves and a chunky scavenged wrist device with a small teal screen, the waistband of olive low-rise cargo trousers just visible at the bottom edge. Palette: yellow, charcoal, olive, cream on tan-brown skin, with tiny red-pink strap accents. Expression and pose: eyes half-lidded, one-sided smirk, chin lifted, shoulder pushed forward so the jacket slips further, thumb hooked toward herself.",
+      "facing": "right"
+    },
+    {
+      "id": "moxie.annoyed",
+      "character": "moxie",
+      "expression": "annoyed",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen right, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Moxie, a scrappy tomboyish young woman scavenger: warm tan-brown skin, sharp amber eyes with thick dark lashes, messy dark-brown hair in two high scruffy pigtails with many loose strands and a ragged fringe, bright yellow over-ear headphones with a dark triangle mark on the ear cup, a small red hinge and a thin yellow cable, two short pale cream face-paint stripes on one cheek, black choker with a metal ring, light cream cropped top with dark trim, a dark angular graphic on the chest and a dark diagonal chest strap with a buckle, oversized charcoal-black jacket worn slipping off both shoulders with bright yellow lining showing at the collar and cuffs and pale chevron marks on the upper sleeve, fingerless dark gloves and a chunky scavenged wrist device with a small teal screen, the waistband of olive low-rise cargo trousers just visible at the bottom edge. Palette: yellow, charcoal, olive, cream on tan-brown skin, with tiny red-pink strap accents. Expression and pose: flat unimpressed stare, one eyebrow down, mouth pulled to one side, a small anime vein mark near the temple, arms folded.",
+      "facing": "right"
+    },
+    {
+      "id": "moxie.surprised",
+      "character": "moxie",
+      "expression": "surprised",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen right, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Moxie, a scrappy tomboyish young woman scavenger: warm tan-brown skin, sharp amber eyes with thick dark lashes, messy dark-brown hair in two high scruffy pigtails with many loose strands and a ragged fringe, bright yellow over-ear headphones with a dark triangle mark on the ear cup, a small red hinge and a thin yellow cable, two short pale cream face-paint stripes on one cheek, black choker with a metal ring, light cream cropped top with dark trim, a dark angular graphic on the chest and a dark diagonal chest strap with a buckle, oversized charcoal-black jacket worn slipping off both shoulders with bright yellow lining showing at the collar and cuffs and pale chevron marks on the upper sleeve, fingerless dark gloves and a chunky scavenged wrist device with a small teal screen, the waistband of olive low-rise cargo trousers just visible at the bottom edge. Palette: yellow, charcoal, olive, cream on tan-brown skin, with tiny red-pink strap accents. Expression and pose: eyes wide with small pupils, eyebrows up, mouth a small open oval, pigtails bouncing upward, one headphone cup knocked askew.",
+      "facing": "right"
+    },
+    {
+      "id": "moxie.thinking",
+      "character": "moxie",
+      "expression": "thinking",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen right, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Moxie, a scrappy tomboyish young woman scavenger: warm tan-brown skin, sharp amber eyes with thick dark lashes, messy dark-brown hair in two high scruffy pigtails with many loose strands and a ragged fringe, bright yellow over-ear headphones with a dark triangle mark on the ear cup, a small red hinge and a thin yellow cable, two short pale cream face-paint stripes on one cheek, black choker with a metal ring, light cream cropped top with dark trim, a dark angular graphic on the chest and a dark diagonal chest strap with a buckle, oversized charcoal-black jacket worn slipping off both shoulders with bright yellow lining showing at the collar and cuffs and pale chevron marks on the upper sleeve, fingerless dark gloves and a chunky scavenged wrist device with a small teal screen, the waistband of olive low-rise cargo trousers just visible at the bottom edge. Palette: yellow, charcoal, olive, cream on tan-brown skin, with tiny red-pink strap accents. Expression and pose: eyes looking up and to one side, mouth pursed, one gloved finger tapping the headphone cup, head tilted.",
+      "facing": "right"
+    },
+    {
+      "id": "moxie.determined",
+      "character": "moxie",
+      "expression": "determined",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen right, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Moxie, a scrappy tomboyish young woman scavenger: warm tan-brown skin, sharp amber eyes with thick dark lashes, messy dark-brown hair in two high scruffy pigtails with many loose strands and a ragged fringe, bright yellow over-ear headphones with a dark triangle mark on the ear cup, a small red hinge and a thin yellow cable, two short pale cream face-paint stripes on one cheek, black choker with a metal ring, light cream cropped top with dark trim, a dark angular graphic on the chest and a dark diagonal chest strap with a buckle, oversized charcoal-black jacket worn slipping off both shoulders with bright yellow lining showing at the collar and cuffs and pale chevron marks on the upper sleeve, fingerless dark gloves and a chunky scavenged wrist device with a small teal screen, the waistband of olive low-rise cargo trousers just visible at the bottom edge. Palette: yellow, charcoal, olive, cream on tan-brown skin, with tiny red-pink strap accents. Expression and pose: brows drawn down, focused forward stare, small fierce closed-mouth smile, one hand reaching down toward her belt, strands of hair lifting.",
+      "facing": "right"
+    },
+    {
+      "id": "moxie.soft",
+      "character": "moxie",
+      "expression": "soft",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen right, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Moxie, a scrappy tomboyish young woman scavenger: warm tan-brown skin, sharp amber eyes with thick dark lashes, messy dark-brown hair in two high scruffy pigtails with many loose strands and a ragged fringe, bright yellow over-ear headphones with a dark triangle mark on the ear cup, a small red hinge and a thin yellow cable, two short pale cream face-paint stripes on one cheek, black choker with a metal ring, light cream cropped top with dark trim, a dark angular graphic on the chest and a dark diagonal chest strap with a buckle, oversized charcoal-black jacket worn slipping off both shoulders with bright yellow lining showing at the collar and cuffs and pale chevron marks on the upper sleeve, fingerless dark gloves and a chunky scavenged wrist device with a small teal screen, the waistband of olive low-rise cargo trousers just visible at the bottom edge. Palette: yellow, charcoal, olive, cream on tan-brown skin, with tiny red-pink strap accents. Expression and pose: eyes lowered, small genuine unguarded smile, shoulders dropped, headphones resting round her neck instead of on her ears.",
+      "facing": "right"
+    },
+    {
+      "id": "opal.neutral",
+      "character": "opal",
+      "expression": "neutral",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen left, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Opal, a shopkeeper and radio contact in her sixties: deep brown skin, short silver-grey natural hair, half-moon reading glasses pushed up onto her forehead, a brass jeweller's loupe hanging on a cord round her neck, a chunky apricot-orange knitted cardigan over a slate-grey canvas work apron with small screwdrivers in the chest pocket, an old chrome desk microphone on a short stand at the lower edge of the frame. Settled, still posture. Palette: apricot orange, slate grey, cream, silver; no yellow anywhere. Designed to sit beside a yellow, olive and charcoal protagonist as a warm, soft, rounded shape. Expression and pose: chin resting on her knuckles, level patient gaze, mouth closed.",
+      "facing": "left"
+    },
+    {
+      "id": "opal.dry",
+      "character": "opal",
+      "expression": "dry",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen left, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Opal, a shopkeeper and radio contact in her sixties: deep brown skin, short silver-grey natural hair, half-moon reading glasses pushed up onto her forehead, a brass jeweller's loupe hanging on a cord round her neck, a chunky apricot-orange knitted cardigan over a slate-grey canvas work apron with small screwdrivers in the chest pocket, an old chrome desk microphone on a short stand at the lower edge of the frame. Settled, still posture. Palette: apricot orange, slate grey, cream, silver; no yellow anywhere. Designed to sit beside a yellow, olive and charcoal protagonist as a warm, soft, rounded shape. Expression and pose: one eyebrow raised, eyes half-lidded, mouth perfectly flat, head tipped a few degrees as if naming a price.",
+      "facing": "left"
+    },
+    {
+      "id": "opal.amused",
+      "character": "opal",
+      "expression": "amused",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen left, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Opal, a shopkeeper and radio contact in her sixties: deep brown skin, short silver-grey natural hair, half-moon reading glasses pushed up onto her forehead, a brass jeweller's loupe hanging on a cord round her neck, a chunky apricot-orange knitted cardigan over a slate-grey canvas work apron with small screwdrivers in the chest pocket, an old chrome desk microphone on a short stand at the lower edge of the frame. Settled, still posture. Palette: apricot orange, slate grey, cream, silver; no yellow anywhere. Designed to sit beside a yellow, olive and charcoal protagonist as a warm, soft, rounded shape. Expression and pose: one corner of the mouth lifted, crow's-feet at the eyes, looking over the top of the microphone.",
+      "facing": "left"
+    },
+    {
+      "id": "opal.worried",
+      "character": "opal",
+      "expression": "worried",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen left, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Opal, a shopkeeper and radio contact in her sixties: deep brown skin, short silver-grey natural hair, half-moon reading glasses pushed up onto her forehead, a brass jeweller's loupe hanging on a cord round her neck, a chunky apricot-orange knitted cardigan over a slate-grey canvas work apron with small screwdrivers in the chest pocket, an old chrome desk microphone on a short stand at the lower edge of the frame. Settled, still posture. Palette: apricot orange, slate grey, cream, silver; no yellow anywhere. Designed to sit beside a yellow, olive and charcoal protagonist as a warm, soft, rounded shape. Expression and pose: leaning in toward the microphone, brows pinched together, lips parted mid-word, one hand gripping the microphone stand.",
+      "facing": "left"
+    },
+    {
+      "id": "opal.soft",
+      "character": "opal",
+      "expression": "soft",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen left, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Opal, a shopkeeper and radio contact in her sixties: deep brown skin, short silver-grey natural hair, half-moon reading glasses pushed up onto her forehead, a brass jeweller's loupe hanging on a cord round her neck, a chunky apricot-orange knitted cardigan over a slate-grey canvas work apron with small screwdrivers in the chest pocket, an old chrome desk microphone on a short stand at the lower edge of the frame. Settled, still posture. Palette: apricot orange, slate grey, cream, silver; no yellow anywhere. Designed to sit beside a yellow, olive and charcoal protagonist as a warm, soft, rounded shape. Expression and pose: glasses taken off and held loosely, eyes lowered to a small cassette tape in her open palm, a quiet closed-mouth smile.",
+      "facing": "left"
+    },
+    {
+      "id": "tolly.neutral",
+      "character": "tolly",
+      "expression": "neutral",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen left, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Tolliver Vance, a licensed ruin surveyor in his late twenties: lanky build, light tan skin, tidy sandy-blond hair slightly out of place, round wire-rimmed glasses, a white hard hat with a small clip-on lamp pushed back on his head, a pale periwinkle-blue survey jacket with white reflective bands, a neatly fastened grey climbing harness across the chest, a clipboard tablet hugged against his chest, one yellow pencil behind his ear as the only yellow on him. Upright posture with slightly raised shoulders. Palette: periwinkle blue, white, light grey. Designed to sit beside a yellow, olive and charcoal protagonist as a cool, clean, pressed contrast. Expression and pose: polite attentive look, mouth closed, eyebrows slightly raised, tablet held squarely.",
+      "facing": "left"
+    },
+    {
+      "id": "tolly.earnest",
+      "character": "tolly",
+      "expression": "earnest",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen left, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Tolliver Vance, a licensed ruin surveyor in his late twenties: lanky build, light tan skin, tidy sandy-blond hair slightly out of place, round wire-rimmed glasses, a white hard hat with a small clip-on lamp pushed back on his head, a pale periwinkle-blue survey jacket with white reflective bands, a neatly fastened grey climbing harness across the chest, a clipboard tablet hugged against his chest, one yellow pencil behind his ear as the only yellow on him. Upright posture with slightly raised shoulders. Palette: periwinkle blue, white, light grey. Designed to sit beside a yellow, olive and charcoal protagonist as a cool, clean, pressed contrast. Expression and pose: bright open smile, eyes wide and keen, one hand lifted in a small wave, leaning forward a little.",
+      "facing": "left"
+    },
+    {
+      "id": "tolly.flustered",
+      "character": "tolly",
+      "expression": "flustered",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen left, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Tolliver Vance, a licensed ruin surveyor in his late twenties: lanky build, light tan skin, tidy sandy-blond hair slightly out of place, round wire-rimmed glasses, a white hard hat with a small clip-on lamp pushed back on his head, a pale periwinkle-blue survey jacket with white reflective bands, a neatly fastened grey climbing harness across the chest, a clipboard tablet hugged against his chest, one yellow pencil behind his ear as the only yellow on him. Upright posture with slightly raised shoulders. Palette: periwinkle blue, white, light grey. Designed to sit beside a yellow, olive and charcoal protagonist as a cool, clean, pressed contrast. Expression and pose: glasses slipped down his nose, wobbly mouth, a single anime sweat drop, hard hat tilted, tablet clutched tighter.",
+      "facing": "left"
+    },
+    {
+      "id": "tolly.impressed",
+      "character": "tolly",
+      "expression": "impressed",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, head and shoulders to mid-chest, three-quarter view facing screen left, centred, character fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. Tolliver Vance, a licensed ruin surveyor in his late twenties: lanky build, light tan skin, tidy sandy-blond hair slightly out of place, round wire-rimmed glasses, a white hard hat with a small clip-on lamp pushed back on his head, a pale periwinkle-blue survey jacket with white reflective bands, a neatly fastened grey climbing harness across the chest, a clipboard tablet hugged against his chest, one yellow pencil behind his ear as the only yellow on him. Upright posture with slightly raised shoulders. Palette: periwinkle blue, white, light grey. Designed to sit beside a yellow, olive and charcoal protagonist as a cool, clean, pressed contrast. Expression and pose: mouth open in sincere awe, eyes shining, eyebrows high, tablet lowered and forgotten.",
+      "facing": "left"
+    },
+    {
+      "id": "archivist.idle",
+      "character": "archivist",
+      "expression": "idle",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, upper works only, strict front view, centred and symmetrical, fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. The Archivist, an ancient machine presence and not a person, with no face: the head and shoulders of a tall housing of near-black violet metal covered in fine inlaid rune grooves that glow teal, two large open tape reels side by side where eyes would be, a single small hot-orange sensor lens between them, loose strands of magnetic tape hanging like a collar, and behind it a thin halo ring of small rectangular screens. Looks straight out at the viewer, perfectly symmetrical. Palette: near-black violet, teal rune light, one orange point; no skin tones. Expression and pose: reels turning slowly with slight motion lines, halo screens dark, orange sensor steady, teal rune light even and calm.",
+      "facing": "front"
+    },
+    {
+      "id": "archivist.playback",
+      "character": "archivist",
+      "expression": "playback",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, upper works only, strict front view, centred and symmetrical, fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. The Archivist, an ancient machine presence and not a person, with no face: the head and shoulders of a tall housing of near-black violet metal covered in fine inlaid rune grooves that glow teal, two large open tape reels side by side where eyes would be, a single small hot-orange sensor lens between them, loose strands of magnetic tape hanging like a collar, and behind it a thin halo ring of small rectangular screens. Looks straight out at the viewer, perfectly symmetrical. Palette: near-black violet, teal rune light, one orange point; no skin tones. Expression and pose: both reels spinning backwards fast with bold curved speed lines, the halo screens lit and each showing a tiny frozen silhouette of a pigtailed girl in one of four colours (red-pink, yellow, sky blue, green), orange sensor flared white-hot.",
+      "facing": "front"
+    },
+    {
+      "id": "archivist.still",
+      "character": "archivist",
+      "expression": "still",
+      "size": "1024x1024",
+      "background": "transparent",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Bust portrait, upper works only, strict front view, centred and symmetrical, fills about 80 percent of a square frame, fully transparent background, no text, no border, no watermark. The Archivist, an ancient machine presence and not a person, with no face: the head and shoulders of a tall housing of near-black violet metal covered in fine inlaid rune grooves that glow teal, two large open tape reels side by side where eyes would be, a single small hot-orange sensor lens between them, loose strands of magnetic tape hanging like a collar, and behind it a thin halo ring of small rectangular screens. Looks straight out at the viewer, perfectly symmetrical. Palette: near-black violet, teal rune light, one orange point; no skin tones. Expression and pose: both reels completely stopped, orange sensor dimmed to a small ember, rune light low, a single halo screen lit showing one small cassette icon.",
+      "facing": "front"
+    }
+  ],
+  "keyArt": {
+    "id": "title-key-art",
+    "size": "1920x1080",
+    "background": "opaque",
+    "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Skies and deep backgrounds may use two flat bands of colour. No text, no logo, no watermark. Wide 16:9 title-screen key art with clear empty space in the upper left third for a logo. Moxie, a scrappy tomboyish young woman scavenger with warm tan-brown skin, amber eyes, messy dark-brown pigtails with loose strands, bright yellow over-ear headphones with a dark triangle mark, two short pale cream face-paint stripes on one cheek, black ring choker, light cream cropped top with a dark diagonal strap, oversized charcoal-black off-shoulder jacket with yellow lining, fingerless gloves and scavenged wrist devices, baggy olive low-rise cargo trousers with a yellow zigzag graphic and torn knees, a utility belt hung with small tools and a yellow cassette Walkman clipped at the hip, red-pink hanging straps, chunky cream-and-charcoal high-top boots with yellow laces, standing right of centre at the lip of a huge circular shaft that drops into the ruins, seen from a low three-quarter angle, weight on one leg, one hand behind her head, the other thumb on the play button of the Walkman, grinning down into the dark. Behind and beside her stand three translucent flat-colour echoes of the same pose caught at slightly different moments, one red-pink, one sky blue, one green, each a single flat tint with an ink outline, so that with her yellow there are four of her. Upper half: warm sunlit pale stone arches, green ivy, yellow painted utility pipes, pink and purple graffiti tags, blue sky. Lower half, down the shaft: the light turns cold, dark rune-inscribed metal rings with teal glowing grooves, magenta and cyan neon, and at the very bottom two enormous tape reels faintly visible. A thin yellow headphone cable trails from her down into the shaft."
+  },
+  "chapterCards": [
+    {
+      "id": "chapter-upper",
+      "title": "Side A",
+      "size": "1920x1080",
+      "background": "opaque",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Skies and deep backgrounds may use two flat bands of colour. No text, no logo, no watermark. Wide 16:9 chapter card, isometric three-quarter high view, empty band along the bottom for a title. The upper ruins in warm golden daylight with no purple light cast: pale sun-bleached stone blocks and broken arches, a great stone ring carved with yellow-painted runes, aged neutral metal panels bolted on later, yellow utility pipes and cables, orange rust, thick green ivy and saplings reclaiming the floor, a few pink and purple graffiti tags on a wall, a dead green-screen console. Small in the frame, Moxie, a scrappy tomboyish young woman scavenger with warm tan-brown skin, amber eyes, messy dark-brown pigtails with loose strands, bright yellow over-ear headphones with a dark triangle mark, two short pale cream face-paint stripes on one cheek, black ring choker, light cream cropped top with a dark diagonal strap, oversized charcoal-black off-shoulder jacket with yellow lining, fingerless gloves and scavenged wrist devices, baggy olive low-rise cargo trousers with a yellow zigzag graphic and torn knees, a utility belt hung with small tools and a yellow cassette Walkman clipped at the hip, red-pink hanging straps, chunky cream-and-charcoal high-top boots with yellow laces, walking in through the arch with her hands in her jacket pockets, a second flat yellow echo of her a step behind."
+    },
+    {
+      "id": "chapter-middle",
+      "title": "Dead Air",
+      "size": "1920x1080",
+      "background": "opaque",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Skies and deep backgrounds may use two flat bands of colour. No text, no logo, no watermark. Wide 16:9 chapter card, isometric three-quarter high view, empty band along the bottom for a title. The middle floors, where daylight ends: a tall stairwell of stone giving way to riveted metal, the last shaft of warm light falling from far above, ivy thinning to a few pale roots, teal rune grooves beginning to glow in the walls, hanging cables, a wall-mounted turret silhouette in the shadows with one orange lens. Small in the frame, Moxie, a scrappy tomboyish young woman scavenger with warm tan-brown skin, amber eyes, messy dark-brown pigtails with loose strands, bright yellow over-ear headphones with a dark triangle mark, two short pale cream face-paint stripes on one cheek, black ring choker, light cream cropped top with a dark diagonal strap, oversized charcoal-black off-shoulder jacket with yellow lining, fingerless gloves and scavenged wrist devices, baggy olive low-rise cargo trousers with a yellow zigzag graphic and torn knees, a utility belt hung with small tools and a yellow cassette Walkman clipped at the hip, red-pink hanging straps, chunky cream-and-charcoal high-top boots with yellow laces, stopped on a landing with one hand pressed to her headphone cup, listening, a jagged burst of static drawn as a graphic shape beside her ear. Colours shift from warm at the top edge to cool at the bottom edge in flat bands."
+    },
+    {
+      "id": "chapter-lower",
+      "title": "Side B",
+      "size": "1920x1080",
+      "background": "opaque",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Skies and deep backgrounds may use two flat bands of colour. No text, no logo, no watermark. Wide 16:9 chapter card, isometric three-quarter high view, empty band along the bottom for a title. The neon depths: dark heavy metal panels etched with dense runes, modular floor grates, exposed pipes, sealed gates, consoles, strong magenta, cyan and violet neon strips, yellow hazard chevrons, one warm orange lamp, the floor still clearly readable. Small in the frame, Moxie, a scrappy tomboyish young woman scavenger with warm tan-brown skin, amber eyes, messy dark-brown pigtails with loose strands, bright yellow over-ear headphones with a dark triangle mark, two short pale cream face-paint stripes on one cheek, black ring choker, light cream cropped top with a dark diagonal strap, oversized charcoal-black off-shoulder jacket with yellow lining, fingerless gloves and scavenged wrist devices, baggy olive low-rise cargo trousers with a yellow zigzag graphic and torn knees, a utility belt hung with small tools and a yellow cassette Walkman clipped at the hip, red-pink hanging straps, chunky cream-and-charcoal high-top boots with yellow laces, mid-stride and unbothered, her yellow headphones the brightest warm thing in the picture, with three flat single-colour echoes of her (red-pink, sky blue, green) at different points along the same walkway. High on the far wall, a ring of small dim screens has turned to watch her."
+    },
+    {
+      "id": "chapter-machine",
+      "title": "Master Tape",
+      "size": "1920x1080",
+      "background": "opaque",
+      "prompt": "Expressive cel-shaded anime illustration in the spirit of Mob Psycho 100 and The Idaten Deities Know Only Peace: bold clean black line art with confident varied line weight, flat colours with exactly one hard-edged shadow tone and no gradients, no painterly rendering, no photorealism, graphic shapes, strong readable silhouette. Skies and deep backgrounds may use two flat bands of colour. No text, no logo, no watermark. Wide 16:9 chapter card, low wide view looking across a vast circular chamber, empty band along the bottom for a title. The time machine: a tape deck the size of a building set into the floor, two colossal reels of dark rune-inscribed metal with a ribbon of flat pale-gold tape running between them across a single huge recording head, teal rune light, quiet violet darkness above, a few small flat gold flecks rising from the tape. Tiny in the foreground with her back to the viewer, Moxie, a scrappy tomboyish young woman scavenger with warm tan-brown skin, amber eyes, messy dark-brown pigtails with loose strands, bright yellow over-ear headphones with a dark triangle mark, two short pale cream face-paint stripes on one cheek, black ring choker, light cream cropped top with a dark diagonal strap, oversized charcoal-black off-shoulder jacket with yellow lining, fingerless gloves and scavenged wrist devices, baggy olive low-rise cargo trousers with a yellow zigzag graphic and torn knees, a utility belt hung with small tools and a yellow cassette Walkman clipped at the hip, red-pink hanging straps, chunky cream-and-charcoal high-top boots with yellow laces, looking up at it with her headphones round her neck and a cassette held loosely in one hand. Still and quiet; no enemies, no action lines."
+    }
+  ]
+}

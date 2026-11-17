@@ -1,0 +1,385 @@
+{
+ "format": 1,
+ "name": "clock-empty-run",
+ "description": "No tapes at all (after a reset): the encounter runs to the horizon with no selves and fails with no survivor.",
+ "covers": ["TEST-06"],
+ "level": {
+  "id": "test-level",
+  "index": 0,
+  "name": "Test Level",
+  "tagline": "A level built by a test.",
+  "theme": "upper",
+  "bpm": 120,
+  "maxTapes": 4,
+  "endModes": ["stop","repeat","reverse"],
+  "entities": [
+   {"kind":"enemy","id":"g1","type":"grunt","x":9.5,"y":2.5},
+   {"kind":"enemy","id":"t1","type":"turret","x":10.5,"y":8.5,"facing":3.141592653589793},
+   {"kind":"switch","id":"sw","x":4.5,"y":2.5},
+   {"kind":"door","id":"d1","cells":[{"c":7,"r":5}],"openWhen":{"sig":"sw"}},
+   {"kind":"plate","id":"p1","c":5,"r":7}
+  ],
+  "objective": {"type":"eliminate","text":"Test objective"},
+  "music": {
+   "root": 9,
+   "scale": "Minor",
+   "progression": [0,5,2,6],
+   "chordBars": 1,
+   "tracks": [{"role":"bass","formula":"triangular"},{"role":"drums","formula":"ruler"},{"role":"melody","formula":"recaman"},{"role":"chord","formula":"squares"}]
+  },
+  "loot": [],
+  "briefing": [],
+  "startFacing": 0,
+  "speeds": [0.5,1,2],
+  "bars": 2,
+  "start": {"x":2.5,"y":5.5},
+  "horizonBars": 4,
+  "map": ["############","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","############"]
+ },
+ "loadout": {
+  "gear": null,
+  "resolved": {
+   "loadout": {"helmet":"base-helmet","top":"base-top","pants":"base-pants","shoes":"base-shoes","melee":"base-melee","ranged":"base-missile"},
+   "mods": {
+    "moveSpeed": 1,
+    "accel": 1,
+    "momentumRetention": 1,
+    "dodgeDistance": 1,
+    "dodgeIframes": 1,
+    "dodgeCooldown": 1,
+    "meleeImpact": 1,
+    "damage": 1,
+    "knockback": 1,
+    "knockbackCap": 1,
+    "stagger": 1,
+    "approachBonus": 1,
+    "sparkSpeed": 1,
+    "interactRadiusAdd": 0,
+    "projectileSpeed": 1,
+    "rangedCooldown": 1
+   },
+   "abilities": [],
+   "melee": {
+    "reach": 1.1,
+    "arcDeg": 110,
+    "light": {"windup":6,"active":4,"recover":10,"impact":1.2,"moveMul":0.5},
+    "heavy": {"windup":16,"active":5,"recover":18,"impact":2,"moveMul":0.25},
+    "damageEff": 1,
+    "knockbackEff": 1,
+    "staggerEff": 1,
+    "style": "blade"
+   },
+   "ranged": {"archetype":"missile","speed":2.5,"range":14,"impact":1.2,"commit":12,"cooldown":45,"pierce":0,"passesWalls":false,"lobbed":false,"count":1,"spreadDeg":0,"turnRate":2.5,"blast":0}
+  }
+ },
+ "bossMemoryFrom": null,
+ "takes": [],
+ "expected": {
+  "recordings": [],
+  "resolution": {
+   "bossMemory": null,
+   "horizonSubs": 1920,
+   "outcome": {"win":false,"objectiveComplete":false,"survivors":[],"reason":"objective","notes":["Objective not complete: Test objective. Still standing: grunt g1, turret t1."]},
+   "events": [],
+   "snapshots": [
+    {
+     "sub": 0,
+     "beat": 0,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 60,
+     "beat": 0.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 120,
+     "beat": 1,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 180,
+     "beat": 1.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 240,
+     "beat": 2,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 300,
+     "beat": 2.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 360,
+     "beat": 3,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 420,
+     "beat": 3.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 480,
+     "beat": 4,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 540,
+     "beat": 4.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 600,
+     "beat": 5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 660,
+     "beat": 5.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 720,
+     "beat": 6,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 780,
+     "beat": 6.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 840,
+     "beat": 7,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 900,
+     "beat": 7.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 960,
+     "beat": 8,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1020,
+     "beat": 8.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1080,
+     "beat": 9,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1140,
+     "beat": 9.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1200,
+     "beat": 10,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1260,
+     "beat": 10.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1320,
+     "beat": 11,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1380,
+     "beat": 11.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1440,
+     "beat": 12,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1500,
+     "beat": 12.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1560,
+     "beat": 13,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1620,
+     "beat": 13.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1680,
+     "beat": 14,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1740,
+     "beat": 14.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1800,
+     "beat": 15,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1860,
+     "beat": 15.5,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 1920,
+     "beat": 16,
+     "actors": [],
+     "enemies": [{"id":"g1","type":"grunt","x":9.5,"y":2.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"},{"id":"t1","type":"turret","x":10.5,"y":8.5,"hp":1,"maxHp":1,"alive":true,"state":"idle"}],
+     "projectiles": [],
+     "mechs": [{"id":"sw","kind":"switch","on":false},{"id":"d1","kind":"door","on":false,"t":0},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    }
+   ]
+  }
+ }
+}

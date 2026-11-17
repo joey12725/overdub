@@ -1,0 +1,111 @@
+{
+ "id": "reel_lash",
+ "kind": "melee",
+ "style": "whip",
+ "hands": 1,
+ "tris": {
+  "Weapon": 4032,
+  "Lash": 564
+ },
+ "tris_total": 4596,
+ "bounds_min": [
+  -0.0473,
+  -0.142,
+  -0.099
+ ],
+ "bounds_max": [
+  0.105,
+  2.255,
+  0.148
+ ],
+ "size": [
+  0.1523,
+  2.397,
+  0.247
+ ],
+ "empties": {
+  "Grip": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "LashRoot": {
+   "pos": [
+    0.0,
+    0.34,
+    0.04
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Tip": {
+   "pos": [
+    0.0,
+    2.255,
+    0.01
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailStart": {
+   "pos": [
+    0.0,
+    1.15,
+    0.0444
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailEnd": {
+   "pos": [
+    0.0,
+    2.255,
+    0.01
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_black",
+  "weapon_dark",
+  "weapon_glow",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_pink_glow",
+  "weapon_steel",
+  "weapon_tape"
+ ],
+ "bones": [
+  "lash_00",
+  "lash_01",
+  "lash_02",
+  "lash_03",
+  "lash_04",
+  "lash_05",
+  "lash_06",
+  "lash_07",
+  "lash_08",
+  "lash_09"
+ ]
+}

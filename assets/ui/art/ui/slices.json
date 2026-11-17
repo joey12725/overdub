@@ -1,0 +1,205 @@
+{
+ "ui/button_disabled.png": {
+  "bottom": 40,
+  "left": 34,
+  "note": "button, disabled state (all four share canvas + margins)",
+  "right": 36,
+  "size": [
+   86,
+   86
+  ],
+  "top": 30
+ },
+ "ui/button_hover.png": {
+  "bottom": 40,
+  "left": 34,
+  "note": "button, hover state (all four share canvas + margins)",
+  "right": 36,
+  "size": [
+   86,
+   86
+  ],
+  "top": 30
+ },
+ "ui/button_normal.png": {
+  "bottom": 40,
+  "left": 34,
+  "note": "button, normal state (all four share canvas + margins)",
+  "right": 36,
+  "size": [
+   86,
+   86
+  ],
+  "top": 30
+ },
+ "ui/button_pressed.png": {
+  "bottom": 40,
+  "left": 34,
+  "note": "button, pressed state (all four share canvas + margins)",
+  "right": 36,
+  "size": [
+   86,
+   86
+  ],
+  "top": 30
+ },
+ "ui/cassette_hub.png": {
+  "note": "hub only (same pixel scale as cassette_reel.png)",
+  "pivot": [
+   67,
+   67
+  ],
+  "size": [
+   134,
+   134
+  ]
+ },
+ "ui/cassette_reel.png": {
+  "hub_radius": 65,
+  "note": "full tape pack + hub, rotate about the centre; sixfold symmetric",
+  "pivot": [
+   128,
+   128
+  ],
+  "size": [
+   256,
+   256
+  ]
+ },
+ "ui/cassette_shell.png": {
+  "hub_centres": [
+   [
+    228,
+    211
+   ],
+   [
+    411,
+    211
+   ]
+  ],
+  "label_rect": [
+   44,
+   45,
+   551,
+   252
+  ],
+  "note": "not sliced; draw hubs behind it",
+  "size": [
+   640,
+   410
+  ],
+  "window_rect": [
+   143,
+   174,
+   353,
+   74
+  ]
+ },
+ "ui/dialogue_box.png": {
+  "bottom": 36,
+  "left": 247,
+  "note": "dialogue box; yellow speaker tab lives in the top-left cell",
+  "right": 36,
+  "size": [
+   299,
+   123
+  ],
+  "top": 71
+ },
+ "ui/name_tab.png": {
+  "bottom": 24,
+  "left": 22,
+  "note": "yellow speaker-name tab / tag (button face without the shadow slab)",
+  "right": 22,
+  "size": [
+   60,
+   60
+  ],
+  "top": 20
+ },
+ "ui/panel.png": {
+  "bottom": 32,
+  "left": 32,
+  "note": "dark inked panel, off-white sticker edge",
+  "right": 32,
+  "size": [
+   80,
+   80
+  ],
+  "top": 32
+ },
+ "ui/progress_fill.png": {
+  "bottom": 0,
+  "left": 28,
+  "note": "slim progress bar, white fill to tint; same canvas as the track",
+  "right": 28,
+  "size": [
+   72,
+   36
+  ],
+  "top": 0
+ },
+ "ui/progress_track.png": {
+  "bottom": 0,
+  "left": 28,
+  "note": "slim progress bar, empty track (3-slice, fixed height)",
+  "right": 28,
+  "size": [
+   72,
+   36
+  ],
+  "top": 0
+ },
+ "ui/ruler_strip.png": {
+  "beat_px": 128,
+  "note": "one bar (4 beats) per tile; tall tick = downbeat at x=64, beats every 128 px",
+  "size": [
+   512,
+   96
+  ],
+  "tick_x": [
+   64,
+   192,
+   320,
+   448
+  ],
+  "tile": "repeat-x"
+ },
+ "ui/ruler_strip_dark.png": {
+  "beat_px": 128,
+  "note": "one bar (4 beats) per tile; tall tick = downbeat at x=64, beats every 128 px",
+  "size": [
+   512,
+   96
+  ],
+  "tick_x": [
+   64,
+   192,
+   320,
+   448
+  ],
+  "tile": "repeat-x"
+ },
+ "ui/toast.png": {
+  "bottom": 0,
+  "left": 84,
+  "note": "toast (3-slice, fixed height); hazard-striped yellow cap is the left cell",
+  "right": 32,
+  "size": [
+   132,
+   95
+  ],
+  "top": 0
+ },
+ "ui/tooltip.png": {
+  "bottom": 44,
+  "left": 56,
+  "note": "paper tooltip, pink sticker shadow; tail lives in the bottom-left cell",
+  "right": 34,
+  "size": [
+   106,
+   90
+  ],
+  "top": 30
+ }
+}

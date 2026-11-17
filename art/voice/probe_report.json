@@ -1,0 +1,100 @@
+[
+ {
+  "models": [
+   "gpt-5.6-sol",
+   "gpt-image-2",
+   "gpt-image-2.6-flare",
+   "gpt-6-astra",
+   "gpt-6-luna",
+   "gpt-5.6-terra",
+   "gpt-image-1.5",
+   "gpt-image-2.6-sunburst",
+   "gpt-5.6-luna",
+   "gpt-6.1-terra",
+   "gpt-6-luna-fast-low",
+   "codex-auto-review",
+   "gpt-image-2.6",
+   "gpt-6-sol",
+   "gpt-6.1-sol",
+   "gpt-6-chat-thinking"
+  ]
+ },
+ {
+  "probe": "audio/speech gpt-4o-mini-tts",
+  "status": 404,
+  "content_type": "",
+  "body": ""
+ },
+ {
+  "probe": "audio/speech tts-1",
+  "status": 404,
+  "content_type": "",
+  "body": ""
+ },
+ {
+  "probe": "audio/speech tts-1-hd",
+  "status": 404,
+  "content_type": "",
+  "body": ""
+ },
+ {
+  "probe": "audio/speech gpt-audio",
+  "status": 404,
+  "content_type": "",
+  "body": ""
+ },
+ {
+  "probe": "audio/speech gpt-audio-mini",
+  "status": 404,
+  "content_type": "",
+  "body": ""
+ },
+ {
+  "probe": "audio/speech gpt-realtime",
+  "status": 404,
+  "content_type": "",
+  "body": ""
+ },
+ {
+  "probe": "chat audio modality gpt-audio",
+  "status": 400,
+  "content_type": "application/json",
+  "body": "{\"error\":{\"message\":\"unknown provider for model gpt-audio\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\",\"param\":\"model\"}}"
+ },
+ {
+  "probe": "chat audio modality gpt-4o-audio-preview",
+  "status": 400,
+  "content_type": "application/json",
+  "body": "{\"error\":{\"message\":\"unknown provider for model gpt-4o-audio-preview\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\",\"param\":\"model\"}}"
+ },
+ {
+  "probe": "chat audio modality gpt-6-chat-thinking",
+  "status": 400,
+  "content_type": "application/json",
+  "body": "{\"detail\":\"The 'gpt-6-chat-thinking' model is not supported when using Codex with a ChatGPT account.\",\"error\":{\"type\":\"invalid_request_error\",\"code\":\"model_not_found\",\"message\":\"The 'gpt-6-chat-thinking' model is not supported when using Codex with a ChatGPT account.\"}}"
+ },
+ {
+  "probe": "chat audio modality gpt-6-luna",
+  "status": 200,
+  "content_type": "application/json",
+  "body": "{\"id\":\"resp_04d99b3c6845ef42016afbd027f98087d28140aaf8214edf8e\",\"object\":\"chat.completion\",\"created\":1794887720,\"model\":\"gpt-6-luna\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"five, six, seven, eight\",\"reasoning_content\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"native_fini"
+ },
+ {
+  "probe": "audio/transcriptions whisper-1",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "body": "{\"text\":\"\"}"
+ },
+ {
+  "probe": "audio/transcriptions gpt-4o-transcribe",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "body": "{\"text\":\"\"}"
+ },
+ {
+  "probe": "audio/transcriptions gpt-4o-mini-transcribe",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "body": "{\"text\":\"\"}"
+ }
+]

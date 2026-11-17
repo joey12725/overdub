@@ -1,0 +1,296 @@
+{
+ "format": 1,
+ "name": "boss-memory-attack-recall",
+ "description": "A remembered attack (a light swung while passing) is pre-empted on the nearest whole beat.",
+ "covers": ["BOSS-02","boss fight with memory"],
+ "level": {
+  "id": "test-level",
+  "index": 0,
+  "name": "Test Level",
+  "tagline": "A level built by a test.",
+  "theme": "upper",
+  "bpm": 120,
+  "maxTapes": 4,
+  "endModes": ["stop","repeat","reverse"],
+  "entities": [{"kind":"enemy","id":"b1","type":"boss","x":7,"y":6.5,"facing":0,"hp":20}],
+  "objective": {"type":"boss","text":"Defeat the boss"},
+  "music": {
+   "root": 9,
+   "scale": "Minor",
+   "progression": [0,5,2,6],
+   "chordBars": 1,
+   "tracks": [{"role":"bass","formula":"triangular"},{"role":"drums","formula":"ruler"},{"role":"melody","formula":"recaman"},{"role":"chord","formula":"squares"}]
+  },
+  "loot": [],
+  "briefing": [],
+  "startFacing": 0,
+  "map": [
+   "################",
+   "#..............#",
+   "#..............#",
+   "#..............#",
+   "#..............#",
+   "#.........#....#",
+   "#.........#....#",
+   "#.........#....#",
+   "#..............#",
+   "#..............#",
+   "#..............#",
+   "################"
+  ],
+  "speeds": [1,2],
+  "bars": 2,
+  "start": {"x":3.5,"y":2.5},
+  "horizonBars": 2
+ },
+ "loadout": {
+  "gear": null,
+  "resolved": {
+   "loadout": {"helmet":"base-helmet","top":"base-top","pants":"base-pants","shoes":"base-shoes","melee":"base-melee","ranged":"base-missile"},
+   "mods": {
+    "moveSpeed": 1,
+    "accel": 1,
+    "momentumRetention": 1,
+    "dodgeDistance": 1,
+    "dodgeIframes": 1,
+    "dodgeCooldown": 1,
+    "meleeImpact": 1,
+    "damage": 1,
+    "knockback": 1,
+    "knockbackCap": 1,
+    "stagger": 1,
+    "approachBonus": 1,
+    "sparkSpeed": 1,
+    "interactRadiusAdd": 0,
+    "projectileSpeed": 1,
+    "rangedCooldown": 1
+   },
+   "abilities": [],
+   "melee": {
+    "reach": 1.1,
+    "arcDeg": 110,
+    "light": {"windup":6,"active":4,"recover":10,"impact":1.2,"moveMul":0.5},
+    "heavy": {"windup":16,"active":5,"recover":18,"impact":2,"moveMul":0.25},
+    "damageEff": 1,
+    "knockbackEff": 1,
+    "staggerEff": 1,
+    "style": "blade"
+   },
+   "ranged": {"archetype":"missile","speed":2.5,"range":14,"impact":1.2,"commit":12,"cooldown":45,"pierce":0,"passesWalls":false,"lobbed":false,"count":1,"spreadDeg":0,"turnRate":2.5,"blast":0}
+  }
+ },
+ "bossMemoryFrom": [2],
+ "takes": [
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 2,
+    "speed": 1,
+    "endMode": "stop",
+    "ticks": 240,
+    "pos": "AABgQAAAIEAAAGBA3t0hQAAAYEC8uyNAAABgQJqZJUAAAGBAd3cnQAAAYEBVVSlAAABgQDMzK0AAAGBAEREtQAAAYEDv7i5AAABgQM3MMEAAAGBAq6oyQAAAYECJiDRAAABgQGZmNkAAAGBAREQ4QAAAYEAiIjpAAABgQAAAPEAAAGBA3t09QAAAYEC8uz9AAABgQJqZQUAAAGBAd3dDQAAAYEBVVUVAAABgQDMzR0AAAGBAERFJQAAAYEDv7kpAAABgQM3MTEAAAGBAq6pOQAAAYECJiFBAAABgQGZmUkAAAGBARERUQAAAYEAiIlZAAABgQAAAWEAAAGBA3t1ZQAAAYEC8u1tAAABgQJqZXUAAAGBAd3dfQAAAYEBVVWFAAABgQDMzY0AAAGBAERFlQAAAYEDv7mZAAABgQM3MaEAAAGBAq6pqQAAAYECJiGxAAABgQGZmbkAAAGBARERwQAAAYEAiInJAAABgQAAAdEAAAGBA3t11QAAAYEC8u3dAAABgQJqZeUAAAGBAd3d7QAAAYEBVVX1AAABgQDMzf0AAAGBAiYiAQAAAYEB3d4FAAABgQGZmgkAAAGBAVVWDQAAAYEBERIRAAABgQDMzhUAAAGBAIiKGQAAAYEAREYdAAABgQAAAiEAAAGBA7+6IQAAAYEDe3YlAAABgQM3MikAAAGBAvLuLQAAAYECrqoxAAABgQJqZjUAAAGBAiYiOQAAAYEB3d49AAABgQGZmkEAAAGBAVVWRQAAAYEBERJJAAABgQDMzk0AAAGBAIiKUQAAAYEAREZVAAABgQAAAlkAAAGBA7+6WQAAAYEDe3ZdAAABgQM3MmEAAAGBAvLuZQAAAYECrqppAAABgQJqZm0AAAGBAiYicQAAAYEB3d51AAABgQGZmnkAAAGBAVVWfQAAAYEBERKBAAABgQDMzoUAAAGBAIiKiQAAAYEAREaNAAABgQAAApEAAAGBA7+6kQAAAYEDe3aVAAABgQM3MpkAAAGBAvLunQAAAYECrqqhAAABgQJqZqUAAAGBAiYiqQAAAYEB3d6tAAABgQGZmrEAAAGBAVVWtQAAAYEBERK5AAABgQDMzr0AAAGBAIiKwQAAAYEAREbFAAABgQAAAskAAAGBA7+6yQAAAYEDe3bNAAABgQM3MtEAAAGBAvLu1QAAAYECrqrZAAABgQJqZt0AAAGBAiYi4QAAAYEB3d7lAAABgQGZmukAAAGBAVVW7QAAAYEBERLxAAABgQDMzvUAAAGBAIiK+QAAAYEAREb9AAABgQAAAwEAAAGBA7+7AQAAAYEDe3cFAAABgQM3MwkAAAGBAvLvDQAAAYECrqsRAAABgQJqZxUAAAGBAiYjGQAAAYEB3d8dAAABgQGZmyEAAAGBAVVXJQAAAYEBERMpAAABgQDMzy0AAAGBAIiLMQAAAYEAREc1AAABgQAAAzkAAAGBA7+7OQAAAYEDe3c9AAABgQM3M0EAAAGBAvLvRQAAAYECrqtJAAABgQJqZ00AAAGBAiYjUQAAAYEB3d9VAAABgQGZm1kAAAGBAVVXXQAAAYEBERNhAAABgQDMz2UAAAGBAIiLaQAAAYEAREdtAAABgQAAA3EAAAGBA7+7cQAAAYEDe3d1AAABgQM3M3kAAAGBAvLvfQAAAYECrquBAAABgQJqZ4UAAAGBAiYjiQAAAYEB3d+NAAABgQGZm5EAAAGBAVVXlQAAAYEBEROZAAABgQDMz50AAAGBAIiLoQAAAYEAREelAAABgQAAA6kAAAGBA7+7qQAAAYEDe3etAAABgQM3M7EAAAGBAvLvtQAAAYECrqu5AAABgQJqZ70AAAGBAiYjwQAAAYEB3d/FAAABgQGZm8kAAAGBAVVXzQAAAYEBERPRAAABgQDMz9UAAAGBAIiL2QAAAYEAREfdAAABgQAAA+EAAAGBA7+74QAAAYEDe3flAAABgQM3M+kAAAGBAvLv7QAAAYECrqvxAAABgQJqZ/UAAAGBAiYj+QAAAYEB3d/9AAABgQDMzAEEAAGBAq6oAQQAAYEAiIgFBAABgQJqZAUEAAGBAERECQQAAYECJiAJBAABgQAAAA0EAAGBAd3cDQQAAYEDv7gNBAABgQGZmBEEAAGBA3t0EQQAAYEBVVQVBAABgQM3MBUEAAGBAREQGQQAAYEC8uwZBAABgQDMzB0EAAGBAq6oHQQAAYEAiIghBAABgQJqZCEEAAGBAEREJQQAAYECJiAlBAABgQAAACkEAAGBAd3cKQQAAYEDv7gpBAABgQGZmC0EAAGBA3t0LQQAAYEBVVQxBAABgQM3MDEEAAGBAREQNQQAAYEC8uw1BAABgQDMzDkEAAGBAq6oOQQAAYEAiIg9BAABgQJqZD0EAAGBAEREQQQAAYECJiBBBAABgQAAAEUEAAGBAd3cRQQAAYEDv7hFBAABgQGZmEkEAAGBA3t0SQQAAYEBVVRNBAABgQM3ME0EAAGBAREQUQQAAYEC8uxRBAABgQDMzFUEAAGBAq6oVQQAAYEAiIhZBAABgQJqZFkEAAGBAEREXQQAAYECJiBdBAABgQAAAGEE=",
+    "facing": "2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JP9sPyT/bD8k/2w/JPw==",
+    "anim": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ==",
+    "events": [[72,0,0,3.5,4.599999904632568,0,1.7500019073486328]]
+   }
+  }
+ ],
+ "expected": {
+  "recordings": [],
+  "resolution": {
+   "bossMemory": {
+    "observed": [
+     {
+      "tape": 2,
+      "speed": 1,
+      "samples": [
+       {"beat":0,"x":3.5,"y":2.5},
+       {"beat":1,"x":3.5,"y":3.375},
+       {"beat":2,"x":3.5,"y":4.25},
+       {"beat":3,"x":3.5,"y":5.125},
+       {"beat":4,"x":3.5,"y":6},
+       {"beat":5,"x":3.5,"y":6.875},
+       {"beat":6,"x":3.5,"y":7.75},
+       {"beat":7,"x":3.5,"y":8.625},
+       {"beat":8,"x":3.5,"y":9.5}
+      ],
+      "actions": [{"beat":2.4,"x":3.5,"y":4.599999904632568,"kind":"light"}]
+     }
+    ]
+   },
+   "horizonSubs": 960,
+   "outcome": {
+    "win": false,
+    "objectiveComplete": false,
+    "survivors": [],
+    "reason": "objective",
+    "notes": ["Objective not complete: Defeat the boss. b1 survived with 20 of 20 hp.","Tape C died at beat 2: struck by boss b1 (remembering Tape C)."]
+   },
+   "events": [
+    {"sub":0,"type":"bossRecall","x":3.5,"y":4.6,"tape":2,"id":"b1","dir":-2.6442,"power":2,"detail":"attack"},
+    {"sub":0,"type":"enemyTelegraph","x":3.5,"y":4.6,"tape":2,"id":"b1","dir":-2.6442,"detail":"recall"},
+    {"sub":116,"type":"step","x":3.5,"y":3.3531,"tape":2,"detail":"alive"},
+    {"sub":233,"type":"step","x":3.5,"y":4.2062,"tape":2,"detail":"alive"},
+    {"sub":240,"type":"enemyAttack","x":3.5,"y":4.6,"tape":2,"id":"b1","dir":-2.6442,"detail":"recall"},
+    {"sub":240,"type":"selfDeath","x":3.5,"y":4.2573,"tape":2,"dir":-2.6442,"detail":"struck by boss b1 (remembering Tape C)"},
+    {"sub":720,"type":"enemyTelegraph","x":7,"y":6.5,"id":"b1","dir":-2.6442,"detail":"cleave"}
+   ],
+   "snapshots": [
+    {
+     "sub": 0,
+     "beat": 0,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":2.5,"facing":1.5708,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"idle","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 60,
+     "beat": 0.5,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":2.9375,"facing":1.5708,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"telegraph","target":2,"bossPhase":1,"bossRecall":true,"bossRecallTape":2,"bossRecallAt":{"x":3.5,"y":4.6}}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 120,
+     "beat": 1,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":3.375,"facing":1.5708,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"telegraph","target":2,"bossPhase":1,"bossRecall":true,"bossRecallTape":2,"bossRecallAt":{"x":3.5,"y":4.6}}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 180,
+     "beat": 1.5,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":3.8125,"facing":1.5708,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"telegraph","target":2,"bossPhase":1,"bossRecall":true,"bossRecallTape":2,"bossRecallAt":{"x":3.5,"y":4.6}}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 240,
+     "beat": 2,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":4.25,"facing":1.5708,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"telegraph","target":2,"bossPhase":1,"bossRecall":true,"bossRecallTape":2,"bossRecallAt":{"x":3.5,"y":4.6}}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":1}
+    },
+    {
+     "sub": 300,
+     "beat": 2.5,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":4.6875,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"attack","bossPhase":1,"bossRecall":true,"bossRecallTape":2,"bossRecallAt":{"x":3.5,"y":4.6}}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 360,
+     "beat": 3,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":5.125,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"attack","bossPhase":1,"bossRecall":true,"bossRecallTape":2,"bossRecallAt":{"x":3.5,"y":4.6}}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 420,
+     "beat": 3.5,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":5.5625,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"idle","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 480,
+     "beat": 4,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":6,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":120,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"idle","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 540,
+     "beat": 4.5,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":6.4375,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":135,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"idle","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 600,
+     "beat": 5,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":6.875,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":150,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"idle","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 660,
+     "beat": 5.5,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":7.3125,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":165,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"idle","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 720,
+     "beat": 6,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":7.75,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":180,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"idle","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 780,
+     "beat": 6.5,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":8.1875,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":195,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"telegraph","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 840,
+     "beat": 7,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":8.625,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":210,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"telegraph","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 900,
+     "beat": 7.5,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":9.0625,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":225,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"telegraph","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    },
+    {
+     "sub": 960,
+     "beat": 8,
+     "actors": [{"tape":2,"live":false,"x":3.5,"y":9.5,"facing":1.5708,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":240,"dir":0,"traversal":1,"ended":true}}],
+     "enemies": [{"id":"b1","type":"boss","x":7,"y":6.5,"hp":20,"maxHp":20,"alive":true,"state":"telegraph","bossPhase":1,"bossRecall":false}],
+     "projectiles": [],
+     "mechs": [],
+     "objective": {"complete":false,"progress":0,"survivors":0}
+    }
+   ]
+  }
+ }
+}

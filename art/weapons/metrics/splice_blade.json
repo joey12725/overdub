@@ -1,0 +1,88 @@
+{
+ "id": "splice_blade",
+ "kind": "melee",
+ "style": "blade",
+ "hands": 1,
+ "tris": {
+  "Weapon": 3888
+ },
+ "tris_total": 3888,
+ "bounds_min": [
+  -0.0332,
+  -0.2451,
+  -0.121
+ ],
+ "bounds_max": [
+  0.0332,
+  0.805,
+  0.137
+ ],
+ "size": [
+  0.0664,
+  1.0501,
+  0.258
+ ],
+ "empties": {
+  "Grip": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Tip": {
+   "pos": [
+    0.0,
+    0.805,
+    -0.052
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailStart": {
+   "pos": [
+    0.0,
+    0.16,
+    0.074
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailEnd": {
+   "pos": [
+    0.0,
+    0.775,
+    -0.012
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_accent2",
+  "weapon_black",
+  "weapon_dark",
+  "weapon_glow",
+  "weapon_grip",
+  "weapon_main",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_steel"
+ ],
+ "bones": []
+}

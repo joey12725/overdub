@@ -1,0 +1,65 @@
+{
+ "id": "bleed_emitter",
+ "kind": "ranged",
+ "style": "emitter",
+ "hands": 0,
+ "tris": {
+  "Weapon": 3550
+ },
+ "tris_total": 3550,
+ "bounds_min": [
+  -0.077,
+  -0.0847,
+  -0.0916
+ ],
+ "bounds_max": [
+  0.077,
+  0.159,
+  0.2028
+ ],
+ "size": [
+  0.154,
+  0.2437,
+  0.2944
+ ],
+ "empties": {
+  "Mount": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Muzzle": {
+   "pos": [
+    0.0,
+    0.082,
+    0.21
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_accent2",
+  "weapon_black",
+  "weapon_dark",
+  "weapon_glow",
+  "weapon_main",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_steel",
+  "weapon_tape",
+  "weapon_violet_glow"
+ ],
+ "bones": []
+}

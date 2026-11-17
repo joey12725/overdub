@@ -1,0 +1,5 @@
+# Shared prompt fragments (source this).
+NOTEXT="A single full-bleed painted illustration: absolutely no text, no letters, no numbers, no logo, no UI, no border, no caption."
+STY="Same art style as the reference illustration: bold cel-shaded anime, thick black ink outlines, flat colour with hard two-tone shading, painterly detailed backgrounds. Wide 3:2."
+MOX="the same girl as in the references (tan skin, dark-brown messy side ponytail, yellow headphones, white crop top, dark-and-yellow jacket off her shoulders, olive baggy cargo pants with yellow zig-zag, yellow Walkman on her belt, chunky beige boots with yellow laces)"
+UI="Flat 2D game interface asset, drawn front-on with no perspective and no tilt, hand-inked sticker style: thick slightly wobbly black ink outline, flat colours, no gradients, no glow, no drop shadow, no text, no letters, no icons. Perfectly axis-aligned, left-right symmetrical. The asset is isolated and centred with empty margin all around, on a fully transparent background."

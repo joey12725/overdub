@@ -1,0 +1,189 @@
+{
+ "format": 1,
+ "name": "mech-dead-ghost-no-plate",
+ "description": "A self dies to a laser on the way; its ghost then stands on the plate, which stays off.",
+ "covers": ["GHOST-05","plates"],
+ "level": {
+  "id": "test-level",
+  "index": 0,
+  "name": "Test Level",
+  "tagline": "A level built by a test.",
+  "theme": "upper",
+  "bpm": 120,
+  "maxTapes": 4,
+  "endModes": ["stop","repeat","reverse"],
+  "entities": [{"kind":"laser","id":"beam","from":{"x":1.5,"y":3.5},"to":{"x":10.5,"y":3.5},"onWhen":{"const":true}},{"kind":"plate","id":"p1","c":5,"r":1}],
+  "objective": {"type":"eliminate","text":"Test objective"},
+  "music": {
+   "root": 9,
+   "scale": "Minor",
+   "progression": [0,5,2,6],
+   "chordBars": 1,
+   "tracks": [{"role":"bass","formula":"triangular"},{"role":"drums","formula":"ruler"},{"role":"melody","formula":"recaman"},{"role":"chord","formula":"squares"}]
+  },
+  "loot": [],
+  "briefing": [],
+  "startFacing": 0,
+  "speeds": [1],
+  "bars": 1,
+  "start": {"x":2.5,"y":5.5},
+  "horizonBars": 1,
+  "map": ["############","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","#..........#","############"]
+ },
+ "loadout": {
+  "gear": null,
+  "resolved": {
+   "loadout": {"helmet":"base-helmet","top":"base-top","pants":"base-pants","shoes":"base-shoes","melee":"base-melee","ranged":"base-missile"},
+   "mods": {
+    "moveSpeed": 1,
+    "accel": 1,
+    "momentumRetention": 1,
+    "dodgeDistance": 1,
+    "dodgeIframes": 1,
+    "dodgeCooldown": 1,
+    "meleeImpact": 1,
+    "damage": 1,
+    "knockback": 1,
+    "knockbackCap": 1,
+    "stagger": 1,
+    "approachBonus": 1,
+    "sparkSpeed": 1,
+    "interactRadiusAdd": 0,
+    "projectileSpeed": 1,
+    "rangedCooldown": 1
+   },
+   "abilities": [],
+   "melee": {
+    "reach": 1.1,
+    "arcDeg": 110,
+    "light": {"windup":6,"active":4,"recover":10,"impact":1.2,"moveMul":0.5},
+    "heavy": {"windup":16,"active":5,"recover":18,"impact":2,"moveMul":0.25},
+    "damageEff": 1,
+    "knockbackEff": 1,
+    "staggerEff": 1,
+    "style": "blade"
+   },
+   "ranged": {"archetype":"missile","speed":2.5,"range":14,"impact":1.2,"commit":12,"cooldown":45,"pierce":0,"passesWalls":false,"lobbed":false,"count":1,"spreadDeg":0,"turnRate":2.5,"blast":0}
+  }
+ },
+ "bossMemoryFrom": null,
+ "takes": [
+  {
+   "source": "tape",
+   "tape": {
+    "v": 1,
+    "index": 0,
+    "speed": 1,
+    "endMode": "stop",
+    "ticks": 120,
+    "pos": "AAAgQAAAsEDNzCRAzcysQJqZKUCamalAZmYuQGZmpkAzMzNAMzOjQAAAOEAAAKBAzcw8QM3MnECamUFAmpmZQGZmRkBmZpZAMzNLQDMzk0AAAFBAAACQQM3MVEDNzIxAmplZQJqZiUBmZl5AZmaGQDMzY0AzM4NAAABoQAAAgEDNzGxAmpl5QJqZcUAzM3NAZmZ2QM3MbEAzM3tAZmZmQAAAgEAAAGBAZmaCQJqZWUDNzIRAMzNTQDMzh0DNzExAmpmJQGZmRkAAAIxAAABAQGZmjkCamTlAzcyQQDMzM0AzM5NAzcwsQJqZlUBmZiZAAACYQAAAIEBmZppAmpkZQM3MnEAzMxNAMzOfQM3MDECamaFAZmYGQAAApEAAAABAZmamQDMz8z/NzKhAZmbmPzMzq0Camdk/mpmtQM3MzD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8AALBAAADAPwAAsEAAAMA/AACwQAAAwD8=",
+    "facing": "K2Ntvytjbb9rY22/K2Ntvytjbb8rY22/K2Ntv2tjbb8rY22/K2Ntvytjbb8rY22/a2Ntvytjbb8rY22/K2Ntvz9jbb9FY22/P2Ntvytjbb9FY22/JWNtv0Vjbb8lY22/RWNtv0Vjbb8lY22/RWNtvyVjbb9FY22/RWNtvyVjbb9FY22/JWNtv0Vjbb9PY22/G2Ntv0Vjbb8bY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntv09jbb9PY22/T2Ntvw==",
+    "anim": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "events": []
+   }
+  }
+ ],
+ "expected": {
+  "recordings": [],
+  "resolution": {
+   "bossMemory": null,
+   "horizonSubs": 480,
+   "outcome": {
+    "win": false,
+    "objectiveComplete": true,
+    "survivors": [],
+    "reason": "noSurvivor",
+    "notes": ["Objective complete at beat 0: Test objective.","Tape A died at beat 0.56: burned by laser beam.","No self survived to the end: the objective needs at least one survivor."]
+   },
+   "events": [
+    {"sub":0,"type":"objective","x":0,"y":0,"detail":"eliminate"},
+    {"sub":27,"type":"step","x":3.025,"y":4.8,"tape":0,"detail":"alive"},
+    {"sub":54,"type":"step","x":3.5312,"y":4.125,"tape":0,"detail":"alive"},
+    {"sub":67,"type":"selfDeath","x":3.775,"y":3.8,"tape":0,"dir":0,"detail":"burned by laser beam"}
+   ],
+   "snapshots": [
+    {
+     "sub": 0,
+     "beat": 0,
+     "actors": [{"tape":0,"live":false,"x":2.5,"y":5.5,"facing":-0.9273,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":0,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [],
+     "projectiles": [],
+     "mechs": [{"id":"beam","kind":"laser","on":true},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":false,"progress":1,"survivors":1}
+    },
+    {
+     "sub": 60,
+     "beat": 0.5,
+     "actors": [{"tape":0,"live":false,"x":3.625,"y":4,"facing":-0.9273,"anim":"run","life":"alive","synced":true,"iframes":false,"phase":{"tick":15,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [],
+     "projectiles": [],
+     "mechs": [{"id":"beam","kind":"laser","on":true},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":true,"progress":1,"survivors":1}
+    },
+    {
+     "sub": 120,
+     "beat": 1,
+     "actors": [{"tape":0,"live":false,"x":4.75,"y":2.5,"facing":-0.9273,"anim":"run","life":"ghost","synced":true,"iframes":false,"phase":{"tick":30,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [],
+     "projectiles": [],
+     "mechs": [{"id":"beam","kind":"laser","on":true},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":true,"progress":1,"survivors":0}
+    },
+    {
+     "sub": 180,
+     "beat": 1.5,
+     "actors": [{"tape":0,"live":false,"x":5.5,"y":1.5,"facing":-0.9273,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":45,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [],
+     "projectiles": [],
+     "mechs": [{"id":"beam","kind":"laser","on":true},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":true,"progress":1,"survivors":0}
+    },
+    {
+     "sub": 240,
+     "beat": 2,
+     "actors": [{"tape":0,"live":false,"x":5.5,"y":1.5,"facing":-0.9273,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":60,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [],
+     "projectiles": [],
+     "mechs": [{"id":"beam","kind":"laser","on":true},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":true,"progress":1,"survivors":0}
+    },
+    {
+     "sub": 300,
+     "beat": 2.5,
+     "actors": [{"tape":0,"live":false,"x":5.5,"y":1.5,"facing":-0.9273,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":75,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [],
+     "projectiles": [],
+     "mechs": [{"id":"beam","kind":"laser","on":true},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":true,"progress":1,"survivors":0}
+    },
+    {
+     "sub": 360,
+     "beat": 3,
+     "actors": [{"tape":0,"live":false,"x":5.5,"y":1.5,"facing":-0.9273,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":90,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [],
+     "projectiles": [],
+     "mechs": [{"id":"beam","kind":"laser","on":true},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":true,"progress":1,"survivors":0}
+    },
+    {
+     "sub": 420,
+     "beat": 3.5,
+     "actors": [{"tape":0,"live":false,"x":5.5,"y":1.5,"facing":-0.9273,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":105,"dir":1,"traversal":0,"ended":false}}],
+     "enemies": [],
+     "projectiles": [],
+     "mechs": [{"id":"beam","kind":"laser","on":true},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":true,"progress":1,"survivors":0}
+    },
+    {
+     "sub": 480,
+     "beat": 4,
+     "actors": [{"tape":0,"live":false,"x":5.5,"y":1.5,"facing":-0.9273,"anim":"idle","life":"ghost","synced":true,"iframes":false,"phase":{"tick":120,"dir":0,"traversal":1,"ended":true}}],
+     "enemies": [],
+     "projectiles": [],
+     "mechs": [{"id":"beam","kind":"laser","on":true},{"id":"p1","kind":"plate","on":false}],
+     "objective": {"complete":true,"progress":1,"survivors":0}
+    }
+   ]
+  }
+ }
+}

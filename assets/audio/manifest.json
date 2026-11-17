@@ -1,0 +1,2025 @@
+{
+ "version": 1,
+ "sampleRate": 44100,
+ "pad": 0.1,
+ "peakDbfs": -1.0,
+ "families": {
+  "bass": {
+   "pitched": true,
+   "loop": true,
+   "release": 0.09,
+   "desc": "Round subtractive bass: saw + square sub through a plucked resonant low-pass, sine core.",
+   "samples": [
+    {
+     "file": "inst/bass_24.wav",
+     "root": 24,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_28.wav",
+     "root": 28,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_32.wav",
+     "root": 32,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_36.wav",
+     "root": 36,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_40.wav",
+     "root": 40,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_44.wav",
+     "root": 44,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_48.wav",
+     "root": 48,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_52.wav",
+     "root": 52,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_56.wav",
+     "root": 56,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_60.wav",
+     "root": 60,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_64.wav",
+     "root": 64,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_68.wav",
+     "root": 68,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    },
+    {
+     "file": "inst/bass_72.wav",
+     "root": 72,
+     "frames": 112455,
+     "loopBegin": 50715,
+     "loopEnd": 112455
+    }
+   ]
+  },
+  "blip_sine_long": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.05,
+   "desc": "Long sine blip (-60 dB at 0.9 s).",
+   "samples": [
+    {
+     "file": "blip/blip_sine_long_36.wav",
+     "root": 36,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_sine_long_42.wav",
+     "root": 42,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_sine_long_48.wav",
+     "root": 48,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_sine_long_54.wav",
+     "root": 54,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_sine_long_60.wav",
+     "root": 60,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_sine_long_66.wav",
+     "root": 66,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_sine_long_72.wav",
+     "root": 72,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_sine_long_78.wav",
+     "root": 78,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_sine_long_84.wav",
+     "root": 84,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_sine_long_90.wav",
+     "root": 90,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_sine_long_96.wav",
+     "root": 96,
+     "frames": 48510
+    }
+   ]
+  },
+  "blip_sine_short": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.02,
+   "desc": "Short sine blip (-60 dB at 0.14 s).",
+   "samples": [
+    {
+     "file": "blip/blip_sine_short_36.wav",
+     "root": 36,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_sine_short_42.wav",
+     "root": 42,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_sine_short_48.wav",
+     "root": 48,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_sine_short_54.wav",
+     "root": 54,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_sine_short_60.wav",
+     "root": 60,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_sine_short_66.wav",
+     "root": 66,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_sine_short_72.wav",
+     "root": 72,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_sine_short_78.wav",
+     "root": 78,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_sine_short_84.wav",
+     "root": 84,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_sine_short_90.wav",
+     "root": 90,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_sine_short_96.wav",
+     "root": 96,
+     "frames": 13230
+    }
+   ]
+  },
+  "blip_square_long": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.05,
+   "desc": "Long square blip (-60 dB at 0.9 s).",
+   "samples": [
+    {
+     "file": "blip/blip_square_long_36.wav",
+     "root": 36,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_square_long_42.wav",
+     "root": 42,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_square_long_48.wav",
+     "root": 48,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_square_long_54.wav",
+     "root": 54,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_square_long_60.wav",
+     "root": 60,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_square_long_66.wav",
+     "root": 66,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_square_long_72.wav",
+     "root": 72,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_square_long_78.wav",
+     "root": 78,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_square_long_84.wav",
+     "root": 84,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_square_long_90.wav",
+     "root": 90,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_square_long_96.wav",
+     "root": 96,
+     "frames": 48510
+    }
+   ]
+  },
+  "blip_square_short": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.02,
+   "desc": "Short square blip (-60 dB at 0.14 s).",
+   "samples": [
+    {
+     "file": "blip/blip_square_short_36.wav",
+     "root": 36,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_square_short_42.wav",
+     "root": 42,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_square_short_48.wav",
+     "root": 48,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_square_short_54.wav",
+     "root": 54,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_square_short_60.wav",
+     "root": 60,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_square_short_66.wav",
+     "root": 66,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_square_short_72.wav",
+     "root": 72,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_square_short_78.wav",
+     "root": 78,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_square_short_84.wav",
+     "root": 84,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_square_short_90.wav",
+     "root": 90,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_square_short_96.wav",
+     "root": 96,
+     "frames": 13230
+    }
+   ]
+  },
+  "blip_tri_long": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.05,
+   "desc": "Long tri blip (-60 dB at 0.9 s).",
+   "samples": [
+    {
+     "file": "blip/blip_tri_long_36.wav",
+     "root": 36,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_tri_long_42.wav",
+     "root": 42,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_tri_long_48.wav",
+     "root": 48,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_tri_long_54.wav",
+     "root": 54,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_tri_long_60.wav",
+     "root": 60,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_tri_long_66.wav",
+     "root": 66,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_tri_long_72.wav",
+     "root": 72,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_tri_long_78.wav",
+     "root": 78,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_tri_long_84.wav",
+     "root": 84,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_tri_long_90.wav",
+     "root": 90,
+     "frames": 48510
+    },
+    {
+     "file": "blip/blip_tri_long_96.wav",
+     "root": 96,
+     "frames": 48510
+    }
+   ]
+  },
+  "blip_tri_short": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.02,
+   "desc": "Short tri blip (-60 dB at 0.14 s).",
+   "samples": [
+    {
+     "file": "blip/blip_tri_short_36.wav",
+     "root": 36,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_tri_short_42.wav",
+     "root": 42,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_tri_short_48.wav",
+     "root": 48,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_tri_short_54.wav",
+     "root": 54,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_tri_short_60.wav",
+     "root": 60,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_tri_short_66.wav",
+     "root": 66,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_tri_short_72.wav",
+     "root": 72,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_tri_short_78.wav",
+     "root": 78,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_tri_short_84.wav",
+     "root": 84,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_tri_short_90.wav",
+     "root": 90,
+     "frames": 13230
+    },
+    {
+     "file": "blip/blip_tri_short_96.wav",
+     "root": 96,
+     "frames": 13230
+    }
+   ]
+  },
+  "boss_drone": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Boss phase: a big saw drone.",
+   "samples": [
+    {
+     "file": "sfx/boss_drone_30.wav",
+     "root": 30,
+     "frames": 66150
+    },
+    {
+     "file": "sfx/boss_drone_36.wav",
+     "root": 36,
+     "frames": 66150
+    },
+    {
+     "file": "sfx/boss_drone_42.wav",
+     "root": 42,
+     "frames": 66150
+    },
+    {
+     "file": "sfx/boss_drone_48.wav",
+     "root": 48,
+     "frames": 66150
+    }
+   ]
+  },
+  "boss_riser": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Boss phase: filtered noise riser.",
+   "samples": [
+    {
+     "file": "sfx/boss_riser_v0.wav",
+     "root": -1,
+     "frames": 52920
+    }
+   ]
+  },
+  "break_crumble": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Breakable wall: crumble and debris.",
+   "samples": [
+    {
+     "file": "sfx/break_crumble_v0.wav",
+     "root": -1,
+     "frames": 35280
+    },
+    {
+     "file": "sfx/break_crumble_v1.wav",
+     "root": -1,
+     "frames": 35280
+    }
+   ]
+  },
+  "break_tone": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Break: sine falling an octave.",
+   "samples": [
+    {
+     "file": "sfx/break_tone_48.wav",
+     "root": 48,
+     "frames": 24255
+    },
+    {
+     "file": "sfx/break_tone_54.wav",
+     "root": 54,
+     "frames": 24255
+    }
+   ]
+  },
+  "bumper_boing": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Bumper fires: a sprung plate boing with a knock.",
+   "samples": [
+    {
+     "file": "sfx/bumper_boing_60.wav",
+     "root": 60,
+     "frames": 22050
+    },
+    {
+     "file": "sfx/bumper_boing_66.wav",
+     "root": 66,
+     "frames": 22050
+    }
+   ]
+  },
+  "clang": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Clang: inharmonic metal rooted on a chord tone.",
+   "samples": [
+    {
+     "file": "sfx/clang_60.wav",
+     "root": 60,
+     "frames": 37485
+    },
+    {
+     "file": "sfx/clang_66.wav",
+     "root": 66,
+     "frames": 37485
+    }
+   ]
+  },
+  "clap": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.03,
+   "desc": "Clap: three noise bursts and a short tail.",
+   "samples": [
+    {
+     "file": "drums/clap_v0.wav",
+     "root": -1,
+     "frames": 17640
+    },
+    {
+     "file": "drums/clap_v1.wav",
+     "root": -1,
+     "frames": 17640
+    }
+   ]
+  },
+  "conveyor_clunk": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Conveyor start / stop / reverse: a motor clunk and a belt jolt.",
+   "samples": [
+    {
+     "file": "sfx/conveyor_clunk_v0.wav",
+     "root": -1,
+     "frames": 17640
+    }
+   ]
+  },
+  "conveyor_hum": {
+   "pitched": true,
+   "loop": true,
+   "release": 0.25,
+   "desc": "Conveyor running (loop): a low motor hum on the key with a soft belt rattle; tuned per level.",
+   "samples": [
+    {
+     "file": "sfx/conveyor_hum_36.wav",
+     "root": 36,
+     "frames": 101430,
+     "loopBegin": 22050,
+     "loopEnd": 101430
+    },
+    {
+     "file": "sfx/conveyor_hum_42.wav",
+     "root": 42,
+     "frames": 101430,
+     "loopBegin": 22050,
+     "loopEnd": 101430
+    },
+    {
+     "file": "sfx/conveyor_hum_48.wav",
+     "root": 48,
+     "frames": 101430,
+     "loopBegin": 22050,
+     "loopEnd": 101430
+    }
+   ]
+  },
+  "core_swell": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Core activation: a rising shimmer.",
+   "samples": [
+    {
+     "file": "sfx/core_swell_v0.wav",
+     "root": -1,
+     "frames": 57330
+    }
+   ]
+  },
+  "count_eight": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.03,
+   "desc": "Count-in voice: \"eight\".",
+   "samples": [
+    {
+     "file": "voice/count_eight_v0.wav",
+     "root": -1,
+     "frames": 16317
+    }
+   ]
+  },
+  "count_five": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.03,
+   "desc": "Count-in voice: \"five\".",
+   "samples": [
+    {
+     "file": "voice/count_five_v0.wav",
+     "root": -1,
+     "frames": 18963
+    }
+   ]
+  },
+  "count_seven": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.03,
+   "desc": "Count-in voice: \"seven\".",
+   "samples": [
+    {
+     "file": "voice/count_seven_v0.wav",
+     "root": -1,
+     "frames": 19845
+    }
+   ]
+  },
+  "count_six": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.03,
+   "desc": "Count-in voice: \"six\".",
+   "samples": [
+    {
+     "file": "voice/count_six_v0.wav",
+     "root": -1,
+     "frames": 17640
+    }
+   ]
+  },
+  "crusher_retract": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Crusher retract: a hydraulic sigh and a soft rattle.",
+   "samples": [
+    {
+     "file": "sfx/crusher_retract_v0.wav",
+     "root": -1,
+     "frames": 20286
+    }
+   ]
+  },
+  "crusher_slam": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Crusher stroke: a heavy piston thump with a clanking metal head and a hiss of air.",
+   "samples": [
+    {
+     "file": "sfx/crusher_slam_v0.wav",
+     "root": -1,
+     "frames": 28665
+    },
+    {
+     "file": "sfx/crusher_slam_v1.wav",
+     "root": -1,
+     "frames": 28665
+    }
+   ]
+  },
+  "dart_fire": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Dart launcher: a pneumatic pfft and a thin whistle.",
+   "samples": [
+    {
+     "file": "sfx/dart_fire_v0.wav",
+     "root": -1,
+     "frames": 14112
+    },
+    {
+     "file": "sfx/dart_fire_v1.wav",
+     "root": -1,
+     "frames": 14112
+    }
+   ]
+  },
+  "death_sweep": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Self death: noise winding down.",
+   "samples": [
+    {
+     "file": "sfx/death_sweep_v0.wav",
+     "root": -1,
+     "frames": 33075
+    }
+   ]
+  },
+  "desync_glitch": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Desync: detuned wobbling voices with two tape dropouts.",
+   "samples": [
+    {
+     "file": "sfx/desync_glitch_60.wav",
+     "root": 60,
+     "frames": 27342
+    },
+    {
+     "file": "sfx/desync_glitch_66.wav",
+     "root": 66,
+     "frames": 27342
+    }
+   ]
+  },
+  "dodge_swish": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Dodge swish.",
+   "samples": [
+    {
+     "file": "sfx/dodge_swish_v0.wav",
+     "root": -1,
+     "frames": 12348
+    },
+    {
+     "file": "sfx/dodge_swish_v1.wav",
+     "root": -1,
+     "frames": 12348
+    }
+   ]
+  },
+  "dodge_tone": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Dodge: sine rising a fourth.",
+   "samples": [
+    {
+     "file": "sfx/dodge_tone_60.wav",
+     "root": 60,
+     "frames": 13230
+    },
+    {
+     "file": "sfx/dodge_tone_66.wav",
+     "root": 66,
+     "frames": 13230
+    }
+   ]
+  },
+  "door_close": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Door sliding shut, latch.",
+   "samples": [
+    {
+     "file": "sfx/door_close_v0.wav",
+     "root": -1,
+     "frames": 34398
+    }
+   ]
+  },
+  "door_open": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Door sliding open, latch.",
+   "samples": [
+    {
+     "file": "sfx/door_open_v0.wav",
+     "root": -1,
+     "frames": 34398
+    }
+   ]
+  },
+  "enemy_attack": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Enemy strike: sine thud dropping an octave, low noise.",
+   "samples": [
+    {
+     "file": "sfx/enemy_attack_48.wav",
+     "root": 48,
+     "frames": 18522
+    },
+    {
+     "file": "sfx/enemy_attack_54.wav",
+     "root": 54,
+     "frames": 18522
+    }
+   ]
+  },
+  "enemy_shock": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Enemy shock: buzzing square with crackle.",
+   "samples": [
+    {
+     "file": "sfx/enemy_shock_60.wav",
+     "root": 60,
+     "frames": 14994
+    },
+    {
+     "file": "sfx/enemy_shock_66.wav",
+     "root": 66,
+     "frames": 14994
+    }
+   ]
+  },
+  "enemy_shot": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Enemy shot: square dropping a fifth.",
+   "samples": [
+    {
+     "file": "sfx/enemy_shot_60.wav",
+     "root": 60,
+     "frames": 13230
+    },
+    {
+     "file": "sfx/enemy_shot_66.wav",
+     "root": 66,
+     "frames": 13230
+    }
+   ]
+  },
+  "enemy_stagger": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Stagger: triangle with a dizzy vibrato.",
+   "samples": [
+    {
+     "file": "sfx/enemy_stagger_48.wav",
+     "root": 48,
+     "frames": 20286
+    },
+    {
+     "file": "sfx/enemy_stagger_54.wav",
+     "root": 54,
+     "frames": 20286
+    }
+   ]
+  },
+  "enemy_telegraph": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Telegraph: square opening up, then cut.",
+   "samples": [
+    {
+     "file": "sfx/enemy_telegraph_48.wav",
+     "root": 48,
+     "frames": 15876
+    },
+    {
+     "file": "sfx/enemy_telegraph_54.wav",
+     "root": 54,
+     "frames": 15876
+    }
+   ]
+  },
+  "fail_thud": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Interact fail: soft sine dipping a tone.",
+   "samples": [
+    {
+     "file": "sfx/fail_thud_48.wav",
+     "root": 48,
+     "frames": 11466
+    },
+    {
+     "file": "sfx/fail_thud_54.wav",
+     "root": 54,
+     "frames": 11466
+    }
+   ]
+  },
+  "flame_ignite": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Flame jet ignites: a gas whoomp opening into a roar.",
+   "samples": [
+    {
+     "file": "sfx/flame_ignite_v0.wav",
+     "root": -1,
+     "frames": 26460
+    }
+   ]
+  },
+  "flame_out": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Flame jet cuts off: a short falling hiss.",
+   "samples": [
+    {
+     "file": "sfx/flame_out_v0.wav",
+     "root": -1,
+     "frames": 17640
+    }
+   ]
+  },
+  "flame_roar": {
+   "pitched": false,
+   "loop": true,
+   "release": 0.15,
+   "desc": "Flame jet burning (loop): a band-limited roar with slow flicker.",
+   "samples": [
+    {
+     "file": "sfx/flame_roar_v0.wav",
+     "root": -1,
+     "frames": 83790,
+     "loopBegin": 17640,
+     "loopEnd": 83790
+    }
+   ]
+  },
+  "hat_closed": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.02,
+   "desc": "Closed hat.",
+   "samples": [
+    {
+     "file": "drums/hat_closed_v0.wav",
+     "root": -1,
+     "frames": 9702
+    },
+    {
+     "file": "drums/hat_closed_v1.wav",
+     "root": -1,
+     "frames": 9702
+    },
+    {
+     "file": "drums/hat_closed_v2.wav",
+     "root": -1,
+     "frames": 9702
+    }
+   ]
+  },
+  "hat_open": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.05,
+   "desc": "Open hat.",
+   "samples": [
+    {
+     "file": "drums/hat_open_v0.wav",
+     "root": -1,
+     "frames": 28665
+    },
+    {
+     "file": "drums/hat_open_v1.wav",
+     "root": -1,
+     "frames": 28665
+    }
+   ]
+  },
+  "impact_heavy": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Heavy impact: deep thump + crunch.",
+   "samples": [
+    {
+     "file": "sfx/impact_heavy_v0.wav",
+     "root": -1,
+     "frames": 22050
+    },
+    {
+     "file": "sfx/impact_heavy_v1.wav",
+     "root": -1,
+     "frames": 22050
+    }
+   ]
+  },
+  "impact_light": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Light impact: crack + small thump.",
+   "samples": [
+    {
+     "file": "sfx/impact_light_v0.wav",
+     "root": -1,
+     "frames": 10584
+    },
+    {
+     "file": "sfx/impact_light_v1.wav",
+     "root": -1,
+     "frames": 10584
+    }
+   ]
+  },
+  "impact_medium": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Medium impact: band crack + thump.",
+   "samples": [
+    {
+     "file": "sfx/impact_medium_v0.wav",
+     "root": -1,
+     "frames": 14112
+    },
+    {
+     "file": "sfx/impact_medium_v1.wav",
+     "root": -1,
+     "frames": 14112
+    }
+   ]
+  },
+  "impact_small": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Projectile hit crack.",
+   "samples": [
+    {
+     "file": "sfx/impact_small_v0.wav",
+     "root": -1,
+     "frames": 8379
+    },
+    {
+     "file": "sfx/impact_small_v1.wav",
+     "root": -1,
+     "frames": 8379
+    }
+   ]
+  },
+  "keys": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.4,
+   "desc": "Warm keys: sine + soft octave + detuned saws, gentle EP bark, natural decay.",
+   "samples": [
+    {
+     "file": "inst/keys_36.wav",
+     "root": 36,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_40.wav",
+     "root": 40,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_44.wav",
+     "root": 44,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_48.wav",
+     "root": 48,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_52.wav",
+     "root": 52,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_56.wav",
+     "root": 56,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_60.wav",
+     "root": 60,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_64.wav",
+     "root": 64,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_68.wav",
+     "root": 68,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_72.wav",
+     "root": 72,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_76.wav",
+     "root": 76,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_80.wav",
+     "root": 80,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_84.wav",
+     "root": 84,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_88.wav",
+     "root": 88,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_92.wav",
+     "root": 92,
+     "frames": 154350
+    },
+    {
+     "file": "inst/keys_96.wav",
+     "root": 96,
+     "frames": 154350
+    }
+   ]
+  },
+  "kick": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.03,
+   "desc": "Round kick: pitch-swept sine, soft click.",
+   "samples": [
+    {
+     "file": "drums/kick_v0.wav",
+     "root": -1,
+     "frames": 26460
+    }
+   ]
+  },
+  "kill_pop": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Kill: a bright pop sweeping down.",
+   "samples": [
+    {
+     "file": "sfx/kill_pop_v0.wav",
+     "root": -1,
+     "frames": 14994
+    }
+   ]
+  },
+  "laser_off": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Laser off: saw falling an octave, closing filter.",
+   "samples": [
+    {
+     "file": "sfx/laser_off_48.wav",
+     "root": 48,
+     "frames": 17640
+    },
+    {
+     "file": "sfx/laser_off_54.wav",
+     "root": 54,
+     "frames": 17640
+    }
+   ]
+  },
+  "laser_on": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Laser on: resonant saw + fifth, then a hum.",
+   "samples": [
+    {
+     "file": "sfx/laser_on_48.wav",
+     "root": 48,
+     "frames": 30870
+    },
+    {
+     "file": "sfx/laser_on_54.wav",
+     "root": 54,
+     "frames": 30870
+    }
+   ]
+  },
+  "lead": {
+   "pitched": true,
+   "loop": true,
+   "release": 0.16,
+   "desc": "Plucky lead: detuned saw + triangle into a resonant low-pass that snaps shut.",
+   "samples": [
+    {
+     "file": "inst/lead_40.wav",
+     "root": 40,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_44.wav",
+     "root": 44,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_48.wav",
+     "root": 48,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_52.wav",
+     "root": 52,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_56.wav",
+     "root": 56,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_60.wav",
+     "root": 60,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_64.wav",
+     "root": 64,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_68.wav",
+     "root": 68,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_72.wav",
+     "root": 72,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_76.wav",
+     "root": 76,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_80.wav",
+     "root": 80,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_84.wav",
+     "root": 84,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_88.wav",
+     "root": 88,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_92.wav",
+     "root": 92,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_96.wav",
+     "root": 96,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    },
+    {
+     "file": "inst/lead_100.wav",
+     "root": 100,
+     "frames": 101430,
+     "loopBegin": 57330,
+     "loopEnd": 101430
+    }
+   ]
+  },
+  "objective_shimmer": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Objective complete: high sparkle.",
+   "samples": [
+    {
+     "file": "sfx/objective_shimmer_v0.wav",
+     "root": -1,
+     "frames": 44100
+    }
+   ]
+  },
+  "pad": {
+   "pitched": true,
+   "loop": true,
+   "release": 0.7,
+   "desc": "Pad: the keys oscillators with a slow swell and a looped sustain.",
+   "samples": [
+    {
+     "file": "inst/pad_36.wav",
+     "root": 36,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_40.wav",
+     "root": 40,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_44.wav",
+     "root": 44,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_48.wav",
+     "root": 48,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_52.wav",
+     "root": 52,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_56.wav",
+     "root": 56,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_60.wav",
+     "root": 60,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_64.wav",
+     "root": 64,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_68.wav",
+     "root": 68,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_72.wav",
+     "root": 72,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_76.wav",
+     "root": 76,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_80.wav",
+     "root": 80,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_84.wav",
+     "root": 84,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_88.wav",
+     "root": 88,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_92.wav",
+     "root": 92,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    },
+    {
+     "file": "inst/pad_96.wav",
+     "root": 96,
+     "frames": 180810,
+     "loopBegin": 79380,
+     "loopEnd": 180810
+    }
+   ]
+  },
+  "perc": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.03,
+   "desc": "Woody FM perc blip.",
+   "samples": [
+    {
+     "file": "drums/perc_v0.wav",
+     "root": -1,
+     "frames": 13230
+    }
+   ]
+  },
+  "plate_thunk": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Plate: a low thunk an octave down.",
+   "samples": [
+    {
+     "file": "sfx/plate_thunk_60.wav",
+     "root": 60,
+     "frames": 15435
+    },
+    {
+     "file": "sfx/plate_thunk_66.wav",
+     "root": 66,
+     "frames": 15435
+    }
+   ]
+  },
+  "resync_lock": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Resync: a click-lock.",
+   "samples": [
+    {
+     "file": "sfx/resync_lock_v0.wav",
+     "root": -1,
+     "frames": 7938
+    }
+   ]
+  },
+  "reverse_swell": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Boss recall: remembered tones played backwards.",
+   "samples": [
+    {
+     "file": "sfx/reverse_swell_60.wav",
+     "root": 60,
+     "frames": 22050
+    },
+    {
+     "file": "sfx/reverse_swell_66.wav",
+     "root": 66,
+     "frames": 22050
+    }
+   ]
+  },
+  "rim": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.02,
+   "desc": "Rim: triangle ping + band noise.",
+   "samples": [
+    {
+     "file": "drums/rim_v0.wav",
+     "root": -1,
+     "frames": 8820
+    },
+    {
+     "file": "drums/rim_v1.wav",
+     "root": -1,
+     "frames": 8820
+    }
+   ]
+  },
+  "sensor_beep": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Beam sensor tripped: a soft two-partial beep.",
+   "samples": [
+    {
+     "file": "sfx/sensor_beep_60.wav",
+     "root": 60,
+     "frames": 12348
+    },
+    {
+     "file": "sfx/sensor_beep_66.wav",
+     "root": 66,
+     "frames": 12348
+    }
+   ]
+  },
+  "shot_arc": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Arc lob: triangle gliding up a fourth.",
+   "samples": [
+    {
+     "file": "sfx/shot_arc_60.wav",
+     "root": 60,
+     "frames": 15876
+    },
+    {
+     "file": "sfx/shot_arc_66.wav",
+     "root": 66,
+     "frames": 15876
+    }
+   ]
+  },
+  "shot_bolt": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Default shot: triangle falling a third.",
+   "samples": [
+    {
+     "file": "sfx/shot_bolt_60.wav",
+     "root": 60,
+     "frames": 13230
+    },
+    {
+     "file": "sfx/shot_bolt_66.wav",
+     "root": 66,
+     "frames": 13230
+    }
+   ]
+  },
+  "shot_missile": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Missile launch: saw rising an octave, rumble.",
+   "samples": [
+    {
+     "file": "sfx/shot_missile_60.wav",
+     "root": 60,
+     "frames": 24255
+    },
+    {
+     "file": "sfx/shot_missile_66.wav",
+     "root": 66,
+     "frames": 24255
+    }
+   ]
+  },
+  "shot_phase": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Phase: detuned sine shimmer.",
+   "samples": [
+    {
+     "file": "sfx/shot_phase_60.wav",
+     "root": 60,
+     "frames": 22050
+    },
+    {
+     "file": "sfx/shot_phase_66.wav",
+     "root": 66,
+     "frames": 22050
+    }
+   ]
+  },
+  "shot_pierce": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Pierce: square diving an octave.",
+   "samples": [
+    {
+     "file": "sfx/shot_pierce_60.wav",
+     "root": 60,
+     "frames": 11466
+    },
+    {
+     "file": "sfx/shot_pierce_66.wav",
+     "root": 66,
+     "frames": 11466
+    }
+   ]
+  },
+  "snare": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.03,
+   "desc": "Snare: band-passed noise + falling tone.",
+   "samples": [
+    {
+     "file": "drums/snare_v0.wav",
+     "root": -1,
+     "frames": 18522
+    },
+    {
+     "file": "drums/snare_v1.wav",
+     "root": -1,
+     "frames": 18522
+    }
+   ]
+  },
+  "spike_down": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Spikes drop: a soft scrape and a low tock.",
+   "samples": [
+    {
+     "file": "sfx/spike_down_v0.wav",
+     "root": -1,
+     "frames": 13230
+    }
+   ]
+  },
+  "spike_up": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Spikes raise: a short metallic shing over a floor knock.",
+   "samples": [
+    {
+     "file": "sfx/spike_up_v0.wav",
+     "root": -1,
+     "frames": 17640
+    },
+    {
+     "file": "sfx/spike_up_v1.wav",
+     "root": -1,
+     "frames": 17640
+    }
+   ]
+  },
+  "step": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Footstep scuff.",
+   "samples": [
+    {
+     "file": "sfx/step_v0.wav",
+     "root": -1,
+     "frames": 7056
+    },
+    {
+     "file": "sfx/step_v1.wav",
+     "root": -1,
+     "frames": 7056
+    },
+    {
+     "file": "sfx/step_v2.wav",
+     "root": -1,
+     "frames": 7056
+    }
+   ]
+  },
+  "switch_click": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Switch lever: two mechanical clicks.",
+   "samples": [
+    {
+     "file": "sfx/switch_click_v0.wav",
+     "root": -1,
+     "frames": 7938
+    }
+   ]
+  },
+  "tape_end": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Tape end: winding down an octave, then a click.",
+   "samples": [
+    {
+     "file": "sfx/tape_end_48.wav",
+     "root": 48,
+     "frames": 26460
+    },
+    {
+     "file": "sfx/tape_end_54.wav",
+     "root": 54,
+     "frames": 26460
+    }
+   ]
+  },
+  "tape_stop": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Self death: a tape-stop fall.",
+   "samples": [
+    {
+     "file": "sfx/tape_stop_60.wav",
+     "root": 60,
+     "frames": 25578
+    },
+    {
+     "file": "sfx/tape_stop_66.wav",
+     "root": 66,
+     "frames": 25578
+    }
+   ]
+  },
+  "tape_turn": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Reverse tape turn: a swell that cuts off.",
+   "samples": [
+    {
+     "file": "sfx/tape_turn_60.wav",
+     "root": 60,
+     "frames": 17640
+    },
+    {
+     "file": "sfx/tape_turn_66.wav",
+     "root": 66,
+     "frames": 17640
+    }
+   ]
+  },
+  "tape_wrap": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Repeat wrap: a quick rewind zip.",
+   "samples": [
+    {
+     "file": "sfx/tape_wrap_v0.wav",
+     "root": -1,
+     "frames": 11466
+    }
+   ]
+  },
+  "tick_click": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Count-in tick transient.",
+   "samples": [
+    {
+     "file": "ui/tick_click_v0.wav",
+     "root": -1,
+     "frames": 5733
+    }
+   ]
+  },
+  "tom": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.03,
+   "desc": "Tom: swept sine with a stick tick.",
+   "samples": [
+    {
+     "file": "drums/tom_v0.wav",
+     "root": -1,
+     "frames": 24255
+    }
+   ]
+  },
+  "transient": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Immediate soft transient ahead of a quantised impact.",
+   "samples": [
+    {
+     "file": "sfx/transient_v0.wav",
+     "root": -1,
+     "frames": 5733
+    },
+    {
+     "file": "sfx/transient_v1.wav",
+     "root": -1,
+     "frames": 5733
+    }
+   ]
+  },
+  "trap_tick": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Trap telegraph: a woody ratchet tick with a pitched ring (tick on the beat before, tock half a beat later).",
+   "samples": [
+    {
+     "file": "sfx/trap_tick_60.wav",
+     "root": 60,
+     "frames": 11466
+    },
+    {
+     "file": "sfx/trap_tick_66.wav",
+     "root": 66,
+     "frames": 11466
+    }
+   ]
+  },
+  "ui_click": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "UI click.",
+   "samples": [
+    {
+     "file": "ui/ui_click_v0.wav",
+     "root": -1,
+     "frames": 6174
+    }
+   ]
+  },
+  "ui_glide": {
+   "pitched": true,
+   "loop": false,
+   "release": 0.08,
+   "desc": "UI speed change: triangle gliding up a fifth.",
+   "samples": [
+    {
+     "file": "ui/ui_glide_60.wav",
+     "root": 60,
+     "frames": 13230
+    },
+    {
+     "file": "ui/ui_glide_66.wav",
+     "root": 66,
+     "frames": 13230
+    }
+   ]
+  },
+  "ui_sweep": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "UI retry sweep.",
+   "samples": [
+    {
+     "file": "ui/ui_sweep_v0.wav",
+     "root": -1,
+     "frames": 15876
+    }
+   ]
+  },
+  "ui_sweep_long": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "UI reset sweep.",
+   "samples": [
+    {
+     "file": "ui/ui_sweep_long_v0.wav",
+     "root": -1,
+     "frames": 26460
+    }
+   ]
+  },
+  "whoosh_heavy": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Heavy swing whoosh.",
+   "samples": [
+    {
+     "file": "sfx/whoosh_heavy_v0.wav",
+     "root": -1,
+     "frames": 15876
+    },
+    {
+     "file": "sfx/whoosh_heavy_v1.wav",
+     "root": -1,
+     "frames": 15876
+    }
+   ]
+  },
+  "whoosh_light": {
+   "pitched": false,
+   "loop": false,
+   "release": 0.08,
+   "desc": "Light swing whoosh.",
+   "samples": [
+    {
+     "file": "sfx/whoosh_light_v0.wav",
+     "root": -1,
+     "frames": 11466
+    },
+    {
+     "file": "sfx/whoosh_light_v1.wav",
+     "root": -1,
+     "frames": 11466
+    }
+   ]
+  }
+ }
+}

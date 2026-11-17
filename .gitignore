@@ -1,0 +1,36 @@
+# Node (prototype/)
+node_modules
+dist
+.vite
+test-results
+
+# Logs and temp files
+*.log
+*.tmp
+*.import.tmp
+
+# Godot: the import cache is rebuilt by `bash tools/gd import`. Keep *.import and *.uid tracked.
+.godot/
+.godot-lock/
+
+# Python and Blender caches
+__pycache__/
+*.pyc
+*.blend1
+art/**/_blender_user/
+
+# Regenerable art work files. The build scripts under art/ write these; nothing in the game reads
+# them. Kept on purpose: art/**/raw and art/voice_el/takes (paid, non-repeatable generator output
+# that the processing scripts read), the .blend sources, and docs/reference/.
+art/previews/
+art/**/work/
+art/**/contact/
+art/voice_el/rejected/
+art/voice/report/
+
+# Third-party downloads the art scripts fetch again on demand. art/moxie_e/dl holds the CC0
+# animation library the shipping Moxie's pipeline reads, so it stays.
+art/**/dl/
+art/**/_dl/
+art/**/src_dl/
+!art/moxie_e/dl/

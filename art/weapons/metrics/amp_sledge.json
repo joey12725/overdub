@@ -1,0 +1,100 @@
+{
+ "id": "amp_sledge",
+ "kind": "melee",
+ "style": "blunt",
+ "hands": 2,
+ "tris": {
+  "Weapon": 7078
+ },
+ "tris_total": 7078,
+ "bounds_min": [
+  -0.1438,
+  -0.3511,
+  -0.354
+ ],
+ "bounds_max": [
+  0.1577,
+  1.091,
+  0.2732
+ ],
+ "size": [
+  0.3015,
+  1.4421,
+  0.6272
+ ],
+ "empties": {
+  "Grip": {
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Grip2": {
+   "pos": [
+    0.0,
+    0.36,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "Tip": {
+   "pos": [
+    0.0,
+    0.89,
+    0.272
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailStart": {
+   "pos": [
+    0.0,
+    0.755,
+    0.27
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "TrailEnd": {
+   "pos": [
+    0.0,
+    1.025,
+    0.27
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "materials": [
+  "weapon_accent",
+  "weapon_accent2",
+  "weapon_black",
+  "weapon_dark",
+  "weapon_grip",
+  "weapon_hot_glow",
+  "weapon_main",
+  "weapon_metal",
+  "weapon_paper",
+  "weapon_steel"
+ ],
+ "bones": []
+}

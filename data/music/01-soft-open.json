@@ -1,0 +1,1209 @@
+{
+  "schema": "overdub-music/1",
+  "id": "01-soft-open",
+  "level": "soft-open",
+  "index": 1,
+  "title": "Soft Open",
+  "description": "A Fibonacci lead over a breathing sine pad in G major pentatonic: five notes, no possible clash, the warmest the game ever sounds.",
+  "arc": "upper",
+  "key": "G Major Pentatonic",
+  "bpm": 90,
+  "bpmNote": "Tempo the piece was composed and measured at. bpm and bars belong to the level designer: if the level file says otherwise, the level wins (3600 / bpm must be an integer).",
+  "music": {
+    "root": 7,
+    "scale": "Major Pentatonic",
+    "progression": [
+      0,
+      2,
+      3,
+      0
+    ],
+    "chordBars": 2,
+    "tracks": [
+      {
+        "role": "melody",
+        "formula": "fibonacci",
+        "params": {
+          "m": 12,
+          "contour": 0.6,
+          "gravity": 0.5,
+          "cycle": 8,
+          "register": 1,
+          "pulses": 5,
+          "steps": 8
+        }
+      },
+      {
+        "role": "chord",
+        "formula": "sine",
+        "params": {
+          "cycles": 1,
+          "phase": 0
+        }
+      },
+      {
+        "role": "bass",
+        "formula": "triangle",
+        "params": {
+          "cycles": 1,
+          "phase": 0.5
+        }
+      },
+      {
+        "role": "drums",
+        "formula": "euclid",
+        "genre": "Lo-fi 80",
+        "params": {
+          "k": 3,
+          "n": 16,
+          "rot": 0,
+          "rate": 0.25
+        }
+      }
+    ]
+  },
+  "layers": [
+    {
+      "cassette": 1,
+      "role": "melody",
+      "formula": "fibonacci",
+      "formulaName": "Fibonacci mod m",
+      "equation": "Fₙ = (Fₙ₋₁ + Fₙ₋₂) mod m",
+      "about": "Lead: the Fibonacci sequence mod m, a tune that keeps almost repeating. Recorded first, it stands alone as a music-box line."
+    },
+    {
+      "cassette": 2,
+      "role": "chord",
+      "formula": "sine",
+      "formulaName": "Sine contour",
+      "equation": "a sin(2πkn/P + φ) + c",
+      "about": "Pad: a slow sine moves the voicing up and down the register, like breath."
+    },
+    {
+      "cassette": 3,
+      "role": "bass",
+      "formula": "triangle",
+      "formulaName": "Triangle contour",
+      "equation": "a tri(kn/P + φ) + c",
+      "about": "Bass: a triangle wave walking between chord tones, three notes a bar."
+    },
+    {
+      "cassette": 4,
+      "role": "drums",
+      "formula": "euclid",
+      "formulaName": "Euclidean E(k,n,r)",
+      "equation": "E(k, n, rotation)",
+      "genre": "Lo-fi 80",
+      "about": "Kit: Euclidean hats E(k,n) over a lo-fi kick and snare."
+    }
+  ],
+  "inLevel": {
+    "about": "What a player can hear in data/levels/01-soft-open.json as it stands: cassettes 1..1 (maxTapes) at tape speeds 1; every subset and speed combination of those, 8 bars each. The other layers are composed and verified for the day the level gains cassettes.",
+    "levelFile": "data/levels/01-soft-open.json",
+    "levelBars": 8,
+    "levelHorizonBars": 8,
+    "audibleCassettes": 1,
+    "speeds": [
+      1
+    ],
+    "bars": 8,
+    "combinationsChecked": 1,
+    "inScalePct": 100,
+    "harshDownbeatPctMean": 0,
+    "harshDownbeatPctWorst": 0,
+    "worstCombo": "-",
+    "onsetsPerBarMin": 5,
+    "onsetsPerBarMax": 5,
+    "progressionTurnsInHorizon": 1
+  },
+  "stateMaps": {
+    "about": "Generative-parameter changes per actor state (MUSIC-08/09, OPEN-22). Ops are applied to the baseline channel parameters of the layer, in the order given by \"order\"; \"only\" restricts an op to roles (pitched layers) or to drum lane classes (kick, backbeat, hat, perc). drift:true scales by the drift level d in 0..1: set -> value*d, add -> value*d, mul -> 1+(value-1)*d.",
+    "order": [
+      "dead",
+      "desynced",
+      "reversing",
+      "stopped"
+    ],
+    "backgroundVoice": "Every PRESENT cassette (recorded, or being recorded now) always has its generated layer sounding, independent of action sounds. A cassette that has not been recorded yet is silent. Action sounds are added on top and never replace the layer.",
+    "alive": {
+      "meaning": "Baseline: the music block exactly as written."
+    },
+    "dead": {
+      "meaning": "The self is a ghost for the rest of this run. The layer thins to its skeleton, softens and falls onto chord tones. It does not recover until a new run keeps that self alive.",
+      "timing": {
+        "onset": "immediate: the first step at or after the death beat (notes already scheduled inside the look-ahead are re-planned)",
+        "ramp": "none",
+        "release": "only at the next run (restart at beat 0)"
+      },
+      "pitched": [
+        {
+          "param": "steps",
+          "op": "max",
+          "value": 2
+        },
+        {
+          "param": "pulses",
+          "op": "mul",
+          "value": 0.5,
+          "round": true,
+          "min": 1
+        },
+        {
+          "param": "gravity",
+          "op": "set",
+          "value": 1
+        },
+        {
+          "param": "palette",
+          "op": "set",
+          "value": 0
+        },
+        {
+          "param": "contour",
+          "op": "max",
+          "value": 0.35
+        },
+        {
+          "param": "cycle",
+          "op": "mul",
+          "value": 0.25,
+          "round": true,
+          "min": 4
+        },
+        {
+          "param": "phrase",
+          "op": "set",
+          "value": 8
+        },
+        {
+          "param": "accent",
+          "op": "mul",
+          "value": 0.65,
+          "round": true
+        },
+        {
+          "param": "ghost",
+          "op": "mul",
+          "value": 0.65,
+          "round": true
+        },
+        {
+          "param": "extension",
+          "op": "set",
+          "value": 0
+        }
+      ],
+      "drums": {
+        "lanes": [
+          "kick",
+          "backbeat",
+          "hat"
+        ],
+        "backbeatAs": "rim",
+        "ops": [
+          {
+            "param": "density",
+            "op": "mul",
+            "value": 0.5
+          },
+          {
+            "param": "threshold",
+            "op": "max",
+            "value": 0.8
+          },
+          {
+            "param": "velocity",
+            "op": "mul",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    "desynced": {
+      "meaning": "The self is alive but off its recording. The contour slips ahead of the rhythm and smooths toward the phrase arch; the gate (which steps sound) is untouched, so the layer stays in time and in key. It converges back to the exact baseline after resync.",
+      "timing": {
+        "driftRisePerBar": 0.25,
+        "driftFallPerBar": 0.5,
+        "driftQuantum": 0.25,
+        "onset": "the drift level is evaluated per master bar: 0.25 in the bar of the desync, full (1.0) in the fourth bar",
+        "release": "falls 0.5 per bar after resync: exactly on the baseline within two bars",
+        "deadWins": "a dead self never drifts (drift = 0)"
+      },
+      "pitched": [
+        {
+          "param": "phase",
+          "op": "set",
+          "value": 4,
+          "drift": true,
+          "round": true
+        },
+        {
+          "param": "contour",
+          "op": "add",
+          "value": 0.45,
+          "drift": true,
+          "max": 0.8
+        },
+        {
+          "param": "accent",
+          "op": "mul",
+          "value": 0.85,
+          "drift": true,
+          "round": true
+        },
+        {
+          "param": "microSteps",
+          "op": "set",
+          "value": 0.18,
+          "drift": true
+        }
+      ],
+      "drums": {
+        "ops": [
+          {
+            "param": "rotation",
+            "op": "set",
+            "value": 2,
+            "drift": true,
+            "round": true,
+            "only": [
+              "perc"
+            ]
+          },
+          {
+            "param": "phase",
+            "op": "set",
+            "value": 4,
+            "drift": true,
+            "round": true,
+            "only": [
+              "hat",
+              "perc"
+            ]
+          },
+          {
+            "param": "microSteps",
+            "op": "set",
+            "value": 0.18,
+            "drift": true,
+            "only": [
+              "hat",
+              "perc"
+            ]
+          }
+        ]
+      }
+    },
+    "reversing": {
+      "meaning": "The tape is on a reverse pass. The contour is read backwards across its cycle (retrograde); gate, chord clock and tempo are unchanged.",
+      "timing": {
+        "onset": "immediate at the next step",
+        "ramp": "none",
+        "release": "immediate at the next step"
+      },
+      "pitched": [
+        {
+          "param": "retrograde",
+          "op": "set",
+          "value": true
+        }
+      ],
+      "drums": {
+        "ops": [
+          {
+            "param": "retrograde",
+            "op": "set",
+            "value": true,
+            "only": [
+              "hat",
+              "perc"
+            ]
+          }
+        ]
+      }
+    },
+    "stopped": {
+      "meaning": "The tape has stopped. The layer becomes a hold figure: one sustained chord tone (bass: the chord root) re-voiced as the chords move, and the kit a single soft kick heartbeat. Tape speed no longer matters.",
+      "timing": {
+        "onset": "immediate at the next step",
+        "ramp": "none",
+        "release": "immediate at the next step"
+      },
+      "pitched": [
+        {
+          "param": "rate",
+          "op": "set",
+          "value": 2,
+          "only": [
+            "melody"
+          ]
+        },
+        {
+          "param": "rate",
+          "op": "set",
+          "value": 4,
+          "only": [
+            "bass",
+            "chord"
+          ]
+        },
+        {
+          "param": "ignoreSpeed",
+          "op": "set",
+          "value": true
+        },
+        {
+          "param": "pulses",
+          "op": "set",
+          "value": 1
+        },
+        {
+          "param": "steps",
+          "op": "set",
+          "value": 1
+        },
+        {
+          "param": "gateLength",
+          "op": "set",
+          "value": 1
+        },
+        {
+          "param": "contour",
+          "op": "set",
+          "value": 1
+        },
+        {
+          "param": "shape",
+          "op": "set",
+          "value": "flat"
+        },
+        {
+          "param": "palette",
+          "op": "set",
+          "value": 0
+        },
+        {
+          "param": "gravity",
+          "op": "set",
+          "value": 1
+        },
+        {
+          "param": "cadence",
+          "op": "set",
+          "value": false
+        },
+        {
+          "param": "accent",
+          "op": "mul",
+          "value": 0.7,
+          "round": true
+        },
+        {
+          "param": "ghost",
+          "op": "mul",
+          "value": 0.7,
+          "round": true
+        },
+        {
+          "param": "retrograde",
+          "op": "set",
+          "value": false
+        },
+        {
+          "param": "phase",
+          "op": "set",
+          "value": 0
+        },
+        {
+          "param": "microSteps",
+          "op": "set",
+          "value": 0
+        },
+        {
+          "param": "rootAnchor",
+          "op": "set",
+          "value": true,
+          "only": [
+            "bass"
+          ]
+        },
+        {
+          "param": "strum",
+          "op": "set",
+          "value": 0,
+          "only": [
+            "chord"
+          ]
+        }
+      ],
+      "drums": {
+        "lanes": [
+          "kick"
+        ],
+        "ops": [
+          {
+            "param": "density",
+            "op": "set",
+            "value": 0.34
+          },
+          {
+            "param": "velocity",
+            "op": "mul",
+            "value": 0.6
+          },
+          {
+            "param": "rate",
+            "op": "set",
+            "value": 0.25
+          },
+          {
+            "param": "ignoreSpeed",
+            "op": "set",
+            "value": true
+          }
+        ]
+      }
+    },
+    "paramGlossary": {
+      "rate": "beats per step at 1x (engine channel.rate = rate / tapeSpeed, unless ignoreSpeed)",
+      "ignoreSpeed": "when true, channel.rate = rate regardless of tape speed",
+      "pulses": "Euclidean gate k (channel.gateParams.k)",
+      "steps": "Euclidean gate n (channel.gateParams.n)",
+      "gateLength": "channel.gateLength (note length as a fraction of a step)",
+      "gravity": "channel.gravity: pull of strong steps onto chord tones",
+      "palette": "channel.palette: 0 = chord tones only, 2 = whole scale",
+      "contour": "channel.contour: blend of the phrase shape over the formula",
+      "shape": "channel.shape: arch | flat",
+      "cycle": "channel.cycle: formula period P in steps",
+      "phrase": "channel.phrase: phrase length in steps",
+      "cadence": "channel.cadence: last step of each phrase lands on the chord root",
+      "accent": "channel.accent velocity",
+      "ghost": "channel.ghost velocity (never above accent)",
+      "extension": "chord layer: 0 = triad, 1 = seventh",
+      "phase": "channel.phase: contour index offset in steps",
+      "microSteps": "lateness as a fraction of one step (channel.micro in ms = microSteps * stepBeats * 60000 / bpm)",
+      "retrograde": "channel.retrograde",
+      "rootAnchor": "bass: channel.rootAnchor",
+      "strum": "chord: channel.strum in ms",
+      "density": "drums: groove density of the kick / backbeat / perc lanes",
+      "threshold": "drums: hit threshold of the formula (hat) lane",
+      "velocity": "drums: multiplier on every lane accent and ghost",
+      "rotation": "drums: groove rotation of the perc lane"
+    }
+  },
+  "sfx": {
+    "palette": "warm",
+    "about": "Upper ruins. Thirds and full triads: every action is a small chime inside the chord (the default table).",
+    "pitchRule": "tones are played in order. from \"chord\": index into the triad of the chord in force at the cue's grid line, stacked upward from the chord root in MIDI octave `octave` (C4 = 60; 0 root, 1 third, 2 fifth, 3 root an octave up ...). from \"scale\": 0-based degree of the level scale in `octave`. perTape: add the acting cassette index (0..3) to index, so four selves acting together spell the chord. \"off\" replaces \"tones\" for off / close events, \"heavy\" for power >= 6.",
+    "latency": {
+      "about": "OPEN-23 / MUSIC-05..07. Only the audible accent is placed, never the simulation event, and only LATE: on the next grid line at or after the event. Impact classes also fire an immediate soft transient (30% gain, first pitch) at the event itself whenever the accent is more than 12 ms away, so feedback is never mushy. Player inputs are not quantised.",
+      "grid": "sixteenth of the tempo as heard (the master sixteenth, subdivided by the power of two the world is slowed by while recording at tape speed s)",
+      "maxLateness": "one grid step",
+      "sixteenthMs": 166.7,
+      "impactGrid": "thirtysecond",
+      "impactGridMs": 83.3,
+      "impactGridNote": "Proposal beyond the prototype: impact classes use the 32nd grid when a sixteenth is longer than 130 ms (bpm below 116), which keeps the worst-case delay of a hit under about 100 ms. All other cues stay on the sixteenth. Both grids nest inside the music.",
+      "immediateTransientMinDelayMs": 12,
+      "mergeRule": "same class and same grid line -> one cue (gain x1.08 per extra event, capped at 1); at most 8 cues per grid line, by priority"
+    },
+    "classes": {
+      "step": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 3,
+            "perTape": true
+          }
+        ],
+        "impact": false,
+        "group": "movement"
+      },
+      "dodge": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 5,
+            "perTape": true
+          }
+        ],
+        "impact": false,
+        "group": "movement"
+      },
+      "swingLight": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 4,
+            "perTape": true
+          }
+        ],
+        "impact": false,
+        "group": "attack"
+      },
+      "swingHeavy": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 3,
+            "perTape": true
+          }
+        ],
+        "impact": false,
+        "group": "attack"
+      },
+      "fire": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 4,
+            "perTape": true
+          },
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 5,
+            "perTape": true
+          }
+        ],
+        "impact": false,
+        "group": "attack"
+      },
+      "hit": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 4,
+            "perTape": true
+          },
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 5,
+            "perTape": true
+          }
+        ],
+        "heavy": [
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 4,
+            "perTape": true
+          },
+          {
+            "from": "chord",
+            "index": 4,
+            "octave": 5,
+            "perTape": true
+          }
+        ],
+        "impact": true,
+        "group": "impact"
+      },
+      "projectileHit": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 5,
+            "perTape": true
+          }
+        ],
+        "impact": true,
+        "group": "impact"
+      },
+      "clang": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 5,
+            "perTape": true
+          }
+        ],
+        "impact": true,
+        "group": "impact"
+      },
+      "kill": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 5
+          },
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 5
+          },
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 5
+          }
+        ],
+        "impact": true,
+        "group": "impact"
+      },
+      "break": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 2
+          },
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 3
+          }
+        ],
+        "impact": true,
+        "group": "impact"
+      },
+      "interact": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 5
+          },
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 5
+          }
+        ],
+        "off": [
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 5
+          },
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 5
+          }
+        ],
+        "impact": false,
+        "group": "mechanism"
+      },
+      "interactFail": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 3
+          }
+        ],
+        "impact": false,
+        "group": "mechanism"
+      },
+      "door": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 2
+          },
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 2
+          }
+        ],
+        "off": [
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 2
+          },
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 2
+          }
+        ],
+        "impact": false,
+        "group": "mechanism"
+      },
+      "plate": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 4
+          }
+        ],
+        "off": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 4
+          }
+        ],
+        "impact": false,
+        "group": "mechanism"
+      },
+      "laser": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 3
+          }
+        ],
+        "impact": false,
+        "group": "mechanism"
+      },
+      "core": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 5
+          },
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 5
+          },
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 5
+          },
+          {
+            "from": "chord",
+            "index": 3,
+            "octave": 5
+          }
+        ],
+        "impact": true,
+        "group": "mechanism"
+      },
+      "objective": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 5
+          },
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 5
+          },
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 5
+          },
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 6
+          }
+        ],
+        "impact": false,
+        "group": "mechanism"
+      },
+      "selfDeath": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 4
+          },
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 4
+          },
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 4
+          }
+        ],
+        "impact": true,
+        "group": "tape"
+      },
+      "desync": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 4,
+            "perTape": true
+          }
+        ],
+        "impact": false,
+        "group": "tape"
+      },
+      "resync": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 4,
+            "perTape": true
+          },
+          {
+            "from": "chord",
+            "index": 3,
+            "octave": 4,
+            "perTape": true
+          }
+        ],
+        "impact": false,
+        "group": "tape"
+      },
+      "tapeWrap": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 5
+          }
+        ],
+        "impact": false,
+        "group": "tape"
+      },
+      "tapeTurn": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 4
+          }
+        ],
+        "impact": false,
+        "group": "tape"
+      },
+      "tapeEnd": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 3
+          }
+        ],
+        "impact": false,
+        "group": "tape"
+      },
+      "enemyTelegraph": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 3
+          },
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 3
+          }
+        ],
+        "impact": false,
+        "group": "enemy"
+      },
+      "enemyAttack": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 2
+          }
+        ],
+        "impact": true,
+        "group": "enemy"
+      },
+      "enemyShot": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 4
+          }
+        ],
+        "impact": false,
+        "group": "enemy"
+      },
+      "enemyStagger": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 1,
+            "octave": 3
+          }
+        ],
+        "impact": false,
+        "group": "enemy"
+      },
+      "bossPhase": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 1
+          },
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 2
+          },
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 2
+          }
+        ],
+        "impact": true,
+        "group": "enemy"
+      },
+      "bossRecall": {
+        "tones": [
+          {
+            "from": "chord",
+            "index": 0,
+            "octave": 4
+          },
+          {
+            "from": "chord",
+            "index": 2,
+            "octave": 4
+          },
+          {
+            "from": "chord",
+            "index": 3,
+            "octave": 4
+          }
+        ],
+        "impact": false,
+        "group": "enemy"
+      }
+    },
+    "ui": {
+      "about": "UI blips (AudioBase.UI_*) and the count-in use 0-based scale degrees of the key in force: the menu bed key on menus, the level key in a level. Tones are played in order, one grid step apart.",
+      "move": [
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 5
+        }
+      ],
+      "select": [
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 5
+        },
+        {
+          "from": "scale",
+          "index": 2,
+          "octave": 5
+        }
+      ],
+      "back": [
+        {
+          "from": "scale",
+          "index": 2,
+          "octave": 5
+        },
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 5
+        }
+      ],
+      "commit": [
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 4
+        },
+        {
+          "from": "scale",
+          "index": 2,
+          "octave": 4
+        },
+        {
+          "from": "scale",
+          "index": 4,
+          "octave": 4
+        }
+      ],
+      "retry": [
+        {
+          "from": "scale",
+          "index": 4,
+          "octave": 4
+        },
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 4
+        }
+      ],
+      "reset": [
+        {
+          "from": "scale",
+          "index": 4,
+          "octave": 4
+        },
+        {
+          "from": "scale",
+          "index": 2,
+          "octave": 4
+        },
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 4
+        }
+      ],
+      "win": [
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 4
+        },
+        {
+          "from": "scale",
+          "index": 2,
+          "octave": 4
+        },
+        {
+          "from": "scale",
+          "index": 4,
+          "octave": 4
+        },
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 5
+        }
+      ],
+      "fail": [
+        {
+          "from": "scale",
+          "index": 2,
+          "octave": 4
+        },
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 4
+        }
+      ],
+      "loot": [
+        {
+          "from": "scale",
+          "index": 4,
+          "octave": 5
+        },
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 6
+        }
+      ],
+      "speed": [
+        {
+          "from": "scale",
+          "index": 0,
+          "octave": 5
+        },
+        {
+          "from": "scale",
+          "index": 4,
+          "octave": 5
+        }
+      ],
+      "countIn": {
+        "5": [
+          {
+            "from": "scale",
+            "index": 0,
+            "octave": 4
+          }
+        ],
+        "6": [
+          {
+            "from": "scale",
+            "index": 0,
+            "octave": 4
+          }
+        ],
+        "7": [
+          {
+            "from": "scale",
+            "index": 0,
+            "octave": 4
+          }
+        ],
+        "8": [
+          {
+            "from": "scale",
+            "index": 4,
+            "octave": 4
+          }
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "about": "Measured by art/music/analyze.ts over 16 master bars per stream; see docs/MUSIC.md for definitions.",
+    "score": 97.6,
+    "inScalePct": 100,
+    "notesChecked": 7952,
+    "harshDownbeatPctMean81": 0,
+    "harshDownbeatPctWorst81": 0,
+    "harshDownbeatPctMeanWith4x": 0,
+    "chordToneDownbeatPct": 100,
+    "onsetsOn16thGridPct": 91.8,
+    "onsetsOn32ndGridPct": 100,
+    "onsetsPerBarByLayerAndSpeed": [
+      {
+        "role": "melody",
+        "1x": 5,
+        "2x": 10,
+        "4x": 20,
+        "0.5x": 2.5
+      },
+      {
+        "role": "chord",
+        "1x": 2,
+        "2x": 4,
+        "4x": 8,
+        "0.5x": 1
+      },
+      {
+        "role": "bass",
+        "1x": 3,
+        "2x": 6,
+        "4x": 12,
+        "0.5x": 1.5
+      },
+      {
+        "role": "drums",
+        "1x": 11,
+        "2x": 22,
+        "4x": 44,
+        "0.5x": 5.5
+      }
+    ],
+    "densityFlags": [],
+    "mudBelow150HzPct": 0,
+    "leadAboveChordPct": 94.1,
+    "deadDensityRatio": 0.58,
+    "desyncChangedStepsPct": 76
+  }
+}

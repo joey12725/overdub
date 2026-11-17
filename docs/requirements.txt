@@ -1,0 +1,2821 @@
+
+===== PAGE 1 =====
+MOXIE
+Game Requirements & Visual Bible
+Four tapes. One world. A solution worth watching.
+JOEY HERSH  /  DESIGN CONSOLIDATION  /  16 NOV 2026
+CURRENT REQUIREMENTS + COMPLETE SOURCE ARCHIVE
+REVISION 1 ADDED: multiple weapon families and first-class cassette/tape-speed HUD (pp. 89-92).
+
+[images on page: 1]
+
+===== PAGE 2 =====
+Contents
+A complete design record: current requirements first, selected visual plates in context, and the original supplied documents in full at
+the back. Use the PDF bookmarks to navigate chapters and subsections.
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+01 / Purpose, authority and reading guide
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 5
+02 / The game at a glance
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7
+03 / Time, tape speed and the shared world
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9
+04 / Recording, commitment, retries and evaluation
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11
+05 / What a tape preserves, and what it does not
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13
+06 / Death, ghosts and hypothetical survival
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 15
+07 / Desynchronization and the recovery spark
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 17
+08 / Movement, momentum and combat
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 20
+09 / Homing missiles and autonomous objects
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 21
+10 / Enemies, targeting and bosses outside the loop
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 23
+11 / Level structure, pressure and puzzle vocabulary
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 25
+12 / Worked scenarios and expected consequences
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 28
+13 / Equipment, loot and permanent progression
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 30
+14 / Musical design requirements
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 32
+15 / Harmonograph: repository and reusable technical context
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 35
+16 / Interface, readability and cinematic playback
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 37
+17 / Moxie: character concept and modeling brief
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 42
+18 / The dungeon, descent and final artifact
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 47
+19 / Environment and object style guide
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 49
+20 / Development implications and the first playable version
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 51
+21 / Verification scenarios and design acceptance
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 54
+22 / Remaining open decisions, without reopening settled ones
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 56
+23 / Decision history and superseded alternatives
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 59
+24 / Legacy concept inventory and original build context
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 63
+25 / Source register, decision anchors and coverage
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 67
+Appendix A / Complete original jam context
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 84
+Appendix B / Complete Harmonograph snapshot
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+DESIGN CONSOLIDATION
+Current decisions supersede the legacy source archive.
+2
+
+[images on page: 0]
+
+===== PAGE 3 =====
+01 / Purpose, authority and reading guide
+This document consolidates the dream-version game discussed with Joey Hersh on November 16, 2026. It is a
+requirements and visual-reference document, not a production schedule, a new brainstorming round, or a mandate
+to reproduce the old game-jam build. “Moxie” identifies the protagonist and serves as this document’s project
+label; a final game title has not been selected.
+The game is an isometric, music-linked puzzle-combat adventure in which a human scavenger records multiple
+versions of herself onto cassette tracks. Those performances combine into one evolving encounter. The central
+experience is discovering a clever plan, executing its pieces, and watching them become a coordinated, cinematic
+performance.
+The source hierarchy
+Latest explicit user decisions control. When the conversation revises an earlier answer, the later answer
+supersedes it. Repeated assistant summaries do not overrule the user. An assistant suggestion is not automatically
+a requirement merely because the discussion moved on.
+The selected images are visual references, not hidden gameplay specifications. They establish appearance,
+materials, lighting and presentation. Text generated inside an image, incidental props, a pose, or an unapproved
+measurement does not silently create lore, abilities or production requirements.
+The original documents provide historical and technical context. The game-jam archive identifies itself as a 2025
+record compiled on November 16, 2026. The supplied Harmonograph page describes an existing repository and its
+documented state. Both are reproduced in full in the appendices, but neither supersedes the current design
+conversation.
+Editorial implications are labeled. This document sometimes expresses a confirmed rule as an equation, a state
+table or a verification scenario. Those are interpretations for implementation, not additional decisions made by the
+user. Where two desired behaviors need reconciliation, the conflict is retained explicitly instead of silently “fixed.”
+Status vocabulary
+Label
+Meaning
+CONFIRMED
+Explicitly selected or clearly reaffirmed in the current conversation.
+WORKING INTERPRETATION
+A practical consequence, example or assistant-proposed expression of the agreed
+design; not a separately approved specification.
+OPEN
+A detail genuinely not settled, including a conflict between desired behaviors.
+LATER
+Desired future development, or an idea explicitly not needed in the first MVP.
+LEGACY
+Historical context or a discarded branch of the design, not a current requirement.
+Requirement identifiers such as TIME-01 and GHOST-03 support implementation discussions and testing. They
+are editorial organization. They do not imply that a formal prioritization or engineering sign-off has already
+occurred.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+PURPOSE, AUTHORITY AND READING GUIDE
+Current decisions supersede the legacy source archive.
+3
+
+[images on page: 0]
+
+===== PAGE 4 =====
+What is included
+The main chapters cover the concept, clock model, recording workflow, repeated and reversed playback, death,
+hypothetical post-death recording, desynchronization, combat, enemy behavior, bosses, level structure,
+equipment, music, interface, cinematic replay, Moxie, the dungeon and the art direction. A later section retains the
+original ideation branches and implementation history. The complete supplied text documents remain available as
+printed appendices and as original text-file attachments inside this PDF.
+Four selected visual assets are reproduced without redesign: the second single-character Moxie concept with
+futuristic belt and wrist equipment; the corrected anime pose/reference sheet; the warmer isometric upper-level
+board; and the darker, rune-inscribed metal lower-level board. Additional detail crops, where used, are crops of
+those same assets rather than new art.
+Corrections that matter most
+An actively recorded ghost can interact. The later correction is decisive: while recording after death, the player
+still follows normal physical movement constraints and can attack or operate switches in that provisional run. A
+dead prerecorded self cannot do those things during later playback.
+Editing an older committed cassette resets every cassette. It does not merely erase the recordings after that
+cassette. Only the currently recorded, not-yet-advanced cassette can be freely retried while retaining earlier
+committed tapes.
+Enemy reactivity does not require randomness. Enemies can obey consistent rules and still behave differently
+when another cassette changes their available targets or the battlefield. “Recorded selves are deterministic,
+enemies are not” was an imprecise earlier assistant description.
+The current game is isometric, equipment-driven and not a roguelike. Side-view precision platforming, a
+branching level map, skill-point spending and point-based respecs were explored and then replaced. The final
+progression direction is a fixed campaign path with revisiting and between-level equipment changes.
+The music must remain coherent. Earlier suggestions about voices drifting away from the shared harmony are not
+a mandate to create discordant music. Death and desynchronization should affect generative parameters without
+abandoning the user’s clean, elegant musical target.
+Source basis: current conversation [C01–C20]; supplied jam archive [J]; supplied Harmonograph repository page [H]; selected art [R01–R04].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+PURPOSE, AUTHORITY AND READING GUIDE
+Current decisions supersede the legacy source archive.
+4
+
+[images on page: 0]
+
+===== PAGE 5 =====
+02 / The game at a glance
+Core concept
+Moxie is a scrappy, expressive, tomboyish human tech scavenger. She enters ancient ruins by choice, seeking loot
+rather than trying to escape captivity. The ruins have been retrofitted with technology. Their deeper layers reveal
+more rune-inscribed metal, neon machinery and temporal systems. The ultimate treasure at the bottom is a literal
+time machine.
+A belt-clipped Walkman is her signature time-recording device. A level consists of one complete
+cassette-recording attempt, normally using up to four tracks. She records one performance, returns to the same
+starting beat, and records the next while earlier performances play alongside her. Different tape speeds change
+how each performance occupies the shared world timeline and how forcefully it interacts with that world.
+The player is not commanding four adaptive companions. They are creating four precise performances. Earlier
+selves do not improvise new attacks or steer toward new targets. Enemies, missiles, doors and other world objects
+can respond to the changing encounter, so the outcome of an old performance is not guaranteed to repeat.
+The music is generated using concepts and capabilities from Harmonograph, Joey’s existing GitHub repository,
+j o e y 1 2 7 2 5 / h a r m o n o g r a p h . Each cassette is also a musical layer with its own generative function. The layers share
+a coherent harmonic and timing framework. Player actions and world sounds become rhythmically integrated
+rather than simply sitting on top of an unrelated soundtrack.
+The intended feeling
+PILLAR-01 — Feel clever. The primary emotional goal is “I found a good solution to a hard problem.” Success
+should feel earned by understanding the system, choosing the right resource at the right time, and constructing a
+favorable future game state.
+PILLAR-02 — Plan through iterations. The player thinks across recordings. Moment-to-moment execution matters,
+but the larger challenge is selecting where each version goes, which tape speed it uses, and the order in which the
+player records the solution.
+PILLAR-03 — Combat is part of the puzzle. This is not a pure puzzle game with combat attached, and not an
+ordinary action game with occasional switches. Enemy targeting, momentum, knockback, survival and spatial
+timing are puzzle materials.
+PILLAR-04 — Fixed performances, changing consequences. The player can rely on an earlier self’s choreography
+while manipulating the environment that choreography encounters. Rescue, distraction, redirection, missed
+attacks and deliberate desynchronization all arise from that relationship.
+PILLAR-05 — A coherent musical result. The soundtrack should remain as elegant and clean as possible
+throughout play. It should not invalidate a mechanically correct solution for being rhythmically unusual.
+PILLAR-06 — The solution becomes a performance. A successful attempt culminates in an automatic,
+non-interactive, cinematic replay at the world’s true beat speed. The replay adds expressive musical visuals while
+preserving what actually happened.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+THE GAME AT A GLANCE
+Current decisions supersede the legacy source archive.
+5
+
+[images on page: 0]
+
+===== PAGE 6 =====
+Boundaries of the vision
+There are four cassette identities, not four unrelated playable characters. Moxie remains the central character.
+Occasional supporting characters, including possible tutorial encounters, can reveal her personality and establish
+that other people exist in the world. The user’s Celeste comparison concerns this light-touch supporting cast, not a
+demand for a similarly structured story or platforming system.
+The game should have personality without requiring an elaborate narrative. The human scavenger, loot-driven
+descent, ancient musical technology and final time machine are enough to anchor the mechanical fantasy. The
+exact civilization, chronology, dialogue, cast and ending remain unspecified.
+A time-loop shooter described as chess-like was mentioned as an inspiration, but its title was uncertain in the
+conversation. This document preserves the intended comparison—planning future states with current
+resources—without assigning the reference to an unverified game.
+The original inspiration list also included Heat, Balatro, Slay the Spire, D&D, XCOM, fighting games and other
+ideas. These belong in the historical context, not a requirement that the final game include racing, cards, tactical
+turns or roguelike runs.
+Current direction: [C01, C02, C08, C11, C15, C16]. Harmonograph repository identity: [H, original lines 1–15 and 99–104]. Historical inspirations:
+[J, original lines 22–39].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+THE GAME AT A GLANCE
+Current decisions supersede the legacy source archive.
+6
+
+[images on page: 0]
+
+===== PAGE 7 =====
+03 / Time, tape speed and the shared world
+Three different meanings of time
+TIME-01 — One shared world. Platforms, enemies, doors and projectiles inhabit one physical encounter. They do
+not exist in four independent worlds. The master musical timeline is the common reference for their interactions.
+TIME-02 — A consistent experience while recording. For a given level, recording one cassette takes the same
+amount of actual playtime regardless of the chosen tape speed. The character’s basic movement and
+responsiveness should feel consistent to the person holding the controls. The world’s apparent speed changes
+relative to that active character.
+TIME-03 — Different durations on the master timeline. A faster tape occupies less master-world time for one
+traversal of its recording; a slower tape occupies more. Recordings are not stretched to make their ends coincide.
+The user explicitly rejected that because it would change where moving platforms and other objects are when
+actions occur.
+Distinguish wall-clock playtime, local cassette progress and master-world beats. The conversation sometimes
+called both wall-clock time and true-speed world playback “real time”; implementation and interface terminology
+must be explicit.
+Musical duration, not a universal number of seconds
+TIME-04 — Author duration in measures. A level’s recording allowance is defined musically. The number of bars
+can vary by level to suit the puzzle. The repeated example of a 15-second recording was illustrative, not a locked
+duration for every level.
+TIME-05 — Tune length by playtesting. No universal minimum, maximum or target range was finalized. The user
+expressly deferred that choice. The later question asking for a fixed ten-second duration was a retread, not a new
+decision.
+TIME-06 — Half/normal/double relationships. There should be a middle speed with a faster and slower option,
+related by doubling or halving. Calling these 0.5×, 1× and 2× is a convenient normalization. Calling the same
+relative choices quarter/half/base changes the labels, not the intended relationship.
+The original jam list also included 4×. Quadruple speed remains historical or optional; the later conversation clearly
+established powers-of-two relationships but did not independently finalize a fourth selectable speed. Four
+cassettes must not be confused with four speed settings.
+A consistent mathematical interpretation
+This editorial derivation expresses the later recording/playback rules, not new tuning.
+Let T be the level’s fixed wall-clock recording allowance, u be elapsed local recording time, and s be the selected
+playback multiplier relative to the middle option. A simple mapping is:
+m a s t e r _ t i m e = l o c a l _ t i m e / t a p e _ s p e e d
+o n e _ t r a v e r s a l _ d u r a t i o n = T / t a p e _ s p e e d
+While recording the active cassette, the world advances at 1/s of its normal master-time rate relative to the
+player’s real seconds. An earlier tape j is displayed at s_j/s_active relative to the active player’s local time. This
+preserves the same world events and spatial relationships rather than assigning every entity an unrelated clock.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+TIME, TAPE SPEED AND THE SHARED WORLD
+Current decisions supersede the legacy source archive.
+7
+
+[images on page: 0]
+
+===== PAGE 8 =====
+Selected speed
+Actual time spent recording
+One forward traversal in final
+master-time playback
+World rate during that recording
+0.5×
+15 s in the illustrative level
+30 s
+2× normal
+1×
+15 s
+15 s
+1× normal
+2×
+15 s
+7.5 s
+0.5× normal
+4×, only if retained
+15 s
+3.75 s
+0.25× normal
+Recording a 2× tape takes 15 real seconds while the world advances 7.5 master seconds. Final playback places
+those actions into the same 7.5 master seconds, preserving the platform landing.
+Expressed in musical coordinates, a local tape of B bars occupies B/s master bars under this interpretation. The
+recording interface must make clear whether a displayed bar count refers to local tape bars or master-world bars.
+Important unresolved timing tension
+Early in the conversation, the desired tradeoff was described as “faster hits harder, gets less far, and is harder to
+control,” with slower versions easier to control. Later, the user explicitly required equal real-time recording lengths
+and consistent character movement while the world changes speed. The inverse-clock mapping above implies that
+a faster cassette sees a slower world during recording, not a faster one. Equal local duration and equal local
+free-space movement also do not automatically produce a shorter maximum walking distance.
+These are not grounds to discard the design. They are open balancing and terminology issues. Harder fast-tape
+play might emerge from timing, compressed world coverage or other encounter constraints, but no mechanism
+accomplishing that was approved. The requirement is to preserve the later timing rules and test the earlier
+intended tradeoff, not silently reverse a clock or invent a movement penalty.
+Likewise, the user requested a tape-speed-sensitive “five, six, seven, eight” count-in. Its exact relation to local tape
+tempo versus master tempo needs to be specified consistently with the recording model. Simply accelerating
+every sound when s increases would not automatically match the inverse visual time scale.
+The whole-attempt horizon
+TIME-07 — A common overall horizon. Faster tracks may stop, repeat or reverse while the longest relevant track
+continues. The user described matching the slowest option. With 0.5×, 1× and 2× tapes and T = 15 seconds, a
+30-second master horizon accommodates one, two and four forward traversals respectively.
+OPEN — What determines that horizon? The discussion alternated between the slowest selected cassette and the
+slowest available option. A level-authored fixed horizon, a slowest-selected horizon and a slowest-allowed horizon
+are not identical when the player selects only fast tapes. The final choice was not made.
+The winning replay must cover the actual intended master-timeline encounter, without arbitrary padding or
+stretching. The exact duration rule must also cover introductory levels with fewer than four tapes.
+Current clock clarifications and rejection of stretching: [C02–C04]. Legacy four-speed list: [J, original lines 17, 34 and 45]. Equations and table:
+working interpretation derived from the confirmed timing examples.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+TIME, TAPE SPEED AND THE SHARED WORLD
+Current decisions supersede the legacy source archive.
+8
+
+[images on page: 0]
+
+===== PAGE 9 =====
+04 / Recording, commitment, retries and
+evaluation
+One level means one cassette attempt
+REC-01 — A level is one complete recording sequence. It can contain multiple rooms or smaller challenges, but
+those challenges share the same cassette attempt. They are not independent encounters with their own automatic
+cassette resets.
+REC-02 — Every recording starts at beat zero. Cassette two does not continue the world from the end of cassette
+one. The same encounter is reconstructed from its initial physical state with the existing tapes playing and one
+additional player-controlled performance being recorded.
+REC-03 — Earlier tapes are visible during recording. The player sees all previously recorded selves alongside the
+current self. They do not see future cassettes that have not yet been recorded. This is sequential planning with
+visible prior commitments, not an omniscient editor of an already complete solution.
+REC-04 — The current cassette can be retried before advancing. A player can discard and rerecord the current
+take while keeping earlier committed cassettes. Choosing to advance commits that take into the sequence.
+REC-05 — Returning to an earlier cassette resets all tapes. Once the player has moved to a later cassette,
+changing an earlier one requires starting the entire level attempt again from cassette one. The user explicitly
+corrected “wipe the later ones” to “wipes all of them.”
+A normal recording cycle
+The player enters the level with the equipment selected between levels. Before recording a tape, they choose its
+speed and, once unlocked, its end-of-tape behavior. A “five, six, seven, eight” count-in prepares the performance.
+The count-in should be visual as well as audible and should communicate the selected timing relationship.
+Recording starts at master beat zero. Earlier tapes replay against the shared world; the current cassette receives
+live control. A continuous timeline with beat markers is visible. The player records movement, attacks, dodges and
+interactions for the level’s allowed local duration. Death does not stop this recording; the special post-death
+recording rules apply.
+Before moving on, the player can retry the current cassette. On advancing, the next recording again starts from
+beat zero with the earlier takes retained. There is no newly created future actor before that actor has been
+recorded.
+After the final recording, playback may begin automatically. The user approved automatic playback, but this does
+not erase the requirement to offer a retry/commit decision at the appropriate point. The exact interaction
+between an automatic preview and committing a take is an interface detail, not permission to auto-commit
+irrevocably.
+Which outcome counts
+REC-06 — Evaluate the final combined encounter. The user described the fourth track’s encounter as the one that
+determines whether the level passes. A kill achieved in cassette one’s original recording is not banked if that kill
+does not happen in the final combined simulation.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+RECORDING, COMMITMENT, RETRIES AND EVALUATION
+Current decisions supersede the legacy source archive.
+9
+
+[images on page: 0]
+
+===== PAGE 10 =====
+REC-07 — Objective plus survivor. Completion requires the level objective and at least one surviving cassette
+character. It does not require all four to survive. Sacrificing one or more tapes can be a valid plan.
+For introductory levels using fewer than four recordings, the natural extension is to evaluate the final required
+recording. This is a working interpretation of the later one-cassette tutorial allowance; the exact early-completion
+rules were not finalized.
+REC-08 — Failure does not force an immediate cut. Let the full playback finish by default so the player can
+observe the failure. Provide a way to end the attempt or reset early rather than trapping the player in a known
+failed sequence.
+What resets and what persists
+Physical encounter state—enemy positions, damage, gates and interactions—must be recalculated for the new
+combined run. A previously killed enemy can survive in the new run because the circumstances changed. This is
+different from reviving an enemy within one uninterrupted run.
+The recordings themselves persist when retrying the current cassette or advancing. Equipment ownership and
+campaign progress belong to the campaign layer, not a bank of provisional combat outcomes. Special bosses that
+remember across recordings may be an intentional exception to ordinary state reset; their memory policy is still
+open.
+OPEN — Recording pauses. The dialogue around pausing was interrupted and the next question began before the
+answer was fully disambiguated. The overall intent is a real-time performed take with planning between iterations.
+A dedicated mid-take tactical-pause feature was not conclusively approved or rejected.
+OPEN — Preview, skip and reset details. The player can reset early on failure. Scrubbing, beat stepping,
+independent tape soloing, timeline editing and replay export were raised as possibilities in assistant lists but were
+not selected as requirements.
+Recording starts, prior-self visibility and commitment rules: [C04, C10]. Final evaluation and survival: [C08–C10]. Level definition and failure
+handling: [C11].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+RECORDING, COMMITMENT, RETRIES AND EVALUATION
+Current decisions supersede the legacy source archive.
+10
+
+[images on page: 0]
+
+===== PAGE 11 =====
+05 / What a tape preserves, and what it does not
+Fixed choreography
+PLAY-01 — Preserve the performance. Earlier selves repeat the same movement, positioning, attack direction and
+action timing. They do not acquire adaptive aim or choose new behaviors during playback. The active player is
+creating choreography, not training an autonomous companion.
+PLAY-02 — Preserve attempts, not old results. A recorded melee swing is a swing at a location and time. Whether
+it hits an enemy is determined by the current run. A switch interaction is attempted in the current world and
+subject to the actor’s current state. It does not force an old door state into existence regardless of what is present.
+PLAY-03 — Recompute world responses. Enemies can move, retarget, be displaced and die differently. Doors can
+be closed at a different time. A launched homing missile can choose a different nearest enemy. These changed
+consequences are fundamental to the puzzle.
+PLAY-04 — Do not casually displace a recorded player. Enemy stagger or knockback should not alter the
+prerecorded player’s path. The user specifically found those responses unsuitable for earlier selves while still
+allowing them to die. Unexpected environmental obstruction is handled by desynchronization rather than
+rewriting the trajectory.
+Why input-only replay is not enough by itself
+The old build used a circular buffer of inputs/actions. That is historical implementation context, not proof that
+input replay alone satisfies the current requirement. Replaying identical inputs against changed collision geometry
+can produce different positions, which contradicts fixed choreography.
+A current implementation therefore needs to preserve the intended path and events, or otherwise guarantee the
+equivalent result. A trajectory-plus-event representation is one possible approach. The precise storage model,
+sample rate, interpolation and engine integration were not chosen in this conversation.
+A useful conceptual split is: the tape owns the intended performance; the world owns collision and interaction
+outcomes; the actor’s alive/ghost/desynchronized state determines whether its attempted actions are physically
+effective. This split explains the design without prescribing a software architecture.
+End-of-tape behavior
+PLAY-05 — Three behaviors. The player should eventually be able to choose, per cassette, whether it stops at the
+end, restarts from the beginning, or plays backward. These controls are introduced later rather than exposing all
+complexity immediately.
+Stop: the tape ceases its recorded action sequence at its endpoint. Whether the body remains solid, holds a plate,
+is targetable, disappears, or counts as the required survivor is not yet specified.
+Repeat: the recorded self cuts straight back to its starting position and performs the same recording again. It does
+not walk back or stretch the original take. The larger encounter continues. Two, four or more traversals can fit
+depending on relative speeds and the common horizon.
+Reverse: the tape reaches its endpoint and retraces the recorded action sequence backward. Alternating forward
+and backward playback—often called ping-pong in the discussion—was the working description. The exact
+behavior after repeated endpoints still needs an explicit event rule.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+WHAT A TAPE PRESERVES, AND WHAT IT DOES NOT
+Current decisions supersede the legacy source archive.
+11
+
+[images on page: 0]
+
+===== PAGE 12 =====
+The initial available mode was not selected by the user. “Start with loop only” was an assistant suggestion, not a
+confirmed tutorial order.
+Reverse is not global history restoration
+PLAY-06 — Reverse recorded actions, not the whole world. The user first described undoing events, then clarified
+that the intended behavior is interaction-specific. A returning projectile may damage an enemy again instead of
+healing it. A switch moved from off to on can be moved back to off. The world continues to evolve forward.
+The player must plan both the forward and backward halves. Opening a door on the outbound pass and closing it
+during the return can create a useful timing window for another cassette. Reverse is a tool for generating new
+interactions with the current world, not restoring every consequence of a past action.
+The earlier projectile example remains a concept reference even after melee became primary. The subsequently
+selected homing missile is dynamic after launch, so it cannot automatically be assumed to rewind a historical target
+path. Reverse behavior for homing missiles remains open.
+Endpoint and causality details still open
+Repeated actions may meet a different world on each traversal. A repeat does not guarantee an enemy is standing
+in the same place or a platform has returned to its old position. Desynchronization and live interaction rules still
+matter.
+Health and death at a loop boundary, whether a dead tape stays dead for the rest of the overall encounter,
+whether a repeat restores any resources, the handling of projectiles left over from a prior traversal, and the exact
+switch operation on reverse are unresolved. None should be inferred from the visual metaphor of rewinding a
+cassette.
+If two tapes operate the same switch, “reverse the original action” might mean set a previous value, toggle the
+current value, or reverse an actor-specific contribution. Those produce different results. The conversation
+established the intended open/close possibilities but not the full concurrency rule.
+Fixed aim, path and changed consequences: [C05, C08]. Playback modes and reverse clarification: [C03]. Historical replay storage: [J, original lines
+14 and 40–46].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+WHAT A TAPE PRESERVES, AND WHAT IT DOES NOT
+Current decisions supersede the legacy source archive.
+12
+
+[images on page: 0]
+
+===== PAGE 13 =====
+06 / Death, ghosts and hypothetical survival
+The essential distinction
+GHOST-01 — Death never truncates the take being recorded. When the current character dies, the player
+continues controlling and recording the rest of that cassette. There must be a major visual distinction showing that
+this is a ghost or hypothetical continuation.
+GHOST-02 — The recording ghost remains physically constrained. While actively recording after death, the
+character cannot simply walk through a wall or closed door. The user revised the earlier freely phasing
+recording-ghost idea specifically because it could record impossible routes for a subsequently rescued character.
+GHOST-03 — The recording ghost can affect that provisional run. Its attacks can kill enemies and its switch
+operations can open doors while the user finishes the take. Those effects help the player perform a possible
+continuation. They do not automatically carry into later recordings.
+GHOST-04 — The recording ghost takes no further damage. The character is already dead in that provisional
+performance. Continuing to take lethal hits would not usefully represent the hypothetical route being recorded.
+GHOST-05 — Playback ghosts are non-interactive. When an earlier cassette dies during a later run, it continues
+along the recorded trajectory but cannot damage enemies, operate switches or physically influence the world. It
+does not take further damage and can pass through obstacles to preserve its path.
+GHOST-06 — Survival is recalculated each run. “Was recorded as a ghost” is not a permanent property of the
+action. A later cassette can prevent an earlier death, making the post-death recorded actions effective. Conversely,
+a previously successful recording can die earlier in the new encounter and lose the effects of its remaining actions.
+State comparison
+State
+Movement / obstacles
+Can affect the world?
+Can take a lethal hit?
+Current live
+recording
+Normal player movement
+and collision
+Yes
+Yes
+Current post-death
+recording ghost
+Still controlled; normal walls
+and doors constrain it
+Yes, in this provisional recording
+run only
+No further damage
+Earlier playback,
+alive and
+synchronized
+Fixed recorded path; new
+obstruction can cause
+desync
+Yes, events resolve against
+current world
+Yes
+Earlier playback,
+dead ghost
+Fixed path; passes through
+obstruction
+No
+No
+Earlier playback,
+alive but
+desynchronized
+Projection follows fixed
+path; recovery spark follows
+reachable space
+No while desynchronized
+No while desynchronized
+The last row is not a kind of death. It is a recoverable loss of physical synchronization. A death ghost does not
+become alive simply because a recovery spark catches up. Exact combinations of death and loop boundaries
+remain open.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+DEATH, GHOSTS AND HYPOTHETICAL SURVIVAL
+Current decisions supersede the legacy source archive.
+13
+
+[images on page: 0]
+
+===== PAGE 14 =====
+Example: rescue a future switch activation
+During cassette one’s original take, the character dies at local second six. The player continues as a visibly distinct
+recording ghost, kills an enemy at second ten, activates a switch at second twelve, and finishes at second fifteen.
+Those actions affect that provisional run so the route can be performed.
+During cassette two, cassette one begins from beat zero. If it dies again at six, its later attack does not kill the
+enemy and its switch does not open the door. Its ghost continues along the recorded route even if that door is
+now closed.
+If cassette two prevents the fatal hit, cassette one is alive at ten and twelve. Its attack and switch operation can
+now be physically effective, assuming the world still presents valid targets and the actor remains synchronized.
+The player is not merely recovering health; they are enabling a planned future contribution.
+Example: a formerly safe take becomes fatal
+Cassette one originally survives all fifteen seconds. In the next recording, enemy targeting changes because
+another self is present. Cassette one walks into a newly aimed projectile at second twelve and dies. The final three
+seconds play as a non-interactive ghost even though those frames were originally recorded alive.
+This was an explicit user example. It establishes that the cassette’s original life/death annotation cannot be
+replayed as an immutable script. The current simulation determines physical effectiveness.
+Provisional effects must not become permanent history
+The actively recorded ghost’s world changes are a rehearsal aid, not authoritative later-run results. A later run
+must resolve the events again using the playback character’s actual alive/desynchronized status. Copying an
+enemy’s old death, or leaving a door open because the recording ghost opened it previously, would violate the
+mechanic.
+This also means rescuing a character does not guarantee every later interaction succeeds. Other tapes can have
+changed target positions, switches or access. A rescued but obstructed character can still desynchronize. The
+system preserves what the actor attempts, not a promise that its hypothetical route will be fully effective.
+The final-tape edge case
+OPEN — The fourth active recording can itself die and continue hypothetically. The user wants the fourth
+combined encounter to determine victory, but also wants post-death active recording actions to affect that
+recording run only. Therefore a final success determination cannot mistakenly count objectives completed solely
+by the fourth recording ghost’s provisional actions.
+A non-interactive validation of all tapes under playback rules is one possible resolution; an
+authoritative-versus-provisional event distinction during the last take is another. These are implementation
+proposals, not an additional gameplay mode already approved. The required outcome is clear: a dead playback self
+cannot win the level through interactions it should no longer have.
+Latest recording-ghost corrections, conditional rescue and new playback deaths: [C06]. This chapter supersedes both the early conversation’s
+phasing recording ghost and the jam archive’s death-advances-track behavior.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+DEATH, GHOSTS AND HYPOTHETICAL SURVIVAL
+Current decisions supersede the legacy source archive.
+14
+
+[images on page: 0]
+
+===== PAGE 15 =====
+07 / Desynchronization and the recovery spark
+Why desynchronization exists
+A fixed recorded path can become impossible in a later run. For example, cassette one passed through an open
+door, but cassette two now closes that door before cassette one reaches it. Letting the old character run in place
+would invalidate the positions and timing of its later attacks. Simply phasing through the door and becoming solid
+on the other side would make the closed door largely irrelevant.
+The selected direction preserves the visible choreography while giving actual traversability a consequence: the
+recorded projection continues, but a second, physically constrained recovery position must catch up before the
+actor becomes interactive again.
+The two positions
+DESYNC-01 — The recording remains the target. The desynchronized projection continues following its exact
+intended performance. It does not detour, wait at the wall, choose a different attack or move the entire tape later
+in time.
+DESYNC-02 — A recovery spark represents the reachable position. A simple, relatively naive navigation agent
+attempts to reach the prerecorded character. It moves fairly quickly but not instantaneously and follows the kinds
+of traversable routes the player is allowed to use.
+DESYNC-03 — Geometry can block the spark. A closed wall or inaccessible route can prevent recovery. The spark
+cannot solve a locked-door puzzle by operating a switch for itself. It is a catch-up mechanism, not a second
+autonomous puzzle-solving character.
+DESYNC-04 — A valid detour costs time. An open, out-of-the-way route may eventually allow the spark to catch
+the projection. A direct route that was blocked can be reopened by another cassette, enabling faster recovery.
+Merely finding empty space on the far side of the wall is not sufficient.
+DESYNC-05 — Resynchronization occurs on catch-up. When the reachable recovery position rejoins the recorded
+position, the character becomes physically effective again. The exact distance tolerance, collision clearance,
+contact behavior and whether a beat boundary is involved are tuning decisions still open.
+Visibility and feel
+DESYNC-06 — Clearly visible, small and ephemeral. The user wants the spark easy to track, but not a large second
+character. A small glowing point or similarly ephemeral mark is the established direction. Invisible recovery logic
+was considered and not preferred.
+The distinction between the actor’s projection and the spark must be understandable in an isometric room. A
+visually satisfying merge is a working art suggestion, not a requirement for a particular particle effect. The cassette
+channel should also communicate this state through its musical behavior.
+Interaction during desynchronization
+DESYNC-07 — Temporarily harmless and invulnerable. The user positively considered engineered invulnerability
+and continued developing puzzles around it. The working rule is that a desynchronized character can neither deal
+nor receive damage and cannot operate world mechanisms while desynchronized.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+DESYNCHRONIZATION AND THE RECOVERY SPARK
+Current decisions supersede the legacy source archive.
+15
+
+[images on page: 0]
+
+===== PAGE 16 =====
+The recovery spark being blocked by walls but not attacked by enemies was an assistant-proposed default
+consistent with this idea. Its exact collision and enemy-targeting treatment has not been explicitly selected. Do not
+interpret it as a new enemy-bait unit or a target with its own health without a further decision.
+DESYNC-08 — Emergent in the base design. There is no baseline “press a button to desync” ability.
+Desynchronization emerges when later actions change the environment around an earlier recording. Levels should
+sometimes make it easy to induce deliberately, teaching players how to use it.
+An upgrade that eventually allows on-demand desynchronization was floated later while discussing progression. It
+remains a candidate equipment ability, not a reversal of the confirmed baseline or a guaranteed unlock.
+The wall-and-turret puzzle
+The user’s example is a wall and a turret. The turret would otherwise almost certainly kill the character. Another
+cassette uses the wall to cause desynchronization, allowing the old projection to cross the lethal firing zone. The
+character then gets behind the turret and destroys it after resynchronizing.
+For the example to obey the agreed rules, the recovery spark must have a route to catch up before the melee
+attack: either another cassette reopens the wall or a traversable detour exists. A desynchronized projection cannot
+destroy the turret while still harmless. The puzzle therefore involves both creating the safe interval and ending it at
+the useful moment.
+This is a desired teaching pattern, not a finalized level layout. The precise turret targeting, attack frequency, wall
+position, spark speed and safe interval are not yet authored.
+Additional example from the discussion
+A boss prepares a large area attack. A later cassette closes a route to desynchronize an earlier self just before the
+blast. Reopening the route lets the spark catch up in time for a coordinated counterattack. This was an assistant
+illustration of the user-approved emergent invulnerability idea, not a confirmed boss move or specific level.
+Failure and edge cases
+An inaccessible spark may never catch up before the level ends. The discussion did not choose a timeout, teleport
+rescue, automatic death or forced failure for this state. Do not add one silently. The player may have intentionally
+traded an actor’s remaining contribution for survival.
+The relationship between desynchronized survival and the “at least one survivor” victory condition remains open.
+Being alive but permanently non-interactive is not automatically the same as satisfying whatever exit or
+completion interaction a level requires.
+Enemy bodies causing desynchronization, movable-object blockage, changes to the floor beneath a path, a spark
+catching a reversing projection, and what happens to the spark when its tape teleports to the start of a repeat also
+need explicit rules. The agreed concept is physical catch-up through traversable space; those are applications still
+to be tested.
+Obstruction problem, rejected overlap-only fix, recovery-agent proposal and turret example: [C07]. On-demand desync as a later upgrade
+candidate: [C12].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+DESYNCHRONIZATION AND THE RECOVERY SPARK
+Current decisions supersede the legacy source archive.
+16
+
+[images on page: 0]
+
+===== PAGE 17 =====
+08 / Movement, momentum and combat
+Perspective and movement priorities
+COMBAT-01 — Isometric play. The user explicitly selected isometric after recognizing that jumping and vertical
+space were not central to the imagined puzzles. Navigation through rooms, spatial timing, mechanisms, positioning
+and combat matter more than precision jumping.
+Relatively flat 2.5D geometry was the assistant’s working framing. The user selected the perspective, not a
+particular projection angle, engine renderer or ban on all height changes. Stairs, ramps, visual elevation and
+interconnected spaces can exist without making precision platforming the defining skill.
+Movement should feel responsive and consistent while the player is recording any tape. The world’s relative pace
+and the tape’s forceful effect in master time provide the variation. General control bindings were discussed but not
+fully selected: WASD plus mouse-facing and controller twin-stick input were suggestions; movement-facing
+attacks were another option. Melee does not require one particular aiming scheme.
+The combat vocabulary
+COMBAT-02 — Melee is primary. Earlier selves always strike at the recorded angle or place. The game should
+derive depth from positioning and coordinating these strikes, rather than allowing old characters to automatically
+chase or aim at new targets.
+COMBAT-03 — Light and heavy attacks. Both should exist. Tape speed changes their timing relative to the shared
+encounter. A fast-tape light attack can look like a blurred flurry; a slow-tape heavy attack can be deeply impractical
+because its commitment occupies so much world time.
+COMBAT-04 — Dodge with invincibility frames. A dodge is required, and the user accepted i-frames. Its behavior
+should feel meaningfully different across tape speeds. Keeping its animation and invulnerability interval consistent
+in local tape time, then mapping them to master time, is the working interpretation. Exact distance, cooldown,
+startup and invulnerability fractions remain unchosen.
+A simpler action set is desirable because coordinating timelines supplies the larger complexity. That does not
+prohibit expressive animation, directional attacks or equipment abilities; it does mean an elaborate fighting-game
+input system has not been requested.
+Momentum is the central combat variable
+MOM-01 — Movement and tape speed feed momentum. The user clarified the causal chain repeatedly: actual
+movement/current speed and tape speed affect effective momentum; momentum affects damage, stagger and
+knockback. These should not feel like unrelated stat bonuses attached to the tape selector.
+MOM-02 — Momentum affects more than damage. High-force attacks must be able to displace enemies more
+strongly and influence stagger. Knockback is a primary puzzle interaction, not a decorative animation.
+MOM-03 — Direction matters. The user discussed actual movement as part of momentum. Treating momentum
+as direction-sensitive is a working physical interpretation: running into a strike, moving away, and changing
+direction need not transfer identical force. The precise calculation has not been selected.
+MOM-04 — Attack type transfers force differently. Light and heavy attacks need distinct feel. Their exact base
+damage, reach, mass-like contribution, force transfer, startup and recovery were not finalized. A heavy attack
+favoring larger impulse and a light attack favoring repeated application were suggestions, not settled formulas.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+MOVEMENT, MOMENTUM AND COMBAT
+Current decisions supersede the legacy source archive.
+17
+
+[images on page: 0]
+
+===== PAGE 18 =====
+The Ant-Man analogy was used to describe concentrating an action through time rather than through mass or size.
+It is a design metaphor for temporal impact, not a requirement for physically accurate relativistic mechanics or for
+copying that character’s powers.
+A useful implementation interpretation, not a fixed formula
+For the time mapping in Chapter 03, a local velocity v_local corresponds to v_master = s × v_local. A combat model
+can therefore derive effective momentum from motion in master-world time, with attack motion and equipment
+supplying additional terms as appropriate.
+This interpretation matters because tape speed should not be accidentally counted twice: once by converting
+velocity into master time and again by applying an unexplained identical multiplier. There may still be deliberate
+balancing curves, caps or nonlinear effects, but their values and definitions were not chosen here.
+The conversation did not settle whether a stationary character’s weapon swing alone generates all required
+momentum, whether movement inertia is persistent, or whether damage and knockback share the same curve.
+The requirement is a legible common cause, not a premature physics equation.
+Dynamic enemy displacement
+MOM-05 — Knockback changes the encounter. Enemies retain their newly simulated positions within the current
+run and react from there. A cassette can knock an enemy into or out of a turret’s line of fire, an earlier melee
+swing, another cassette’s attack or an environmental hazard.
+A previously successful swing may miss after another tape changes the enemy’s path. That is expected. The player
+should also be able to arrange the converse: a previously ineffective attack becomes useful because another self
+delivers the enemy into it.
+The user accepted real displacement, not a fixed hit animation that snaps enemies back to predetermined
+positions. However, enemy mass, resistance, collision with other enemies, shield behavior and boss immunity rules
+are still content-design choices.
+MOM-06 — Do not apply enemy knockback rules to fixed player recordings. Enemy stagger and displacement are
+desired. Enemy attacks staggering or knocking a recorded player off its path were specifically not desired. These
+two uses of “stagger” must remain separate in implementation and documentation.
+Health and lethality
+HEALTH-01 — Each player cassette is one-hit lethal. A qualifying hit kills that individual tape character. It does not
+instantly end the whole attempt or truncate the active recording. Dodging or desynchronization can prevent a hit
+from qualifying under their respective immunity rules.
+HEALTH-02 — Most ordinary enemies die in one hit. Some enemies should take two or three hits. These are
+intended survivability bands, not immutable counts independent of momentum and equipment. The user
+specifically mentioned an upgrade allowing a two-hit enemy to die in one hit.
+HEALTH-03 — Bosses have health bars. Boss fights allow sustained damage and multi-cassette coordination
+instead of using only the ordinary enemy hit-count model. Exact health totals and display treatment are not
+selected.
+HEALTH-04 — One surviving self is enough. The objective must be achieved and at least one cassette must
+survive. Which cassette survives is not prescribed. Three sacrifices can be valid if the remaining character satisfies
+the completion condition.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+MOVEMENT, MOMENTUM AND COMBAT
+Current decisions supersede the legacy source archive.
+18
+
+[images on page: 0]
+
+===== PAGE 19 =====
+Friendly fire, body-blocking between selves, shielding another self by intercepting a bullet, damage from solid
+geometry, and whether environmental hazards use the same one-hit rule were not fully specified. They should be
+handled as open collision policies, not inferred from action-game convention.
+Perspective choice: [C13]. Light/heavy/dodge, momentum and displacement: [C08, C09]. One-hit player cassettes, ordinary enemies and boss
+health: [C09].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+MOVEMENT, MOMENTUM AND COMBAT
+Current decisions supersede the legacy source archive.
+19
+
+[images on page: 0]
+
+===== PAGE 20 =====
+09 / Homing missiles and autonomous objects
+A limited exception to fixed targeting
+MISSILE-01 — Secondary ranged attack. Melee remains primary, but the user proposed a guided missile as an
+interesting secondary attack. It provides a way for a deterministic recorded action to create an object whose later
+behavior is dynamic.
+MISSILE-02 — Fixed launch event. The cassette records when and where it fires. The character does not rewrite
+that firing decision in response to the new world. The exact relationship between a recorded facing angle and the
+missile’s initial orientation is not yet specified.
+MISSILE-03 — Acquire the nearest enemy once at launch. The user explicitly chose one-time target acquisition.
+The missile then tracks that target rather than continually switching to whichever enemy has become nearest.
+MISSILE-04 — Dynamic flight. The missile is a world object, not a prerecorded person. It can pursue the currently
+selected target’s simulated motion without violating the fixed-player-performance rule.
+Why it matters for puzzles
+Suppose cassette one fires at a particular moment. During the original recording, enemy A is nearest. In a later run,
+cassette two knocks enemy B closer before that launch event. The same prerecorded firing action can now
+produce a missile aimed at B. The changed target comes from the object’s launch-time logic, not from cassette one
+deciding to aim differently.
+Once the missile has chosen B, moving A closer does not change its target. This makes targeting manipulation a
+discrete timing problem rather than an indefinitely shifting nearest-target contest.
+A playback missile launches only when the actor is physically able to perform that action: alive and synchronized.
+The actively controlled recording ghost is the known provisional exception; it may generate effects in that take
+which must not be copied into later authoritative playback without survival.
+Not yet specified
+The assistant described missiles as “limited,” but the user did not choose ammunition, charges, a cooldown or an
+explicit scarcity rule. These remain open. Do not make ammunition management a mandatory puzzle dimension
+based solely on that wording.
+There is no final rule for firing with no enemies present, equal-distance target ties, line-of-sight requirements,
+walls, turn speed, projectile lifetime, target death before impact, or whether a missile persists after its owner dies
+or desynchronizes.
+The missile’s behavior during reversed tape playback also remains open. The earlier returning-bullet example does
+not automatically define the behavior of a later homing projectile. It may need an explicit backward event type, but
+no solution was selected.
+Changing weapons was initially uncertain. The later equipment-based progression explicitly allows found weapons
+and armor to modify or add abilities. The exact weapon roster, including whether every loadout retains the missile,
+is still undefined.
+Secondary projectile rationale and one-time nearest-target choice: [C09]. Equipment-based progression: [C12].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+HOMING MISSILES AND AUTONOMOUS OBJECTS
+Current decisions supersede the legacy source archive.
+20
+WEAPON UPDATE: see Revision 1 beginning on page 89. Missiles are one of several ranged weapons.
+
+[images on page: 0]
+
+===== PAGE 21 =====
+10 / Enemies, targeting and bosses outside the
+loop
+Understandable responses, not fixed enemy films
+AI-01 — Enemies react to the current encounter. They may aim at the nearest player, move toward the farthest,
+close a gap or follow other type-specific logic. The user used these as examples of rules, not a finalized list of
+enemy classes.
+AI-02 — More selves change circumstances, not necessarily the rule. An enemy can behave differently with two,
+three or four selves because its nearest target, threats or accessible paths changed. It does not need a special
+“two-player behavior mode” solely because a second tape exists.
+AI-03 — Preserve player choreography despite enemy changes. Enemies can dodge a previous attack in the sense
+of being somewhere else due to their simulation, while the recorded player still swings at the same place. Later
+cassettes can herd, lure or knock enemies into those fixed attacks.
+AI-04 — Legibility matters. The desired feeling is strategic, not arbitrary. Consistent targeting rules make a
+changed outcome explainable. Enemy behavior can be reactive and still deterministic given the same initial
+conditions, inputs and internal state. No requirement for random action selection was established.
+The assistant suggested drawing aggro, staggering and forced movement as tools for controlling enemy behavior.
+Momentum-driven stagger and knockback were later confirmed; a separate taunt or explicit aggro ability was not.
+Encounter scales
+AI-05 — Coordination at the encounter level. Most fights should require coordination, but not every individual
+enemy needs multiple actors. One self may handle one or two weaker enemies while another works elsewhere.
+Tough enemies or bosses may demand two, three or four selves acting together.
+This allows allocation puzzles and focus-fire puzzles within the same system. The player might divide four
+recordings across threats, or concentrate them on one enemy that has a narrow opening. Requiring all four tapes
+to strike every ordinary enemy would misrepresent the user’s clarification.
+AI-06 — Enemy attacks can be projectile-based. The player’s melee focus does not restrict enemy weapons.
+Turrets and aimed projectile attacks are explicitly part of the design discussion.
+AI-07 — Attacks follow musical timing. Enemies should fire on beats or subdivisions. Exact per-enemy grids and
+attack patterns remain to be authored. Their sounds follow the general audio integration rules, but enemies do not
+directly modify the player cassettes’ generative wave functions.
+Whether dead ghosts or desynchronized projections remain targetable by enemy decision logic was not settled.
+Invulnerability alone does not answer whether an enemy should continue shooting at them; that policy can
+substantially affect puzzles.
+Special bosses
+BOSS-01 — At least one boss can exist outside the loop. The user wants at least one, possibly multiple, bosses
+that respond to prior recordings and can adapt across iterations. This intention was reaffirmed in the current
+conversation; it is not merely an abandoned jam-era idea.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+ENEMIES, TARGETING AND BOSSES OUTSIDE THE LOOP
+Current decisions supersede the legacy source archive.
+21
+
+[images on page: 0]
+
+===== PAGE 22 =====
+BOSS-02 — Distinguish two forms of adaptation. Ordinary reactivity means an enemy sees a new target now and
+acts differently now. Cross-recording memory means a boss retains knowledge of an earlier performance after the
+world returns to beat zero. The “outside the loop” idea suggests the second, but its exact memory and counterplay
+rules were not finalized.
+BOSS-03 — Multi-self coordination, not just larger health. Bosses can require different cassettes to provide
+pressure, positioning, support or access. Their health bars enable sustained combat, but the underlying
+requirement remains clever coordination.
+The jam archive proposed a boss that updates its actions every loop because it is outside the loop while four selves
+face it. That is useful ancestry. The current document does not lock in a wave-then-boss structure, a particular
+adaptive algorithm, or a roster of music-police bosses.
+Fairness and replay implications
+No rule was chosen for whether the special boss remembers discarded current takes, whole-attempt resets, earlier
+visits, or only committed cassettes. No rule was chosen for what it can predict, what cues reveal adaptation, or
+whether it can access a recording before observing it. These are material open decisions.
+The cinematic replay must not become a fresh adaptive encounter that produces a different outcome. Once the
+final authoritative result has been determined, the replay should show that result. Freezing/reusing resolved
+simulation data is a working implementation approach, not a selected storage technology.
+Enemy target examples and fixed-aim clarification: [C05]. Special outside-loop boss: [C08]. Legacy boss concept: [J, original line 34]. Musical enemy
+constraints: [C15].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+ENEMIES, TARGETING AND BOSSES OUTSIDE THE LOOP
+Current decisions supersede the legacy source archive.
+22
+
+[images on page: 0]
+
+===== PAGE 23 =====
+11 / Level structure, pressure and puzzle
+vocabulary
+Level definition and challenge allocation
+LEVEL-01 — One level, one tape attempt. A level is the shared recording sequence for its cassette tracks. Multiple
+rooms or subproblems can coexist within it. There is no reset simply because the player crosses into another room.
+LEVEL-02 — Typical levels need two to four cassettes. Early teaching levels can use one. A single-cassette lesson
+might demonstrate that sufficiently high momentum breaks a particular kind of wall.
+LEVEL-03 — Combine small problems within the four-self budget. The user’s examples were one one-self problem
+plus one three-self problem; two two-self problems; or one four-self problem. These examples describe how
+demands can be distributed inside one level, not a mandate for a sequence of separately reset puzzle rooms.
+A cassette can potentially contribute to more than one task over time; the conversation did not define the
+numbers as disjoint, permanently assigned teams. The important design idea is allocating a finite set of selves
+across the encounter.
+Flow, pressure and solutions
+LEVEL-04 — Levels should have a flow. Layout and encounter design should guide the player through meaningful
+relationships rather than presenting an unstructured sandbox. This does not require one rigid chronological
+solution or forbid spatial branches within a room.
+LEVEL-05 — Use time pressure and design clarity. Time pressure comes both from finite tape length and from
+external enemies or hazards. Limited lives, paid attempts or a finite retry count were not selected as the
+mechanism enforcing deliberate play.
+LEVEL-06 — Author a solution, permit alternatives. Each level can be made with a solution in mind, but must
+support other valid approaches arising from the game’s rules. The user wants room for clever, unanticipated
+combinations, not musical or procedural policing of creativity.
+LEVEL-07 — Duration varies by level. Musical recording length should support the puzzle being authored. Final
+time values, difficulty curves and overall campaign length remain playtesting/content decisions.
+Reusable interaction ideas
+The current discussion directly supports switches controlling walls or doors, turrets and firing lanes, rooms with
+alternate routes, high-momentum breakable obstacles, dynamic enemies, physical knockback, and the timing
+relationships among tapes. These form the confirmed vocabulary or user-proposed teaching examples.
+The legacy archive supplies additional candidates: a pressure switch held down while another self crosses; an
+instantly recharging shield requiring two simultaneous hits; laser gates; moving platforms; conveyor belts; and
+environmental devices that interact with music. These are valuable inherited ideas, but are not all approved
+content commitments for the new isometric version.
+Knocking an enemy onto a pressure plate, into hazards or into another actor’s strike was discussed as a useful
+extension. Exact force thresholds, which entities can activate plates, and whether enemies can block doors are still
+unspecified.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+LEVEL STRUCTURE, PRESSURE AND PUZZLE VOCABULARY
+Current decisions supersede the legacy source archive.
+23
+
+[images on page: 0]
+
+===== PAGE 24 =====
+Teaching complexity
+Early single-cassette levels can establish basic motion, attacks and momentum. Later tasks can introduce
+cooperation, rescue, desynchronization and end-of-tape options. The original archive’s “start with two, then four;
+combat, interactions, powerups” ladder is retained as historical inspiration, but the later explicit allowance for
+one-cassette teaching takes precedence.
+The end behaviors should unlock later. The exact order of stop, repeat and reverse, and whether a tutorial teaches
+the wall-and-turret trick explicitly or through discovery, were not fixed. The user wants emergent properties, but
+also levels with easy-to-find opportunities to induce desync.
+Campaign shape
+LEVEL-08 — Fixed campaign progression. Branching routes between levels were explored through a Slay the Spire
+comparison, then dropped in favor of a fixed path. The final equipment system provides specialization without
+requiring a branching campaign map.
+LEVEL-09 — Revisiting is allowed. Earlier levels can be revisited. The exact replay menu, reward behavior and use
+of later gear on old levels are not fully specified, though revisiting was proposed in the context of experimenting
+with new capabilities.
+Later challenge layer
+LATER-01 — B-side-style levels and optional challenges. The user likes the idea of harder equivalents and
+challenges later, but does not want these immediately in the MVP.
+LATER-02 — Stars and scoring are possibilities, not a specification. Their criteria are undecided. Fewer cassettes,
+speed, survival and stylish coordination were assistant examples, not agreed scoring metrics. Do not let an
+unapproved scoring system dictate the core solution space.
+Level definition, 1+3 / 2+2 / 4 examples, pressure, alternate solutions and optional challenges: [C11]. Fixed campaign path and revisiting: [C12].
+Legacy tutorial ideas: [J, original lines 64–77].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+LEVEL STRUCTURE, PRESSURE AND PUZZLE VOCABULARY
+Current decisions supersede the legacy source archive.
+24
+
+[images on page: 0]
+
+===== PAGE 25 =====
+12 / Worked scenarios and expected
+consequences
+These scenarios preserve concrete examples from the conversation and initial context. They are explanatory tests
+of the rules, not a newly approved level list. “Local seconds” refer to the cassette being discussed; a production
+implementation maps them onto master beats using the selected tape speed.
+Scenario A — Two simultaneous hits
+Origin: legacy tutorial candidate. An enemy’s shield recharges immediately after one hit. One tape removes the
+shield while another lands the damaging hit at the required overlapping moment. The purpose is to teach why
+cooperation can accomplish something a lone sequence of attacks cannot.
+The exact simultaneity window, damage handling and whether both hits must be melee are not specified. The rule
+must be readable rather than depending on an unexplained single-frame coincidence.
+Scenario B — Hold a door for another self
+Origin: legacy tutorial candidate retained as relevant context. One self stands on a pressure switch while another
+crosses the opened door. Tape speed and end behavior can determine how long that support remains available.
+The stop-mode body policy matters here. A tape that ceases playback might keep holding a plate or might stop
+contributing entirely; the conversation has not chosen between those behaviors.
+Scenario C — Rescue the route after local second six
+Origin: current user clarification. Cassette one dies at six, continues recording an interactive hypothetical route,
+attacks at ten and flips a switch at twelve. In cassette two’s simulation, those later actions are ineffective if the old
+self dies again. Preventing the fatal hit enables them, subject to current targets and collision state.
+A door opened only by the original recording ghost must not remain open in the new run without an effective new
+activation. This is the clearest test of provisional recording effects versus authoritative playback effects.
+Scenario D — A clean take dies at local second twelve
+Origin: current user clarification. A previously surviving tape is killed later because another cassette changes
+enemy aim. Its remaining three seconds become non-interactive ghost playback even though they were originally
+recorded alive.
+Expected result: movement continues exactly; damage and switch events no longer count after death; the ghost is
+not repeatedly killed; the other tapes continue the attempt.
+Scenario E — Redirect the battlefield
+Origin: current combat discussion. One self strikes an enemy into a turret’s firing lane or out of the path of
+another prerecorded attack. The enemy’s subsequent path is genuinely different.
+Expected result: old attacks can miss, new opportunities can appear, and the player can intentionally arrange a
+multi-self chain. The engine must not snap the enemy back to preserve a prior outcome.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+WORKED SCENARIOS AND EXPECTED CONSEQUENCES
+Current decisions supersede the legacy source archive.
+25
+
+[images on page: 0]
+
+===== PAGE 26 =====
+Scenario F — Change a missile’s launch target
+Origin: current secondary-attack proposal. A missile launches at the same recorded time. A later cassette moves a
+different enemy closer before that moment, changing the selected target. After launch, the missile remains
+committed even if another enemy later becomes nearer.
+Expected result: changed acquisition without adaptive player aim. If the emitter is a dead playback ghost or is
+desynchronized at the event, no effective missile is launched under the ordinary playback rule.
+Scenario G — Fast repeat against slow support
+Origin: current timing discussion. With the illustrative 15-second recording allowance, a 0.5× tape traverses once
+over 30 seconds of master time, a 1× tape twice, and a 2× tape four times if they repeat. The slow self can provide
+a long-duration contribution while the faster self repeats a compact action pattern.
+Expected result: no stretching, correct beat alignment, and no assumption that the world resets every time a fast
+tape loops. Events on later traversals still resolve against the current world.
+Scenario H — A useful backward pass
+Origin: current reverse clarification. A fast tape opens a door outbound, then moves the switch back on the
+reverse pass so another self’s access window closes at a planned time. A backward-moving attack or returning
+projectile can cause a fresh hit rather than healing an earlier one.
+Expected result: local action reversal, not global causal rollback. Shared switch conflicts and homing-projectile
+reversal need explicit policies before this becomes a production test.
+Scenario I — Recovery through a detour
+Origin: current recovery-agent proposal. A door is closed before an earlier character reaches it. The projection
+desynchronizes and continues. A small recovery spark navigates the available longer route. Reopening the door
+may give it a shorter route to catch up.
+Expected result: recovery depends on traversable space and finite catch-up speed, not on the projection merely
+leaving the wall’s collision volume. If the spark never reaches the projection, no automatic recovery is implied.
+Scenario J — Desync past the turret
+Origin: current user-authored example. A wall is used to induce desync before a lethal turret lane. The projection
+reaches the turret’s rear without taking damage. A valid detour or reopened route lets the spark catch up before
+the attack that breaks the turret.
+Expected result: the safety interval is useful, but the turret cannot be destroyed until the actor is interactive again.
+This preserves the tradeoff between invulnerability and lost agency.
+Scenario K — Learn a momentum threshold
+Origin: current user teaching example. An early one-cassette puzzle uses a wall that can be broken with enough
+momentum. The lesson isolates how tape speed and movement affect the impact of an attack before adding
+multi-self coordination.
+Exact thresholds and the visual language distinguishing breakable from indestructible walls remain content
+decisions. This is not a requirement for general-purpose environmental destruction.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+WORKED SCENARIOS AND EXPECTED CONSEQUENCES
+Current decisions supersede the legacy source archive.
+26
+
+[images on page: 0]
+
+===== PAGE 27 =====
+Scenario L — Sacrifice without losing the attempt
+Origin: current survival rule. Several cassettes can die while accomplishing setup tasks, provided the objective is
+fulfilled and at least one self survives. A mechanically valid plan is not rejected because some recordings were
+sacrificed or the resulting rhythm is unconventional.
+Expected result: individual death is not instant global failure. Whether a stopped or desynchronized actor qualifies
+as the final survivor must be resolved separately.
+Current examples: [C03, C06–C11]. Shield and pressure-door ancestry: [J, original lines 65–67].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+WORKED SCENARIOS AND EXPECTED CONSEQUENCES
+Current decisions supersede the legacy source archive.
+27
+
+[images on page: 0]
+
+===== PAGE 28 =====
+13 / Equipment, loot and permanent progression
+The final progression model
+GEAR-01 — A campaign, not a roguelike. Progress accumulates through the descent. There is no run-based reset
+of the player’s build after a Slay the Spire-style attempt. The branching-map comparison was exploratory and does
+not establish a roguelike structure.
+GEAR-02 — Upgrades are physical equipment. The final choice replaces a skill tree and abstract point allocation
+with found armor, weapons and related gear. This fits Moxie’s scavenger identity and the motivation to descend
+for loot.
+GEAR-03 — Change loadouts between levels. “Respeccing” means swapping equipment rather than redistributing
+skill points. The user wants this flexibility so an unfortunate configuration does not trap the player with an
+impossible puzzle.
+GEAR-04 — Keep a generous inventory. The player should not have a super-limited inventory forcing constant
+disposal of discovered options. A numeric capacity, weight system, encumbrance mechanic and item-slot count
+were not chosen.
+GEAR-05 — Gear can enhance or add abilities. Items should strengthen aspects of the existing mechanics and can
+introduce new capabilities. The exact categories, progression order and item roster remain to be designed.
+Upgrade ideas that were actually discussed
+Faster resynchronization: improve the recovery spark’s ability to catch a desynchronized projection. This changes
+how quickly an actor regains interaction and is one of the most directly relevant candidates.
+More control over knockback and a higher maximum: allow more precise or stronger enemy repositioning. This
+can change both combat efficiency and environmental puzzle solutions.
+Stronger attacks: reduce the hits needed for tougher ordinary enemies, including the explicit two-hit-to-one-hit
+example. The user valued this as a chosen advantage rather than a universal upgrade that merely shifts the next
+level’s enemy numbers upward.
+Extra time: some form of additional recording allowance was floated, but not fully resolved. It must be reconciled
+with the fixed-per-level recording duration and musical alignment rules before use.
+On-demand desync: a possible later specialization could eventually allow manual desynchronization. This was a
+tentative upgrade idea. The baseline still teaches desync as an emergent environmental property.
+Improved dodge or specialized tape hardware: these appeared in assistant examples illustrating equipment, not as
+a selected item catalog. They remain possible rather than required.
+Choice and puzzle compatibility
+The user oscillated between predetermined upgrades and specialization because universal stat increases can feel
+less meaningful, while optional powers can make authored puzzles harder to balance. The final resolution keeps
+specialization through equipment and allows between-level changes.
+This does not establish that every mandatory level must be solvable with every possible loadout. That stronger
+statement came from the assistant. The user’s actual concern is avoiding permanent dead ends by allowing
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+EQUIPMENT, LOOT AND PERMANENT PROGRESSION
+Current decisions supersede the legacy source archive.
+28
+GEAR UPDATE: see Revision 1 beginning on page 89. Multiple melee and ranged weapon families are required.
+
+[images on page: 0]
+
+===== PAGE 29 =====
+reconfiguration. The available equipment at a stage must support a viable approach, with the exact compatibility
+policy still open.
+A loadout can change how a player solves a level, but should not silently invalidate a tape already recorded under
+different capabilities. Locking equipment for a level attempt is a reasonable working consequence of “between
+levels,” though exact inventory access rules were not formalized.
+Unselected details
+The discussion did not settle whether all cassettes share the same equipment or can have individual loadouts,
+whether gear visibly changes Moxie’s model, how many equipment slots exist, whether item rarity or random rolls
+exist, or how loot is awarded in a failed attempt.
+Thematically, armor and weapons are found on the descent. That does not automatically mean collecting them
+mid-recording changes an existing tape’s statistics or that each loop duplicates loot. Pickup persistence and replay
+semantics remain open.
+There is no approved economy, merchant system, crafting system, durability system or randomized loot table.
+These are not required to implement the selected progression concept.
+Progression revisions, campaign permanence, revisiting, respec rationale and final gear decision: [C12, C16].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+EQUIPMENT, LOOT AND PERMANENT PROGRESSION
+Current decisions supersede the legacy source archive.
+29
+
+[images on page: 0]
+
+===== PAGE 30 =====
+14 / Musical design requirements
+The soundtrack is generated, not four static stems
+MUSIC-01 — Use Harmonograph concepts and capabilities. The user’s Harmonograph is an existing project, not
+just an inspirational word or a generic visual instrument. Its mathematical generators, shared harmonic structure
+and clock should underpin the cassette-driven soundtrack.
+MUSIC-02 — Per-level cassette functions. Each level should probably assign a different mathematical function to
+each track. The user affirmed functions in the Harmonograph sense. Musical roles such as bass, drums, melody and
+harmony are relevant because the engine supports them, but a permanent one-role-per-cassette assignment was
+not finalized.
+MUSIC-03 — Coherent combinations at different speeds. Half/normal/double relationships should align the
+voices rhythmically. Shared key, scale and chord context should keep them harmonically related. Powers-of-two
+speed relationships alone do not guarantee musical beauty; arrangement and harmonic mapping still matter.
+MUSIC-04 — Elegant and clean during play. Do not reserve coherence for successful solutions. Earlier incomplete
+takes and unusual but valid approaches should still sound as intentional as possible.
+Actions contribute to the music
+The user compared the desired integration to Beat Saber notes adding to the music and Pistol Whip gunshots
+participating in it. These are experience references, not a requirement to copy their scoring or input systems.
+MUSIC-05 — Roughly quantize effects to a fine grid. Sound effects should sync to at least something like a
+sixteenth-note grid. The user accepted the same general quantization rule for combat and movement sounds. A
+sixteenth is the illustrative precision target, not an approved exact tolerance in milliseconds.
+MUSIC-06 — Musical irregularity does not invalidate a solution. There is no requirement to play a prescribed tune
+or to reject successful actions because they sound “wrong.” The user explicitly rejected steering against
+mechanically valid solutions on that basis.
+MUSIC-07 — Quantization is not permission to rewrite gameplay. The discussion concerned sounds. It did not
+authorize delaying a melee hit, moving a character, changing a switch time or adjusting an enemy result merely to
+make the soundtrack neater. Any scheduling offset between the actual event and its audible accent needs a
+deliberate latency policy.
+A function shaping which notes or accents correspond to events was suggested, but the exact mapping from a
+jump, hit, footstep, switch or missile to pitch and timbre remains open. So does the extent to which the musical
+layer exists independently of action-triggered sounds.
+Death and desync change the composition
+MUSIC-08 — Affect the relevant cassette channel. A character’s death or desynchronization should be heard in
+that tape’s layer, not represented solely by a visual shader or a global audio effect.
+MUSIC-09 — Use generative parameters, not only processing. The user corrected the assumption that this merely
+means stacking muffling, tape wobble or phasing effects on a finished stem. Harmonograph exposes mathematical,
+pitch, rhythm, gate, velocity and other parameters that can alter the generated composition itself.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+MUSICAL DESIGN REQUIREMENTS
+Current decisions supersede the legacy source archive.
+30
+
+[images on page: 0]
+
+===== PAGE 31 =====
+Candidate changes discussed include simplifying a pattern on death, altering complexity or phase-related
+parameters during desync, and converging back toward a baseline as synchronization is restored. These are ideas,
+not a selected mapping table. Any transformation must retain the coherent-music goal and cannot silently alter the
+gameplay clock.
+A dead cassette does not resynchronize in the sense of becoming alive merely because the musical pattern returns
+to normal. A new run that saves that character can restore its living musical behavior. Death and recoverable
+desync require distinct semantics even if some audio colors are related.
+Enemies keep time without rewriting the functions
+MUSIC-10 — Beat-aligned enemy attacks. Enemies can fire on the beat, quarter notes or other subdivisions
+appropriate to their behavior. The exact attack grids belong to enemy content design.
+MUSIC-11 — No direct enemy control of the generative wave functions. By and large, enemies should not alter
+the actual functions driving the four player channels. Their attacks and effects contribute rhythm and pressure
+instead.
+An enemy can indirectly change a player channel by killing or desynchronizing that self, because actor state is an
+approved music input. That is different from an enemy independently changing a formula’s parameters as an extra
+musical mechanic.
+Music-linked visuals
+MUSIC-12 — Environmental visualization is welcome. The user liked mathematical/musical visualization
+integrated into the architecture. Runes, machinery, panels and environmental patterns can make the relationship
+visible. Collision-changing architecture driven by arbitrary waveforms was not approved merely by liking
+visualization.
+MUSIC-13 — Extra flourishes in the final replay. Music-linked visual effects that reward musicality should
+primarily enrich the cinematic playback. They should not penalize strange rhythms or change the result. During
+recording, readability remains important.
+“Reward musicality” was accepted as a visual idea, not an approved numerical rhythm score. The later
+stars/scoring system remains deferred.
+Musical coherence, per-track functions, quantized effects, state-linked parameters, enemy restrictions and visual reward: [C14, C15]. Existing
+engine capabilities: [H, original lines 75–95 and 129–147].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+MUSICAL DESIGN REQUIREMENTS
+Current decisions supersede the legacy source archive.
+31
+
+[images on page: 0]
+
+===== PAGE 32 =====
+15 / Harmonograph: repository and reusable
+technical context
+Repository identity and source limits
+Harmonograph is a repository in Joey Hersh’s GitHub account: j o e y 1 2 7 2 5 / h a r m o n o g r a p h . The supplied page
+labels it private. It is distinct from the old jam repository, a s h k a t y / g a m e _ j a m .
+This chapter reports the supplied repository-page snapshot. The source code, current repository state and linked
+internal documentation were not independently inspected for this consolidation. Relative labels such as “six
+minutes ago,” the displayed commit and development status belong to that snapshot, not a fresh verification.
+The most relevant integration fact is that the snapshot describes one shared JavaScript engine, with multiple hosts.
+The game need not inherit the requirements of the Ableton host merely because that host already exists.
+Mathematical and harmonic capabilities
+The supplied README describes 66 formulas. Named examples include Fibonacci modulo m, Collatz, Recamán,
+Thue–Morse, Nørgård’s infinity series, Stern’s diatomic sequence, primes and bytebeat; logistic, Hénon, Lorenz
+and Rössler systems; cellular automata and L-systems; Lissajous figures, rose curves, superformula, spirograph and
+times-table circles; rhythm generators and neo-Riemannian harmony.
+The page describes scale-degree mapping, gravity toward chord tones, fold modes, leap recovery, contour and
+cadence controls. Chromatic notes require an explicit escape. A shared key, scale and chord progression—including
+13 scales, Roman-numeral chords and borrowed chords—keeps different voices harmonically related.
+Up to eight formula terms or other channels can be combined using amplitudes, ratios, phases and operators.
+“Integer Sum” combines raw integer values before modulus. Pitch, gate and velocity sums can be enabled
+independently.
+Musical transformations include inversion, retrograde, augmentation, diminution and canon, with ABAC phrase
+variation. These are especially relevant to cassette speed and backward playback, but they do not by themselves
+define the game’s collision, death or reverse-event rules.
+Rhythm and instrument roles
+The browser supports Melody, Bass, Chord and Drums voices. Gates and velocities can use their own formulas.
+Drum voices can sample a contour against a hit threshold, with contour height affecting velocity.
+The snapshot lists eleven drum starting points: house, boom bap, trap, drill, Jersey club, dancehall, reggaeton,
+jungle, rock, funk/disco and lo-fi. It also mentions Euclidean rhythms, polymeter, modulo gates and a Zeno roll.
+These are available references, not a finalized soundtrack genre list for Moxie.
+Drum controls include per-voice gates, note maps, velocity curves, timing and Boolean lane logic
+(AND/OR/XOR/NOT). Chord controls include extensions from triads to thirteenths, inversions, minimal-motion
+voicing, spread and strum. These give state-driven composition more possibilities than post-processing a fixed
+audio file.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+HARMONOGRAPH: REPOSITORY AND REUSABLE TECHNICAL CONTEXT
+Current decisions supersede the legacy source archive.
+32
+
+[images on page: 0]
+
+===== PAGE 33 =====
+Determinism and scheduling
+The README says the same state produces the same notes and supports seeking, looping and recalling sessions. A
+voice is evaluated at step n after speed, phase, retrograde or Sum operations. Values are normalized and mapped
+to a scale degree under the chord active at that beat. The compiler emits note events on exact beat boundaries.
+This distinction is important for the game: repeating or reversing a contour need not mean restoring an old global
+chord. The source describes mapping under the chord active at the current beat. Reusing that principle can
+support coherent combinations without globally rewinding harmony.
+The browser’s visual playhead follows A u d i o C o n t e x t . g e t O u t p u t T i m e s t a m p ( ) rather than the scheduler, with
+optional display delay for Bluetooth. The Web Audio host records events it actually sent, and the heard-pitch
+graph uses that record. These are useful synchronization ideas, not proof that the game already has an
+audio-accurate replay implementation.
+Visualizations available as inspiration
+Stack shows multiple continuous formula contours against a shared playhead. Epicycles reconstructs a contour
+from its sixteen strongest Fourier harmonics as nested rotating circles. Shape wraps a period around a radial form.
+Constellation traces a voice on a pitch-class helix. Other studies are mentioned but not enumerated in the
+supplied text.
+These visuals can inform runes, temporal machinery and music-responsive architectural patterns. The current
+game discussion did not approve copying the full editor UI, exposing mathematical equations to players, or making
+every level a literal rendering of a formula.
+Existing hosts and workflow
+The browser demo has fifteen voices and built-in Web Audio instruments. Its documented development workflow
+uses Node.js 18 or newer, n p m c i , n p m r u n b u i l d : d e m o and n p m r u n d e m o , with a localhost demo server on port
+18130. Sessions save/load JSON and export MIDI. The README warns that background tabs can throttle browser
+scheduling.
+The Ableton Live 12 / Max for Live build has a Conductor and eight MIDI channel devices, plus a local desktop
+editor connected to Live’s transport. It uses native Max scheduling, c o l l , the Live Object Model, and loopback
+HTTP/OSC for the editor. The browser is not in the native Live timing path.
+That host’s source lists Windows and Live 12 Suite, a device builder, install scripts and a ready-made Live Set with
+Drift, Operator, Electric, 808 Core Kit and Wavetable. These are host-development requirements, not player
+prerequisites for the eventual game.
+Live sections can be recalled on beat, bar or phrase boundaries, with a build/drop behavior and a “Commit 4 bars”
+operation writing an editable MIDI clip. The browser omits sections and builds. The source also describes a
+proposed Push 2 bank: Formula, three shape parameters, Range, Cycle, Pace and Volume.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+HARMONOGRAPH: REPOSITORY AND REUSABLE TECHNICAL CONTEXT
+Current decisions supersede the legacy source archive.
+33
+
+[images on page: 0]
+
+===== PAGE 34 =====
+Repository structure
+Path
+Role in the supplied snapshot
+e n g i n e / h a r m o n o g r a p h . j s
+Formulas, harmony, pitch mapping, sections, builds and event compiler.
+m a x / r u n t i m e . j s
+Live API, state, parameter banks, scheduler caches and clip writing.
+d e m o /
+Browser model, Web Audio, timeline, scenes and interface.
+e d i t o r /
+Local editor, equations, scenes, KaTeX and bundled fonts.
+s c r i p t s /
+Build, install, publish and local-editor-server tooling.
+t e s t s /
+Node test suite.
+d o c s /
+Status, browser-demo notes and Push workflow.
+m a t h - m u s i c - n o t e s /
+Formula library, rhythm mathematics, harmony, synthesis and visualization research.
+H a r m o n o g r a p h L i v e
+P r o j e c t /
+Saved Live Set.
+The page describes a JavaScript stack with Web Audio, Canvas 2D, KaTeX, Node’s built-in test runner and Max
+v 8 . c o d e b o x . It mentions Geist, Geist Mono and STIX Two Text bundled with OFL licenses, and KaTeX under MIT.
+License files and a game redistribution plan were not reviewed here.
+Verification status as supplied
+The snapshot reports 70 tests and describes coverage for known sequences and periods, determinism, scale/range
+safety, seeking, voice leading, Sum operations, continuity past 4,096 steps, rational periods, P/L/R transforms, 88
+genre/drum-sound combinations, quantized boundaries, state migration, typesetting, device chunks, Fourier
+reconstruction and audio/visual timing.
+It calls the project a development build. Engine/device/state-transfer/clip-writing tests are reported as passing,
+with a real four-bar clip written and read back in Live. Full save/reload in Live, sustained eight-track timing, and
+custom Push 2 pads/display still need host and hardware testing according to the source.
+OPEN — Integration route. Reuse the JavaScript engine directly, bridge it to the chosen game engine, compile
+events offline, or port selected logic: none was chosen. The old Godot build does not settle the new project’s
+rendering or audio architecture. The requirement is to preserve the musical capabilities and timing behavior, not to
+invent a completed integration.
+Entire chapter: supplied Harmonograph repository page [H], especially original lines 75–95, 96–127, 129–147 and 149–178. Full original text is
+preserved in Appendix B.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+HARMONOGRAPH: REPOSITORY AND REUSABLE TECHNICAL CONTEXT
+Current decisions supersede the legacy source archive.
+34
+
+[images on page: 0]
+
+===== PAGE 35 =====
+16 / Interface, readability and cinematic playback
+Recording interface
+UI-01 — Show the timeline during recording. It is not a post-run-only analysis tool. The selected format is
+continuous time with beat markers, rather than only discrete beat ticks or only broad measures.
+UI-02 — Match cassette and actor colors. Each timeline should be visibly identified by the color of its cassette in
+the UI. These are four versions of Moxie, not a requirement for four separate outfits, genders, bodies or character
+designs.
+The original jam used red, yellow, blue and green, with keys 1–4. The current conversation selected color
+correspondence but did not reconfirm that exact palette or those bindings. The historical colors are available as a
+reference, not a final accessibility or art specification.
+UI-03 — Communicate actor state. The current recording ghost must be obviously distinct. Playback ghosts, living
+desynchronized projections and recovery sparks must not be visually conflated. State-linked musical changes
+should reinforce, rather than replace, visual communication.
+UI-04 — Show the count-in visually and audibly. “Five, six, seven, eight” is the chosen musical framing. The user
+added “as well” after selecting visual presentation, so the intended reading is visual support in addition to an
+audible count, not a visual-only replacement.
+UI-05 — Expose the selected tape settings. Tape speed and later-unlocked end behavior need an understandable
+representation. The precise controls, selector layout and terminology are unchosen. The Walkman is operated
+through button prompts and interface first, with supporting character animations appreciated.
+Useful working interface implications
+A cassette strip can communicate local progress, its mapping onto master beats, alive/ghost/desync state and
+commitment status. A current-take retry should be clearly different from a full-attempt reset. These are
+straightforward interface consequences of the rules, not a finalized screen design.
+The player must be able to follow earlier selves while controlling the new one. Foreground walls, overlapping
+effects and bright neon should not conceal important enemies or recovery sparks. The assistant suggested
+transparency/cutaway handling for isometric walls; no particular solution was selected.
+How to view activity in other rooms is still open. “All prior cassettes are visible during recording” establishes that
+they are simulated and shown, rather than hidden by design, but it does not decide whether the camera shows the
+whole level, follows the active actor, uses cutaways or supplements off-screen activity with an interface indicator.
+A timeline does not automatically imply editable keyframes, free scrubbing, a pause-and-plan editor or arbitrary
+beat stepping. None of those features was approved. The player is still performing a take in real time.
+The cinematic result
+CINE-01 — End-to-end true-speed replay. Once the level is beaten, the player should be able to watch the
+combined result against the master beat clock, with all recorded selves happening concurrently.
+CINE-02 — Lock gameplay control. The user preferred a proper performance to watch, rather than intervening in
+the result. Free camera control was not separately retained. A skip/reset mechanism for failed playback is a
+separate requirement from interactive control over a successful encounter.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+INTERFACE, READABILITY AND CINEMATIC PLAYBACK
+Current decisions supersede the legacy source archive.
+35
+HUD UPDATE: see Revision 1 beginning on page 89. Four cassette decks and speed indicators are first-class UI.
+
+[images on page: 0]
+
+===== PAGE 36 =====
+CINE-03 — Make it as cinematic as possible. Music-linked visual flourishes should give the final replay something
+extra. Dynamic framing, impact emphasis and performance-driven effects are reasonable directions, but no
+specific camera cuts, zooms or slow-motion system were selected.
+CINE-04 — Preserve timing and outcome. Cinematic treatment must not stretch individual tapes to match
+duration, invalidate recorded collisions, or turn a completed encounter into another adaptive simulation. It
+presents the resolved performance at the correct master timing.
+CINE-05 — No invented replay length target. The replay lasts for the encounter’s defined musical timeline. The
+user rejected treating it as a separately timed movie whose length is chosen independently. Level/tape duration
+itself remains a playtesting choice.
+Additional spectacle should not make the replay less understandable. The payoff is seeing how the solution works,
+not hiding the causal chain under effects. That is an interpretation of the user’s cleverness goal and cinematic
+request, not a mandate for one visual technique.
+Timeline, count-in and automatic playback: [C10]. Final replay, control lock and musical visual reward: [C04, C14]. Cassette colors and Walkman
+interaction: [C17].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+INTERFACE, READABILITY AND CINEMATIC PLAYBACK
+Current decisions supersede the legacy source archive.
+36
+
+[images on page: 0]
+
+===== PAGE 37 =====
+17 / Moxie: character concept and modeling brief
+Identity and personality
+CHAR-01 — Name: Moxie. The short list narrowed to Riff, Roxy and Moxie, then Roxy was dropped. Riff did not
+feel sufficiently like a personal name to the user. Moxie was selected. No surname, exact age, height or biography
+was finalized.
+CHAR-02 — A human woman. She is tomboyish, somewhat androgynous in style and posing, scrappy and
+expressive. The user explicitly described a female-gaze direction. That should not be flattened into the assistant’s
+inaccurate shorthand of “posing leaning feminine.” The intended appeal is confident, characterful and stylish, with
+room for unconventional femininity.
+CHAR-03 — Voluntary scavenger. She is not trapped in the dungeon and is not primarily defined as a synthetic
+being native to an abstract math world. She goes in for loot. Her curiosity, attitude and resourcefulness should
+support that motivation.
+CHAR-04 — Streetwear first. “Very streetwear” was emphasized repeatedly. Patchwork technology and
+scavenged equipment belong on a recognizable urban outfit, not a generic armored fantasy adventurer costume.
+Moxie is the central person the player engages with. Other people can exist, including tutorial/supporting
+characters, but a large ensemble, selectable protagonists and romance systems were not selected. The old jam’s
+no-romance constraint was a scope expedient and is not a current narrative prohibition.
+Signature pieces
+CHAR-05 — Yellow headphones. These are the defining signature item. Their yellow color is explicitly chosen, not
+an incidental recoloring opportunity. They should remain readable at the isometric gameplay scale.
+CHAR-06 — Belt-clipped Walkman. The time device is a Walkman-style cassette player worn at the belt, not
+chest-slung, handheld by default or embedded in a weapon. Interface prompts are the primary interaction;
+button-press or dial animations are welcome supporting detail.
+CHAR-07 — Scrappy pigtail styling. The user described a scrappy pigtail look. The selected artwork develops it as
+messy dark-brown pigtails with loose strands. The final hair construction should follow the chosen visual source
+rather than reverting to the rejected magenta redesign.
+CHAR-08 — Cropped top and low-rise pants. Both are explicit clothing choices. The outfit should feel lived-in,
+practical for a scavenger and stylistically intentional, without being replaced by a tunic, robe or high-waisted
+generic adventure costume.
+CHAR-09 — Futuristic belt and wrist equipment. The user liked the original coloration, theming, face paint and
+Walkman, then specifically requested more futuristic tools on the belt and wrist accessories. The second
+single-character image is the result of that refinement.
+Details visible in the second single-character reference
+The selected hero concept shows an expressive anime face, dark messy hair, yellow over-ear headphones, subtle
+facial markings, a warm skin palette, a light cropped top with dark trim, a diagonal dark strap, an oversized dark
+jacket with yellow lining, loose low-rise olive cargo pants, visible wear and tears, yellow graphic accents, red/pink
+hanging straps, fingerless gloves and substantial high-top footwear with yellow laces.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+MOXIE: CHARACTER CONCEPT AND MODELING BRIEF
+Current decisions supersede the legacy source archive.
+37
+
+[images on page: 0]
+
+===== PAGE 38 =====
+The belt carries a yellow cassette player and a collection of compact technological tools and containers. Both
+wrists have futuristic wearable devices with small illuminated interfaces. The accessories feel scavenged and
+modular rather than pristine, uniform military equipment.
+These observations describe the selected picture. They are not a statement that every buckle, connector, logo or
+screen shown by the generator has already been technically engineered for a 3D asset.
+Art style
+The user’s explicit references are The Idaten Deities Know Only Peace and Mob Psycho 100: expressive anime
+aesthetics, strong character energy and a willingness to use bold graphic treatment. The selected character
+concepts are anime illustrations with clear silhouettes, cel-shaded form and graphic accents.
+The requested pose sheet is intended to help a 3D modeler translate the design. It is not a request to restyle the
+character as semi-realistic 3D concept art. The first reference-sheet attempt changed palette, face, hair and
+costume and was explicitly rejected.
+The corrected anime sheet is included because the user selected it for this handoff. It provides turnarounds,
+expressions, poses and accessory details. However, it also visibly differs from the second hero concept in some
+colors and graphics. The handoff must acknowledge those variations rather than claiming that the two pictures are
+identical.
+Reference hierarchy and unresolved visual variants
+R01, second Moxie concept: use as the primary anchor for the approved yellow/charcoal/olive coloration,
+face/personality, Walkman and futuristic equipment refinement.
+R02, corrected pose sheet: use for multi-angle study, expression range, accessory close-ups and pose language. It
+also introduces graffiti motifs later explicitly liked by the user.
+R02 shows a more yellow outer jacket, darker cropped top, purple/pink accents and a star emblem on the
+headphones, while R01 has a dark outer jacket, light top and a triangular headphone graphic. R02 also includes hair
+accents and costume graphics not identical to R01. These are reference variants to reconcile before final modeling,
+not permission to redesign the character again.
+The “approximately 170 cm” text in the generated sheet is not an approved character height. “Time Runner” or
+“Tape Architect” text in the image is likewise not confirmed lore. Exact material values, topology, body
+measurements, orthographic alignment and rig specifications remain production decisions.
+Pose and equipment guidance
+Useful supplied poses include relaxed confidence, crouching, running, bracing/leaning, interacting and sitting,
+along with neutral, confident, playful, curious, surprised, thoughtful and other expressive faces. Their purpose is to
+communicate Moxie’s attitude and silhouette, not to add climbing or parkour as required gameplay.
+For gameplay, the necessary action vocabulary comes from the mechanics: locomotion, light/heavy strikes, dodge,
+hit/death transition, continued recording-ghost movement, fixed ghost playback, desync projection and resync.
+Exact animation counts, attack weapons, rig complexity and transition design were not selected.
+Cassette color identity should not destroy the protagonist’s recognizable design. How much of the clothing,
+outline, effects or accents changes per tape is open. The user wanted a simple character identity outside the
+cassette colors, not four fully redesigned versions.
+Identity and outfit: [C16, C17]. Style references: [C01]. Asset refinement and correction: [C18]. Visual details: selected images [R01, R02].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+MOXIE: CHARACTER CONCEPT AND MODELING BRIEF
+Current decisions supersede the legacy source archive.
+38
+
+[images on page: 0]
+
+===== PAGE 39 =====
+MOXIE / SELECTED VISUAL REFERENCES — original artwork, not regenerated
+39
+R01 — Moxie: second single-character concept
+Selected character anchor. Original image retained: yellow headphones and Walkman, dark/olive streetwear, face markings, and the
+requested futuristic belt tools and wrist accessories.
+
+[images on page: 1]
+
+===== PAGE 40 =====
+MOXIE / SELECTED VISUAL REFERENCES — original artwork, not regenerated
+40
+R02 — Moxie: corrected anime reference sheet
+Full selected sheet, including turnaround, expressions, poses and equipment studies. Use with the variant notes in Chapter 17; generated labels and measurements are not automatically canonical.
+
+[images on page: 1]
+
+===== PAGE 41 =====
+MOXIE / SELECTED VISUAL REFERENCES — original artwork, not regenerated
+41
+R02 / Detail study — turnaround, expressions and gear
+The following detail crops are taken from the same corrected sheet, without repainting or redesign. They improve readability but do not resolve the color and emblem differences between R01 and R02.
+
+[images on page: 3]
+
+===== PAGE 42 =====
+18 / The dungeon, descent and final artifact
+World concept
+WORLD-01 — Ancient ruins with technology added later. The setting is not simply a clean industrial facility or an
+abstract void. It has age, accumulated interventions and a layered material history.
+WORLD-02 — Rune-inscribed metal is the dominant material language. Stone is present throughout but
+secondary to inscribed metal overall. The exact balance may vary by level. The warmer upper reference uses
+substantial masonry; that can describe an upper region without redefining the entire descent as a stone dungeon.
+WORLD-03 — Overgrowth in much of the world. Vegetation should reclaim many spaces. It is not merely a single
+decorative plant or a requirement that every deep machine chamber remain equally lush.
+WORLD-04 — Lighting varies with depth and level. The descent starts warmer and becomes more metallic, neon
+and cold as Moxie goes down. Individual levels can vary; the arc is a direction, not a single universal light setup.
+WORLD-05 — The bottom loot is a time machine. This is the selected endpoint, not just a generic prize. The user
+specifically felt it ties the descent to the existing time mechanics. Its connection to the Walkman, origin, scale and
+eventual use have not been defined.
+Upper layers / overworld-like spaces
+The warmer board establishes sunlit concrete/stone, aged neutral metal, yellow-painted utilities, orange rust and
+green foliage. Graffiti remains pink/purple. The user’s correction was specifically about lighting: remove the strong
+purple cast and make the scene warmer and more overworld-like, without eliminating purple graffiti.
+This distinction is important. A purple tag on a warm wall is welcome; bathing every surface in purple ambient light
+is not the selected upper-world direction. Small cyan or pink technological emissions can remain accents without
+controlling the whole palette.
+The term “overworld-like” describes the desired visual feeling. It does not introduce an open world, a hub map or
+free-roaming exploration beyond the already discussed level structure.
+Lower layers / neon inscribed metal
+The lower board shifts toward heavy metal panels, etched symbols, modular grates, exposed pipes, rivets,
+consoles, sealed gates and machinery. Neon magenta, cyan and violet are stronger, with yellow hazard accents and
+occasional warm orange sources.
+The user explicitly requested darker lower levels with more neon and inscribed metal. Darkness should establish
+depth and mood without making the playable floor, enemy tells or recovery spark unreadable. This readability
+point is an implementation implication, not a request to remove the cold lower-world contrast.
+Runes should feel integrated into the material and machinery, not like generic decorative stone fantasy symbols
+applied indiscriminately. The exact alphabet, meaning and relationship to Harmonograph have not been selected.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+THE DUNGEON, DESCENT AND FINAL ARTIFACT
+Current decisions supersede the legacy source archive.
+42
+
+[images on page: 0]
+
+===== PAGE 43 =====
+Musical architecture
+The user liked Harmonograph-inspired visualization in the environment. Possible visual expressions already
+discussed include geometric patterns, engineered spaces, panels, rails and mathematical forms embedded in
+architecture. The current world combines those ideas with ancient ruins, vegetation and retrofitted technology
+rather than becoming a featureless graph visualization.
+A rhythmically active panel, illuminated contour or rune pattern can support the musical identity without becoming
+a gameplay control. Whether a particular installation physically changes the level or only visualizes the music must
+be specified per object; no general rule making all waveforms collidable was approved.
+Supporting people and story scale
+Other scavengers or tutorial characters were suggested as possibilities, not assigned names or roles. The goal is to
+reveal aspects of Moxie and establish a lived-in world while keeping the narrative light. A protagonist who is
+trapped, a mandatory rescue of a loved one, and the old music-police premise are not the selected foundation.
+The final time machine gives the descent a concrete attraction. The conversation did not decide whether Moxie
+knows its true nature at the beginning, whether it is portable, whether she uses it, or whether the ending contains
+a time paradox. None of these should be filled in as established story.
+Ruins, materials, overgrowth, lighting arc and time-machine loot: [C16, C19]. Musical architecture: [C15]. Warm/dark art revisions: [C20, R03, R04].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+THE DUNGEON, DESCENT AND FINAL ARTIFACT
+Current decisions supersede the legacy source archive.
+43
+
+[images on page: 0]
+
+===== PAGE 44 =====
+MOXIE / SELECTED VISUAL REFERENCES — original artwork, not regenerated
+44
+R03 — Upper levels: warmer isometric environment board
+Full updated warm board. Preserve golden/neutral lighting, pink and purple graffiti, green overgrowth, yellow utility accents and the isometric presentation. No level-flow diagram is included.
+
+[images on page: 1]
+
+===== PAGE 45 =====
+MOXIE / SELECTED VISUAL REFERENCES — original artwork, not regenerated
+45
+R04 — Lower levels: neon and rune-inscribed metal
+Full selected lower-level board. Dark inscribed plating, neon machinery, grates, consoles, gates and utility props establish the colder descent. This is an art reference, not a finished encounter layout.
+
+[images on page: 1]
+
+===== PAGE 46 =====
+MOXIE / SELECTED VISUAL REFERENCES — original artwork, not regenerated
+46
+R03 + R04 / Detail study — the descent’s material and lighting contrast
+Enlarged crops of the two selected environment dioramas. The upper scene is warm and overgrown; the lower scene is darker, more metallic and neon-lit. Layout details remain illustrative.
+
+[images on page: 2]
+
+===== PAGE 47 =====
+19 / Environment and object style guide
+Isometric presentation is non-negotiable
+ART-01 — Environment references are isometric. The user corrected a perspective environment board and
+specifically rejected the level-flow illustration inside it. The final environment plates use isometric modules, props
+and dioramas, with no embedded level-flow diagram.
+A scene can suggest rooms, cover and routes visually without becoming an approved level layout. The boards are a
+style library for production. They do not mandate their displayed ladders, catwalk heights or arrangement as
+mechanics.
+ART-02 — Maintain the expressive anime/cel-shaded direction. Clear edges, graphic silhouettes, selective texture
+and deliberate lighting connect the environments to the character. Do not turn the style into photorealistic
+industrial asset rendering or the rejected semi-realistic character sheet.
+ART-03 — Graffiti is part of the visual identity. The user explicitly liked graffiti on the rocks, leading to the
+environment/prop studies. Graffiti can contrast with older inscriptions and machinery: recent, playful human
+intervention over an older technical system.
+Materials and surfaces
+The selected boards depict cracked masonry, worn paint, yellow hazard bands, riveted or panelized metal, rusted
+edges, vent grilles, cables, recessed lighting, glass-like energy tubes, graffiti, scattered debris and vegetation
+growing through seams. The lower board adds denser inscriptions and darker plating.
+These are useful material families, not a requirement for every asset to contain every detail. Large readable forms
+should carry the scene; small wear and decal detail supports them. The exact texture resolution, shader model,
+geometry density and texture-painting pipeline were not selected.
+The upper and lower boards share a family of recognizable utility shapes and accents. The shift is primarily material
+dominance, lighting, age/readability and technological density, rather than introducing an entirely unrelated visual
+style halfway through the game.
+Modular environment vocabulary visible in the references
+Floors and borders: solid tiles, cracked variants, painted markings, inscribed tiles, metal grates, edge pieces and
+small stairs. These support a consistent isometric kit.
+Walls and openings: ruined masonry fragments, arches, metal doorframes, closed inscribed gates, low barriers and
+railings. Functional doors and walls must be distinguishable from decorative remnants in a final gameplay asset set,
+although no final marker system was selected.
+Machinery: generators, ventilators, large pipes, consoles, screens, cylindrical energy apparatus and neon fixtures.
+Waveform screens and etched panels connect technology to the music theme without assigning them unapproved
+abilities.
+Containers and loot props: closed cases, open chests, crates, drums and compact modules. The images suggest
+visual forms for scavenging and equipment discovery; they do not define loot rarity, inventory size or an economy.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+ENVIRONMENT AND OBJECT STYLE GUIDE
+Current decisions supersede the legacy source archive.
+47
+
+[images on page: 0]
+
+===== PAGE 48 =====
+Small objects: cassette-like devices, cables and spools, handheld equipment, canisters, tools and illuminated
+components. Some reference props resemble crystals or power cells. Their presence in a board is not a decision
+that the game contains a crystal currency or magic system.
+Color and lighting discipline
+The core character palette is anchored by yellow headphones/Walkman and the second Moxie concept’s warm,
+dark, olive and neutral clothing. Environment graffiti can be vivid purple or pink. Cyan technology can act as a
+distinct accent.
+For upper levels, warm daylight and neutral material shading should dominate. For lower levels, cool darkness and
+localized neon can dominate. The user did not request that purple be removed from the game; the rejected
+element was an overly purple lighting cast in the warm upper reference.
+Cassette colors are a functional layer on top of the environment palette. A final color language must keep four
+selves and their sparks readable against both warm surfaces and neon chambers. Exact hues, patterns and
+accessibility support remain production decisions rather than assumptions from the old red/yellow/blue/green
+implementation.
+What the reference set does not settle
+No enemy or boss visual roster has been approved. The old police, drone and ettercap assets are historical
+possibilities, not the current cast. No final melee weapon silhouette, armor-slot appearance system, camera
+projection angle or level naming scheme is fixed by these boards.
+The selected illustrations are full concept references, not orthographically exact construction drawings. A 3D
+modeler still needs consistent hidden/back details, resolved variants and gameplay scale. That work should
+elaborate the selected design, not reinterpret the palette or outfit without direction.
+User’s graffiti approval, isometric/no-flow correction and lighting revisions: [C18–C20]. Visible object/material families: [R01–R04].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+ENVIRONMENT AND OBJECT STYLE GUIDE
+Current decisions supersede the legacy source archive.
+48
+
+[images on page: 0]
+
+===== PAGE 49 =====
+20 / Development implications and the first
+playable version
+What the first version is for
+The user wants a dream-version requirements document and intends to build an MVP to test and play with the
+mechanics. That is not a request to cut the entire vision down to the old jam’s deadline or to specify a full
+commercial production plan now.
+The only clearly deferred feature family is the later challenge/scoring layer: B-side equivalents, optional mastery
+challenges, stars and scores. Other systems belong to the discussed vision even where their implementation timing
+is undecided. A detailed milestone plan or “must fit in four days” limit has not been set for the new project.
+The immediate design uncertainties are best made testable rather than disguised as final balance: the time
+mapping, equal-duration recording feel, repeated paths against dynamic geometry, conditional ghost effects,
+recovery-spark catch-up, momentum clarity and the music’s response to state.
+Required behavior versus implementation choice
+The game needs fixed recorded choreography and dynamically resolved outcomes. It needs one coherent temporal
+coordinate system, not multiple incompatible calculations that happen to look aligned in one example. It needs a
+clear distinction between provisional recording effects and final playback effects. These are behavioral
+requirements.
+The game does not yet have a selected trajectory storage format, navigation algorithm, physics timestep, replay
+serialization scheme, audio integration strategy, rendering pipeline or target platform list. The previous Godot
+project is a reference and potential starting point, not evidence that those decisions have already been remade for
+the isometric version.
+One reasonable implementation interpretation is to preserve local-tape motion and action events, transform them
+onto master beats, simulate enemies and world objects from the current run’s state, and gate interaction by the
+actor’s life/synchronization state. The recovery position is independent of the fixed visual path. This is a
+conceptual decomposition, not mandatory class names or a new engine architecture.
+Replay integrity
+A successful cinematic must reproduce the actual resolved outcome. It should not trigger a new boss learning step,
+choose new random decisions, or evaluate ghost-only provisional kills as genuine. The document requires outcome
+fidelity but leaves open whether the implementation records scene states, records deterministic simulation inputs
+and seeds, or uses another method.
+The old ring-buffer approach can inform recording storage, but must not be accepted merely because it existed.
+Likewise, the supplied Harmonograph determinism claim concerns note generation from musical state, not the
+determinism of the game’s physics or enemy system.
+Tests that follow directly from the design
+The acceptance scenarios in the next chapter turn the existing discussion into checks. They are not new
+mechanics. An implementation can pass them in different architectures provided it preserves the experience.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+DEVELOPMENT IMPLICATIONS AND THE FIRST PLAYABLE VERSION
+Current decisions supersede the legacy source archive.
+49
+
+[images on page: 0]
+
+===== PAGE 50 =====
+The visual handoff should similarly be tested against the selected references: Moxie should not unexpectedly lose
+her yellow headphones, low-rise streetwear, Walkman or futuristic gear; warm upper lighting should not return to
+the rejected purple cast; the environment should not revert to a side-view platformer.
+Explicitly uncommitted production decisions
+The conversation did not decide commercial platform support, multiplayer, pricing, localization, achievement
+counts, save infrastructure, procedural generation, networking or monetization. They are not silently added to this
+requirements document. The four selves are a single player’s recordings, not an approved four-player co-op mode.
+Overall playtime, level count, exact boss count beyond at least one outside-loop boss, equipment count,
+music-genre roster and final game title remain unspecified. The requested document records the design rather
+than inventing these values.
+Dream-version request and stopping boundary: [C01]. MVP deferral of challenge/scoring features: [C11]. Technical context: [J, H].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+DEVELOPMENT IMPLICATIONS AND THE FIRST PLAYABLE VERSION
+Current decisions supersede the legacy source archive.
+50
+
+[images on page: 0]
+
+===== PAGE 51 =====
+21 / Verification scenarios and design acceptance
+This checklist is derived from confirmed behavior. Tests depending on an open policy are marked accordingly; they
+must not be interpreted as already resolved.
+ID
+Check
+Expected result
+TEST-01
+Record the same-duration level at slow, middle and
+fast settings.
+Actual recording allowance remains equal; world pace
+changes relative to the controlled character.
+TEST-02
+Compare a recording’s platform landing with
+true-speed replay.
+The master-beat relationship is preserved; no duration
+stretching changes the landing.
+TEST-03
+Begin cassette two after finishing cassette one.
+The encounter starts at beat zero; cassette one plays
+from its start.
+TEST-04
+Record a later tape.
+Prior tapes are visible/simulated; unrecorded future
+tapes do not appear.
+TEST-05
+Retry the currently active cassette before
+advancing.
+Earlier committed takes remain; the current take can
+be replaced.
+TEST-06
+Change any older tape after advancing.
+Every cassette in the attempt is reset, including those
+before the edited tape.
+TEST-07
+Die while actively recording.
+Recording continues with a major ghost visual
+distinction.
+TEST-08
+Approach a locked door while actively recording
+after death.
+Normal movement collision still applies; the recording
+ghost cannot simply phase through.
+TEST-09
+Attack and flip a switch as the active recording
+ghost.
+They affect that provisional recording run.
+TEST-10
+Replay the same tape and let it die before those
+events.
+Later attack/switch effects do not occur; its
+non-interactive ghost continues the path.
+TEST-11
+Prevent the tape’s old fatal hit.
+Later recorded actions can be effective, subject to
+current world and sync state.
+TEST-12
+Kill a previously surviving earlier tape at a new time.
+From that moment, it becomes a non-interactive
+playback ghost.
+TEST-13
+Close a door across a living earlier tape’s recorded
+path.
+Its projection stays on the recording;
+desynchronization and reachable recovery apply.
+TEST-14
+Leave an unobstructed detour for the recovery
+spark.
+Finite-speed recovery can navigate toward the moving
+projection; no instant overlap-only recovery.
+TEST-15
+Open a blocked route while a spark is catching up.
+The new traversable route can enable recovery.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+VERIFICATION SCENARIOS AND DESIGN ACCEPTANCE
+Current decisions supersede the legacy source archive.
+51
+
+[images on page: 0]
+
+===== PAGE 52 =====
+ID
+Check
+Expected result
+TEST-16
+Attack or receive fire while desynchronized.
+No dealt or received damage under the working
+invulnerable/harmless rule.
+TEST-17
+Use the wall-and-turret teaching case.
+Desync can protect the crossing, but the actor must
+resync before damaging the turret.
+TEST-18
+Add a closer self to an enemy’s target rule.
+Enemy response can change without the old tape
+changing its aim or path.
+TEST-19
+Knock an enemy into/out of another attack.
+Its new physical position changes later hit outcomes.
+TEST-20
+Compare movement/tape-speed combinations on
+the same attack.
+Effective momentum meaningfully influences damage,
+stagger and knockback.
+TEST-21
+Dodge a qualifying hit.
+The selected i-frame interval can prevent death; exact
+timing is tunable.
+TEST-22
+Fire a recorded missile after changing enemy
+positions.
+Nearest target is acquired once at launch; the missile
+does not continuously retarget.
+TEST-23
+Kill three selves and complete the objective with
+one survivor.
+The survival rule permits success.
+TEST-24
+Complete an objective with no survivors.
+The survival requirement is not met.
+TEST-25
+Trigger repeat on a short tape.
+It cuts to its starting position and repeats without
+resetting the entire encounter.
+TEST-26
+Trigger reverse.
+Recorded actions run backward without globally
+restoring world history; specific event inverses require
+policy.
+TEST-27
+Produce a mechanically valid but unusual rhythm.
+The solution is not rejected or steered away solely for
+musical reasons.
+TEST-28
+Produce ordinary movement/combat sounds.
+They use the agreed fine rhythmic integration policy;
+no unapproved gameplay-time adjustment.
+TEST-29
+Kill/desync a cassette.
+Its own generated musical channel changes state;
+shared coherence remains a design goal.
+TEST-30
+Let enemies attack.
+Their timing can be beat-based, but they do not
+directly rewrite player wave functions.
+TEST-31
+Finish a failed final encounter.
+Playback may finish for observation; the player can
+reset/end early.
+TEST-32
+Watch a successful cinematic.
+Controls do not alter the result; all tapes use correct
+master timing and extra music-linked visuals.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+VERIFICATION SCENARIOS AND DESIGN ACCEPTANCE
+Current decisions supersede the legacy source archive.
+52
+
+[images on page: 0]
+
+===== PAGE 53 =====
+ID
+Check
+Expected result
+TEST-33
+Change gear between levels.
+Available equipment can be recombined without
+skill-point reallocation.
+TEST-34
+Review art handoff.
+Selected character details, isometric perspective, warm
+upper lighting and neon metal lower direction are
+preserved.
+Tests awaiting an explicit policy
+Boundary tests must be added once stop-mode body/survival behavior, loop-boundary death handling, reverse
+switch conflicts, authoritative final-ghost evaluation, spark damage/targeting and the whole-attempt horizon have
+been decided. A test suite that assumes answers to these questions would prematurely settle design decisions.
+The practical target for the first playable version is that failures can be explained in the game’s own terms: the
+enemy moved; the old self died; the spark did not catch up; an attack lacked momentum; the chosen speed
+covered the wrong timing window. “The replay drifted for no reason” is not the intended challenge.
+Editorial verification checklist derived from [C02–C20]. These are behavioral checks, not reports of tests already run.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+VERIFICATION SCENARIOS AND DESIGN ACCEPTANCE
+Current decisions supersede the legacy source archive.
+53
+
+[images on page: 0]
+
+===== PAGE 54 =====
+22 / Remaining open decisions, without reopening
+settled ones
+This register stops at details already raised or directly exposed by the discussed mechanics. It is not a new scope
+expansion or a request to begin another interview now. Settled topics—such as isometric perspective, continued
+post-death recording and equipment-based progression—are not questions again.
+Time and tape boundaries
+OPEN-01 — Exact speed menu. Half/middle/double is established as the relationship. Is 4× retained from the old
+list, and what labels does the interface use?
+OPEN-02 — Overall encounter horizon. Does the slowest selected tape, slowest allowed option or an authored
+master-bar duration define it? This changes fast-only attempts and the availability of repeated traversals.
+OPEN-03 — Local bars versus master bars. The equal real-time take, inverse playback duration and
+speed-sensitive count-in need one unambiguous clock definition. The illustrative equations are not a substitute for
+agreeing that terminology.
+OPEN-04 — Fast/slow tradeoffs. Earlier desired harder fast play and shorter reach do not follow automatically
+from the later equal-local-time movement model. Preserve the intent as a test target rather than hard-coding
+contradictory rules.
+OPEN-05 — End behavior details. What remains physical after stop? Does a dead cassette reset at a repeat
+boundary? What resources or spawned objects persist? What happens to recovery state on teleport or reversal?
+OPEN-06 — Reverse event semantics. Specify switch behavior under multiple actors, continuous interactions,
+projectile return behavior and homing missiles. Global history reversal is already ruled out; the object-level
+inverses are not all defined.
+State, collision and outcome
+OPEN-07 — Authoritative result after the final active ghost. Decide how to exclude provisional post-death
+interactions from the final win result while still letting the player finish the take interactively.
+OPEN-08 — Survivor evaluation. At what beat is survival checked? Does an alive but desynchronized actor
+qualify? What about a stopped tape? Does a level require someone physically at an exit as well as alive?
+OPEN-09 — Recovery tuning. Choose spark speed, acceleration if any, catch-up tolerance, route selection and
+replanning behavior. Define what happens when no route exists or catch-up never occurs.
+OPEN-10 — Collision permissions. Decide actor-to-actor blocking, friendly fire, projectile interception, movable
+objects, enemy bodies obstructing a projection, environmental hazards and recovery-spark interaction layers.
+OPEN-11 — Active-player desync. The established examples concern earlier recordings obstructed by later
+actions. Whether live control itself can desynchronize before a special gear ability, and how that would record, was
+not defined.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+REMAINING OPEN DECISIONS, WITHOUT REOPENING SETTLED ONES
+Current decisions supersede the legacy source archive.
+54
+
+[images on page: 0]
+
+===== PAGE 55 =====
+Combat and enemies
+OPEN-12 — Momentum calculation. Set the contribution of local movement, attack motion, tape speed, direction
+and equipment. Choose damage/stagger/knockback curves and caps without double-counting time conversion.
+OPEN-13 — Action timings. Choose attack reach, commitment, recovery, dodge distance and i-frames. The
+three-action vocabulary is established; the numbers are not.
+OPEN-14 — Missile edge cases. No target, equal-nearest ties, target death, wall collision, lifetime, resource limits,
+post-owner-death persistence and reverse playback need policies.
+OPEN-15 — Enemy roster and targeting detail. Nearest/farthest are examples. Exact classes, tells, firing grids,
+ghost/desync target eligibility and stagger resistance remain content decisions.
+OPEN-16 — Outside-loop boss memory. Define remembered information, memory reset boundaries, observation
+limits and readable counterplay. Ensure cinematic replay does not update it again.
+Levels, progression and interface
+OPEN-17 — Objective types and early completion. The final combined attempt determines victory; fewer-tape
+tutorials are allowed. Exact objective types and whether a normal level can finish before all four recordings are
+committed were not settled.
+OPEN-18 — Gear structure. Choose shared versus per-tape equipment, slot types, acquisition rules, visible outfit
+changes and whether time/desync upgrades enter the first implementation. Respec-through-equipment is settled.
+OPEN-19 — Available-build compatibility. The user wants no permanent build dead ends. Whether every loadout
+must work, or the player is expected to re-equip for some levels, is not a finalized constraint.
+OPEN-20 — Camera and input particulars. Isometric is settled. Exact projection, room framing, off-screen tape
+presentation, occlusion handling, attack-facing scheme and final bindings are not.
+OPEN-21 — Retry/preview interaction and pause. Free current-take retry, full reset for earlier edits, automatic
+playback and early failure reset are settled. Their exact interface sequence and the interrupted mid-recording
+pause answer need resolution.
+Audio, art and scope
+OPEN-22 — Music state maps. Choose which function parameters respond to living, dead and desynchronized
+states, their transition timing and whether all tapes always have a background voice independent of action sounds.
+OPEN-23 — Sound quantization latency. Define the grid, allowable audible delay and treatment of immediate
+impact feedback. Do not assume this also quantizes all player inputs.
+OPEN-24 — Visual reference reconciliation. Resolve R01/R02 jacket/top palette, headphone emblem, hair
+accents and exact measurements before a final model. The selected character identity and style are already
+established.
+OPEN-25 — Concrete content and delivery scope. Game title, total levels, exact bosses, equipment roster,
+campaign duration, NPCs, ending detail and technical delivery targets remain unspecified. B-sides and scoring are
+explicitly later ideas.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+REMAINING OPEN DECISIONS, WITHOUT REOPENING SETTLED ONES
+Current decisions supersede the legacy source archive.
+55
+
+[images on page: 0]
+
+===== PAGE 56 =====
+23 / Decision history and superseded alternatives
+This section preserves the path of the conversation so later readers do not resurrect an obsolete instruction
+merely because it appears earlier in a source or assistant summary.
+Topic
+Earlier idea / misleading restatement
+Latest controlling direction
+Genre emphasis
+Platformer/brawler or pure combat arenas
+Isometric puzzle-combat; planning is primary,
+execution still matters.
+Perspective
+Side-view; then top-down/isometric debate
+User explicitly chose isometric; jumping is not
+central.
+Playable cast
+Four different characters or outfits
+Four recordings of Moxie, differentiated primarily
+by cassette color.
+Recording duration
+Playback speed changes how long the user
+records
+Equal actual recording time per tape within a
+level; world rate changes relative to the player.
+Duration across levels
+Fixed 60 seconds from the jam or a proposed
+universal short duration
+Measures authored per level; numeric duration
+determined by playtesting.
+Concurrent playback
+Stretch every tape to a common end
+Preserve speed and master-beat timing; fast tapes
+stop/repeat/reverse.
+Reverse
+Undo every consequence of the run
+Reverse local action sequence;
+interaction-specific effects, not global history
+restoration.
+Post-death recording
+Stop immediately / advance to next tape
+Continue controlling and recording the remaining
+take.
+Active recording
+ghost
+Intangible and unable to interact
+Physically constrained, interactive in that
+provisional run, no further damage.
+Dead playback ghost
+Follow original living interactions regardless
+Fixed trajectory but intangible, harmless and
+non-interactive after its current-run death.
+Life state
+Bake original death time into the tape
+Recalculate survival on every combined run.
+Blocked old path
+Run in place or change route
+Preserve projection; desync while a reachable
+recovery position catches up.
+Resync
+Automatically become physical just beyond a
+wall
+A small, fast, finite-speed spark navigates
+traversable space and rejoins the recorded
+position.
+Desync access
+Dedicated baseline ability button
+Emergent environmental effect; optional
+on-demand gear idea remains tentative.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+DECISION HISTORY AND SUPERSEDED ALTERNATIVES
+Current decisions supersede the legacy source archive.
+56
+
+[images on page: 0]
+
+===== PAGE 57 =====
+Topic
+Earlier idea / misleading restatement
+Latest controlling direction
+Enemy behavior
+Replay a fixed enemy film / require
+randomness
+Live rule-based reactions to current positions,
+with special outside-loop bosses considered.
+Player targeting
+Auto-aim previous melee attacks
+Fixed recorded direction/place; no adaptive
+player correction.
+Ranged attacks
+Pure melee only / generic ranged loadout
+Melee primary with a proposed guided missile
+secondary.
+Missile tracking
+Continuously retarget nearest
+Acquire nearest once at launch and retain that
+target.
+Combat force
+Tape speed independently buffs every stat
+Movement and tape speed feed momentum;
+momentum drives damage, stagger and
+knockback.
+Player health
+Hearts or a small health pool
+One lethal hit per cassette character.
+Victory
+Objective alone, even if everyone dies
+Objective plus at least one survivor.
+Rerecording
+Edit any older tape / erase only later tapes
+Retry current take before advancing; changing an
+older committed tape resets all tapes.
+Audio validity
+Prevent rhythmically awkward solutions
+Accept mechanically valid solutions; keep sound
+integration coherent.
+State audio
+Only muffling/phasing a finished stem
+Use Harmonograph’s compositional parameters as
+well as any suitable processing.
+Enemy audio
+influence
+Enemies alter generative functions
+Enemies keep time; no direct rewriting of cassette
+wave functions.
+Progression map
+Slay the Spire-style branches between levels
+Fixed campaign path with revisiting.
+Upgrades
+Predetermined stat unlocks, then point-based
+skill tree
+Found equipment provides specialization; swap
+armor/weapons between levels.
+Roguelike structure
+Build during a run, then reset
+Permanent cumulative campaign progression.
+Protagonist
+Trapped person, synthetic native, old masked
+cyborg
+Human scavenger by choice, scrappy/expressive,
+named Moxie.
+Narrative goal
+Defeat music police / rescue a loved one or
+pet
+Descend for loot; a time machine is the bottom
+artifact.
+Character art
+Semi-realistic magenta-haired
+reference-sheet redesign
+Preserve expressive anime character identity and
+selected references.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+DECISION HISTORY AND SUPERSEDED ALTERNATIVES
+Current decisions supersede the legacy source archive.
+57
+
+[images on page: 0]
+
+===== PAGE 58 =====
+Topic
+Earlier idea / misleading restatement
+Latest controlling direction
+Environment art
+Perspective scenes with side-view level-flow
+graphic
+Isometric references; no level-flow diagram in the
+art boards.
+Upper lighting
+Strong purple ambient tint
+Warm, overworld-like illumination; retain purple
+graffiti.
+Lower lighting
+Apply the warm correction everywhere
+Lower levels intentionally become darker, colder,
+more neon and metal-heavy.
+Naming history
+The ten protagonist options offered were Jinx, Riff, Vex, Kit, Nyx, Roxy, Echo, Moxie, Zig and Rei. Riff/Roxy/Moxie
+stood out, then Roxy was dropped, and Moxie won because Riff did not feel enough like a name. The user
+associated the shortlist with musical parallels; this document does not invent an etymology for Moxie.
+The original game-title ideas were Syncopate, SyncoFate and Cassette Overdrive, with “game_jam” as a
+placeholder and “Pirate Music” / “Syncopate-Balatro” as playful options. No final game title was selected during
+the new conversation. “Moxie’s World,” printed on generated boards, is a reference-board heading rather than an
+approved release title.
+Assistant suggestions that remain only suggestions
+A fixed three-hit player health model, conventional twin-stick control, solo/mute/scrub tools, a particular camera
+cut style, explicit taunts, a restricted missile ammo pool, a guaranteed loop-only first mode, and specific formulas
+for damage or death music were not adopted just because an assistant proposed them.
+Similarly, “every mandatory puzzle must work with every optional build” was an assistant-proposed constraint. The
+user instead emphasized the ability to change builds and later selected equipment. That distinction should remain
+visible during level design.
+Revision history synthesized from the current user conversation [C01–C20]. Legacy names: [J, original lines 153–155].
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+DECISION HISTORY AND SUPERSEDED ALTERNATIVES
+Current decisions supersede the legacy source archive.
+58
+
+[images on page: 0]
+
+===== PAGE 59 =====
+24 / Legacy concept inventory and original build
+context
+This chapter preserves the substance of the initial documents without treating every brainstorm as part of the
+current game. The full archive, including its original wording, links and message excerpts, follows in Appendix A.
+Historical assertions below are attributed to that archive, not independently verified claims about the referenced
+games or tools.
+Other games considered before the cassette concept
+The initial catalog contained a racing deckbuilder in the Balatro/Slay the Spire family, with strong inspiration from
+Heat; a D&D-inspired turn-based game; XCOM combat combined with B/STS cards; and a fashion game in which
+designing clothes for a runway was also preparing for combat on a battlefield.
+The flywheel-racing variant emphasized building acceleration across laps without losing traction. Braking could
+break a multiplier/streak, compared with Beat Saber. Upgrading the car through cards, rhythm checks or currency
+was considered, with cards favored for tension and chance. These are separate concepts and ancestry for
+momentum/multiplier thinking, not requirements for Moxie’s equipment or combat systems.
+An expanding-world puzzle used a tiny isometric world that grows every time the goal is reached. Lego-like blocks
+would be added, new obstacles could include a simulated waterfall or enemies, and the player might choose from
+three world additions. Another fragment proposed 4D exploration in a 2D game, possibly by looping music tracks.
+Other variants included falling repeatedly from the top to the bottom of a looping platformer; a grappling hook
+used to circle platforms and build speed, with a shift action creating a bouncing shield; Recur-inspired
+forward/backward time controlled by moving right/left; and a conveyor-belt level fragment. The reference to
+rebuilding The Witcher 3 in four days was a joke, not a scope target.
+The cassette idea’s ancestry
+The time-loop FPS idea originated in the redwoods discussion. It was retooled as a platformer/boss rush: four
+tracks, failure if the boss is not killed by the fourth recording, previous performances playing simultaneously, and a
+boss able to change actions because it is outside the loop.
+The brainstorm included speed choices of 0.5×/1×/2×/4×, momentum attacks, a late powerup to overwrite one
+thread, and light cooperative-style puzzles compared with The Legend of Zelda: Tri Force Heroes. My Friend
+Pedro was named for combat; another idea had two tracks fighting while two enabled routes through the
+environment.
+The winning jam direction was a small 2D brawler/platformer with four colored cassettes, combo-heavy tag-team
+combat, possible waves and a boss, and tape length as a resource. TowerFall, Smash Bros, fighting games and Your
+Only Move Is Hustle were feel references. A different weapon per cassette was described as beyond comfortable
+jam scope, not an implemented feature.
+The current version inherits four-self coordination, tape identity, time-scaled force and the possibility of an
+outside-loop boss. It changes the perspective, puzzle priority, protagonist/world, progression, music generation
+and detailed state rules.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+LEGACY CONCEPT INVENTORY AND ORIGINAL BUILD CONTEXT
+Current decisions supersede the legacy source archive.
+59
+
+[images on page: 0]
+
+===== PAGE 60 =====
+Old time and interaction rules
+The old discussion deliberately avoided rewind to sidestep questions about undoing enemy death. It selected play,
+loop and write, with enemies remaining dead within the run. The new reverse-action mechanic is a later revision
+and should not be deleted because the archive says “no rewinding.”
+A useful original causality example survives: if tape one fires at an enemy at time five, tape two may move the
+enemy before the projectile arrives, so the old shot no longer kills it. That idea directly anticipates the current
+live-enemy/fixed-performance model.
+The old death rule advanced the player to the next tape and left a ghost with collisions but no damage or
+interactions until saved by a later self. The new design instead continues recording a constrained, interactive
+hypothetical ghost, then recalculates effectiveness during subsequent playback. These systems are related but not
+interchangeable.
+The archive’s high-five when two tracks pass in opposite directions is a personality flourish, not a current required
+mechanic. Track-specific enemies, track-colored zones, hue-rotated clothing, screen tints, grabbing/grappling and
+a combo charge meter also remain legacy ideas unless reselected.
+Special pickups included time freeze and double speed. Mixing controls could strengthen tapes;
+drum/chord/melody roles could grant different powers; genres could determine abilities. None of those gameplay
+mappings is confirmed in the current Harmonograph requirements.
+Loop-themed level ideas
+The source listed an airport baggage carousel, factory conveyor belt, race track with cars potentially moving
+forward/backward in time, circuit board, vinyl record player, lazy river, hiking trail and bowling alley. The
+record-player idea included hitting the needle to stop or start the soundtrack.
+These motifs may inspire mechanical geometry or themes, but the current campaign setting is an ancient,
+retrofitted dungeon descent. They are not eight mandatory modern-world biomes. Laser gates and
+button-controlled passages from the old build are more directly reusable interaction concepts.
+Earlier story and character
+The jam story moved through a musician reclaiming space from AI-generated music, a loved-one or pet rescue
+template, then evil music police stopping the heroine’s music. Robo Bee police drones and an ettercap appeared in
+the build. A joke ending had a small dog follow the heroine and urinate on a music cop.
+The old protagonist moved from cyberpunk/android/magical-girl concepts to a rebellious cyborg. A mask reduced
+mouth-animation work; facial expression would use eyebrows. Specific ideas included a robotic arm and knee, a
+piano-key jacket accent, low-cut techwear pants, an angular top/collar and recognizable shoes.
+Weapon sketches included axe-guitar or axe-bass, keyboard-axe, harp, lyre/sickle, flute sword, electric banjo-axe,
+sitar-axe and balalaika. The axe-guitar/bass direction won under time pressure. The present game confirms melee
+and equipment weapons, but not that the final weapon must be an axe-guitar.
+The new Moxie concept replaces the old protagonist’s synthetic identity and mask requirement. Some visual
+ancestry—streetwear, music equipment, low-rise pants and bold color—remains compatible. The new female-gaze,
+expressive human scavenger brief takes precedence.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+LEGACY CONCEPT INVENTORY AND ORIGINAL BUILD CONTEXT
+Current decisions supersede the legacy source archive.
+60
+
+[images on page: 0]
+
+===== PAGE 61 =====
+Earlier visual references and pipeline
+The archive mentioned synthwave/retrowave, Y2K old-computer imagery, psychedelic Greek sculpture,
+“cyberpunk Hazbin Hotel” and a Panty & Stocking comparison, plus the “2025-gamejam-inspo” Pinterest board. An
+early pixel/NES direction was abandoned in favor of drawn, cut-out, rigged art because of asset and animation
+workload.
+The old pipeline discussed Procreate exports, PSD breakdowns, a separated and assembled character, Godot
+Skeleton2D, inverse kinematics for the weapon, TexturePacker tilesets, face swaps for hurt/recovery and an anger
+mark. A suggestion to use a 2D PSD Importer also appears in the raw discussion. These are historical workflow
+suggestions, not validated dependencies for the new 3D/isometric handoff.
+The old target was 16:9 at an assumed 1920×1080, scaled in-engine. The new conversation did not select output
+resolution, asset pixel density or a final rendering stack.
+Earlier movement and combat tuning
+The jam discussed a slower, less floaty brawler baseline and compared its accelerated state with Hero in Smash. It
+wanted responsiveness at slow and fast settings, with tunable acceleration and distance, and debated how much
+momentum to emphasize.
+Features discussed or reported built include air steering, air attacks, crouch on S, fast fall/down attack, camera pan
+after a configurable half-second crouch, coyote time, jump buffering, dash, wall slide/climb/jump, head-bonk
+acceleration and velocity-scaled fast-fall damage. Knockback was originally limited to a third combo hit or
+directional up/down attacks, with a downward stun. Hit stop was proposed.
+These specific platformer controls and combo restrictions are not current requirements. Momentum affecting
+damage/stagger/knockback now has a broader role, and jumping is not central. Hit-stop behavior must also be
+reconciled with fixed choreography and musical timing rather than imported without examination.
+What the archive says was built
+The reported Godot 4 2D project has four red/yellow/blue/green tracks, keys 1–4, independent approximately
+60-second timers, hearts and cassette-deck UI. Track switching pauses/resumes the relevant track. Previous
+tracks replay without reacting to live input. The fourth track causes a reset; “First 4 levels” was the last described
+commit.
+The archive names enemy_cop, Robo Bee, an ettercap and a punching-bag/test dummy. It reports
+chasing/pathing, attacks/cooldowns, sword attacks, ground/air movement, dash, wall interaction, knockback,
+damage-number particles, a camera-shake README, laser gates, buttons, level switchers, tiles and backgrounds.
+It describes the game under g a m e _ j a m _ g a m e / and art under g a m e _ j a m _ a s s e t s / in a s h k a t y / g a m e _ j a m , with
+master/dev and numerous feature/Codex branches. That repository is separate from Joey’s Harmonograph
+project. The current state of those branches has not been checked for this document.
+Old audio work
+Four stems—bass, drums, melody and pads—were tested at half/normal/double speeds. The archive notes 3^4 =
+81 combinations and reports that roughly a quarter were sampled with encouraging results. Faster variants might
+add flourishes or sharper pads instead of simply speeding the source.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+LEGACY CONCEPT INVENTORY AND ORIGINAL BUILD CONTEXT
+Current decisions supersede the legacy source archive.
+61
+
+[images on page: 0]
+
+===== PAGE 62 =====
+Feedback included a menacing synth clashing with a chiming upbeat progression, the beat running too long before
+the synth, pads weakening suspense, a crowded fast version and successful atmospheric slow/normal loops. The
+pads were placeholders. Final time pressure led to four separate one-minute files and effects on the 1× track.
+This is useful evidence of the original musical intention and prior iteration, but the new game uses a generative
+Harmonograph approach. The delivered old files are not the new soundtrack specification. Source references to
+stock effects and transforming other games’ music were brainstorm/joke context, not a rights or sourcing plan.
+Engineering and process history
+A queue-of-actions prototype became a ring/circular buffer, one per tape, paired with a movement/combat state
+machine. The source attributes similar approaches to other games; those comparisons are reproduced as source
+claims, not independently verified technical facts.
+The team proposed enemy input abstraction, reusing the player state machine, a decision tree and Godot 2D
+navigation. LimboAI behavior trees/hierarchical state machines were discussed but rejected as migration risk
+during the jam. The user preferred exported/tunable controls over premature fixed balance.
+Process notes include a playable master branch, an integration dev branch, short-lived branches with no more than
+two tasks, minimal branch protection/red tape, 1–3-hour Kanban tasks and ClickUp/whiteboards. Asset priorities
+placed character, weapon and one enemy before extensive environmental work; late logs describe animation/IK
+difficulties, asset swaps and unfinished level work.
+These constraints explain the prototype’s compromises. They are not current deadlines, team roles or mandatory
+tools. Casual team-name lists, future-AI speculation and logistics remain in the full appendix for completeness
+rather than becoming design requirements.
+Source availability cautions
+The archive was compiled from a 906-message group DM, a planning Google Doc and the team repository. It
+includes 440 ideation-relevant chat lines and states that speakers were anonymized. It says some
+images/audio/video attachments were not archived and their Discord links expired; voice calls were not recorded.
+Some source links are only labels or abbreviated URLs.
+The provided text mentions a ClickUp whiteboard and Pinterest pins that were not readable without login. It
+reports that an itch.io submission was not found in the compiler’s search. These are limits of that source, not a new
+audit or proof that a submission never existed.
+No unavailable sketch, MP3, prototype video, whiteboard screenshot or undisclosed code has been reconstructed
+or treated as inspected here. The current generated art included in this PDF is a separate, available reference set.
+Entire chapter: supplied jam archive [J], original lines 1–690. Complete original wording and links are preserved in Appendix A.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+LEGACY CONCEPT INVENTORY AND ORIGINAL BUILD CONTEXT
+Current decisions supersede the legacy source archive.
+62
+
+[images on page: 0]
+
+===== PAGE 63 =====
+25 / Source register, decision anchors and
+coverage
+Supplied text sources
+[J] P a s t e d t e x t . t x t — GMTK Game Jam 2025: ideation dump. The source labels the jam as July 30–August 3,
+2025 and its compilation date as November 16, 2026. It contains the idea catalog, source references, original
+planning document, reported build state and anonymized ideation chat. Original line references in this document
+refer to the source’s own line sequence, not PDF page numbers.
+[H] P a s t e d t e x t ( 1 ) . t x t — Harmonograph repository-page snapshot. The source identifies
+j o e y 1 2 7 2 5 / h a r m o n o g r a p h , marks it private, and contains the README, feature descriptions, host workflows,
+reported verification state, paths and repository-page metadata. It is not an independent review of the repository’s
+code.
+Both complete files are reproduced in the following appendices. Their original bytes are also embedded as PDF
+attachments so source spelling, Unicode and line structure can be recovered even when the printed edition
+substitutes a textual description for an unsupported emoji glyph.
+The user’s initial typed brainstorm substantially overlaps the planning-document section of [J]. Its distinct current
+additions—dream-version intent, puzzle emphasis, Harmonograph integration and anime references—are carried in
+the current decision anchors below. The supplied s t o r m y - v i s i o n - m 7 v z . h e r e . n o w link is retained in the source
+record as the initial compilation location; this document relies on the supplied text rather than assuming unseen
+web content.
+Current conversation anchors
+These editorial anchor labels group the visible design conversation by topic. Short quotations preserve decisive
+wording where useful; they are not a replacement for the chapter explanations or a claim that a complete verbatim
+chat export is attached.
+[C01] Dream-version brief and boundaries. The user wants the full dream version and a requirements document,
+not merely a jam entry. Music should use Harmonograph, vary with track speed, and integrate gameplay sounds.
+More puzzly mechanics and anime inspiration from The Idaten Deities Know Only Peace and Mob Psycho 100
+were specified. The later interview was capped at the listed design areas plus character/world questions.
+[C02] Desired player experience. “I want the player to feel smart.” The user emphasized a good solution to a hard
+problem, the right resource at the right time, and planning future game states. Execution matters but is secondary
+to selecting speeds, routes and recording order.
+[C03] Tape endpoints and backward actions. Stop, repeat and reverse were selected as eventually available
+per-tape choices. Backward projectiles can hit again while a switch can go from on back to off. This corrects any
+interpretation of reverse as restoring all world history.
+[C04] Clock and recording-start clarifications. “Recording should always take 15 seconds” was the illustrative
+per-level example. The user repeatedly distinguished consistent active-character feel from changing world speed,
+rejected stretching a fast recording to match others, requested true-beat concurrent final playback and said every
+tape starts at the zero beat mark.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+SOURCE REGISTER, DECISION ANCHORS AND COVERAGE
+Current decisions supersede the legacy source archive.
+63
+
+[images on page: 0]
+
+===== PAGE 64 =====
+[C05] Reactive enemies and fixed attacks. Closest-target firing and farthest-target pursuit were examples. Past
+selves always attack at the same angle or place. An extra self changes circumstances; it does not authorize
+retargeting a recorded melee attack.
+[C06] Ghost correction. “The effects should impact that run, but no later runs.” Active post-death recording
+remains constrained and interactive; dead playback ghosts do not affect the world. A later tape can rescue an old
+self or cause an originally surviving self to die at a new time.
+[C07] Physical resynchronization. The user rejected merely checking whether the projection is inside a wall,
+proposed a fast but finite naive catch-up agent, and wanted alternate routes and opening doors to matter. Desync
+should be emergent; the spark should be visible but small and ephemeral. The wall/turret example is
+user-authored.
+[C08] Coordination and boss identity. Most fights require coordination at the encounter scale, though one self can
+handle a weaker enemy or two. Some threats need two, three or four selves. At least one boss should exist outside
+the loop and respond across recordings.
+[C09] Combat, missiles and survival. Light/heavy melee and a dodge were retained. The user specified tape speed
+and actual movement feeding momentum, with momentum determining knockback, stagger and damage. Missiles
+target nearest once at launch. Player cassettes die in one hit, ordinary enemies mostly in one with some two/three,
+bosses have health bars, and “Any one must survive.”
+[C10] Retry and interface rules. On editing an old cassette: “Wipes all of them.” Current takes can be retried
+before advancing. The timeline is visible while recording and uses continuous time with beat markers. A
+visual/audible five-six-seven-eight count-in responds to tape speed. Playback can start automatically.
+[C11] Level and challenge structure. A level is one round of cassette recording, not separate cassette-reset
+encounters. Typical combinations include 1+3, 2+2 or one four-self challenge. One-self teaching levels are
+allowed. Use time pressure from both tapes and hazards, clear flow, intended solutions with alternate approaches,
+full failed playback with early reset, and later—not immediate MVP—B-sides/stars/scores.
+[C12] Progression’s final form. The user rejected roguelike reset, explored a branching map and skill tree, then
+settled on a fixed campaign path with revisits and found equipment. Armor/weapons can be swapped between
+levels, a generous inventory retains options, and equipment replaces abstract point reallocation.
+[C13] Isometric selection. Jumping/verticality were recognized as incidental to the original mental picture: “Let’s
+go isometric.” Interconnected rooms and spatial navigation are welcome without preserving precision-platforming
+as the main activity.
+[C14] Music and final performance. Keep all four layers as elegant/clean/cohesive as possible. Actions’ sounds
+should roughly quantize to something like sixteenth notes using the same rule for combat/movement.
+Mechanically valid but odd rhythms remain valid. Extra music-linked visual reward belongs in the locked, cinematic,
+true-timeline playback.
+[C15] Parametric state music and enemy limits. The user corrected a post-effects-only description: Harmonograph
+offers many parameters. Death/desync should affect the relevant cassette channel. Enemy attacks keep time, but
+by and large do not change actual wave functions. Musical visualization in the world was welcomed.
+[C16] Protagonist premise and loot. An actual human, not trapped, descends as a scavenger for loot. She is
+scrappy and expressive. The premise prompted the gear-based progression decision. At the bottom is a straight-up
+time machine, tying into the other time mechanics.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+SOURCE REGISTER, DECISION ANCHORS AND COVERAGE
+Current decisions supersede the legacy source archive.
+64
+
+[images on page: 0]
+
+===== PAGE 65 =====
+[C17] Moxie’s selected design. Tomboyish female, slightly androgynous in style/posing, female-gaze direction;
+very streetwear, scrappy cyberpunk tech scavenger. Moxie is the selected name. Yellow headphones, scrappy
+pigtail styling, cropped top, low-rise pants and a belt-clipped Walkman are explicit.
+[C18] Character image refinement. The user liked coloration/theming/face paint/Walkman, requested futuristic
+belt tools and wrist accessories, then rejected a reference-sheet redesign that changed palette/style/details. The
+corrected anime sheet is the selected multi-pose artifact for this document.
+[C19] Dungeon materials and light arc. Ancient ruins with later tech, predominantly rune-inscribed metal,
+secondary stone and frequent vegetation. Lighting varies; warmer at the top, colder/more metal/neon lower
+down. Other characters can exist without requiring elaborate narrative.
+[C20] Environment-art corrections. The user liked graffiti on rocks, requested isometric environment/object
+references, explicitly removed level-flow imagery, kept purple graffiti while warming upper lighting, and requested
+darker lower levels with more neon and inscribed metal.
+Selected image register
+Ref
+Asset / creation order
+Role
+R01
+c y b e r p u n k _ r e l i c _ r u n n e r _ i n _ a n c i e n t _ r u i n
+s . p n g — second single-character concept, after the
+futuristic-accessory edit
+Principal Moxie appearance/palette and accessory
+anchor.
+R02
+a _ h i g h l y _ d e t a i l e d _ a n i m e _ c y b e r p u n k _ a n i m
+e _ c h a r a c t e r . p n g — corrected anime reference
+sheet
+Turnarounds, expressions, pose and equipment
+studies; reconcile noted variants.
+R03
+a _ d e t a i l e d _ i s o m e t r i c _ g a m e _ a r t _ r e f e r e n c
+e _ b o a r d _ i n _ t . p n g — warmed upper-level
+revision
+Warm isometric
+environment/modules/props/tiles/materials.
+R04
+a _ d e t a i l e d _ i s o m e t r i c _ c o n c e p t _ a r t _ r e f e r
+e n c e _ b o a r d . p n g — darker lower-level board
+Cold neon, inscribed metal and lower-dungeon style.
+The rejected semi-realistic character sheet, the older non-isometric environment board with a flow diagram, and
+the superseded purple-lit upper board are intentionally not presented as selected references. Their revision history
+is documented in the text instead.
+Coverage against the agreed interview areas
+Core gameplay: Chapters 03–10 cover recording, time, playback modes, ghost state, desync, collisions, combat,
+health, victory and enemy/boss responses. The remaining edges are explicitly registered rather than invented.
+Puzzle design: Chapters 11–12 cover cassette allocation, level flow, pressure, teaching, intended/alternate
+solutions and the actual worked examples.
+World and characters: Chapters 17–19 include Moxie’s identity/outfit/device, supporting-character scope, the
+dungeon, lighting/material progression and the bottom artifact, together with all four selected visual plates.
+Music: Chapters 14–15 cover per-track functions, coherence, sound quantization, state parameters, enemy limits,
+visualization and the existing Harmonograph repository/host context.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+SOURCE REGISTER, DECISION ANCHORS AND COVERAGE
+Current decisions supersede the legacy source archive.
+65
+
+[images on page: 0]
+
+===== PAGE 66 =====
+Camera and controls: Chapters 08 and 16 cover the isometric decision, action vocabulary, input uncertainties, live
+timeline, cassette identity, count-in, playback and cinematic control lock.
+Narrative and progression: Chapters 02, 13 and 18 cover voluntary scavenging, equipment specialization,
+revisiting, the fixed campaign, no roguelike reset and the time-machine destination.
+Original context: Chapter 24 provides a complete categorized bridge from the jam-era ideas and build to the new
+direction. Appendices A and B preserve the two supplied documents in full rather than replacing them with a
+selective summary.
+Document limitations
+This is a consolidation of the conversation and supplied assets, not a live GitHub audit, playtest report or validated
+game build. No numerical balance, topology, engine integration or unrecorded story has been claimed as
+completed. Where the conversation was ambiguous or an assistant statement contradicted a later user
+clarification, that uncertainty is visible.
+No further design interview is required to use this as the current handoff. The open register identifies the
+remaining decisions without undoing the substantial design already settled.
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+SOURCE REGISTER, DECISION ANCHORS AND COVERAGE
+Current decisions supersede the legacy source archive.
+66
+
+[images on page: 0]
+
+
+[Appendix A (legacy jam archive) and Appendix B (Harmonograph README snapshot) omitted - not current requirements]
+
+===== PAGE 89 =====
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+REVISION 1 / DESIGN DECISIONS
+Applies to all preceding chapters; later user requirements supersede earlier wording.
+Revision 1  |  Controlling addendum  |  16 November 2026
+1
+This addendum records three explicit refinements made after the original illustrated document: ranged attacks form a
+multi-weapon family; melee weapons are interchangeable loot with distinct properties; and four visible cassette decks
+with tape-speed readouts are mandatory, first-class gameplay interface elements.
+New controlling requirements
+WEAPON-01  /  Multiple viable ranged weapons
+Guided missiles are ONE ranged weapon option, not the entire ranged combat system. Players can find and equip other
+ranged weapons with different projectile behavior, speeds, range, penetration, and trajectories. Melee remains the primary
+combat emphasis.
+WEAPON-02  /  Homing missile downside
+A missile is intentionally VERY SLOW relative to faster direct-fire projectiles. It acquires the nearest enemy exactly once on
+launch, then tracks that chosen target. Its long travel time is a tactical drawback and gives the changing battlefield time to
+affect the outcome.
+WEAPON-03  /  Other projectile archetypes
+Examples to explore include fast shots that pierce multiple enemies, projectiles that penetrate walls, and weapons using
+arcing or vertical trajectories. These are design directions, not a settled complete item roster or weapon balance sheet.
+WEAPON-04  /  Varied melee equipment
+Different found melee weapons must be viable, with meaningful differences such as reach, attack arc, windup, recovery,
+attack speed, impact transfer, stagger and knockback efficiency. Weapon selection should alter viable strategies, not simply
+reskin one sword.
+UI-06  /  Four persistent cassette UI elements
+All four cassette identities must exist as unmistakable, first-class on-screen UI components, not merely small optional
+indicators or a single generic timeline. Their colors must match the corresponding Moxie copies in the world.
+UI-07  /  Explicit tape-speed visualization
+Each cassette displays its own selected tape speed as a prominent visual value and readout. The UI must make half/double
+relationships intuitive and visibly connect playback rate to tape duration, beat alignment and active motion.
+The basic facts are settled; exact weapon models, ammunition systems, equipment slot layout, cassette deck placement and
+visual animation are still design tasks. Do not treat the examples in this addendum as confirmed statistics or final art.
+
+[images on page: 0]
+
+===== PAGE 90 =====
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+WEAPONS / SHARED COMBAT LANGUAGE
+Replaces the former missile-only framing in Chapter 09; supplements Chapters 08 and 13.
+Revision 1  |  Controlling addendum  |  16 November 2026
+2
+The rule: fixed trigger, simulated projectile
+A past cassette always performs a firing action at the same recorded master-beat point and recorded position. The launched
+object may use its own world simulation: collision, travel time, trajectory and target selection are determined by the current
+encounter. A projectile can hit, miss, pierce or be obstructed differently on later runs without rewriting the performer.
+Candidate ranged weapon tradeoffs (illustrative, not locked)
+Archetype
+Potential downside / distinction
+Puzzle use
+Guided missile
+Very slow flight; one-time nearest-target lock
+Target manipulation and delayed
+impact
+Piercing shot
+Fast; continues through several targets
+Aligning enemies along a trajectory
+Wall-penetrator
+Can pass through select obstacles
+Attacking through cover and spatial
+puzzles
+Arc / vertical shot
+Curved or elevated trajectory
+Reaching enemies behind low
+cover
+Short-range burst
+Quick but narrower usable range
+Close-quarters spacing and risk
+Melee weapon family
+Weapons found in the dungeon should have different timing, contact shapes and momentum transfer. Example design axes:
+blade versus blunt impact, narrow versus sweeping arcs, quick attacks versus long recovery, high reach versus close control,
+and knockback-focused versus damage-focused weapons. Light and heavy attacks and dodge remain core actions; their precise
+variants can be equipment-dependent.
+Interaction with the cassette and ghost rules
+An alive, synchronized recorded self can launch its equipped ranged attack or perform its equipped melee action. A dead
+playback ghost or desynchronized copy cannot affect world objects. Different equipment loadouts should be decided between
+level attempts, avoiding changes that silently reinterpret an already committed tape. Exact projectile reverse-playback behavior
+remains unresolved.
+
+[images on page: 0]
+
+===== PAGE 91 =====
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+CASSETTE DECK / REQUIRED HUD
+A conceptual wireframe - four explicit channels and speed settings, not a final layout.
+Revision 1  |  Controlling addendum  |  16 November 2026
+3
+The cassette interface is a primary instrument of play. The player should always understand which take is being
+recorded, which takes are committed, how fast each tape is configured and where its actions sit relative to the shared
+beat ruler.
+CASSETTE 01
+0.5x
+COMMITTED
+local tape progress
+CASSETTE 02
+2x
+COMMITTED
+local tape progress
+CASSETTE 03
+1x
+RECORDING
+local tape progress
+CASSETTE 04
+--
+NOT RECORDED
+local tape progress
+MASTER BEAT RULER
+0
+4
+8
+12
+16
+What must be genuinely visible in production
+Cassette presence and status
+All four cassette objects have distinct color channels and readable states: unavailable/not yet recorded, active recording,
+committed playback, stopped or reverse/loop mode when unlocked. The active cassette must be unmistakable.
+Speed is a first-class control and readout
+Each tape visibly presents 0.5x / 1x / 2x / 4x or the level-supported subset, not hidden in a settings menu. Speed markers,
+changing reel/transport behavior and a clear rate label should make the time relationship apparent.
+Timeline and alignment
+Show a continuous-time timeline with beat markers WHILE recording, plus explicit mapping to master beats and tape
+progress. Prior recordings appear as simultaneous performers; future unrecorded selves must not appear.
+Feedback and legibility
+Show death/ghost/desync indicators distinctly, as well as fixed take commitment, retry current take and reset entire attempt.
+Supporting cassette artwork and Walkman animations can reinforce these controls but cannot replace them.
+
+[images on page: 0]
+
+===== PAGE 92 =====
+MOXIE  /  REQUIREMENTS & VISUAL BIBLE
+IMPLEMENTATION / ACCEPTANCE CHECKS
+Acceptance tests for the new weapons and first-class cassette interface.
+Revision 1  |  Controlling addendum  |  16 November 2026
+4
+Weapon behavior
+NEW-01
+Equip at least two melee weapons with visibly different effective reach, attack timing, knockback or other meaningful
+properties; both remain viable.
+NEW-02
+Equip at least two ranged weapon archetypes with different weaknesses; guided missile is slower than at least one
+alternative projectile.
+NEW-03
+A missile acquires nearest enemy once on launch, does not retarget, and may choose a different enemy on a subsequent
+tape playback if battlefield state differs.
+NEW-04
+A fast piercing projectile may strike successive targets in its line when that weapon property applies; a normal projectile does
+not inherit piercing automatically.
+NEW-05
+A wall-piercing or vertical-trajectory weapon follows only its own documented collision/trajectory rules; never grant every
+ranged attack these abilities.
+NEW-06
+Different cassette speeds and local velocity influence melee momentum and its damage/stagger/knockback consequences,
+with weapon-specific characteristics.
+Cassette HUD and planning
+NEW-07
+Four separately identifiable on-screen cassette elements are present during level play; their colors correspond to the four
+player recordings.
+NEW-08
+Each cassette visibly states its tape speed and status, including which tape is currently recording and which are committed.
+NEW-09
+Continuous-time master timeline with beat markers remains visible during recording, not only during the final cinematic
+replay.
+NEW-10
+Switching tape speed changes readout and any corresponding reel/transport feedback without losing master-beat alignment.
+NEW-11
+A player can distinguish a cassette that is unrecorded, committed, stopped, looping, reversing, dead or desynchronized
+without relying exclusively on audio.
+Status note: above acceptance criteria specify behavior and visual information architecture, not a finalized HUD arrangement or
+numerical combat balancing. The sample instrument display is illustrative only.
+
+[images on page: 0]
+
+===== PAGE 93 =====
+MOXIE / REQUIREMENTS & VISUAL BIBLE
+REVISION 2 / EQUIPMENT EFFECTS
+Supersedes any earlier implication that armor or clothing is cosmetic only.
+Controlling addendum | 16 November 2026
+1
+APPAREL-01 / All four clothing slots must have gameplay effects
+Helmets, shirts or tops, pants, and shoes are distinct equippable categories. Each slot can affect one or more
+aspects of gameplay, and the equipment system should expose those effects clearly. Clothing is not restricted
+to appearance or a flat defense statistic.
+HELMETS / HEADGEAR
+Possible effects: enemy targeting or awareness, protection against a specific hazard, beat or timeline
+readability, or a cassette-related perk. A visible helmet need not obscure Moxie's signature yellow headphones;
+appearance compatibility is an art and UX requirement.
+SHIRTS / TOPS / JACKETS
+Possible effects: attack power or type, damage/impact properties, interaction radius, desynchronization
+behavior, or other utility. Her signature crop-top and layered streetwear silhouette should remain a
+recognizable visual baseline.
+PANTS / LEGWEAR
+Possible effects: mobility or acceleration, directional control, momentum retention, dodge recovery, or
+carrying/utility properties. Examples are candidate design axes, not finalized item statistics.
+SHOES / BOOTS
+Possible effects: traction, movement speed, dodge characteristics, terrain handling, collision behavior, or
+momentum transfer. Footwear can change how a level is solved rather than merely improve a score.
+
+[images on page: 0]
+
+===== PAGE 94 =====
+MOXIE / REQUIREMENTS & VISUAL BIBLE
+REVISION 2 / EQUIPMENT EFFECTS
+Equipment architecture, loadout swapping, and acceptance requirements.
+Controlling addendum | 16 November 2026
+2
+APPAREL-02 / Loadouts, tradeoffs, and puzzle viability
+• Moxie scavenges equipment during her descent. Weapons and wearable gear may be found as loot, stored in
+a generous inventory, and swapped BETWEEN levels. This is the primary customization/respec mechanism;
+no abstract skill-tree points are required.
+• Every named apparel slot may have an active effect, passive modifier, or conditional ability. Equipment can
+grant new abilities as well as adjust existing ones. Different pieces should support meaningful playstyles
+without every upgrade being a strictly superior replacement.
+• The slots coexist with multiple viable melee weapons and multiple ranged weapon options. Slow one-lock
+homing missiles, fast piercing projectiles, wall-penetrating shots, and arcing/vertical trajectories are potential
+ranged archetypes, not universal attack properties.
+• Mandatory levels must remain completable with equipment available at that point, and the player may revisit
+older levels and change loadouts to experiment with alternate solutions. Specific gear lists, numerical stats,
+inventory capacity, and exact slot restrictions remain to be playtested or designed.
+APPAREL-03 / Visual and interface clarity
+• The loadout interface must plainly identify helmet/headgear, shirt/top, pants, shoes, melee weapon, and
+ranged weapon slots and state their mechanical effects in player-readable terms.
+• Equipped clothing should be visibly reflected on the character when practical, while preserving the
+recognizable Moxie identity: yellow headphones, belt Walkman, scrappy pigtails, streetwear crop top and
+low-rise silhouette as the base design.
+• The four cassette objects and their individual tape-speed indicators remain mandatory, first-class gameplay
+HUD elements, alongside the live beat-marked timeline. Apparel changes must not hide or replace these core
+controls.
+Acceptance criteria
+APP-TEST-01: Equip and swap a helmet, shirt, pants, and shoes; each category can demonstrably change a
+gameplay outcome.
+APP-TEST-02: Changing a clothing slot updates its displayed effect and preserves the distinction between
+equipment categories.
+APP-TEST-03: A valid compulsory level can be completed using at least the intended baseline loadout
+available before entering it.
+
+[images on page: 0]
