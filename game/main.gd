@@ -6,4 +6,5 @@ extends GameApp
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	WebCompat.apply()
 	wire_defaults()

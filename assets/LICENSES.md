@@ -3,6 +3,9 @@
 What ships in `assets/` (and the fonts in `ui/theme/fonts/`), where it came from, and what must be
 settled before the game is distributed. Folder-level files carry the detail; this file is the index.
 
+The project's code and original content are MIT-licensed (`LICENSE` at the repo root). The
+third-party items below keep their own terms, which the MIT licence does not override.
+
 ## Read first: three things that block or limit distribution
 
 1. **Moxie's mesh was generated with Tencent Hunyuan3D-2 — it may not be distributed in the EU, the

@@ -294,7 +294,7 @@ func setup(p_tape: int, p_color: Color, S: Shared) -> void:
 		for mi: MeshInstance3D in e.meshes:
 			mi.material_override = S.mats.afterimage
 			mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-			mi.set_instance_shader_parameter(&"color", Color(color, 0.0))
+			WebCompat.set_param(mi, &"color", Color(color, 0.0))
 		e.visible = false
 		e.top_level = true
 		add_child(e)
@@ -418,7 +418,7 @@ func _attach_gear(S: Shared, body_meshes: Array[MeshInstance3D]) -> void:
 	_muzzle.mesh = S.flash
 	_muzzle.material_override = S.mats.flat_add
 	_muzzle.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	_muzzle.set_instance_shader_parameter(&"color", Color(color, 0.0))
+	WebCompat.set_param(_muzzle, &"color", Color(color, 0.0))
 	if _ranged_muzzle != null:
 		_ranged_muzzle.add_child(_muzzle)
 	elif lh >= 0:
@@ -434,7 +434,7 @@ func _flat(mesh: Mesh, mat: Material, parent: Node3D, y: float, c: Color) -> Mes
 	mi.material_override = mat
 	mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	mi.position.y = y
-	mi.set_instance_shader_parameter(&"color", c)
+	WebCompat.set_param(mi, &"color", c)
 	parent.add_child(mi)
 	return mi
 
@@ -511,7 +511,7 @@ func _build_world(S: Shared) -> void:
 	_spark.custom_aabb = AABB(Vector3(-1000, -50, -1000), Vector3(2000, 100, 2000))
 	world.add_child(_spark)
 	_tether = _flat(S.strip, m.flat_overlay, world, 0.0, Color(color, 0.9))
-	_tether.set_instance_shader_parameter(&"dash", 0.16)
+	WebCompat.set_param(_tether, &"dash", 0.16)
 	_merge = _flat(S.merge_ring, m.flat_overlay_add, world, 0.05, Color(color, 0.0))
 
 
@@ -751,7 +751,7 @@ func update_self(a: ActorInterp.SelfFrame, env: Env) -> void:
 	if _muzzle.visible:
 		var ms := 0.4 + wrist * 1.1
 		_muzzle.scale = Vector3(ms, ms, ms)
-		_muzzle.set_instance_shader_parameter(&"color", Color(color, wrist * 0.9))
+		WebCompat.set_param(_muzzle, &"color", Color(color, wrist * 0.9))
 
 	# ── swing trail ──
 	var swing_k := 1.0 if st.body == ActorStyle.Body.SOLID else (0.8 if st.body == ActorStyle.Body.HOLO else 0.35)
@@ -895,18 +895,18 @@ func _update_markers(st: ActorStyle.Resolved, sp: ActorStyle.Params, env: Env, s
 	var live := env.is_live
 	# Floored: a ghost's ring and letter are the identity it has left (ACCESSIBILITY A2, A3).
 	var ring_k := maxf(ActorStyle.RING_FLOOR, st.ring * (1.0 if live else 0.8))
-	_ring.set_instance_shader_parameter(&"color", Color(color, 0.95 * ring_k))
-	_ring_ink.set_instance_shader_parameter(&"color", Color(_S.ink, (0.85 if env.high_contrast else 0.7) * ring_k))
-	_disc.set_instance_shader_parameter(&"color", Color(color, (0.26 if live else 0.14) * ring_k))
+	WebCompat.set_param(_ring, &"color", Color(color, 0.95 * ring_k))
+	WebCompat.set_param(_ring_ink, &"color", Color(_S.ink, (0.85 if env.high_contrast else 0.7) * ring_k))
+	WebCompat.set_param(_disc, &"color", Color(color, (0.26 if live else 0.14) * ring_k))
 	_live_ring.visible = live
 	if live:
 		var pulse := 1.18 + env.beat_pulse * 0.25
 		_live_ring.scale = Vector3(pulse, 1.0, pulse)
-		_live_ring.set_instance_shader_parameter(&"color", Color(color, 0.3 + 0.5 * env.beat_pulse))
+		WebCompat.set_param(_live_ring, &"color", Color(color, 0.3 + 0.5 * env.beat_pulse))
 	var badge_k := maxf(ActorStyle.BADGE_FLOOR, ring_k)
 	var off := Vector3(-env.cam_fwd.x * 0.5, 0.0, -env.cam_fwd.y * 0.5) * maxf(1.0, rig.top / ActorGear.STANDIN_TOP)
 	_badge.position = Vector3(off.x, 0.016, off.z)
-	_badge.set_instance_shader_parameter(&"color", Color(_S.ink, 0.85 * badge_k))
+	WebCompat.set_param(_badge, &"color", Color(_S.ink, 0.85 * badge_k))
 	# Letter lies flat on the floor, upright as seen from the camera.
 	_letter.position = Vector3(off.x, 0.02, off.z)
 	var yaw := atan2(-env.cam_fwd.x, -env.cam_fwd.y)
@@ -920,13 +920,13 @@ func _update_markers(st: ActorStyle.Resolved, sp: ActorStyle.Params, env: Env, s
 	if _halo.visible:
 		_halo.position = Vector3(0, rig.top + 0.08 + sin(env.time * 2.3) * 0.015, 0)
 		_halo.rotation = Vector3(0.25 + sin(env.time * 1.3) * 0.08, env.time * 0.9, 0.12)
-		_halo.set_instance_shader_parameter(&"color", Color(color, 0.9 * st.flick))
+		WebCompat.set_param(_halo, &"color", Color(color, 0.9 * st.flick))
 	_pause.visible = stopped
 	if stopped:
 		_pause.position = Vector3(0, rig.top + 0.16, 0)
 		_pause.basis = env.cam_basis
 		for b: MeshInstance3D in _pause_bars:
-			b.set_instance_shader_parameter(&"color", Color(color.lerp(Color(0.6, 0.6, 0.6), 0.3), 0.65 + 0.3 * sin(env.time * 2.0)))
+			WebCompat.set_param(b, &"color", Color(color.lerp(Color(0.6, 0.6, 0.6), 0.3), 0.65 + 0.3 * sin(env.time * 2.0)))
 
 
 func _start_death(a: ActorInterp.SelfFrame) -> void:
@@ -991,8 +991,8 @@ func _update_spark(a: ActorInterp.SelfFrame, want_tether: bool, env: Env) -> voi
 			mm.set_instance_transform(2 + i, Transform3D(Basis.from_scale(Vector3(s, s, s)), Vector3(px, h - (1.0 - f) * 0.05, pz)))
 			mm.set_instance_color(2 + i, Color(color, 0.7 * f * f if on else 0.0))
 		var length := ActorGeom.place_strip(_tether, a.spark_x, a.spark_y, a.x, a.y, 0.05, 0.03)
-		_tether.set_instance_shader_parameter(&"len", length)
-		_tether.set_instance_shader_parameter(&"color", Color(color, 0.9))
+		WebCompat.set_param(_tether, &"len", length)
+		WebCompat.set_param(_tether, &"color", Color(color, 0.9))
 	else:
 		_trail_count = 0
 	if _merge_t >= 0.0:
@@ -1005,7 +1005,7 @@ func _update_spark(a: ActorInterp.SelfFrame, want_tether: bool, env: Env) -> voi
 			_merge.visible = true
 			var s := 0.25 + 0.9 * sqrt(k)
 			_merge.transform = Transform3D(Basis.from_scale(Vector3(s, 1.0, s)), Vector3(_merge_x, 0.05, _merge_y))
-			_merge.set_instance_shader_parameter(&"color", Color(color, (1.0 - k) * (0.6 + 0.4 * ActorMath.bump(k * 2.0))))
+			WebCompat.set_param(_merge, &"color", Color(color, (1.0 - k) * (0.6 + 0.4 * ActorMath.bump(k * 2.0))))
 
 
 ## Scene anchor at chest height (camera framing / fx).

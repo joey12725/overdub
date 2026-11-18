@@ -184,7 +184,7 @@ func _flat(mesh: Mesh, mat: Material, parent: Node3D, c: Color) -> MeshInstance3
 	mi.mesh = mesh
 	mi.material_override = mat
 	mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	mi.set_instance_shader_parameter(&"color", c)
+	WebCompat.set_param(mi, &"color", c)
 	parent.add_child(mi)
 	return mi
 
@@ -197,16 +197,16 @@ func _build_overlays(S: Shared) -> void:
 	if tg != null:
 		_tele = _flat(tg, m.flat_mix, _body, Color(danger, 0.0))
 		_tele.position.y = 0.022
-		_tele.set_instance_shader_parameter(&"edge", 0.0 if spec.arc >= TAU - 0.01 else 1.2)
-		_tele.set_instance_shader_parameter(&"back", 0.22)
+		WebCompat.set_param(_tele, &"edge", 0.0 if spec.arc >= TAU - 0.01 else 1.2)
+		WebCompat.set_param(_tele, &"back", 0.22)
 		_tele.visible = false
 	_aim = _flat(S.strip, m.flat_mix, self, Color(danger, 0.3))
 	_aim.top_level = true
-	_aim.set_instance_shader_parameter(&"edge", 0.6)
+	WebCompat.set_param(_aim, &"edge", 0.6)
 	_aim.visible = false
 	_target_line = _flat(S.strip, m.flat_mix, self, Color(1, 1, 1, 0.35))
 	_target_line.top_level = true
-	_target_line.set_instance_shader_parameter(&"dash", 0.12)
+	WebCompat.set_param(_target_line, &"dash", 0.12)
 	_target_line.visible = false
 	# Facing arrow on the floor in front of the body.
 	_arrow = _flat(S.arrow, m.flat_mix, _body, Color(danger, 0.55))
@@ -235,25 +235,25 @@ func _build_overlays(S: Shared) -> void:
 		for i: int in EnemySpecs.BOSS_VOLLEY_COUNT:
 			var v := _flat(S.strip, m.flat_mix, self, Color(danger, 0.0))
 			v.top_level = true
-			v.set_instance_shader_parameter(&"edge", 0.6)
+			WebCompat.set_param(v, &"edge", 0.6)
 			v.visible = false
 			_volley.append(v)
 		_sweep = _flat(S.sweep, m.flat_mix, self, Color(danger, 0.0))
 		_sweep.position.y = 0.024
-		_sweep.set_instance_shader_parameter(&"back", 0.2)
+		WebCompat.set_param(_sweep, &"back", 0.2)
 		_sweep.visible = false
 		_recall = _flat(S.recall, m.flat_mix, self, Color(danger, 0.0))
 		_recall.top_level = true
-		_recall.set_instance_shader_parameter(&"back", 0.25)
+		WebCompat.set_param(_recall, &"back", 0.25)
 		_recall.visible = false
 		_recall_line = _flat(S.strip, m.flat_overlay, self, Color(1, 1, 1, 0.0))
 		_recall_line.top_level = true
-		_recall_line.set_instance_shader_parameter(&"dash", 0.22)
+		WebCompat.set_param(_recall_line, &"dash", 0.22)
 		_recall_line.visible = false
 		# Memory ribbon: a dashed loop of tape that rewinds around the boss while it recalls.
 		_ribbon = _flat(S.ring, m.flat_add, self, Color(1, 1, 1, 0.0))
-		_ribbon.set_instance_shader_parameter(&"dash", 0.35)
-		_ribbon.set_instance_shader_parameter(&"len", TAU * 1.6)
+		WebCompat.set_param(_ribbon, &"dash", 0.35)
+		WebCompat.set_param(_ribbon, &"len", TAU * 1.6)
 		_ribbon.visible = false
 	if type == EnemyType.SHIELDER:
 		_dome = _flat(S.dome, m.flat_add, _body, Color(SHIELD_COLOR, 0.12))
@@ -548,8 +548,8 @@ func _update_telegraph(e: ActorInterp.EnemyFrame, env: Env) -> void:
 		var show := (tele or atk) and (type != EnemyType.BOSS or mode == EnemySpecs.BOSS_CLEAVE)
 		_tele.visible = show
 		if show:
-			_tele.set_instance_shader_parameter(&"fill", fill)
-			_tele.set_instance_shader_parameter(&"color", Color(col, op))
+			WebCompat.set_param(_tele, &"fill", fill)
+			WebCompat.set_param(_tele, &"color", Color(col, op))
 	# Aim line: always shows where turrets / drones point; fills during the telegraph.
 	var aim_type := spec.shape == EnemySpecs.SHAPE_LINE
 	if aim_type:
@@ -564,16 +564,16 @@ func _update_telegraph(e: ActorInterp.EnemyFrame, env: Env) -> void:
 		var width := 0.05 + 0.05 * e.state_t if tele else (0.12 * (1.0 - e.state_t) + 0.03 if atk else 0.025)
 		ActorGeom.place_strip(_aim, e.x + fx * start, e.y + fy * start, e.x + fx * (start + length), e.y + fy * (start + length), width, h)
 		_aim.visible = e.state != EnemyStateName.ASLEEP
-		_aim.set_instance_shader_parameter(&"fill", fill if tele else 2.0)
-		_aim.set_instance_shader_parameter(&"back", 0.25 if tele else 1.0)
+		WebCompat.set_param(_aim, &"fill", fill if tele else 2.0)
+		WebCompat.set_param(_aim, &"back", 0.25 if tele else 1.0)
 		var ac := danger.lerp(Color.WHITE, 0.6 * (1.0 - e.state_t)) if atk else danger
-		_aim.set_instance_shader_parameter(&"color", Color(ac, 0.9 if tele else (0.95 * (1.0 - e.state_t) + 0.1 if atk else 0.28)))
+		WebCompat.set_param(_aim, &"color", Color(ac, 0.9 if tele else (0.95 * (1.0 - e.state_t) + 0.1 if atk else 0.28)))
 	else:
 		_aim.visible = false
 	if type == EnemyType.BOSS:
 		_update_boss_modes(e, env, mode, tele, atk, fill, op, col)
 	_arrow.visible = e.state != EnemyStateName.ASLEEP
-	_arrow.set_instance_shader_parameter(&"color", Color(danger, 0.9 if tele else 0.55))
+	WebCompat.set_param(_arrow, &"color", Color(danger, 0.9 if tele else 0.55))
 
 
 func _update_boss_modes(e: ActorInterp.EnemyFrame, env: Env, mode: StringName, tele: bool, atk: bool, fill: float, op: float, col: Color) -> void:
@@ -588,15 +588,15 @@ func _update_boss_modes(e: ActorInterp.EnemyFrame, env: Env, mode: StringName, t
 			var r0 := spec.radius + 0.2
 			var length := minf(spec.length, maxf(1.0, _target_dist(e, env) + 0.5)) if _target_dist(e, env) >= 0.0 else spec.length * 0.6
 			ActorGeom.place_strip(v, e.x + cos(a) * r0, e.y + sin(a) * r0, e.x + cos(a) * (r0 + length), e.y + sin(a) * (r0 + length), 0.09, 0.5)
-			v.set_instance_shader_parameter(&"fill", fill)
-			v.set_instance_shader_parameter(&"back", 0.25 if tele else 1.0)
-			v.set_instance_shader_parameter(&"color", Color(col, op))
+			WebCompat.set_param(v, &"fill", fill)
+			WebCompat.set_param(v, &"back", 0.25 if tele else 1.0)
+			WebCompat.set_param(v, &"color", Color(col, op))
 	# Sweep: a ring of shockwaves out to BOSS_SWEEP_RANGE.
 	var sw := active and mode == EnemySpecs.BOSS_SWEEP
 	_sweep.visible = sw
 	if sw:
-		_sweep.set_instance_shader_parameter(&"fill", fill)
-		_sweep.set_instance_shader_parameter(&"color", Color(col, op * 0.8))
+		WebCompat.set_param(_sweep, &"fill", fill)
+		WebCompat.set_param(_sweep, &"color", Color(col, op * 0.8))
 	# Memory strike: the zone at the remembered place, a dashed line from the boss to it and the
 	# rewinding tape ribbon, all in the remembered cassette's colour.
 	var rc := _tape_color(env, e.recall_tape)
@@ -607,16 +607,16 @@ func _update_boss_modes(e: ActorInterp.EnemyFrame, env: Env, mode: StringName, t
 		var r := EnemySpecs.BOSS_RECALL_RADIUS + EnemySpecs.ACTOR_RADIUS
 		var pulse := 1.0 + 0.04 * sin(_time * 9.0)
 		_recall.transform = Transform3D(Basis.from_scale(Vector3(r * pulse, 1.0, r * pulse)), Vector3(e.recall_x, 0.026, e.recall_y))
-		_recall.set_instance_shader_parameter(&"fill", fill)
-		_recall.set_instance_shader_parameter(&"color", Color(rc.lerp(EnemySpecs.DANGER, 0.25), maxf(op, 0.5)))
+		WebCompat.set_param(_recall, &"fill", fill)
+		WebCompat.set_param(_recall, &"color", Color(rc.lerp(EnemySpecs.DANGER, 0.25), maxf(op, 0.5)))
 		var ln := ActorGeom.place_strip(_recall_line, e.x, e.y, e.recall_x, e.recall_y, 0.06, 0.05)
-		_recall_line.set_instance_shader_parameter(&"len", ln)
-		_recall_line.set_instance_shader_parameter(&"color", Color(rc, 0.8))
+		WebCompat.set_param(_recall_line, &"len", ln)
+		WebCompat.set_param(_recall_line, &"color", Color(rc, 0.8))
 	_ribbon.visible = _recall_k > 0.05
 	if _ribbon.visible:
 		var rr := spec.radius + 0.45
 		_ribbon.transform = Transform3D(Basis(Vector3.UP, -_time * 2.2) * Basis.from_scale(Vector3(rr, 1.0, rr)), Vector3(0, 1.0 + sin(_time * 3.0) * 0.08, 0))
-		_ribbon.set_instance_shader_parameter(&"color", Color(rc, 0.85 * _recall_k))
+		WebCompat.set_param(_ribbon, &"color", Color(rc, 0.85 * _recall_k))
 
 
 func _update_target(e: ActorInterp.EnemyFrame, env: Env) -> void:
@@ -628,9 +628,9 @@ func _update_target(e: ActorInterp.EnemyFrame, env: Env) -> void:
 	var c := _tape_color(env, e.target)
 	var p := env.self_pos[e.target]
 	var ln := ActorGeom.place_strip(_target_line, e.x, e.y, p.x, p.y, 0.024, 0.035)
-	_target_line.set_instance_shader_parameter(&"len", ln)
-	_target_line.set_instance_shader_parameter(&"color", Color(c, 0.75 if e.state == EnemyStateName.TELEGRAPH else 0.38))
-	_target_pip.set_instance_shader_parameter(&"color", Color(c, 0.95))
+	WebCompat.set_param(_target_line, &"len", ln)
+	WebCompat.set_param(_target_line, &"color", Color(c, 0.75 if e.state == EnemyStateName.TELEGRAPH else 0.38))
+	WebCompat.set_param(_target_pip, &"color", Color(c, 0.95))
 
 
 func _update_markers(e: ActorInterp.EnemyFrame, env: Env) -> void:
@@ -644,7 +644,7 @@ func _update_markers(e: ActorInterp.EnemyFrame, env: Env) -> void:
 		if not p.visible:
 			continue
 		p.position = Vector3((float(i) - float(n - 1) * 0.5) * gap, 0, 0)
-		p.set_instance_shader_parameter(&"color", Color("#fff1d6") if i < e.hp else Color(Color("#2a2530"), 0.8))
+		WebCompat.set_param(p, &"color", Color("#fff1d6") if i < e.hp else Color(Color("#2a2530"), 0.8))
 	if _bar_fill != null:
 		var f := ActorMath.clamp01(float(e.hp) / float(e.max_hp)) if e.max_hp > 0 else 0.0
 		_bar_fill.scale = Vector3(maxf(0.001, 1.56 * f), 0.07, 1.0)
@@ -652,7 +652,7 @@ func _update_markers(e: ActorInterp.EnemyFrame, env: Env) -> void:
 		var bc := EnemySpecs.DANGER.lerp(Color.WHITE, 0.7 if _flash > 0.0 else 0.0)
 		if e.boss_recall and e.recall_tape >= 0:
 			bc = bc.lerp(_tape_color(env, e.recall_tape), 0.6)
-		_bar_fill.set_instance_shader_parameter(&"color", bc)
+		WebCompat.set_param(_bar_fill, &"color", bc)
 
 
 func _update_shield(e: ActorInterp.EnemyFrame, dt: float) -> void:
@@ -670,7 +670,7 @@ func _update_shield(e: ActorInterp.EnemyFrame, dt: float) -> void:
 	_dome.visible = e.shield or _shield_break_t < 1.0
 	var k := 1.0 if e.shield else 1.0 - _shield_break_t
 	var shimmer := 0.5 + 0.5 * sin(_time * 5.0)
-	_dome.set_instance_shader_parameter(&"color", Color(SHIELD_COLOR, (0.08 + 0.06 * shimmer) * k + (0.0 if e.shield else 0.25 * k)))
+	WebCompat.set_param(_dome, &"color", Color(SHIELD_COLOR, (0.08 + 0.06 * shimmer) * k + (0.0 if e.shield else 0.25 * k)))
 	var s := 1.0 if e.shield else 1.0 + (1.0 - k) * 0.3
 	_dome.scale = Vector3(s, 0.95 * s, 0.8 * s)
 
@@ -715,4 +715,4 @@ func _tick_death(dt: float) -> void:
 	_shock.visible = true
 	var rr := spec.radius * (1.0 + k * 2.5)
 	_shock.scale = Vector3(rr, 1.0, rr)
-	_shock.set_instance_shader_parameter(&"color", Color(EnemySpecs.DANGER, 0.8 * (1.0 - k)))
+	WebCompat.set_param(_shock, &"color", Color(EnemySpecs.DANGER, 0.8 * (1.0 - k)))

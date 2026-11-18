@@ -2,6 +2,7 @@
   "name": "overdub",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "OVERDUB - an isometric, music-linked puzzle-combat game about recording four versions of yourself onto cassette.",
   "scripts": {

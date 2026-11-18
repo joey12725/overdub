@@ -90,7 +90,7 @@ func setup(p_kind: StringName, S: Shared) -> void:
 			var ex := _part(S.orb, halo_mat, Vector3(0.09, 0.09, 0.14), Vector3(0, 0, -0.18), Vector3.ZERO, false)
 			_halos.append(ex)
 			_lock = _world(S.strip, m.flat_mix)
-			_lock.set_instance_shader_parameter(&"dash", 0.14)
+			WebCompat.set_param(_lock, &"dash", 0.14)
 			_reticle = _world(S.ring, m.flat_overlay_add)
 		RangedArchetype.PIERCE:
 			_part(S.orb, core_mat, Vector3(0.05, 0.05, 0.3), Vector3.ZERO, Vector3.ZERO, true)
@@ -132,10 +132,10 @@ func setup(p_kind: StringName, S: Shared) -> void:
 			_streak = _world(S.strip, m.flat_add)
 	_load_model(S)
 	if _streak != null:
-		_streak.set_instance_shader_parameter(&"fade", 1.0)
-		_streak.set_instance_shader_parameter(&"edge", -0.8)
+		WebCompat.set_param(_streak, &"fade", 1.0)
+		WebCompat.set_param(_streak, &"edge", -0.8)
 	if _shadow != null:
-		_shadow.set_instance_shader_parameter(&"color", Color(0, 0, 0, 0.35))
+		WebCompat.set_param(_shadow, &"color", Color(0, 0, 0, 0.35))
 
 
 ## Swap the primitive core for the archetype's model when its file exists. The model is cel-shaded
@@ -166,8 +166,8 @@ func _load_model(S: Shared) -> void:
 			var col := (m as BaseMaterial3D).albedo_color if m is BaseMaterial3D else Color(0.8, 0.8, 0.8)
 			var glow := mat_name.ends_with("_glow")
 			mi.set_surface_override_material(i, S.mats.body_pair(col, glow, glow)[0])
-		mi.set_instance_shader_parameter(&"outline_width", 0.008)
-		mi.set_instance_shader_parameter(&"glow_mul", 2.2)
+		WebCompat.set_param(mi, &"outline_width", 0.008)
+		WebCompat.set_param(mi, &"glow_mul", 2.2)
 	if kind != RangedArchetype.PHASE:
 		for c: MeshInstance3D in _cores:
 			c.visible = false
@@ -182,7 +182,7 @@ func _part(mesh: Mesh, mat: Material, scl: Vector3, pos: Vector3, rot: Vector3, 
 	mi.transform = Transform3D(Basis.from_euler(rot) * Basis.from_scale(scl), pos)
 	_body.add_child(mi)
 	if fixed.a > 0.0:
-		mi.set_instance_shader_parameter(&"color", fixed)
+		WebCompat.set_param(mi, &"color", fixed)
 	elif is_core:
 		_cores.append(mi)
 	return mi
@@ -210,24 +210,24 @@ func reset(id: int, owner_color: Color) -> void:
 	var pale := 0.0 if kind == RangedArchetype.MISSILE else (0.2 if kind == RangedArchetype.BOLT or kind == RangedArchetype.SHOCK else 0.55)
 	var core := Color(owner_color.lerp(Color.WHITE, pale), 1.0)
 	for c: MeshInstance3D in _cores:
-		c.set_instance_shader_parameter(&"color", core)
+		WebCompat.set_param(c, &"color", core)
 	_halo_alpha = 0.55
 	for h: MeshInstance3D in _halos:
-		h.set_instance_shader_parameter(&"color", Color(owner_color, _halo_alpha))
+		WebCompat.set_param(h, &"color", Color(owner_color, _halo_alpha))
 	for c: MeshInstance3D in _crackle:
-		c.set_instance_shader_parameter(&"color", Color(owner_color.lerp(Color.WHITE, 0.4), 0.9))
+		WebCompat.set_param(c, &"color", Color(owner_color.lerp(Color.WHITE, 0.4), 0.9))
 	for mi: MeshInstance3D in _model_meshes:
-		mi.set_instance_shader_parameter(&"accent", Color(owner_color.lerp(Color.WHITE, pale * 0.5), 1.0))
-		mi.set_instance_shader_parameter(&"outline_color", Color(owner_color.darkened(0.7), 1.0))
+		WebCompat.set_param(mi, &"accent", Color(owner_color.lerp(Color.WHITE, pale * 0.5), 1.0))
+		WebCompat.set_param(mi, &"outline_color", Color(owner_color.darkened(0.7), 1.0))
 		# The phase shot's model shows through walls as a flat owner-coloured silhouette.
-		mi.set_instance_shader_parameter(&"xray_color", Color(owner_color, 0.7 if kind == RangedArchetype.PHASE else 0.0))
+		WebCompat.set_param(mi, &"xray_color", Color(owner_color, 0.7 if kind == RangedArchetype.PHASE else 0.0))
 	if _streak != null:
-		_streak.set_instance_shader_parameter(&"color", Color(owner_color, 0.8))
+		WebCompat.set_param(_streak, &"color", Color(owner_color, 0.8))
 	if _lock != null:
-		_lock.set_instance_shader_parameter(&"color", Color(owner_color, 0.55))
-		_reticle.set_instance_shader_parameter(&"color", Color(owner_color, 0.85))
+		WebCompat.set_param(_lock, &"color", Color(owner_color, 0.55))
+		WebCompat.set_param(_reticle, &"color", Color(owner_color, 0.85))
 	if _landing != null:
-		_landing.set_instance_shader_parameter(&"color", Color(owner_color, 0.0))
+		WebCompat.set_param(_landing, &"color", Color(owner_color, 0.0))
 	visible = true
 
 
@@ -272,7 +272,7 @@ func update_shot(p: ActorInterp.ShotFrame, target_id: String, env: Env) -> void:
 			if has_t:
 				var tp: Vector2 = env.enemy_pos[target_id]
 				var ln := ActorGeom.place_strip(_lock, p.x, p.y, tp.x, tp.y, 0.03, 0.06)
-				_lock.set_instance_shader_parameter(&"len", ln)
+				WebCompat.set_param(_lock, &"len", ln)
 				var s := 0.45 + sin(_time * 8.0) * 0.04
 				_reticle.transform = Transform3D(Basis(Vector3.UP, _time * 3.0) * Basis.from_scale(Vector3(s, 1.0, s)), Vector3(tp.x, 0.06, tp.y))
 		RangedArchetype.PIERCE, RangedArchetype.BURST, RangedArchetype.BOLT, RangedArchetype.DART:
@@ -287,7 +287,7 @@ func update_shot(p: ActorInterp.ShotFrame, target_id: String, env: Env) -> void:
 			var s := 1.0 + sin(_time * 9.0 + _seed) * 0.15
 			_body.scale = Vector3(s, s, s)
 			for hm: MeshInstance3D in _halos:
-				hm.set_instance_shader_parameter(&"color", Color(color, 0.35 + 0.15 * sin(_time * 13.0)))
+				WebCompat.set_param(hm, &"color", Color(color, 0.35 + 0.15 * sin(_time * 13.0)))
 			_emit_acc += dt * 18.0
 			while _emit_acc >= 1.0:
 				_emit_acc -= 1.0
@@ -305,7 +305,7 @@ func update_shot(p: ActorInterp.ShotFrame, target_id: String, env: Env) -> void:
 			var ly := p.y + _vel.z * tl
 			var s := 0.35 + 0.08 * sin(_time * 10.0)
 			_landing.transform = Transform3D(Basis(Vector3.UP, _time * 2.0) * Basis.from_scale(Vector3(s, 1.0, s)), Vector3(lx, 0.02, ly))
-			_landing.set_instance_shader_parameter(&"color", Color(color, 0.8 if _samples > 2 else 0.0))
+			WebCompat.set_param(_landing, &"color", Color(color, 0.8 if _samples > 2 else 0.0))
 		RangedArchetype.SHOCK:
 			var step := floorf(_time * 24.0)
 			for i: int in CRACKLE:
@@ -316,7 +316,7 @@ func update_shot(p: ActorInterp.ShotFrame, target_id: String, env: Env) -> void:
 				var bz := Basis.looking_at(dirv, Vector3.UP if absf(dirv.y) < 0.95 else Vector3.RIGHT)
 				_crackle[i].transform = Transform3D(bz * Basis.from_scale(Vector3(0.012, 0.012, length)), dirv * (0.05 + length * 0.5))
 			for hm: MeshInstance3D in _halos:
-				hm.set_instance_shader_parameter(&"color", Color(color, 0.4 + 0.3 * ActorMath.hash01(floorf(_time * 30.0) + _seed)))
+				WebCompat.set_param(hm, &"color", Color(color, 0.4 + 0.3 * ActorMath.hash01(floorf(_time * 30.0) + _seed)))
 
 
 func _muzzle(p: ActorInterp.ShotFrame) -> void:

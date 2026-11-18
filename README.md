@@ -1,38 +1,110 @@
-<img src="assets/icon.svg" width="64" height="64" alt="">
+<div align="center">
+
+<img src="assets/icon.svg" width="96" height="96" alt="">
 
 # OVERDUB
 
-An isometric action-puzzle game. You record Moxie's run on up to four cassettes, one take at a
-time; every earlier take plays back beside you, at the tape speed and end mode you chose for it,
-on one shared timeline set to the level's music. A level is solved when the copies of Moxie,
-together, do what one of her could not.
+**Four tapes. One world. A solution worth watching.**
 
-The game is a **Godot 4.4.1** project (GDScript, Forward+) at the repo root. `prototype/` is the
-earlier TypeScript build: it does not ship, but it is the executable reference for the rules, and
-the simulation in `core/` is a port of it that must agree with it tick for tick.
+An isometric puzzle-brawler where you record up to four takes of yourself onto cassette,
+each at its own tape speed, then watch them all play back together and win as a crew of one.
 
-## Run
+### [▶ Play it in your browser](https://overdub.joeyhersh.com)
 
-Open the folder in Godot 4.4.1 and press Play, or:
+[![Play now](https://img.shields.io/badge/play-overdub.joeyhersh.com-ff4d6d?style=for-the-badge)](https://overdub.joeyhersh.com)
+[![Godot 4.4](https://img.shields.io/badge/Godot-4.4.1-478cbf?style=for-the-badge&logo=godotengine&logoColor=white)](https://godotengine.org)
+[![MIT licence](https://img.shields.io/badge/licence-MIT-ffd23f?style=for-the-badge)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-2%2C086%20passing-7dff6b?style=for-the-badge)](#under-the-hood)
 
-```
-godot --path .                      # the game (main scene res://game/main.tscn)
-# tools/gd finds godot_console.exe / godot4 / godot on PATH; otherwise set GODOT=/path/to/godot
-bash tools/gd import                # refresh the import cache after adding or changing assets
-```
+<img src="docs/screenshots/cinematic.gif" width="720" alt="Level 10 cinematic: four takes of Moxie play back at once while the camera cuts on the beat">
 
-On the development machine Godot lives at `C:\Users\joeya\.t3\tools\godot\`, and every headless run
-goes through `tools/gd`, which serialises access to the shared `.godot/` cache:
+</div>
 
-```
-bash tools/gd test [filter]         # import, then run the suites whose path contains <filter>
-bash tools/gd script res://x.gd     # run a SceneTree script headless
-bash tools/gd shot res://x.gd       # run it windowed (needs a GPU) - for screenshots
-bash tools/mem                      # memory use in percent; check before anything heavy
-```
+---
 
-`tools/mem` also warns when exited processes are still being held in memory. When it does, waiting
-does not help and polling makes it worse: reboot first.
+## The pitch
+
+Moxie goes down into the ruins for the score nobody has pulled. Rumour says there's a time
+machine at the bottom, and everyone agrees it takes a crew of four to reach. Moxie doesn't do crews.
+
+What she has is a Walkman with a strange recording head. Press record and everything she does
+goes onto tape. Rewind, pick up a fresh cassette, and her last take plays back beside her while
+she records the next one. Before long four Moxies are working one room, each running at its own
+speed, all locked to the same beat.
+
+You solve a level when the copies of Moxie, together, do what one of her couldn't.
+
+## How a level plays
+
+<img src="docs/screenshots/level10-four-takes.png" width="100%" alt="Recording the fourth take while takes A, B and C play back, with the four cassettes and the master beat ruler along the bottom">
+
+1. **Set up a cassette.** Choose its **tape speed** (0.5×, 1×, 2× or 4×) and what happens when the
+   tape runs out: **stop**, **repeat** or **reverse**. A 2× take moves twice as fast and hits
+   twice as hard, but gets half as much time.
+2. **Record.** After a count-in, everything you do goes on tape: moving, swinging, dodging,
+   shooting, pulling levers. Every earlier take plays back alongside you.
+3. **Review and commit.** Keep the take, or rewind and record it again. Takes always restart from
+   beat zero, and the room resets with them.
+4. **Win as a crew.** When the takes together finish the objective with at least one Moxie still
+   standing, the game re-cuts your solution as a **cinematic**, scored and shot on the beat.
+
+A dead take isn't wasted. A Moxie who dies at the right moment still held that door open long
+enough for the next one to get through.
+
+## Twelve floors down
+
+<img src="docs/screenshots/levels.jpg" width="100%" alt="All twelve levels, from the sunlit upper ruins to the neon depths">
+
+| # | Level | |
+|---|---|---|
+| 01 | **Soft Open** | One grunt. Then two. Press record. |
+| 02 | **Hit Harder** | Same swing. Faster tape. |
+| 03 | **Hold the Door** | One of you holds it. The other has to still be around when it opens. |
+| 04 | **Second Opinion** | It shrugs off one of you. |
+| 05 | **Dead Air** | Four jobs. Three cassettes. One of you works a double shift, dead. |
+| 06 | **Crossfire** | The stalker wants whoever is farthest. The sentry wants whoever it can see. Introduce them. |
+| 07 | **Out of Phase** | Shut a door on yourself. Walk through the fire. Come back for your hands. |
+| 08 | **Loop Pedal** | One of you stays. One of you lasts. One of you comes round again. |
+| 09 | **Rewind** | What you opened on the way out, you close on the way back. |
+| 10 | **Heavy Rotation** | Two machines, four of you. Spend them carefully. |
+| 11 | **The Archivist** | It has read every tape you kept. Give it something to read. |
+| 12 | **Master Tape** | Every take was holding a door for the next one. |
+
+Every level ships with a stored solution, and the test suite replays all of them, so every
+puzzle is proven solvable.
+
+## What's in the box
+
+- **A four-track tape deck as the HUD.** Four cassettes and a master beat ruler show every take's
+  speed, end mode, life state and actions against one shared timeline.
+- **Music that plays with you.** The soundtrack is generated live by *Harmonograph*, a synthesiser
+  and composer built for the game. Each cassette drives its own voice, so a 2× take is literally
+  double time.
+- **Combat with weight.** Momentum scales with tape speed and approach. Hits land with hitstop,
+  impact bursts, afterimages and decals.
+- **Six kinds of robot and a boss:** grunts, brutes, shielders, stalkers, sentry turrets and
+  drones, then the Archivist.
+- **Traps and machines:** spikes, crushers, conveyors, flame jets, dart launchers, bumpers, beam
+  sensors, relays and magnets, plus lasers, doors and pressure plates. All of them run on the same
+  deterministic clock as you.
+- **37 pieces of gear** in six slots, a wardrobe, and loot that changes how your takes play.
+- **A voiced story** with Moxie, Opal, Tolliver and the Archivist, illustrated dialogue portraits,
+  and a Field Guide that fills in as you meet things.
+- **Replays.** Every winning performance is kept and can be watched again from the campaign map.
+- **Accessibility options:** colour-blind cassette palettes, cassette patterns, high contrast,
+  text size, hold-or-press-twice confirmations, audio/video offset, screen shake and reduced
+  flashing.
+
+<table>
+<tr>
+<td><img src="docs/screenshots/title.png" alt="Title screen"></td>
+<td><img src="docs/screenshots/level08-cinematic.png" alt="Level 8 cinematic"></td>
+</tr>
+<tr>
+<td><img src="docs/screenshots/level01-recording.png" alt="Recording the first take of level 1"></td>
+<td><img src="docs/screenshots/ending.png" alt="The ending"></td>
+</tr>
+</table>
 
 ## Controls
 
@@ -49,96 +121,115 @@ does not help and polling makes it worse: reboot first.
 | Pause | Esc or P | Start |
 | Setup: tape speed down / up | Q / E | LB / RB |
 | Setup: cycle end mode | Tab | Y |
-| After a take: retry | R | X |
-| After a take: commit | C | — |
+| After a take: retry / commit | R / C | X / — |
 | End the attempt | Backspace or Delete | B |
 | Reset all tapes (hold) | Backspace or Delete | Back + Y |
 | Skip the cinematic (hold) | Enter, Space or Esc | A, B or Start |
-| Menus | Arrows or W A S D, Enter or Space, Esc | D-pad, A, B |
 
-The source of truth is `game/input.gd`. Settings include an option to press twice instead of
-holding for "reset all".
+The source of truth is [`game/input.gd`](game/input.gd).
 
-## Tests
+## Play it
 
+**In the browser:** **[overdub.joeyhersh.com](https://overdub.joeyhersh.com)**. Use a desktop
+browser with WebGL 2 (Chrome, Edge or Firefox). The first load downloads about 250 MB.
+The browser build uses Godot's Compatibility renderer, so it skips the colour-grading pass that the
+desktop build has.
+
+**From source:** install [Godot 4.4.1](https://godotengine.org/download/archive/4.4.1-stable/),
+open this folder, and press Play. Or from a terminal:
+
+```sh
+godot --path .            # runs res://game/main.tscn
 ```
-bash tools/gd test                  # every Godot suite under tests/
-bash tools/gd test acceptance       # the requirement-by-requirement suite (docs/ACCEPTANCE.md)
+
+## Under the hood
+
+OVERDUB is built so the puzzles can be trusted.
+
+- **Deterministic simulation.** [`core/`](core/) runs at 240 substeps per second, with 60 local
+  ticks per second scaled by each tape's speed. It has no nodes, no wall clock, and no randomness.
+  A take is a fixed trajectory plus a list of attempted actions, so it replays identically every
+  time. That includes desyncs: when the world changes under a recorded take, the game shows a
+  recovery spark and the take finds its way back.
+- **Two implementations that must agree.** [`prototype/`](prototype/) is an earlier TypeScript
+  build kept as the executable rulebook. The Godot core is a port of it, and 163 golden scenarios
+  exported from the prototype must come out identical in Godot, tick for tick.
+- **Tested end to end.** 1,246 Godot tests and 840 prototype tests cover the simulation, every
+  level's stored solution, audio scheduling, UI flow, saves, and a requirement-by-requirement
+  acceptance suite ([`docs/ACCEPTANCE.md`](docs/ACCEPTANCE.md)). A windowed bot plays all twelve
+  levels through the real game loop and screenshots each step.
+
+```sh
+bash tools/gd test                  # every Godot suite (imports first)
 bash tools/gd test levels           # all twelve levels replayed from their stored solutions
-cd prototype && npx vitest run      # the prototype's suite (the rules reference)
+cd prototype && npx vitest run      # the rules reference
+bash tools/gd shot res://tools/smoke.gd -- <dir>   # play a slice of the real game, with screenshots
+bash tools/web/publish.sh           # export the web build and publish it
 ```
 
-The runner fails a test on any script error logged while it ran. `tests/goldens/` holds scenarios
-exported from the prototype that the Godot simulation must reproduce exactly.
+`tools/gd` finds `godot4`, `godot` or `godot_console.exe` on your PATH, or set `GODOT=/path/to/godot`.
 
-Playing the real game through automation and saving screenshots (windowed, a fresh save in the
-output folder, never the player's):
-
-```
-bash tools/gd shot res://tools/smoke.gd -- <output dir>
-bash tools/gd shot res://tools/shot_world.gd -- <output dir> levels    # every level's solution
-bash tools/gd shot res://tools/shot_hud.gd -- <output dir>
-bash tools/gd shot res://tools/shot_menus.gd -- <output dir>
-bash tools/gd shot res://tools/shot_actors.gd -- <output dir>
-```
-
-## Layout
+<details>
+<summary><b>Project layout</b></summary>
 
 ```
 core/            deterministic simulation: no nodes, no clock, no randomness
 content/         loaders for data/, loadout resolution, level validation
 data/            levels and their solutions, gear, story, music, codex, accessibility data
-game/            session state machine, input, save, campaign, and app.gd, which wires everything
-game/contracts/  the small base classes each module implements
+game/            session state machine, input, save, campaign, web build support, app wiring
 world/           level construction from the kit, camera, lighting, decals, music displays
 actors/          Moxie, the robots, projectiles, cassette identity
 feel/  fx/       hit feel; particles and music-linked effects
 cinema/          the director that plans the winning replay's shots
 musicviz/        music displays mounted in the world
-audio/           the synthesiser, the music director, quantised effects, voice
+audio/           Harmonograph synthesiser, music director, quantised effects, voice
 replay/          kept winning performances
 ui/              HUD, menus, dialogue, coach marks, widgets, theme
 assets/          what the game loads: models, textures, audio, portraits, UI art
-art/             sources and build scripts for everything in assets/ (Godot ignores this folder)
-tests/  tools/   suites and goldens; dev scripts
+art/             sources and build scripts for everything in assets/
+tests/  tools/   test suites and goldens; dev and web build scripts
 docs/            design and module documents
 prototype/       the TypeScript reference build
 ```
 
-Start with `docs/GODOT-PORT.md` (layout, conventions, module facades, asset contract) and
-`docs/ARCHITECTURE.md` (the design and its rules). `docs/requirements.txt` is the creator's list;
-`docs/ACCEPTANCE.md` maps each requirement to its test; `docs/DECISIONS.md` records open questions.
-Module documents: `docs/TRAPS.md`, `COMBAT-FEEL.md`, `CINEMATIC.md`, `DIALOGUE.md`, `WIDGETS.md`,
-`MUSICVIZ.md`, `MUSIC.md`, `ONBOARDING.md`, `CODEX.md`, `WARDROBE.md`, `ACCESSIBILITY.md`,
-`VOICE-CAST.md`, and `ui/README.md` for the hooks the UI exposes to the game.
+Start with [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the design and its rules, and
+[`docs/GODOT-PORT.md`](docs/GODOT-PORT.md) for layout, conventions and the asset contract.
+[`docs/requirements.txt`](docs/requirements.txt) is the original design brief.
 
-## Rebuilding assets
+</details>
 
-Everything in `assets/` is produced by a script under `art/`; edit the source and rebuild, never the
-output. Blender is 4.5: `blender --background --python art/<script>.py -- <args>`.
+<details>
+<summary><b>Rebuilding assets</b></summary>
+
+Everything in `assets/` is produced by a script under `art/`: edit the source and rebuild, never
+the output. Blender is 4.5: `blender --background --python art/<script>.py -- <args>`.
 
 | Output | Rebuild with |
 |---|---|
-| Robots, kit, traps, weapons, headgear (`assets/models/`) | the Blender scripts in `art/enemies/`, `art/kit/`, `art/traps/`, `art/weapons/`, `art/wardrobe/` |
-| Moxie (`assets/models/moxie.glb`) | the numbered steps in `art/moxie_e/` (see its README); outfit masks with `python tools/moxie_regions.py` |
-| Animation library (`assets/anim/`) | `art/anim/build.py`, then `assets/anim/library/build_library.gd` |
-| Samples (`assets/audio/`) | `python -I art/audio/make_samples.py [family ...]`, check with `art/audio/analyze.py` |
-| Voice (`assets/audio/voice/elevenlabs/`) | `art/voice_el/` — paid and not repeatable; do not regenerate casually |
-| Textures, portraits, UI art, icons | the `process.py` / `build_*.py` scripts in `art/world_art/`, `art/portraits/`, `art/ui_art/`, `art/icons/`, reading the generator output kept in each `raw/` folder |
-| Level music | `python art/music/merge.py` merges `data/music/` into `data/levels/` |
+| Robots, kit, traps, weapons, headgear | the Blender scripts in `art/enemies/`, `art/kit/`, `art/traps/`, `art/weapons/`, `art/wardrobe/` |
+| Moxie (`assets/models/moxie.glb`) | the numbered steps in `art/moxie_e/`; outfit masks with `python tools/moxie_regions.py` |
+| Animation library | `art/anim/build.py`, then `assets/anim/library/build_library.gd` |
+| Samples | `python -I art/audio/make_samples.py [family ...]` |
+| Textures, portraits, UI art, icons | the scripts in `art/world_art/`, `art/portraits/`, `art/ui_art/`, `art/icons/`, reading each `raw/` folder |
+| Level music | `python art/music/merge.py` |
 | Level index, solutions, goldens | `cd prototype && npx vite-node scripts/level.ts index --write`, `level.ts run NN --write`, `scripts/export-goldens.ts` |
-| Bus layout | `bash tools/gd script res://audio/tools/make_bus_layout.gd` |
 
-After any rebuild run `bash tools/gd import`. The `raw/` folders and `art/voice_el/takes/` are kept
-in the repo because they cannot be regenerated identically; `work/`, download and preview folders
-are ignored (`.gitignore`).
+Run `bash tools/gd import` after any rebuild.
 
-## Credits and licences
+</details>
 
-`assets/LICENSES.md` is the index of every asset's source and terms. Read its first section before
-distributing a build: **Moxie's mesh was generated with Tencent Hunyuan3D-2, whose licence forbids
-distribution in the EU, the UK and South Korea**, and the commercial licence of the ElevenLabs voice
-files is unconfirmed. Fonts: Inter (SIL OFL 1.1) and DejaVu Sans Mono (Bitstream Vera licence), in
-`ui/theme/fonts/`.
+## Licence
 
-Created in [T3 Code](https://t3.codes).
+OVERDUB's code and original content are released under the **[MIT License](LICENSE)**.
+
+A few assets come from third parties and keep their own terms. The MIT licence does not override
+them. [`assets/LICENSES.md`](assets/LICENSES.md) lists every source. The ones to know about:
+
+- **Moxie's 3D mesh** was generated with Tencent Hunyuan3D-2, whose community licence forbids using
+  or distributing its output in the EU, the UK and South Korea.
+- **Voice lines** were generated with ElevenLabs stock voices, under ElevenLabs' terms.
+- **Fonts:** Inter (SIL Open Font License 1.1) and DejaVu Sans Mono (Bitstream Vera licence),
+  with their licence texts in [`ui/theme/fonts/`](ui/theme/fonts/).
+- **Animation sources** retargeted from Quaternius' Universal Animation Library (CC0).
+
+Built with [Godot](https://godotengine.org) and [Blender](https://www.blender.org).

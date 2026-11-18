@@ -151,7 +151,7 @@ func apply_materials(mats: ActorMaterials, tints: Dictionary[StringName, Color],
 		_fx.append(fx)
 		mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
 		_xray_volume.z = xray_radius()
-		mi.set_instance_shader_parameter(&"xray_volume", _xray_volume)
+		WebCompat.set_param(mi, &"xray_volume", _xray_volume)
 	translucent = true
 	set_translucent(false)
 
@@ -173,7 +173,7 @@ func set_translucent(on: bool) -> void:
 ## Set an instance uniform on every mesh of the rig.
 func set_param(param: StringName, value: Variant) -> void:
 	for mi: MeshInstance3D in meshes:
-		mi.set_instance_shader_parameter(param, value)
+		WebCompat.set_param(mi, param, value)
 
 
 ## Mesh object by node name (e.g. the shielder's "Shield", the boss's "Armor_1"), or null.

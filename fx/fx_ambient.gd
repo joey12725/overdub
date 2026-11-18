@@ -419,7 +419,7 @@ func _contour_node(samples: int, nm: String) -> MeshInstance3D:
 	n.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	# The vertex data are indices, not positions: give culling the whole diorama.
 	n.custom_aabb = _bounds.grow(6.0)
-	n.set_instance_shader_parameter("samples", float(samples))
+	WebCompat.set_param(n, "samples", float(samples))
 	add_child(n)
 	n.transform = Transform3D.IDENTITY
 	return n
@@ -449,9 +449,9 @@ func _build_contours() -> void:
 			s.hw = minf(SCREEN_HW, size.x * 0.42)
 			s.amp = minf(SCREEN_AMP, size.y * 0.26)
 		s.node = _contour_node(SCREEN_PTS, "WaveScreen%d" % _screens.size())
-		s.node.set_instance_shader_parameter("mode", 1.0)
-		s.node.set_instance_shader_parameter("width", 0.035)
-		s.node.set_instance_shader_parameter("lay", Vector4(s.hw, s.cy, s.amp, 0.0))
+		WebCompat.set_param(s.node, "mode", 1.0)
+		WebCompat.set_param(s.node, "width", 0.035)
+		WebCompat.set_param(s.node, "lay", Vector4(s.hw, s.cy, s.amp, 0.0))
 		_screens.append(s)
 	screen_count = _screens.size()
 	_place_screens()
@@ -459,9 +459,9 @@ func _build_contours() -> void:
 
 func _place_screens() -> void:
 	for s: Screen in _screens:
-		s.node.set_instance_shader_parameter("origin", Vector3(s.x, 0.0, s.z) + _b_normal * 0.3)
-		s.node.set_instance_shader_parameter("along", _b_right)
-		s.node.set_instance_shader_parameter("up", Vector3.UP)
+		WebCompat.set_param(s.node, "origin", Vector3(s.x, 0.0, s.z) + _b_normal * 0.3)
+		WebCompat.set_param(s.node, "along", _b_right)
+		WebCompat.set_param(s.node, "up", Vector3.UP)
 
 
 ## Choose the far edge (outward normal most aligned with the view direction), mount a rail and a
@@ -514,14 +514,14 @@ func _build_edge(ctx: RenderCtx) -> void:
 	_build_mount()
 
 	_strip_node = _contour_node(HISTORY, "EdgeStrip")
-	_strip_node.set_instance_shader_parameter("mode", 0.0)
-	_strip_node.set_instance_shader_parameter("width", 0.06)
-	_strip_node.set_instance_shader_parameter("origin", edge_origin)
-	_strip_node.set_instance_shader_parameter("along", edge_along)
-	_strip_node.set_instance_shader_parameter("up", Vector3.UP)
+	WebCompat.set_param(_strip_node, "mode", 0.0)
+	WebCompat.set_param(_strip_node, "width", 0.06)
+	WebCompat.set_param(_strip_node, "origin", edge_origin)
+	WebCompat.set_param(_strip_node, "along", edge_along)
+	WebCompat.set_param(_strip_node, "up", Vector3.UP)
 	var s0 := 0.4
 	var play := s0 + (edge_len - EPI_SPAN - s0) * 0.8
-	_strip_node.set_instance_shader_parameter("lay", Vector4(s0, play, rail_y + STRIP_LIFT, STRIP_H))
+	WebCompat.set_param(_strip_node, "lay", Vector4(s0, play, rail_y + STRIP_LIFT, STRIP_H))
 
 	_ring_mat = ShaderMaterial.new()
 	_ring_mat.shader = SHADER_RING
@@ -776,8 +776,8 @@ func _update_sigils(m: MusicPulse, br: float, dt: float) -> void:
 		# Alternate sigils counter-rotate so a room never turns as one block.
 		var dir := 1.0 if s % 2 == 0 else -1.0
 		g.node.rotation = Vector3(0.0, -ang * dir, 0.0)
-		g.node.set_instance_shader_parameter("morph", g.morph)
-		g.node.set_instance_shader_parameter("tint", Color(g.color.r, g.color.g, g.color.b, a))
+		WebCompat.set_param(g.node, "morph", g.morph)
+		WebCompat.set_param(g.node, "tint", Color(g.color.r, g.color.g, g.color.b, a))
 
 
 func _draw_screens(m: MusicPulse, br: float) -> void:
@@ -864,8 +864,8 @@ func _update_epicycles(m: MusicPulse, br: float, dt: float) -> void:
 		# Circle centred on the running tip.
 		ring.visible = r > 0.004
 		ring.transform = Transform3D(plane * Basis.from_scale(Vector3(r, r, 1.0)), _strip_point(cu + x, cv + y) - edge_inward * 0.01)
-		ring.set_instance_shader_parameter("radius", r)
-		ring.set_instance_shader_parameter("tint", Color(rune.r, rune.g, rune.b, (0.12 + 0.18 * (1.0 - float(i) / EPI_COUNT)) * br))
+		WebCompat.set_param(ring, "radius", r)
+		WebCompat.set_param(ring, "tint", Color(rune.r, rune.g, rune.b, (0.12 + 0.18 * (1.0 - float(i) / EPI_COUNT)) * br))
 		# x = sum a sin, y = sum a cos: the vertical coordinate of the tip is the reconstructed contour.
 		var ang := _hf[i] * theta + _hp[i]
 		x += r * sin(ang)

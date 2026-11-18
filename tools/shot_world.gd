@@ -40,6 +40,7 @@ var _markers: Node3D = null
 
 
 func _initialize() -> void:
+	WebCompat.apply()
 	var args := OS.get_cmdline_user_args()
 	_out_dir = OS.get_environment("TEMP").replace("\\", "/") + "/overdub_shots"
 	var wanted: Array[String] = []
@@ -51,7 +52,7 @@ func _initialize() -> void:
 		else:
 			wanted.append(a)
 	DirAccess.make_dir_recursive_absolute(_out_dir)
-	for mode: String in ["levels", "cine", "perf", "trapwarn"]:
+	for mode: String in ["levels", "cine", "perf", "trapwarn", "clip"]:
 		if wanted.has(mode):
 			wanted.erase(mode)
 			_run_campaign.call_deferred(mode, wanted)
@@ -301,6 +302,8 @@ func _run_campaign(mode: String, ids: Array[String]) -> void:
 				await _shot_trapwarn(id, res)
 			"perf":
 				await _perf(id, res)
+			"clip":
+				await _clip(id, res)
 	quit(0)
 
 
@@ -454,3 +457,21 @@ func _perf(id: String, res: Resolution) -> void:
 			print("[shot_world] PERF musicviz %.0f us/frame: %s" % [hub.frame_cost_usec(), ", ".join(hub.cost_report())])
 		_save("perf_%s_%s" % [id, mode])
 	_view.call("set_cinema_plan", null)
+
+
+## clip [id]: the cinematic playback saved as numbered frames (every 3rd simulation frame, so 20 per
+## second) for turning into a GIF or video with ffmpeg.
+func _clip(id: String, res: Resolution) -> void:
+	var lv := CampaignData.level(id)
+	_view.call("set_cinema_plan", CinemaPlanner.plan(res, lv, CinemaTypes.Context.new()))
+	var n := res.frames.size()
+	var saved := 0
+	for k: int in range(1, n):
+		_view.render(_play_frame(res, k, ViewMode.CINEMATIC, _tapes(res)))
+		await process_frame
+		if k % 3 == 0:
+			await process_frame
+			_save("clip_%s_%05d" % [id, saved])
+			saved += 1
+	_view.call("set_cinema_plan", null)
+	print("[shot_world] clip %s: %d frames" % [id, saved])

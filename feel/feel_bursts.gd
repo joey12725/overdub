@@ -70,13 +70,13 @@ func burst(kind: int, at: Vector3, size: float, life: float, tier: int, screen_a
 	_seed = fmod(_seed + 0.6180339, 1.0)
 	var mi := _burst[i]
 	mi.transform = Transform3D(Basis.from_scale(Vector3.ONE * minf(size, max_size)), at)
-	mi.set_instance_shader_parameter(&"progress", 0.0)
-	mi.set_instance_shader_parameter(&"kind", float(kind))
-	mi.set_instance_shader_parameter(&"tier", float(mini(tier, max_tier)))
-	mi.set_instance_shader_parameter(&"angle", screen_angle)
-	mi.set_instance_shader_parameter(&"seed", _seed * 10.0)
-	mi.set_instance_shader_parameter(&"tint", tint)
-	mi.set_instance_shader_parameter(&"lines", float(lines))
+	WebCompat.set_param(mi, &"progress", 0.0)
+	WebCompat.set_param(mi, &"kind", float(kind))
+	WebCompat.set_param(mi, &"tier", float(mini(tier, max_tier)))
+	WebCompat.set_param(mi, &"angle", screen_angle)
+	WebCompat.set_param(mi, &"seed", _seed * 10.0)
+	WebCompat.set_param(mi, &"tint", tint)
+	WebCompat.set_param(mi, &"lines", float(lines))
 	mi.visible = true
 	_burst_t[i] = 0.0
 	_burst_life[i] = maxf(life, 0.02)
@@ -89,10 +89,10 @@ func decal(kind: int, xform: Transform3D, life: float, power: float = 1.0) -> vo
 	_seed = fmod(_seed + 0.6180339, 1.0)
 	var mi := _decal[i]
 	mi.transform = xform
-	mi.set_instance_shader_parameter(&"progress", 0.0)
-	mi.set_instance_shader_parameter(&"kind", float(kind))
-	mi.set_instance_shader_parameter(&"seed", _seed * 10.0)
-	mi.set_instance_shader_parameter(&"power", power)
+	WebCompat.set_param(mi, &"progress", 0.0)
+	WebCompat.set_param(mi, &"kind", float(kind))
+	WebCompat.set_param(mi, &"seed", _seed * 10.0)
+	WebCompat.set_param(mi, &"power", power)
 	mi.visible = true
 	_decal_t[i] = 0.0
 	_decal_life[i] = maxf(life, 0.02)
@@ -107,7 +107,7 @@ func advance(dt: float) -> void:
 		if p >= 1.0:
 			_burst[i].visible = false
 		else:
-			_burst[i].set_instance_shader_parameter(&"progress", p)
+			WebCompat.set_param(_burst[i], &"progress", p)
 	for i: int in DECALS:
 		if not _decal[i].visible:
 			continue
@@ -116,7 +116,7 @@ func advance(dt: float) -> void:
 		if p >= 1.0:
 			_decal[i].visible = false
 		else:
-			_decal[i].set_instance_shader_parameter(&"progress", p)
+			WebCompat.set_param(_decal[i], &"progress", p)
 
 
 func clear() -> void:
