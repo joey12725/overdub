@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=45 format=3]
+[gd_resource type="AudioBusLayout" load_steps=45 format=3 uid="uid://btwul6civrhh4"]
 
 [sub_resource type="AudioEffectEQ6" id="AudioEffectEQ6_j3pel"]
 band_db/10000_hz = -1.5

@@ -46,9 +46,9 @@ func spawn(body: Node3D, tint: Color, life: float = FeelTune.GHOST_LIFE, opacity
 		var g := _pool[i]
 		g.mesh = mesh
 		g.global_transform = src.global_transform
-		g.set_instance_shader_parameter(&"tint", tint)
-		g.set_instance_shader_parameter(&"life", 0.0)
-		g.set_instance_shader_parameter(&"opacity", opacity)
+		WebCompat.set_param(g, &"tint", tint)
+		WebCompat.set_param(g, &"life", 0.0)
+		WebCompat.set_param(g, &"opacity", opacity)
 		g.visible = true
 		_t[i] = 0.0
 		_life[i] = maxf(0.03, life)
@@ -169,7 +169,7 @@ func advance(dt: float) -> void:
 			g.visible = false
 			g.mesh = null
 		else:
-			g.set_instance_shader_parameter(&"life", p)
+			WebCompat.set_param(g, &"life", p)
 
 
 func clear() -> void:

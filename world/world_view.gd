@@ -432,7 +432,8 @@ func _apply_quality() -> void:
 	if world_env != null:
 		world_env.environment.glow_enabled = high
 	if post != null:
-		post.set_enabled(high)
+		# The web renderer reads the screen texture back black here, which blanks the view (WebCompat).
+		post.set_enabled(high and not WebCompat.is_web())
 	for p: OmniLight3D in _practicals:
 		if is_instance_valid(p):
 			p.visible = high

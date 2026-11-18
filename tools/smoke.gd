@@ -364,6 +364,8 @@ func _until(cond: Callable, timeout_s: float, what: String) -> void:
 func _shot(name: String) -> void:
 	await process_frame
 	await process_frame
+	if OS.get_environment("OVERDUB_DIAG") == "1" and name == "briefing":
+		_instance_uniform_report()
 	_n += 1
 	var img := root.get_texture().get_image()
 	var path := _dir.path_join("%02d_%s.png" % [_n, name])
@@ -414,3 +416,34 @@ func _logged_errors() -> Array[String]:
 			var at := lines[i + 1].strip_edges() if i + 1 < lines.size() else ""
 			out.append(l.strip_edges() + ("  " + at if at.begins_with("at:") else ""))
 	return out
+
+
+## OVERDUB_DIAG=1: count the geometry instances whose materials declare instance uniforms, per
+## shader (the web renderer holds at most 4,096 instance-uniform slots in all).
+func _instance_uniform_report() -> void:
+	var counts := {}
+	var stack: Array[Node] = [root]
+	while not stack.is_empty():
+		var n: Node = stack.pop_back()
+		for ch: Node in n.get_children():
+			stack.append(ch)
+		var gi := n as GeometryInstance3D
+		if gi == null:
+			continue
+		var mats: Array[Material] = [gi.material_override, gi.material_overlay]
+		var mi := n as MeshInstance3D
+		if mi != null and mi.mesh != null:
+			for i: int in range(mi.mesh.get_surface_count()):
+				mats.append(mi.get_surface_override_material(i))
+				mats.append(mi.mesh.surface_get_material(i))
+		var seen := {}
+		for m: Material in mats:
+			var sm := m as ShaderMaterial
+			while sm != null:
+				if sm.shader != null and RegEx.create_from_string(r"(?m)^\s*instance\s+uniform\s").search(sm.shader.code) != null and not seen.has(sm.shader.resource_path):
+					seen[sm.shader.resource_path] = true
+					var key := "%s (%s)" % [sm.shader.resource_path, n.get_class()]
+					counts[key] = int(counts.get(key, 0)) + 1
+				sm = sm.next_pass as ShaderMaterial
+	for k: String in counts:
+		print("diag: %5d %s" % [counts[k], k])

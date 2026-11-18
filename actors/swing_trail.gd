@@ -35,9 +35,9 @@ func setup(melee: MeleeWeaponDef, color: Color, mats: ActorMaterials, actor_heig
 	_impact = _mesh(ActorGeom.ring(0.8, 1.0, 36), mats.flat_add)
 	_impact.position = Vector3(0, 0.03, _reach * 0.65)
 	for m: MeshInstance3D in [_light, _heavy]:
-		m.set_instance_shader_parameter(&"style", _style)
-		m.set_instance_shader_parameter(&"trail_color", Color(color, 0.0))
-	_impact.set_instance_shader_parameter(&"color", Color(color, 0.0))
+		WebCompat.set_param(m, &"style", _style)
+		WebCompat.set_param(m, &"trail_color", Color(color, 0.0))
+	WebCompat.set_param(_impact, &"color", Color(color, 0.0))
 
 
 func _mesh(mesh: ArrayMesh, mat: Material) -> MeshInstance3D:
@@ -68,18 +68,18 @@ func update_trail(anim: StringName, t: float, dt: float, intensity: float) -> vo
 	var lo := _fade * 0.9 * intensity
 	_light.visible = lo > 0.01
 	if _light.visible:
-		_light.set_instance_shader_parameter(&"progress", lp)
-		_light.set_instance_shader_parameter(&"tail", tail)
-		_light.set_instance_shader_parameter(&"preview", 0.0)
-		_light.set_instance_shader_parameter(&"trail_color", Color(_color, lo))
+		WebCompat.set_param(_light, &"progress", lp)
+		WebCompat.set_param(_light, &"tail", tail)
+		WebCompat.set_param(_light, &"preview", 0.0)
+		WebCompat.set_param(_light, &"trail_color", Color(_color, lo))
 	# Heavy.
 	var impact := 0.0
 	if anim == AnimState.HEAVY_WINDUP:
 		_fade_heavy = 0.0
 		_heavy.visible = true
-		_heavy.set_instance_shader_parameter(&"preview", 1.0)
-		_heavy.set_instance_shader_parameter(&"progress", 1.0)
-		_heavy.set_instance_shader_parameter(&"trail_color", Color(_color, (0.12 + 0.35 * ActorMath.clamp01(t)) * intensity))
+		WebCompat.set_param(_heavy, &"preview", 1.0)
+		WebCompat.set_param(_heavy, &"progress", 1.0)
+		WebCompat.set_param(_heavy, &"trail_color", Color(_color, (0.12 + 0.35 * ActorMath.clamp01(t)) * intensity))
 	else:
 		var hp := 1.02
 		if anim == AnimState.HEAVY_ACTIVE:
@@ -94,17 +94,17 @@ func update_trail(anim: StringName, t: float, dt: float, intensity: float) -> vo
 		var ho := _fade_heavy * intensity
 		_heavy.visible = ho > 0.01
 		if _heavy.visible:
-			_heavy.set_instance_shader_parameter(&"preview", 0.0)
-			_heavy.set_instance_shader_parameter(&"progress", hp)
-			_heavy.set_instance_shader_parameter(&"tail", 0.9)
-			_heavy.set_instance_shader_parameter(&"trail_color", Color(_color, ho))
+			WebCompat.set_param(_heavy, &"preview", 0.0)
+			WebCompat.set_param(_heavy, &"progress", hp)
+			WebCompat.set_param(_heavy, &"tail", 0.9)
+			WebCompat.set_param(_heavy, &"trail_color", Color(_color, ho))
 	# Ground shock ring for heavy impacts (not the whip: it lashes, it does not slam).
 	var show := _style_name != MeleeStyle.WHIP and impact > 0.0 and _fade_heavy > 0.02
 	_impact.visible = show
 	if show:
 		var s := _reach * (0.25 + 0.45 * minf(1.5, impact))
 		_impact.scale = Vector3(s, 1.0, s)
-		_impact.set_instance_shader_parameter(&"color", Color(_color, maxf(0.0, 1.0 - impact / 1.5) * _fade_heavy * intensity))
+		WebCompat.set_param(_impact, &"color", Color(_color, maxf(0.0, 1.0 - impact / 1.5) * _fade_heavy * intensity))
 
 
 func hide_all() -> void:

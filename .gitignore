@@ -34,3 +34,7 @@ art/**/dl/
 art/**/_dl/
 art/**/src_dl/
 !art/moxie_e/dl/
+
+# Web export output (tools/web/)
+build/
+.herenow/

@@ -366,7 +366,7 @@ static func _meshes(n: Node) -> Array[MeshInstance3D]:
 ## Per-node glow multiplier (glow shaders' instance_energy) for parts that share one material.
 static func _node_energy(n: Node, e: float) -> void:
 	for mi: MeshInstance3D in _meshes(n):
-		mi.set_instance_shader_parameter(&"instance_energy", e)
+		WebCompat.set_param(mi, &"instance_energy", e)
 
 
 static func _rest(n: Node3D) -> Vector3:
