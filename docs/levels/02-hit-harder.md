@@ -11,7 +11,7 @@ other on a single straight line running north from the start, marked by an inscr
 
 ```
 #.....o.....#   amp (core): the objective
-######%######   wall2, needs 4.5: only a 2x heavy WITH a run-up (5.4); a standing 2x heavy is 3.6
+######%######   wall2, needs 4.0: only a 2x heavy WITH a run-up (5.4); a standing 2x heavy is 3.6
 #........G..#   g1, asleep until wall1 breaks
 ######%######   wall1, needs 3.2: nothing at 1x (best is 2.7); a standing 2x heavy is 3.6
 #.....@.....#   start, facing the wall
@@ -19,7 +19,7 @@ other on a single straight line running north from the start, marked by an inscr
 
 Wall 1 teaches tape speed (no swing at 1x can do it). Wall 2 teaches movement (at the right speed,
 standing still is still not enough). Every failed hit is reported by the game with both numbers
-("hit breakable wall wall2 with momentum 3.6; it needs 4.5"), so each clang says how far off it was.
+("hit breakable wall wall2 with momentum 3.6; it needs 4.0"), so each clang says how far off it was.
 
 ## Intended solution (one 2x take, wins at beat 6.8; the tape covers 16 of the 32 beats)
 
@@ -35,8 +35,8 @@ standing still is still not enough). Every failed hit is reported by the game wi
 | Plan | Result |
 |---|---|
 | 1x tape, everything including a running heavy | FAIL — wall1 clangs: 2.7, 1.8, 1.0 against 3.2. Lesson: change the tape, not the swing. |
-| 2x, standing heavies at both walls | FAIL — wall1 breaks, wall2 clangs twice at 3.6 against 4.5. Lesson: speed is not all of it. |
-| 2x, running LIGHT swings | FAIL — 3.0 against 3.2 and against 4.5. Lesson: heavy and running, both. |
+| 2x, standing heavies at both walls | FAIL — wall1 breaks, wall2 clangs twice at 3.6 against 4.0. Lesson: speed is not all of it. |
+| 2x, running LIGHT swings | FAIL — 3.0 against 3.2 and against 4.0. Lesson: heavy and running, both. |
 | 2x, sprint through both walls, wake the amp, ignore the grunt | FAIL (nobody survived) — objective complete at 3.1, then "Tape A died at beat 6: struck by grunt g1". Lesson for 03: the world keeps running after you are done. |
 
 ## Alternatives that win
@@ -56,8 +56,13 @@ tape); here it is deliberately free.
 
 Momentum: 1x light 1 / running 1.5, heavy 1.8 / running 2.7; 2x light 2 / 3, heavy 3.6 / 5.4.
 The approach factor is clamped at 1, so a dodge cannot push a 1x swing past 2.7. Thresholds 3.2 and
-4.5 sit at least 0.2 away from every reachable value (never on an exact one such as 3.0). A heavy
+4.0 sit at least 0.2 away from every reachable value (never on an exact one such as 3.0). A heavy
 lands 16 ticks after the press and takes its momentum from the press. `mutate`: all 12 win.
+
+Wall 2 was 4.5 until a player equipped level 1's Stylus Shiv (heavy impact 1.4) and could not
+pass: its best swing here is a running 2x heavy at 4.2, so 4.5 was out of reach. At 4.0 the Shiv
+still needs a run-up at both walls (standing 2x heavy 2.8; wall 1 at 3.2 also needs it), and the
+baseline lesson is unchanged. `level.ts probe 02 --loadout stylus_shiv` shows both walls reachable.
 
 ## Presentation must-haves (Godot)
 

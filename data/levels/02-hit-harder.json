@@ -32,7 +32,7 @@
   "entities": [
     { "kind": "breakable", "id": "wall1", "c": 6, "r": 9, "threshold": 3.2 },
     { "kind": "enemy", "id": "g1", "type": "grunt", "x": 9.5, "y": 6.5, "facing": 1.5707963267948966, "wakeWhen": { "sig": "wall1" } },
-    { "kind": "breakable", "id": "wall2", "c": 6, "r": 4, "threshold": 4.5 },
+    { "kind": "breakable", "id": "wall2", "c": 6, "r": 4, "threshold": 4.0 },
     { "kind": "core", "id": "amp", "x": 6.5, "y": 1.5 },
     { "kind": "decor", "type": "graffiti", "x": 3.5, "y": 9.6, "variant": "x2" },
     { "kind": "decor", "type": "graffiti", "x": 9.5, "y": 4.6, "variant": "RUN IT" },
